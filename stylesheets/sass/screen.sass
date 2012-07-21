@@ -1,10 +1,232 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
 @import base
-@include establish-baseline(16px)
+
+html
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif
+  @include text-shadow()
+  
+body
+  margin: 0
+  background-color: #eee
+  @include background-image(linear-gradient(#fff, $background-color 150px))
+
+/* Headings
+
 h1
-  font-size: 24px
+  @include adjust-font-size-to(40px)
+  
+/* Page structure
+.page, header, footer
+  max-width: 960px
+  margin: 0 auto
+
+header
+  min-height: 140px
+  position: relative
+
+body::before
+  content: " "
+  position: fixed
+  bottom: 0
+  left: 0
+  height: 100px
+  width: 100%
+  @include background-image(linear-gradient(rgba(255,255,255,0), #eee 80px))
+
+/* Post layout bits
+
+article header
+  min-height: 0
+
+section.content
+  width: 75%
+  float: left
+  padding-right: 5%
+
+section.sidebar
+  width: 20%
+  float: right
+
+.entry
+  p:first-child
+    @include leader()
+
+  p:last-child
+    @include trailer()
+    @include trailing-border
+  
+  aside
+    @include rhythm-borders()
+
+/* Strange bouncer thing
+.bouncer-container *
+  position: absolute
+
+.bouncer-container
+  
+  .mask
+    width: 200px
+    height: 38px
+    position: absolute
+    top: 106px
+    left: -50px
+    background-color: $background-color
+    z-index: 1
+    
+  position: absolute
+  text-indent: -9999px
+  .bouncer
+    top: 85px
+    left: -50px
+    width: 50px
+    height: 60px
+    background-color: $bouncer-color
+    @include border-radius(25px, 50%)
+    @include opacity(0)
+    z-index: 2
+    
+  .ear1, .ear2
+    width: 8px
+    height: 28px
+    background-color: $bouncer-color
+    @include border-radius(50%, 50%)
+  
+  .ear1
+    top: -12px
+    left: 10px
+    @include rotate(-15deg)
+    
+  .ear2
+    top: -12px
+    right: 10px
+    @include rotate(15deg)
+    
+  .eye1, .eye2
+    top: 10px
+    left: 20px
+    background-color: $background-color
+    width: 5px
+    height: 6px
+    @include border-radius(50%, 50%)
+    
+  .eye1
+    top: 12px
+    left: 22px
+    
+  .eye2
+    top: 12px
+    left: 32px
+    
+  .mouth
+    top: 24px
+    left: 22px
+    width: 15px
+    height: 8px
+    background-color: $background-color
+    @include border-bottom-radius(25px)
+  
+  .bounce1::before, .bounce2::before, .bounce3::before, .bounce3::after
+    z-index: -2
+  
+  .bounce1
+    top: 114px
+    left: -49px
+    width: 70px
+    height: 80px
+    background-color: $bouncer-color
+    @include border-radius(50%, 50%)
+    @include opacity(0.05)
+    @include rotate(20deg)
+    
+    &::before
+      content: " "
+      position: absolute
+      background-color: $background-color
+      top: 7px
+      width: 78px
+      height: 85px
+      @include border-radius(50%, 50%)
+
+  .bounce2
+    top: 107px
+    left: 20px
+    width: 70px
+    height: 80px
+    background-color: $bouncer-color
+    @include border-radius(50%, 50%)
+    @include opacity(0.15)
+    @include rotate(15deg)
+
+    &::before
+      content: " "
+      position: absolute
+      background-color: $background-color
+      top: 7px
+      left: -1px
+      width: 76px
+      height: 85px
+      @include border-radius(50%, 50%)
+      
+  .bounce3
+    top: 111px
+    left: 88px
+    width: 70px
+    height: 80px
+    background-color: $bouncer-color
+    @include border-radius(50%, 50%)
+    @include opacity(0.4)
+    @include rotate(25deg)
+
+    &::before
+      content: " "
+      position: absolute
+      background-color: $background-color
+      top: 9px
+      left: -1px
+      width: 76px
+      height: 85px
+      @include border-radius(50%, 50%) 
+    &::after
+      content: " "
+      position: absolute
+      background-color: $background-color
+      top: -28px
+      left: -9px
+      width: 100px
+      height: 60px
+      @include border-radius(50%, 50%) 
+      
+.move-mask
+  @include animation-name(move-box)
+  @include animation-duration(2s)
+  @include animation-fill-mode(forwards)
+
+.move-bouncer
+  @include animation-name(move-bouncer)
+  @include animation-duration(2s)
+  @include animation-fill-mode(forwards)
+
+@include keyframes(move-box)
+  30%, 33%
+    left: 21px
+  63%, 66%
+    left: 91px
+  97%, 100%
+    left: 161px
+
+@include keyframes(move-bouncer)
+  15%
+    top: 64px
+  30%, 33%
+    top: 85px
+    left: 21px
+    @include opacity(1)
+  45%
+    top: 64px
+  63%, 64%
+    top: 86px
+    left: 91px
+    @include opacity(1)
+  74%, 100%
+    top: 74px
+    left: 104px
+    @include opacity(1)

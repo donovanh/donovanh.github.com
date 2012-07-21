@@ -9,44 +9,52 @@
     <title>{% if page.title %} {{ page.title }} - {% endif %} hop.ie</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Thoughts from Donovan's brain{% endif %}">
     <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
     <link rel="stylesheet" href="/stylesheets/screen.css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <link rel="canonical" href="{{ page.url | canonical }}">
-
-    <!-- All JavaScript at the bottom, except this Modernizr build.
-         Modernizr enables HTML5 elements & feature detects for optimal performance.
-         Create your own custom Modernizr build: www.modernizr.com/download/ -->
     <script src="/javascripts/modernizr.js"></script>
 </head>
 <body>
-    <!--[if lt IE 7]><p class="chromeframe">OMG Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header>
+		<h1 class="bouncer-container">Donovan Hutchinson</h1>
+	</header>
 
-		<header>
-			<span></span>
-		</header>
-
-		<section class="sidebar">
-		  
+	<div class="page clearfix">
+	  <section class="sidebar">
+	    <p>Some bio, twitter link, contact details</p>
 		</section>
-		<article>
-			{{ content }}
-		</article>
+  	<section class="content">
+  		{{ content }}
+  	</section>
+  </div>
+	<footer>
+		<p>&copy; 2012 Donovan Hutchinson</p>
+	</footer>
 
-		<footer>
-			<p>&copy; 2012 Luke Maciak</p>
-		</footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
-        <script src="javascripts/main.js"></script>
-        <!-- end scripts -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
-    </html>
+  <script id="bouncer-template" type="text/html">
+    <span class="mask"></span>
+    <span class="bounce1"></span>
+	  <span class="bounce2"></span>
+	  <span class="bounce3"></span>
+	  <span class="bouncer">
+	    <span class="ear1"></span>
+	    <span class="ear2"></span>
+	    <span class="head"></span>
+	    <span class="eye1"></span>
+	    <span class="eye2"></span>
+	    <span class="mouth"></span>
+	  </span>
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script src="/javascripts/mustache.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
