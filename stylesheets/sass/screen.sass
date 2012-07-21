@@ -3,16 +3,29 @@
 html
   font-family: "PT Serif", Georgia, Times, "Times New Roman", serif
   @include text-shadow()
+  color: $font-color
   
 body
   margin: 0
-  background-color: #eee
-  @include background-image(linear-gradient(#fff, $background-color 150px))
+  background-color: $background-color
 
 /* Headings
 
 h1
   @include adjust-font-size-to(40px)
+
+/* Links
+
+a
+  color: $link-color
+  @include transition(color 0.2s ease-out)
+  
+  &:visited, &:active
+    color: $link-color-visited
+  
+  &:hover
+    color: $hover-color
+    @include transition(color 0.2s ease-out)
   
 /* Page structure
 .page, header, footer
@@ -22,6 +35,10 @@ h1
 header
   min-height: 140px
   position: relative
+  
+footer
+  min-height: 200px
+  text-align: center
 
 body::before
   content: " "
@@ -30,7 +47,7 @@ body::before
   left: 0
   height: 100px
   width: 100%
-  @include background-image(linear-gradient(rgba(255,255,255,0), #eee 80px))
+  @include background-image(linear-gradient($transparent-background, $background-color 80px))
 
 /* Post layout bits
 
@@ -47,12 +64,13 @@ section.sidebar
   float: right
 
 .entry
+  z-index: 4
+  
   p:first-child
     @include leader()
 
   p:last-child
     @include trailer()
-    @include trailing-border
   
   aside
     @include rhythm-borders()
@@ -62,6 +80,22 @@ section.sidebar
   position: absolute
 
 .bouncer-container
+  position: absolute
+  a
+    text-indent: -9999px
+    top: 60px
+    left: -50px
+    height: 80px
+    z-index: 3
+    
+    &:hover
+      .bouncer
+        background-color: $bouncer-color-hover
+        @include transition(color 0.2s ease-out)
+        cursor: pointer
+      .ear1, .ear2
+        background-color: $bouncer-color-hover
+        @include transition(color 0.2s ease-out)
   
   .mask
     width: 200px
@@ -71,19 +105,18 @@ section.sidebar
     left: -50px
     background-color: $background-color
     z-index: 1
-    
-  position: absolute
-  text-indent: -9999px
+
   .bouncer
     top: 85px
     left: -50px
     width: 50px
     height: 60px
     background-color: $bouncer-color
+    @include transition(color 0.2s ease-out)
     @include border-radius(25px, 50%)
     @include opacity(0)
     z-index: 2
-    
+      
   .ear1, .ear2
     width: 8px
     height: 28px
@@ -206,11 +239,11 @@ section.sidebar
   @include animation-fill-mode(forwards)
 
 @include keyframes(move-box)
-  30%, 33%
+  29%, 32%
     left: 21px
-  63%, 66%
+  62%, 65%
     left: 91px
-  97%, 100%
+  96%, 100%
     left: 161px
 
 @include keyframes(move-bouncer)
@@ -222,6 +255,7 @@ section.sidebar
     @include opacity(1)
   45%
     top: 64px
+    @include opacity(1)
   63%, 64%
     top: 86px
     left: 91px
