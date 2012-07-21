@@ -1,49 +1,52 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% if page.title %} {{ page.title }} - {% endif %} hop.ie</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Thoughts from Donovan's brain{% endif %}">
+    <meta name="viewport" content="width=device-width">
 
-<html>
-	<head>
-		<title>{% if page.title %} {{ page.title }} | {% endif %} My Page</title>
-		<link rel="stylesheet" href="/style.css" />
-	</head>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-	<body>
-		<div id="header">
-			<h1>Welcome to my page</h1>
-			<h4>Here is some tagline</h4>
-			<hr />
-		</div>
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+    <link rel="canonical" href="{{ page.url | canonical }}">
 
-		<div id="sidebar">
+    <!-- All JavaScript at the bottom, except this Modernizr build.
+         Modernizr enables HTML5 elements & feature detects for optimal performance.
+         Create your own custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="/javascripts/modernizr.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]><p class="chromeframe">OMG Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-			<h3>First Heading</h3>
+		<header>
+			<span></span>
+		</header>
 
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-			</ul>
-
-			<h3>Second Heading</h3>
-
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-			</ul>
-		</div>
-
-		<div id="content">
-
+		<section class="sidebar">
+		  
+		</section>
+		<article>
 			{{ content }}
+		</article>
 
-		</div>
-
-		<div id="footer">
-			<hr />
+		<footer>
 			<p>&copy; 2012 Luke Maciak</p>
-		</div>
+		</footer>
 
-	</body>
-
-</html>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
+        <script src="javascripts/main.js"></script>
+        <!-- end scripts -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+    </html>

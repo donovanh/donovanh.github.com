@@ -1,6 +1,6 @@
-Simple Jekyll Site
-===
+Hop.ie
+======
 
-This is an example of a very basic Jekyll site. It lays down the basic folder structure, uses very basic CSS to make it look presentable and leaves everything else up to you.
+Random thoughts and updates as I go through the journey of creating and deploying web things. I can be contacted at @donovanh or d@hop.ie.
 
-This is a perfect starting point for building your own Jekyll site.
+This site is running on Jekyll and Github pages.
