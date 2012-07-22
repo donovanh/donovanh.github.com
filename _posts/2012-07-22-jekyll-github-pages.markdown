@@ -5,21 +5,21 @@ description: "How I built this blog. (Hint: Using Jekyll and Github Pages)"
 category: 
 tags: [jekyl, github pages]
 ---
-This weekend I decided to rebuild by old hop.ie website. As it stood, it was more of a portfolio site and not enough of a blog, so I took the opportunity to remake the site to be more focussed on the blogging.
+This weekend I decided to rebuild my old hop.ie website. It was more of a portfolio site and not enough of a blog so I took the opportunity to remake the site to be more focussed.
 
-It was also a chance to try out [Jekyll][1], a "blog aware, static site generator", as well as [Github Pages][2]. Github pages allows you to serve static websites for free. It's extremely fast and easy to deploy to if you're used to Git.
+I decided to try out [Jekyll][1], a "blog aware, static site generator", as well as [Github Pages][2]. Github pages allows you to serve static websites for free. It's extremely fast and easy to deploy if you're used to Git.
 
 ##Getting started with Jekyll
 
 Jekyll is [easy to install][3]. Once installed, there are loads of examples available online to learn from. One of the most feature-rich is [jekyll-bootstrap][4]. It includes handy rake tasks for setting up pages and posts, configuration for multiple comment systems and RSS distributors, and even a templating system.
 
-I prefer to start with something simpler (that I can understand) and add things on as needed. With that in mind, I found a great simple starter layout [from Lukasz Maciak][5]. I was able to refer to the features implemented in jekyll-bootstap and implement various bits as I learned how it worked.
+I prefer to start with something simpler (that I can understand) and add things on as needed. With that in mind, I found a great simple starter layout [from Lukasz Maciak][5]. I was able to refer to the features in jekyll-bootstap and grab various bits as I learned how it worked.
 
 ##Gotta have the SASS
 
-While building the HTML templates without using HAML was *ok*, I couldn't stick to plain old CSS. I [installed Compass][8] and set up a sass directory within my stylesheets directory. Compass is a fantastic way to quickly produce efficient and powerful CSS effects, and includes a range of amazing plugins. One of which I got to try out (thanks to [@irishstu][9] for the tip) was [Vertical Rhythm][10].
+While building the HTML templates without using HAML was *ok*, I couldn't stick to plain old CSS. I [installed Compass][8] and set up a sass directory within my stylesheets directory. Compass is a fantastic way to quickly produce efficient and powerful CSS effects, and includes a range of amazing plugins. One of which I got to try out was [Vertical Rhythm][10] (thanks to [@irishstu][9] for the tip).
 
-A [decent tutorial video][11] helped explain just what it was about, and it was a great help getting the text to sit well.
+A [decent tutorial video][11] helped explain just what it was about, and it was a great help getting the text to behave.
 
 ##Migrating from Wordpress
 
@@ -41,7 +41,7 @@ Setting up and deploying this site was straightforward. I set up a new repo call
     $ git remote add origin git@github.com:donovanh/donovanh.github.com.git
     $ git push -u origin master
     
-After waiting a few minutes for the site to initialise (it's instant on future pushes), my static site was available at [donovanh.github.com][7].
+After waiting a few minutes for the site to be created, the site was available at [donovanh.github.com][7].
 
 ##See under the hood on Github
 
