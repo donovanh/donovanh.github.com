@@ -13,7 +13,7 @@ It was also a chance to try out [Jekyll][1], a "blog aware, static site generato
 
 Jekyll is [easy to install][3]. Once installed, there are loads of examples available online to learn from. One of the most feature-rich is [jekyll-bootstrap][4]. It includes handy rake tasks for setting up pages and posts, configuration for multiple comment systems and RSS distributors, and even a templating system.
 
-I prefer to start with something simpler (that I can understand) and add things on as needed. With that in mind, I found a great simple starter layout [from Lukasz Maciak here][5]. I was able to refer to the features implemented in jekyll-bootstap and implement various bits as I learned how it worked.
+I prefer to start with something simpler (that I can understand) and add things on as needed. With that in mind, I found a great simple starter layout [from Lukasz Maciak][5]. I was able to refer to the features implemented in jekyll-bootstap and implement various bits as I learned how it worked.
 
 ##Gotta have the SASS
 
@@ -27,13 +27,13 @@ There are a million plugins and ways to convert Wordpress posts into other forma
 
 ##Speaking of Markdown
 
-Markdown is just lovely, compared to the bloated Wordpress WYSIWYG I escaped. I did need a quick introduction to some of the syntax, and [this one from Slekz][13] was handy. More info is available from [Daring Fireball][14]. (You can also see the source of this post here.)
+Markdown is just lovely, compared to the bloated Wordpress WYSIWYG I escaped. I did need a quick introduction to some of the syntax, and [this one from Slekz][13] was handy. More info is available from [Daring Fireball][14]. (You can also see the source of [this post][15].)
 
 ##Deploying to Github Pages
 
 Pages hosted on Github are generated through their own version of Jekyll. Because of this, no custom plugins will work. However if you wanted to pre-process your site locally and publish the static result, that would work too.
 
-Setting up and deploying this site was straightforward. I set up a new repo called [donovanh.github.com][6], then applied the following to my local Jekyll version of the site:
+Setting up and deploying this site was straightforward. I set up a new repo called [donovanh.github.com][6] (Note: You'll want to add **\_site/\*** to your *.gitignore* file), then applied the following to my local Jekyll version of the site.
 
     $ git init
     $ git add .
@@ -46,8 +46,6 @@ After waiting a few minutes for the site to initialise (it's instant on future p
 ##See under the hood on Github
 
 If you'd like to poke at the code behind this site, it's [on github right now][6]. Have fun, and if you feel like suggesting improvements I'd appreciate it.
-
-
 
  [1]: http://jekyllrb.com/
  [2]: http://pages.github.com
@@ -63,3 +61,4 @@ If you'd like to poke at the code behind this site, it's [on github right now][6
  [12]: https://github.com/davidwinter/wordpress-to-jekyll
  [13]: http://old-wp.slekx.com/the-markdown-tutorial/
  [14]: http://daringfireball.net/projects/markdown/basics/
+ [15]: https://raw.github.com/donovanh/donovanh.github.com/master/_posts/2012-07-22-jekyll-github-pages.markdown
