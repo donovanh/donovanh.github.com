@@ -6,13 +6,6 @@ title: Archive
 	<header>
 	  <h1>Older posts</h1>
 	</header>
-  <ul>
-    
-    
-    <li> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> - <a href="{{ post.url }}" description="{{ post.description }}">{{ post.title }}</a></li>
-    
-    
-  </ul>
 {% for post in site.posts limit: 10 offset: 10 %}
   {% unless post.layout == 'redirect' %}
   <article>
