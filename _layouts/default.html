@@ -10,23 +10,25 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Thoughts from Donovan's brain{% endif %}">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/stylesheets/screen.css">
-    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold" rel="stylesheet" type="text/css">
     <link rel="canonical" href="{{ page.url | canonical }}">
     <script src="/javascripts/modernizr.js"></script>
 </head>
 <body>
-	<header>
-		<h1 class="bouncer-container"><a href="/">Donovan Hutchinson</a></h1>
-	</header>
+  <div class="page-container">
+  	<header>
+  		<h1 class="bouncer-container"><a href="/">Donovan Hutchinson</a></h1>
+  	</header>
 
-	<div class="page clearfix">
-	  <section class="sidebar">
-	    <p>Some bio, twitter link, contact details</p>
-		</section>
-  	<section class="content">
-  		{{ content }}
-  	</section>
+  	<div class="page clearfix">
+  	  <section class="sidebar">
+  	    <p><a href="http://twitter.com/donovanh">@donovanh</a></p>
+  		</section>
+    	<section class="content">
+    		{{ content }}
+    	</section>
+    </div>
   </div>
 	<footer>
 		<p>&copy; 2012 Donovan Hutchinson</p>

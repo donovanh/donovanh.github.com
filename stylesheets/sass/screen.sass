@@ -7,7 +7,8 @@ html
   
 body
   margin: 0
-  background-color: $background-color
+  background-color: $font-color
+  border-top: 20px solid $font-color
 
 /* Headings
 
@@ -18,6 +19,8 @@ h1
 
 a
   color: $link-color
+  text-decoration: none
+  font-weight: bold
   @include transition(color 0.2s ease-out)
   
   &:visited, &:active
@@ -28,32 +31,49 @@ a
     @include transition(color 0.2s ease-out)
   
 /* Page structure
-.page, header, footer
+
+.page-container
+  background-color: $background-color
+  padding-bottom: 20px
+.page, header
   max-width: 960px
   margin: 0 auto
 
 header
-  min-height: 140px
+  min-height: 120px
   position: relative
   
 footer
-  min-height: 200px
+  min-height: 150px
   text-align: center
+  border-top: 2px solid #fff
+  background-color: $font-color
+  
+  p
+    color: $background-color
+    text-shadow: none
+    @include padding-leader()
+    margin: 0
 
-body::before
+.nothing::before
   content: " "
   position: fixed
   bottom: 0
   left: 0
-  height: 100px
+  height: 60px
   width: 100%
-  @include background-image(linear-gradient($transparent-background, $background-color 80px))
+  @include background-image(linear-gradient($transparent-background, $background-color 50px))
 
 /* Post layout bits
 
 article header
   min-height: 0
-
+  
+  .date
+    font-family: "PT Sans", Helvetica, Arial, sans-serif
+    margin-top: -40px
+    color: #888
+    
 section.content
   width: 75%
   float: left
@@ -62,7 +82,15 @@ section.content
 section.sidebar
   width: 20%
   float: right
-
+  @include opacity(0.2)
+  
+  &:hover
+    @include opacity(1)
+  p
+    @include leader(2)
+    @include adjust-font-size-to(18px)
+    color: #888
+    
 .entry
   z-index: 4
   
@@ -161,7 +189,7 @@ section.sidebar
     z-index: -2
   
   .bounce1
-    top: 114px
+    top: 111px
     left: -49px
     width: 70px
     height: 80px
