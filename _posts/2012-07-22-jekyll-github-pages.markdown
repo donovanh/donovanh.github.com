@@ -45,7 +45,9 @@ After waiting a few minutes for the site to initialise (it's instant on future p
 
 ##See under the hood on Github
 
-If you'd like to poke at the code behind this site, it's [on github right now][6]. Have fun, and if you feel like suggesting improvements I'd appreciate it.
+I'm sure there are a few more blogposts in the process used to create this site, and as I learn more I'll continue to update.
+
+In the meantime if you'd like to poke at the code behind this site, it's [on github right now][6]. Have fun, and if you feel like suggesting improvements I'd appreciate it.
 
  [1]: http://jekyllrb.com/
  [2]: http://pages.github.com
