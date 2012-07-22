@@ -96,12 +96,57 @@ section.sidebar
   
   p:first-child
     @include leader()
-
-  p:last-child
-    @include trailer()
   
   aside
     @include rhythm-borders()
+
+.tags
+
+  ul
+    padding: 0
+    margin: 0
+    @include trailer()
+
+  li
+    list-style: none
+    display: inline-block
+    @include adjust-font-size-to(16px)
+    margin: 0
+      
+    a
+      color: $font-color
+
+.sharing
+  
+  ul
+    padding: 0
+
+  li
+    list-style: none
+    display: inline-block
+    background-color: #ddd
+    border: 1px solid #fff
+    @include border-radius(5px)
+    padding: 5px 8px
+    z-index: 5
+    position: relative
+    @include adjust-font-size-to(16px)
+    margin: 0
+    
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      border: 4px solid #ccc
+      z-index: 0
+      @include border-radius(5px)
+      
+    a
+      color: $font-color
 
 /* Strange bouncer thing
 .bouncer-container *

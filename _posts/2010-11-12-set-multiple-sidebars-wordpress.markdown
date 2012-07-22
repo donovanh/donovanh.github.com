@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setting multiple sidebars in Wordpress"
+title: "Multiple sidebars in Wordpress"
 description: "A few tips for setting up more than one sidebar in a Wordpress theme. Multiple sidebars can be used for footers, internal page areas, etc."
 category: 
 tags: [wordpress]

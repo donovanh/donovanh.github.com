@@ -592,13 +592,66 @@ section.sidebar p {
 .entry p:first-child {
   margin-top: 1.5em;
 }
-.entry p:last-child {
-  margin-bottom: 1.5em;
-}
 .entry aside {
   border-style: dashed;
   border-width: 0.05em;
   padding: 1.45em;
+}
+
+.tags ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+.tags li {
+  list-style: none;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.875em;
+  margin: 0;
+}
+.tags li a {
+  color: #2c3437;
+}
+
+.sharing ul {
+  padding: 0;
+}
+.sharing li {
+  list-style: none;
+  display: inline-block;
+  background-color: #dddddd;
+  border: 1px solid white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  z-index: 5;
+  position: relative;
+  font-size: 0.8em;
+  line-height: 1.875em;
+  margin: 0;
+}
+.sharing li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid #cccccc;
+  z-index: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.sharing li a {
+  color: #2c3437;
 }
 
 /* Strange bouncer thing */
