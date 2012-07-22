@@ -12,38 +12,44 @@ While <a href="http://www.wordpress.org">Wordpress</a> was originally developed 
 Either in a text editor, or under <em>Themes-&gt;Editor</em>, open the file "functions.php". This is the file that tells your theme that it is going to have multiple sidebars. For the purposes of this example, we will be setting up custom sidebars for each of the "home", "about us", "blog" and "contact us" pages. You may wish to edit this to fit your needs.
 
 The following text might already be in your functions.php file:
-<pre>if ( function_exists('register_sidebar') )</pre>
+    
+    if ( function_exists('register_sidebar') )
+    
 You'll want to replace it with something like this:
 
-    if ( function_exists('register_sidebar') ) {
-      register_sidebar(array(
-        'name' => 'Home',
-        'description' => 'Your homepage sidebar.',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
-      ));
+{% highlight php %}
+<?php
+if ( function_exists('register_sidebar') ) {
+  register_sidebar(array(
+    'name' => 'Home',
+    'description' => 'Your homepage sidebar.',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+  ));
 
-      register_sidebar(array(
-        'name' => 'About',
-        'description' => 'Your about us sidebar.',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
-      ));
+  register_sidebar(array(
+    'name' => 'About',
+    'description' => 'Your about us sidebar.',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+  ));
 
-      register_sidebar(array(
-        'name' => 'Blog',
-        'description' => 'Blog, and default fallback sidebar.',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
-      ));
+  register_sidebar(array(
+    'name' => 'Blog',
+    'description' => 'Blog, and default fallback sidebar.',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+  ));
 
-      register_sidebar(array(
-        'name' => 'Contact',
-        'description' => 'Contact us sidebar.',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
-      ));
-    }
+  register_sidebar(array(
+    'name' => 'Contact',
+    'description' => 'Contact us sidebar.',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+  ));
+}
+?>
+{% endhighlight %}
       
 Save the functions file and if necessary, upload it to your theme folder.
 <h3>What is this code doing?</h3>
@@ -56,14 +62,15 @@ The easiest way to obtain the page ID is to browse to your <em>Pages</em> menu i
 Go through each of your pages and take note of each ID, as they will be needed next.
 <h3>Sidebar.php</h3>
 Open the file sidebar.php. In this file we will add the code that connects your page IDs to their named sidebars. The code looks like this:
-
-    <?php
-      // dynamic_sidebar()
-      if (is_page(2)) dynamic_sidebar('Home');
-      elseif (is_page(4)) dynamic_sidebar('About');
-      elseif (is_page(6)) dynamic_sidebar('Contact');
-      else dynamic_sidebar('Blog');
-    ?>
+{% highlight php %}
+<?php
+  // dynamic_sidebar()
+  if (is_page(2)) dynamic_sidebar('Home');
+  elseif (is_page(4)) dynamic_sidebar('About');
+  elseif (is_page(6)) dynamic_sidebar('Contact');
+  else dynamic_sidebar('Blog');
+?>
+{% endhighlight %}
     
 You will need to replace the numbers (2,4,6) in this code with the corresponding IDs from earlier. Place this code into your sidebar.php file where you would like your sidebar html to appear. This is usually within a sidebar div or similar.
 

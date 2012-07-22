@@ -9,9 +9,5 @@ tags: [24theweb]
 
 We were late to hear about the [24theweb][1] project, an Irish collaboration to get some crazy people together to build 3 awesome websites in 24 hours for charity. Well done to them, the [end result][2] speaks for itself.
 
-Did you enjoy this article? Let us know in the comments below!
-
-### Leave a comment
-
  [1]: http://24theweb.com/
  [2]: http://24theweb.com/2010/11/the-sites/

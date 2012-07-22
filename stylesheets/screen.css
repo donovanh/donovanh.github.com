@@ -572,12 +572,20 @@ section.content {
 section.sidebar {
   width: 20%;
   float: right;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-  opacity: 0.2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 section.sidebar:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 section.sidebar p {
   margin-top: 3em;
@@ -1189,3 +1197,291 @@ section.sidebar p {
     height: 60px;
   }
 }
+
+/* Pygments */
+.hll {
+  background-color: #ffffcc;
+}
+
+.c {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment */
+.err {
+  border: 1px solid red;
+}
+
+/* Error */
+.k {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword */
+.o {
+  color: #666666;
+}
+
+/* Operator */
+.cm {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+.cp {
+  color: #bc7a00;
+}
+
+/* Comment.Preproc */
+.c1, .cs {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* Comment.Special */
+.gd {
+  color: #a00000;
+}
+
+/* Generic.Deleted */
+.ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.gr {
+  color: red;
+}
+
+/* Generic.Error */
+.gh {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+.gi {
+  color: #00a000;
+}
+
+/* Generic.Inserted */
+.go {
+  color: gray;
+}
+
+/* Generic.Output */
+.gp {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+.gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.gu {
+  color: purple;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+.gt {
+  color: #0040d0;
+}
+
+/* Generic.Traceback */
+.kc, .kd, .kn {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+.kp {
+  color: green;
+}
+
+/* Keyword.Pseudo */
+.kr {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+.kt {
+  color: #b00040;
+}
+
+/* Keyword.Type */
+.m {
+  color: #666666;
+}
+
+/* Literal.Number */
+.s {
+  color: #ba2121;
+}
+
+/* Literal.String */
+.na {
+  color: #7d9029;
+}
+
+/* Name.Attribute */
+.nb {
+  color: green;
+}
+
+/* Name.Builtin */
+.nc {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Name.Class */
+.no {
+  color: #880000;
+}
+
+/* Name.Constant */
+.nd {
+  color: #aa22ff;
+}
+
+/* Name.Decorator */
+.ni {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Name.Entity */
+.ne {
+  color: #d2413a;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+.nf {
+  color: blue;
+}
+
+/* Name.Function */
+.nl {
+  color: #a0a000;
+}
+
+/* Name.Label */
+.nn {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Name.Namespace */
+.nt {
+  color: green;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+.nv {
+  color: #19177c;
+}
+
+/* Name.Variable */
+.ow {
+  color: #aa22ff;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+.w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+.mf, .mh, .mi, .mo {
+  color: #666666;
+}
+
+/* Literal.Number.Float */
+/* Literal.Number.Hex */
+/* Literal.Number.Integer */
+/* Literal.Number.Oct */
+.sb, .sc {
+  color: #ba2121;
+}
+
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+.sd {
+  color: #ba2121;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+.s2 {
+  color: #ba2121;
+}
+
+/* Literal.String.Double */
+.se {
+  color: #bb6622;
+  font-weight: bold;
+}
+
+/* Literal.String.Escape */
+.sh {
+  color: #ba2121;
+}
+
+/* Literal.String.Heredoc */
+.si {
+  color: #bb6688;
+  font-weight: bold;
+}
+
+/* Literal.String.Interpol */
+.sx {
+  color: green;
+}
+
+/* Literal.String.Other */
+.sr {
+  color: #bb6688;
+}
+
+/* Literal.String.Regex */
+.s1 {
+  color: #ba2121;
+}
+
+/* Literal.String.Single */
+.ss {
+  color: #19177c;
+}
+
+/* Literal.String.Symbol */
+.bp {
+  color: green;
+}
+
+/* Name.Builtin.Pseudo */
+.vc, .vg, .vi {
+  color: #19177c;
+}
+
+/* Name.Variable.Class */
+/* Name.Variable.Global */
+/* Name.Variable.Instance */
+.il {
+  color: #666666;
+}
+
+/* Literal.Number.Integer.Long */
