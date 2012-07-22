@@ -247,20 +247,28 @@ section.sidebar
     left: 161px
 
 @include keyframes(move-bouncer)
+  0%
+    height: 40px
+    top: 105px
   15%
     top: 64px
+    height: 60px
   30%, 33%
-    top: 85px
+    top: 105px
     left: 21px
     @include opacity(1)
+    height: 40px
   45%
     top: 64px
     @include opacity(1)
+    height: 60px
   63%, 64%
-    top: 86px
+    top: 106px
     left: 91px
     @include opacity(1)
+    height: 40px
   74%, 100%
     top: 74px
     left: 104px
     @include opacity(1)
+    height: 60px
