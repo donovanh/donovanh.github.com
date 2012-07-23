@@ -38,7 +38,7 @@ Setting up and deploying this site was straightforward. I set up a new repo call
     $ git init
     $ git add .
     $ git commit -a -m "First commit"
-    $ git remote add origin git@GitHub.com:donovanh/donovanh.github.com.git
+    $ git remote add origin git@github.com:donovanh/donovanh.github.com.git
     $ git push -u origin master
     
 After waiting a few minutes for the site to be created, the site was available at [donovanh.github.com][7].
@@ -50,17 +50,17 @@ I'm sure there are a few more blogposts in the process used to create this site,
 In the meantime if you'd like to poke at the code behind this site, it's [on GitHub right now][6]. Have fun, and if you feel like suggesting improvements I'd appreciate it.
 
  [1]: http://jekyllrb.com/
- [2]: http://pages.GitHub.com
- [3]: https://GitHub.com/mojombo/jekyll/wiki/install
- [4]: https://GitHub.com/plusjade/jekyll-bootstrap
- [5]: https://GitHub.com/maciakl/Sample-Jekyll-Site
- [6]: https://GitHub.com/donovanh/donovanh.github.com
+ [2]: http://pages.github.com
+ [3]: https://github.com/mojombo/jekyll/wiki/install
+ [4]: https://github.com/plusjade/jekyll-bootstrap
+ [5]: https://github.com/maciakl/Sample-Jekyll-Site
+ [6]: https://github.com/donovanh/donovanh.github.com
  [7]: http://donovanh.github.com
  [8]: http://compass-style.org/install/
  [9]: https://twitter.com/irishstu
  [10]: http://compass-style.org/reference/compass/typography/vertical_rhythm/
  [11]: http://www.youtube.com/watch?v=ls3Clk-kz3s
- [12]: https://GitHub.com/davidwinter/wordpress-to-jekyll
+ [12]: https://github.com/davidwinter/wordpress-to-jekyll
  [13]: http://old-wp.slekx.com/the-markdown-tutorial/
  [14]: http://daringfireball.net/projects/markdown/basics/
- [15]: https://raw.GitHub.com/donovanh/donovanh.github.com/master/_posts/2012-07-22-jekyll-GitHub-pages.markdown
+ [15]: https://raw.github.com/donovanh/donovanh.github.com/master/_posts/2012-07-22-jekyll-github-pages.markdown
