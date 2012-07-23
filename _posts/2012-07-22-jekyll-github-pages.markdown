@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Get started with Jekyll & Github Pages"
-description: "How I built this blog. (Hint: Using Jekyll and Github Pages)"
+title: "Using Jekyll & GitHub Pages"
+description: "How I built this blog. (Hint: By using Jekyll and GitHub Pages)"
 category: 
-tags: [jekyl, github pages]
+tags: [jekyl, GitHub pages]
 ---
 This weekend I decided to rebuild my old hop.ie website. It was more of a portfolio site and not enough of a blog so I took the opportunity to remake the site to be more focussed.
 
-I decided to try out [Jekyll][1], a "blog aware, static site generator", as well as [Github Pages][2]. Github pages allows you to serve static websites for free. It's extremely fast and easy to deploy if you're used to Git.
+I decided to try out [Jekyll][1], a "blog aware, static site generator", as well as [GitHub Pages][2]. GitHub pages allows you to serve static websites for free. It's extremely fast and easy to deploy if you're used to Git.
 
 ##Getting started with Jekyll
 
@@ -29,38 +29,38 @@ There are a million plugins and ways to convert Wordpress posts into other forma
 
 Markdown is just lovely, compared to the bloated Wordpress WYSIWYG I escaped. I did need a quick introduction to some of the syntax, and [this one from Slekz][13] was handy. More info is available from [Daring Fireball][14]. (You can also see the source of [this post][15].)
 
-##Deploying to Github Pages
+##Deploying to GitHub Pages
 
-Pages hosted on Github are generated through their own version of Jekyll. Because of this, no custom plugins will work. However if you wanted to pre-process your site locally and publish the static result, that would work too.
+Pages hosted on GitHub are generated through their own version of Jekyll. Because of this, no custom plugins will work. However if you wanted to pre-process your site locally and publish the static result, that would work too.
 
 Setting up and deploying this site was straightforward. I set up a new repo called [donovanh.github.com][6] (Note: You'll want to add **\_site/\*** to your *.gitignore* file), then applied the following to my local Jekyll version of the site.
 
     $ git init
     $ git add .
     $ git commit -a -m "First commit"
-    $ git remote add origin git@github.com:donovanh/donovanh.github.com.git
+    $ git remote add origin git@GitHub.com:donovanh/donovanh.github.com.git
     $ git push -u origin master
     
 After waiting a few minutes for the site to be created, the site was available at [donovanh.github.com][7].
 
-##See under the hood on Github
+##See under the hood on GitHub
 
 I'm sure there are a few more blogposts in the process used to create this site, and as I learn more I'll continue to update.
 
-In the meantime if you'd like to poke at the code behind this site, it's [on github right now][6]. Have fun, and if you feel like suggesting improvements I'd appreciate it.
+In the meantime if you'd like to poke at the code behind this site, it's [on GitHub right now][6]. Have fun, and if you feel like suggesting improvements I'd appreciate it.
 
  [1]: http://jekyllrb.com/
- [2]: http://pages.github.com
- [3]: https://github.com/mojombo/jekyll/wiki/install
- [4]: https://github.com/plusjade/jekyll-bootstrap
- [5]: https://github.com/maciakl/Sample-Jekyll-Site
- [6]: https://github.com/donovanh/donovanh.github.com
+ [2]: http://pages.GitHub.com
+ [3]: https://GitHub.com/mojombo/jekyll/wiki/install
+ [4]: https://GitHub.com/plusjade/jekyll-bootstrap
+ [5]: https://GitHub.com/maciakl/Sample-Jekyll-Site
+ [6]: https://GitHub.com/donovanh/donovanh.github.com
  [7]: http://donovanh.github.com
  [8]: http://compass-style.org/install/
  [9]: https://twitter.com/irishstu
  [10]: http://compass-style.org/reference/compass/typography/vertical_rhythm/
  [11]: http://www.youtube.com/watch?v=ls3Clk-kz3s
- [12]: https://github.com/davidwinter/wordpress-to-jekyll
+ [12]: https://GitHub.com/davidwinter/wordpress-to-jekyll
  [13]: http://old-wp.slekx.com/the-markdown-tutorial/
  [14]: http://daringfireball.net/projects/markdown/basics/
- [15]: https://raw.github.com/donovanh/donovanh.github.com/master/_posts/2012-07-22-jekyll-github-pages.markdown
+ [15]: https://raw.GitHub.com/donovanh/donovanh.github.com/master/_posts/2012-07-22-jekyll-GitHub-pages.markdown
