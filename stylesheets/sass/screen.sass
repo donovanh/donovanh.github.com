@@ -153,49 +153,58 @@ section.sidebar
 /* Strange bouncer thing
 .bouncer-container *
   position: absolute
-
+  
 .bouncer-container
   position: absolute
+  margin: 0
+  width: 200px
+  height: 100px
+  top: 80px
+  
+  
   a
     text-indent: -9999px
-    top: 60px
-    left: -50px
-    height: 80px
-    z-index: 3
+    z-index: 0
     
     &:hover
       .bouncer
         background-color: $bouncer-color-hover
-        @include transition(color 0.2s ease-out)
+        @include transition(background-color 0.2s ease-out)
         cursor: pointer
       .ear1, .ear2
         background-color: $bouncer-color-hover
-        @include transition(color 0.2s ease-out)
+        @include transition(background-color 0.2s ease-out)
   
   .mask
     width: 200px
     height: 38px
     position: absolute
-    top: 106px
+    top: 42px
     left: -50px
     background-color: $background-color
     z-index: 1
 
   .bouncer
-    top: 85px
+    top: 21px
     left: -50px
     width: 50px
     height: 60px
     background-color: $bouncer-color
-    @include transition(color 0.2s ease-out)
+    @include transition(background-color 0.2s ease-out)
     @include border-radius(25px, 50%)
     @include opacity(0)
     z-index: 2
       
+  .bouncer-end-position
+    top: 10px
+    left: 104px
+    @include opacity(1)  
+  
   .ear1, .ear2
     width: 8px
     height: 28px
     background-color: $bouncer-color
+    @include transition(background-color 0.2s ease-out)
     @include border-radius(50%, 50%)
   
   .ear1
@@ -236,7 +245,7 @@ section.sidebar
     z-index: -2
   
   .bounce1
-    top: 111px
+    top: 47px
     left: -49px
     width: 70px
     height: 80px
@@ -255,7 +264,7 @@ section.sidebar
       @include border-radius(50%, 50%)
 
   .bounce2
-    top: 107px
+    top: 43px
     left: 20px
     width: 70px
     height: 80px
@@ -275,7 +284,7 @@ section.sidebar
       @include border-radius(50%, 50%)
       
   .bounce3
-    top: 111px
+    top: 47px
     left: 88px
     width: 70px
     height: 80px
@@ -313,6 +322,7 @@ section.sidebar
   @include animation-duration(2s)
   @include animation-fill-mode(forwards)
 
+
 @include keyframes(move-box)
   29%, 32%
     left: 21px
@@ -324,313 +334,26 @@ section.sidebar
 @include keyframes(move-bouncer)
   0%
     height: 40px
-    top: 105px
+    top: 42px
   15%
-    top: 64px
+    top: 0
     height: 60px
   30%, 33%
-    top: 105px
+    top: 42px
     left: 21px
     @include opacity(1)
     height: 40px
   45%
-    top: 64px
+    top: 0
     @include opacity(1)
     height: 60px
   63%, 64%
-    top: 106px
+    top: 42px
     left: 91px
     @include opacity(1)
     height: 40px
   74%, 100%
-    top: 74px
+    top: 10px
     left: 104px
     @include opacity(1)
     height: 60px
-
-/* Pygments
-
-.hll
-  background-color: #ffffcc
-
-.c
-  color: #408080
-  font-style: italic
-
-/* Comment
-
-.err
-  border: 1px solid #FF0000
-
-/* Error
-
-.k
-  color: #008000
-  font-weight: bold
-
-/* Keyword
-
-.o
-  color: #666666
-
-/* Operator
-
-.cm
-  color: #408080
-  font-style: italic
-
-/* Comment.Multiline
-
-.cp
-  color: #BC7A00
-
-/* Comment.Preproc
-
-.c1, .cs
-  color: #408080
-  font-style: italic
-
-/* Comment.Single
-/* Comment.Special
-
-.gd
-  color: #A00000
-
-/* Generic.Deleted
-
-.ge
-  font-style: italic
-
-/* Generic.Emph
-
-.gr
-  color: #FF0000
-
-/* Generic.Error
-
-.gh
-  color: #000080
-  font-weight: bold
-
-/* Generic.Heading
-
-.gi
-  color: #00A000
-
-/* Generic.Inserted
-
-.go
-  color: #808080
-
-/* Generic.Output
-
-.gp
-  color: #000080
-  font-weight: bold
-
-/* Generic.Prompt
-
-.gs
-  font-weight: bold
-
-/* Generic.Strong
-
-.gu
-  color: #800080
-  font-weight: bold
-
-/* Generic.Subheading
-
-.gt
-  color: #0040D0
-
-/* Generic.Traceback
-
-.kc, .kd, .kn
-  color: #008000
-  font-weight: bold
-
-/* Keyword.Constant
-/* Keyword.Declaration
-/* Keyword.Namespace
-
-.kp
-  color: #008000
-
-/* Keyword.Pseudo
-
-.kr
-  color: #008000
-  font-weight: bold
-
-/* Keyword.Reserved
-
-.kt
-  color: #B00040
-
-/* Keyword.Type
-
-.m
-  color: #666666
-
-/* Literal.Number
-
-.s
-  color: #BA2121
-
-/* Literal.String
-
-.na
-  color: #7D9029
-
-/* Name.Attribute
-
-.nb
-  color: #008000
-
-/* Name.Builtin
-
-.nc
-  color: #0000FF
-  font-weight: bold
-
-/* Name.Class
-
-.no
-  color: #880000
-
-/* Name.Constant
-
-.nd
-  color: #AA22FF
-
-/* Name.Decorator
-
-.ni
-  color: #999999
-  font-weight: bold
-
-/* Name.Entity
-
-.ne
-  color: #D2413A
-  font-weight: bold
-
-/* Name.Exception
-
-.nf
-  color: #0000FF
-
-/* Name.Function
-
-.nl
-  color: #A0A000
-
-/* Name.Label
-
-.nn
-  color: #0000FF
-  font-weight: bold
-
-/* Name.Namespace
-
-.nt
-  color: #008000
-  font-weight: bold
-
-/* Name.Tag
-
-.nv
-  color: #19177C
-
-/* Name.Variable
-
-.ow
-  color: #AA22FF
-  font-weight: bold
-
-/* Operator.Word
-
-.w
-  color: #bbbbbb
-
-/* Text.Whitespace
-
-.mf, .mh, .mi, .mo
-  color: #666666
-
-/* Literal.Number.Float
-/* Literal.Number.Hex
-/* Literal.Number.Integer
-/* Literal.Number.Oct
-
-.sb, .sc
-  color: #BA2121
-
-/* Literal.String.Backtick
-/* Literal.String.Char
-
-.sd
-  color: #BA2121
-  font-style: italic
-
-/* Literal.String.Doc
-
-.s2
-  color: #BA2121
-
-/* Literal.String.Double
-
-.se
-  color: #BB6622
-  font-weight: bold
-
-/* Literal.String.Escape
-
-.sh
-  color: #BA2121
-
-/* Literal.String.Heredoc
-
-.si
-  color: #BB6688
-  font-weight: bold
-
-/* Literal.String.Interpol
-
-.sx
-  color: #008000
-
-/* Literal.String.Other
-
-.sr
-  color: #BB6688
-
-/* Literal.String.Regex
-
-.s1
-  color: #BA2121
-
-/* Literal.String.Single
-
-.ss
-  color: #19177C
-
-/* Literal.String.Symbol
-
-.bp
-  color: #008000
-
-/* Name.Builtin.Pseudo
-
-.vc, .vg, .vi
-  color: #19177C
-
-/* Name.Variable.Class
-/* Name.Variable.Global
-/* Name.Variable.Instance
-
-.il
-  color: #666666
-
-/* Literal.Number.Integer.Long
