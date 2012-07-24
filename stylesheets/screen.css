@@ -949,7 +949,6 @@ section.sidebar p {
   color: #2c3437;
 }
 
-/* Strange bouncer thing */
 .bouncer-container * {
   position: absolute;
 }
@@ -1173,6 +1172,18 @@ section.sidebar p {
   -webkit-border-radius: 50% 50%;
   -moz-border-radius: 50% / 50%;
   border-radius: 50% / 50%;
+}
+
+html.no-js .bouncer-container a {
+  background: url(/images/bouncer.png) no-repeat;
+  height: 100px;
+  left: -50px;
+}
+html.no-js .bouncer-container a:hover {
+  background-image: url(/images/bouncer-hover.png);
+}
+html.no-js .bouncer-container .mask {
+  display: none;
 }
 
 .move-mask {

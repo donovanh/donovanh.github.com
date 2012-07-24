@@ -150,22 +150,21 @@ section.sidebar
     a
       color: $font-color
 
-/* Strange bouncer thing
 .bouncer-container *
   position: absolute
-  
+
 .bouncer-container
   position: absolute
   margin: 0
   width: 200px
   height: 100px
   top: 80px
-  
-  
+
+
   a
     text-indent: -9999px
     z-index: 0
-    
+  
     &:hover
       .bouncer
         background-color: $bouncer-color-hover
@@ -174,7 +173,7 @@ section.sidebar
       .ear1, .ear2
         background-color: $bouncer-color-hover
         @include transition(background-color 0.2s ease-out)
-  
+
   .mask
     width: 200px
     height: 38px
@@ -194,29 +193,29 @@ section.sidebar
     @include border-radius(25px, 50%)
     @include opacity(0)
     z-index: 2
-      
+    
   .bouncer-end-position
     top: 10px
     left: 104px
     @include opacity(1)  
-  
+
   .ear1, .ear2
     width: 8px
     height: 28px
     background-color: $bouncer-color
     @include transition(background-color 0.2s ease-out)
     @include border-radius(50%, 50%)
-  
+
   .ear1
     top: -12px
     left: 10px
     @include rotate(-15deg)
-    
+  
   .ear2
     top: -12px
     right: 10px
     @include rotate(15deg)
-    
+  
   .eye1, .eye2
     top: 10px
     left: 20px
@@ -224,15 +223,15 @@ section.sidebar
     width: 5px
     height: 6px
     @include border-radius(50%, 50%)
-    
+  
   .eye1
     top: 12px
     left: 22px
-    
+  
   .eye2
     top: 12px
     left: 32px
-    
+  
   .mouth
     top: 24px
     left: 22px
@@ -240,10 +239,10 @@ section.sidebar
     height: 8px
     background-color: $background-color
     @include border-bottom-radius(25px)
-  
+
   .bounce1::before, .bounce2::before, .bounce3::before, .bounce3::after
     z-index: -2
-  
+
   .bounce1
     top: 47px
     left: -49px
@@ -253,7 +252,7 @@ section.sidebar
     @include border-radius(50%, 50%)
     @include opacity(0.05)
     @include rotate(20deg)
-    
+  
     &::before
       content: " "
       position: absolute
@@ -282,7 +281,7 @@ section.sidebar
       width: 76px
       height: 85px
       @include border-radius(50%, 50%)
-      
+    
   .bounce3
     top: 47px
     left: 88px
@@ -311,6 +310,22 @@ section.sidebar
       width: 100px
       height: 60px
       @include border-radius(50%, 50%) 
+    
+html.no-js
+  .bouncer-container
+    a
+      background: url(/images/bouncer.png) no-repeat
+      height: 100px
+      left: -50px
+      
+      &:hover
+        background-image: url(/images/bouncer-hover.png)
+    .mask
+      display: none
+    
+      
+      
+      
       
 .move-mask
   @include animation-name(move-box)

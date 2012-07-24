@@ -10,8 +10,4 @@
 		$('.bouncer-container').find('.mask').addClass('move-mask');
 	}
 	
-	$('.bouncer-container a').hover(function(e) {
-		$(e.target).toggleClass('hovered');
-	});
-	
 }());
