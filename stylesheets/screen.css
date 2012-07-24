@@ -758,6 +758,11 @@ html {
 
 /* Colours */
 /* Shadow defaults */
+* {
+  /* Some font love */
+  -webkit-font-smoothing: antialiased;
+}
+
 html {
   font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
   text-shadow: 0 -1px 0 white;
