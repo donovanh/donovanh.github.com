@@ -5,7 +5,7 @@ description: "How I built this blog. (Hint: By using Jekyll and GitHub Pages)"
 category: 
 tags: [jekyl, GitHub pages]
 ---
-This weekend I decided to rebuild my old hop.ie website.
+Hop.ie needed a new look, and what better opportunity to learn a new approach.
 
 I decided to try out [Jekyll][1], a "blog aware, static site generator", as well as [GitHub Pages][2]. GitHub pages allows you to serve static websites for free. It's extremely fast and easy to deploy if you're used to Git.
 
