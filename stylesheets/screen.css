@@ -1174,18 +1174,6 @@ section.sidebar p {
   border-radius: 50% / 50%;
 }
 
-html.no-js .bouncer-container a {
-  background: url(/images/bouncer.png) no-repeat;
-  height: 100px;
-  left: -50px;
-}
-html.no-js .bouncer-container a:hover {
-  background-image: url(/images/bouncer-hover.png);
-}
-html.no-js .bouncer-container .mask {
-  display: none;
-}
-
 .move-mask {
   -webkit-animation-name: move-box;
   -moz-animation-name: move-box;

@@ -1,6 +1,10 @@
-/*
-  Welcome to Compass. Use this file to write IE specific override styles.
-  Import this file using the following HTML or equivalent:
-  <!--[if IE]>
-    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
+.bouncer-container
+  a
+    background: url(/images/bouncer.png) no-repeat
+    height: 100px
+    left: -50px
+    
+    &:hover
+      background-image: url(/images/bouncer-hover.png)
+  .mask, .bouncer, .bounce1, .bounce2, .bounce3
+    display: none
