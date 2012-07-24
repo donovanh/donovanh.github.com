@@ -3,7 +3,7 @@
   height: 100px;
   width: 220px;
   left: -50px;
-  top: 16px;
+  top: -10px;
 }
 .bouncer-container a:hover {
   background-image: url(/images/bouncer-hover.png);
