@@ -13,6 +13,7 @@ body
   margin: 0
   background-color: $font-color
   border-top: 20px solid $font-color
+  border-bottom: 2px solid #fff
 
 /* Headings
 
@@ -39,7 +40,8 @@ a
 .page-container
   background-color: $background-color
   padding-bottom: 20px
-.page, header
+  
+.page, header, footer
   max-width: 960px
   margin: 0 auto
 
@@ -49,8 +51,6 @@ header
   
 footer
   min-height: 150px
-  text-align: center
-  border-top: 2px solid #fff
   background-color: $font-color
   
   p
@@ -58,15 +58,9 @@ footer
     text-shadow: none
     @include padding-leader()
     margin: 0
-
-.nothing::before
-  content: " "
-  position: fixed
-  bottom: 0
-  left: 0
-  height: 60px
-  width: 100%
-  @include background-image(linear-gradient($transparent-background, $background-color 50px))
+    
+  a, a:visited
+    color: $footer-font-color
 
 /* Post layout bits
 
@@ -78,12 +72,12 @@ article header
     margin-top: -40px
     color: #888
     
-section.content
+section.content, section.footer-content
   width: 75%
   float: left
   padding-right: 5%
 
-section.sidebar
+sidebar
   width: 20%
   float: right
   @include opacity(0.6)

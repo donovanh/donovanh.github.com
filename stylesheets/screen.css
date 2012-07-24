@@ -458,6 +458,7 @@ td {
     page-break-after: avoid;
   }
 }
+/* @import compass/utilities */
 /* Pygments */
 .hll {
   background-color: #ffffcc;
@@ -773,6 +774,7 @@ body {
   margin: 0;
   background-color: #2c3437;
   border-top: 20px solid #2c3437;
+  border-bottom: 2px solid white;
 }
 
 /* Headings */
@@ -808,7 +810,7 @@ a:hover {
   padding-bottom: 20px;
 }
 
-.page, header {
+.page, header, footer {
   max-width: 960px;
   margin: 0 auto;
 }
@@ -820,8 +822,6 @@ header {
 
 footer {
   min-height: 150px;
-  text-align: center;
-  border-top: 2px solid white;
   background-color: #2c3437;
 }
 footer p {
@@ -830,19 +830,8 @@ footer p {
   padding-top: 1.5em;
   margin: 0;
 }
-
-.nothing::before {
-  content: " ";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 50, color-stop(0%, rgba(238, 238, 238, 0)), color-stop(100%, #ffffee));
-  background-image: -webkit-linear-gradient(rgba(238, 238, 238, 0), #ffffee 50px);
-  background-image: -moz-linear-gradient(rgba(238, 238, 238, 0), #ffffee 50px);
-  background-image: -o-linear-gradient(rgba(238, 238, 238, 0), #ffffee 50px);
-  background-image: linear-gradient(rgba(238, 238, 238, 0), #ffffee 50px);
+footer a, footer a:visited {
+  color: #0066aa;
 }
 
 /* Post layout bits */
@@ -855,13 +844,13 @@ article header .date {
   color: #888888;
 }
 
-section.content {
+section.content, section.footer-content {
   width: 75%;
   float: left;
   padding-right: 5%;
 }
 
-section.sidebar {
+sidebar {
   width: 20%;
   float: right;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
@@ -871,7 +860,7 @@ section.sidebar {
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
-section.sidebar:hover {
+sidebar:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
@@ -879,7 +868,7 @@ section.sidebar:hover {
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
-section.sidebar p {
+sidebar p {
   margin-top: 3em;
   font-size: 0.9em;
   line-height: 1.66667em;
