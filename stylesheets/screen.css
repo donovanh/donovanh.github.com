@@ -1502,13 +1502,13 @@ sidebar p {
 /* Overrides */
 @media only screen and (max-width: 500px) {
   /* Style adjustments for phoney sizes */
-  section.content {
+  section.content, section.footer-content {
     width: auto;
     float: none;
     padding: 0 20px;
   }
 
-  section.sidebar {
+  sidebar {
     width: auto;
     float: none;
     text-align: center;
