@@ -966,7 +966,7 @@ section.sidebar p {
   z-index: 0;
 }
 .bouncer-container a:hover .bouncer {
-  background-color: #1a94e1;
+  background-color: #0066aa;
   -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
@@ -974,7 +974,7 @@ section.sidebar p {
   cursor: pointer;
 }
 .bouncer-container a:hover .ear1, .bouncer-container a:hover .ear2 {
-  background-color: #1a94e1;
+  background-color: #0066aa;
   -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
