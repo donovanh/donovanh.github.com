@@ -1506,3 +1506,41 @@ html.no-js .bouncer-container .mask {
     height: 60px;
   }
 }
+
+/* Overrides */
+@media only screen and (max-width: 500px) {
+  /* Style adjustments for phoney sizes */
+  section.content {
+    width: auto;
+    float: none;
+    padding: 0 20px;
+  }
+
+  section.sidebar {
+    width: auto;
+    float: none;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.8em;
+    line-height: 1.875em;
+  }
+
+  h1 {
+    font-size: 1.2em;
+    line-height: 1.25em;
+  }
+
+  header {
+    min-height: 90px;
+  }
+
+  article header .date {
+    margin-top: -26px;
+  }
+
+  .bouncer-container {
+    top: 30px;
+  }
+}
