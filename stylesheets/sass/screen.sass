@@ -311,7 +311,19 @@ sidebar
       height: 60px
       @include border-radius(50%, 50%) 
       
-      
+/* Override for older browsers
+.bouncer-container.old
+  a
+    background: url(/images/bouncer.png) no-repeat
+    height: 100px
+    width: 220px
+    left: -50px
+    top: -10px
+    
+    &:hover
+      background-image: url(/images/bouncer-hover.png)
+  .mask, .bouncer, .bounce1, .bounce2, .bounce3
+    display: none      
       
       
 .move-mask

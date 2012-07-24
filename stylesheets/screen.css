@@ -1171,6 +1171,21 @@ sidebar p {
   border-radius: 50% / 50%;
 }
 
+/* Override for older browsers */
+.bouncer-container.old a {
+  background: url(/images/bouncer.png) no-repeat;
+  height: 100px;
+  width: 220px;
+  left: -50px;
+  top: -10px;
+}
+.bouncer-container.old a:hover {
+  background-image: url(/images/bouncer-hover.png);
+}
+.bouncer-container.old .mask, .bouncer-container.old .bouncer, .bouncer-container.old .bounce1, .bouncer-container.old .bounce2, .bouncer-container.old .bounce3 {
+  display: none;
+}
+
 .move-mask {
   -webkit-animation-name: move-box;
   -moz-animation-name: move-box;
