@@ -4,7 +4,7 @@ title: 'Wordpress plugin: QR Print'
 description: "I made a Wordpress plugin. Probably won't happen again, I swear."
 tags: [wordpress]
 ---
-Introducing a neat little plugin I'm working on, <a href="/qr">QR Print</a>. It simply adds a QR code that contains the current page URL to the bottom of your page. It also hides it so that it only shows on the printed version of your page.
+Introducing a neat little plugin I'm working on, <a href="http://wordpress.org/extend/plugins/qr-print/">QR Print</a>. It simply adds a QR code that contains the current page URL to the bottom of your page. It also hides it so that it only shows on the printed version of your page.
 
 It works by making use of the Google Chart API. Google has a range of image-generating stuff that includes pretty pie charts and graphs, and also includes a handy QR code generator.
 
