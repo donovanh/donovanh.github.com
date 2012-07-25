@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--<html manifest="cards.manifest">-->
+<html>
+<head>
+	<title>Loyalty Cards</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="img/iphone_cards_icon.png"/>
+
+    <link rel="apple-touch-startup-image" href="img/startup.png" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
+    
+</head>
+<body>
+	<div class="page">
+		<div id="header">
+			<h1>Loyalty</h1>
+			<div class="add"><p class="button"><a href="#" class="inactive">+</a></p></div>
+		</div>
+		<div id="addCard" class="shrunk">
+			<div id="formerror"></div>
+			<form id="addCardForm" method="post">
+				<h2>Add new card</h2>
+			    <p><input type="text" class="text" name="firstname" id="firstname" placeholder="First Name" /></p>
+			    <p><input type="text" class="text" name="lastname" id="lastname" placeholder="Last Name" /></p>
+			    <p class="stampselect"><label for="numberOfStamps">Stamps:</label>
+			    	<select name="numberOfStamps" id="numberOfStamps">
+			    		<option value="0">0</option>
+			    		<option value="1">1</option>
+			    		<option value="2">2</option>
+			    		<option value="3">3</option>
+			    		<option value="4">4</option>
+			    		<option value="5">5</option>
+			    		<option value="6">6</option>
+			    	</select>
+			    </p>
+			    <button value="addnew" id="addnew">Add new card</button>
+			    <button value="close" id="closenew" class="grey">Cancel</button>
+			</form>
+		</div>
+		
+		<div id="card" class="shrunk"></div>
+		
+	
+		<div id="cards"></div>
+		
+	</div>
+	<script type="text/javascript" src="js/phonegap-1.1.0.js"></script>
+	<script type="text/javascript" src="js/xui-2.3.0.min.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
