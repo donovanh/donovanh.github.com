@@ -8,7 +8,7 @@ published: true
 ---
 Website speed has always been a huge factor in how people perceive the quality of a website. 
 
-##Let them eat dust
+##A timely issue
 
 Jakob Nielsen [has been advocating since 1993][2] that loading times are the most valued aspect of a website. Even [in 2010][3] his research was showing the same desperate need for speed. Though our connectivity has improved dramatically since then, changes in the way we use the web has brought speed back into focus.
 
