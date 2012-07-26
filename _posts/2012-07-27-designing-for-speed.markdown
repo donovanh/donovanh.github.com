@@ -16,6 +16,8 @@ Jakob Nielsen [has been advocating since 1993][2] that loading times are the mos
 
 Smartphone use might be reaching 4G speeds in some places, but for most people using mobile devices over the phone networks, the speed is much worse than landline connections. It's also a fact that a massive number of people, particularly in [Africa][5] and [much of Asia][4], are using their phones as a primary Internet connection.
 
+You simply cannot assume that your users will be on fast connections. They could well be on a train or outside the cities, relying on an edge connection or satellite broadband.
+
 ##500% improvement
 
 [ShopIreland.ie][1], a shopping comparison site launched in 2005, is a site I managed and put in place some of the following ideas to improve speed. 
