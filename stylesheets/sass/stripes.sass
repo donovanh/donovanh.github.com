@@ -1,0 +1,16 @@
+@import base
+/* Override for a stripey theme
+.bouncer
+  @include background-image(linear-gradient($bouncer-color 68%, $background-color 68%, $background-color 76%, $bouncer-color 76%, $bouncer-color 80%, $background-color 80%, $background-color 88%, $bouncer-color 88%))
+  background-repeat: no-repeat
+  
+.bouncer-container
+
+  a
+    &:hover
+      .bouncer
+        @include background-image(linear-gradient($bouncer-color-hover 68%, $background-color 68%, $background-color 76%, $bouncer-color-hover 76%, $bouncer-color-hover 80%, $background-color 80%, $background-color 88%, $bouncer-color-hover 88%))
+        @include transition(backround-image 0.2s ease-out)
+      .ear1, .ear2
+        background-color: $bouncer-color-hover
+        @include transition(backround-image 0.2s ease-out)
