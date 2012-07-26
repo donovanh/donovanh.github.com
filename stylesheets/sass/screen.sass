@@ -71,7 +71,7 @@ article header
   
   .date
     font-family: "PT Sans", Helvetica, Arial, sans-serif
-    margin-top: -40px
+    margin-top: -36px
     color: #888
     
 section.content, section.footer-content
@@ -190,7 +190,7 @@ sidebar
     height: 60px
     background-color: $bouncer-color
     @include transition(background-color 0.2s ease-out)
-    @include border-radius(25px, 50%)
+    @include border-radius(25px, 30px)
     @include opacity(0)
     z-index: 2
     
@@ -350,29 +350,35 @@ sidebar
 @include keyframes(move-bouncer)
   0%
     height: 40px
+    @include border-radius(25px, 20px)
     top: 42px
   15%
     top: 0
     height: 60px
+    @include border-radius(25px, 30px)
   30%, 33%
     top: 42px
     left: 21px
     @include opacity(1)
     height: 40px
+    @include border-radius(25px, 20px)
   45%
     top: 0
     @include opacity(1)
     height: 60px
+    @include border-radius(25px, 30px)
   63%, 64%
     top: 42px
     left: 91px
     @include opacity(1)
     height: 40px
+    @include border-radius(25px, 20px)
   74%, 100%
     top: 10px
     left: 104px
     @include opacity(1)
     height: 60px
+    @include border-radius(25px, 30px)
     
     
 /* Overrides
