@@ -6,7 +6,7 @@ tags: [websites]
 newstylesheet: "stripes"
 published: true
 ---
-Website speed has always been a huge factor in how people perceive the quality of a website. 
+The speed of your website is a huge factor in how people perceive the quality of your content. By following some simple tips, you'll be able to ensure your site responds quickly enough to encourage visitors to stick around. 
 
 ##A timely issue
 
