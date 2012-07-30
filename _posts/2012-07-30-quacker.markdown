@@ -5,7 +5,7 @@ description: "What's French for tweet? Quack, d'accord!"
 tags: [websites]
 published: true
 ---
-Just a quick update to share some info about a fun side project I've just put online. [Quacker][1] is a tool that translates a tweet before posting it to your timeline. It's also been a chance to learn more about some modern (and free) web technologies.
+So I thought I'd share some info about a fun side project I've just put online. [Quacker][1] is a tool that translates a tweet before posting it to your timeline. It's also been a chance to learn more about some modern (and free) web technologies.
 
 The project was a good chance to combine HAML & SASS on the front-end, deploy the app using Heroku, and share the [Quacker site code][2] using GitHub. The site also uses Microsoft's translation API. 
 
