@@ -1,0 +1,20 @@
+html {
+	font-size:120%;
+	font-family: HelveticaNeue, Helvetica, Arial, Sans-serif;
+	text-align:center;
+}
+.duck-container {
+	height:350px;
+	margin: 0 auto;
+}
+
+header {
+	display:inline-block;
+	width:300px;
+}
+
+.bigduck .duck {
+	clear:both;
+	font-size:32px;
+	margin: 0 auto;
+}

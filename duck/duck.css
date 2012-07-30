@@ -1,0 +1,198 @@
+.duck {
+  font-size: 12px;
+  width: 32.125em;
+  height: 25em;
+  position: absolute;
+  /*top: 0;
+  left: 40px;*/
+  /* @include rotateY(180deg) */
+}
+.duck .head {
+  width: 12.5em;
+  height: 12.5em;
+  background-color: #ffea00;
+  border: 0.75em solid black;
+  -webkit-border-radius: 12.5em;
+  -moz-border-radius: 12.5em;
+  -ms-border-radius: 12.5em;
+  -o-border-radius: 12.5em;
+  border-radius: 12.5em;
+  position: absolute;
+  left: 5.938em;
+  top: 0;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+  background-image: -webkit-gradient(radial, 7em 2em, 0, 7em 2em, 6, color-stop(100%, #ffea00), color-stop(100%, #ffd800));
+  background-image: -webkit-radial-gradient(7em 2em, #ffea00 6em, #ffd800 6em);
+  background-image: -moz-radial-gradient(7em 2em, #ffea00 6em, #ffd800 6em);
+  background-image: -o-radial-gradient(7em 2em, #ffea00 6em, #ffd800 6em);
+  background-image: radial-gradient(7em 2em, #ffea00 6em, #ffd800 6em);
+  background-repeat: no-repeat;
+}
+.duck .beak {
+  position: absolute;
+  left: 0;
+  top: 2em;
+}
+.duck .beak-part1 {
+  width: 10.188em;
+  height: 3.625em;
+  background-color: #f1b500;
+  background-image: -webkit-gradient(radial, 7em 2em, 0, 7em 2em, 6, color-stop(100%, #f1b500), color-stop(100%, #daa400));
+  background-image: -webkit-radial-gradient(7em 2em, #f1b500 6em, #daa400 6em);
+  background-image: -moz-radial-gradient(7em 2em, #f1b500 6em, #daa400 6em);
+  background-image: -o-radial-gradient(7em 2em, #f1b500 6em, #daa400 6em);
+  background-image: radial-gradient(7em 2em, #f1b500 6em, #daa400 6em);
+  border: 0.625em solid black;
+  -webkit-border-radius: 5.625em 50%;
+  -moz-border-radius: 5.625em / 50%;
+  border-radius: 5.625em / 50%;
+  left: -5em;
+  top: 5.563em;
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.duck .beak-part2 {
+  width: 11.563em;
+  height: 4.375em;
+  background-color: #ffc000;
+  background-image: -webkit-gradient(radial, 7em 1em, 0, 7em 1em, 6, color-stop(100%, #ffc000), color-stop(100%, #daa400));
+  background-image: -webkit-radial-gradient(7em 1em, #ffc000 6em, #daa400 6em);
+  background-image: -moz-radial-gradient(7em 1em, #ffc000 6em, #daa400 6em);
+  background-image: -o-radial-gradient(7em 1em, #ffc000 6em, #daa400 6em);
+  background-image: radial-gradient(7em 1em, #ffc000 6em, #daa400 6em);
+  border: 0.625em solid black;
+  -webkit-border-radius: 6.563em 50%;
+  -moz-border-radius: 6.563em / 50%;
+  border-radius: 6.563em / 50%;
+  left: -6.625em;
+  top: 3.438em;
+  position: absolute;
+}
+.duck .eye {
+  position: absolute;
+  width: 2.813em;
+  height: 2.813em;
+  padding: 0.625em;
+  top: 1.625em;
+  left: 5.625em;
+  background-color: white;
+  border: 0.625em solid black;
+  -webkit-border-radius: 3.75em;
+  -moz-border-radius: 3.75em;
+  -ms-border-radius: 3.75em;
+  -o-border-radius: 3.75em;
+  border-radius: 3.75em;
+}
+.duck .eye-dark {
+  width: 3.125em;
+  height: 3.125em;
+  background-color: black;
+  position: absolute;
+  left: 0.313em;
+  top: 0.313em;
+  -webkit-border-radius: 3.125em;
+  -moz-border-radius: 3.125em;
+  -ms-border-radius: 3.125em;
+  -o-border-radius: 3.125em;
+  border-radius: 3.125em;
+}
+.duck .eye-shine {
+  width: 1.25em;
+  height: 1.25em;
+  background-color: white;
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  -ms-border-radius: 1.25em;
+  -o-border-radius: 1.25em;
+  border-radius: 1.25em;
+  top: 0.188em;
+  left: 0.188em;
+  position: absolute;
+}
+.duck .body {
+  width: 25em;
+  height: 14.375em;
+  border: 0.75em solid black;
+  background-color: #ffea00;
+  -webkit-border-radius: 12.5em 50%;
+  -moz-border-radius: 12.5em / 50%;
+  border-radius: 12.5em / 50%;
+  -moz-border-radius-topright: 2.5em;
+  -webkit-border-top-right-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+  -moz-border-radius-bottomright: 12.5em;
+  -webkit-border-bottom-right-radius: 12.5em;
+  border-bottom-right-radius: 12.5em;
+  top: 8.75em;
+  left: 6.25em;
+  position: absolute;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  background-image: -webkit-gradient(radial, 13em 2em, 0, 13em 2em, 11, color-stop(100%, #ffea00), color-stop(100%, #ffd800));
+  background-image: -webkit-radial-gradient(13em 2em, #ffea00 11em, #ffd800 11em);
+  background-image: -moz-radial-gradient(13em 2em, #ffea00 11em, #ffd800 11em);
+  background-image: -o-radial-gradient(13em 2em, #ffea00 11em, #ffd800 11em);
+  background-image: radial-gradient(13em 2em, #ffea00 11em, #ffd800 11em);
+  background-repeat: no-repeat;
+}
+.duck .wing {
+  top: 0.875em;
+  left: 12.813em;
+  position: absolute;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.duck .wing-part1, .duck .wing-part2, .duck .wing-part3 {
+  background-color: black;
+  width: 10.188em;
+  height: 3.625em;
+  border: 0.625em solid black;
+  -webkit-border-radius: 5.625em 50%;
+  -moz-border-radius: 5.625em / 50%;
+  border-radius: 5.625em / 50%;
+  position: absolute;
+}
+.duck .wing-part1a, .duck .wing-part2a, .duck .wing-part3a {
+  width: 11.125em;
+  height: 3.875em;
+  -webkit-border-radius: 4.625em 50%;
+  -moz-border-radius: 4.625em / 50%;
+  border-radius: 4.625em / 50%;
+  background-color: #ffea00;
+  left: -1.813em;
+  top: -0.25em;
+  position: absolute;
+}
+.duck .wing-part2 {
+  top: 3.125em;
+  left: -1.25em;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.wing-part1 {
+  top: 4.875em;
+  left: -5em;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
