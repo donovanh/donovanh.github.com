@@ -36,5 +36,5 @@ I considered a background image. I would certainly do something if it didn't vio
 
 As a result, this blog's a lot plainer looking than the previous version. Yet, I like it a lot more. 
 
- [1]: http://en.wikipedia.org/wiki/Just_in_time_\(business\)
- [2]: http://www.google.ie/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=0CG0QtwIwAw&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DH8eP99neOVs&ei=FIwXUI65OMfMhAfchIGQAQ&usg=AFQjCNGhKm1jZCf4SYoiudOExMnIMMQNvA
+ [1]: http://en.wikipedia.org/wiki/Just_in_time_(business)
+ [2]: http://www.youtube.com/watch?v=H8eP99neOVs
