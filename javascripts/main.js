@@ -1,7 +1,6 @@
 (function(){
-	
 	// On load, show the bouncer
-	if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius')) {
+	if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius') && !$('html').hasClass('no-js')) {
 		$('.bouncer-container a').append($('#bouncer-template').html());
 		var movingBouncer = $('.bouncer-container').find('.bouncer').addClass('move-bouncer');
 		setTimeout(function() {
@@ -9,7 +8,7 @@
 		}, 2000);
 		$('.bouncer-container').find('.mask').addClass('move-mask');
 	} else {
-		$('.bouncer-container').addClass('old');
+		$('html').addClass('no-js');
 	}
 	
 }());
