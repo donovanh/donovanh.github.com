@@ -7,7 +7,7 @@ published: true
 ---
 There's a strategy often used in manufacturing industries called [Just In Time][1] production. 
 
-As I'm both lazy and busier than I've ever been before, I though I'd take a leaf out of the *just in time* book and apply it to web development. The result is this site.
+As I'm both lazy and busier than I've ever been, I though I'd take a leaf out of the *just in time* book and apply it to web development. The result is this site.
 
 ##Contentedness
 
@@ -24,7 +24,7 @@ With that in mind I began with a totally empty page and one rule, only add somet
 
 ##Wait for it
 
-I've been gradually adding bits here and there as they seem relevant, and holding back on anything that might get in the way of the content; "[saying no][2]", as Steve Jobs said.
+I've been gradually adding bits here and there as they seem relevant, and holding back on anything that might get in the way of the content; [saying no][2], as Steve Jobs said.
 
 I wanted some sort of identifying logo, but at the same time maintain focus on the site content. The best way, it seemed, was to have a simple but recognisable image. Something fun and not too serious, but not distracting either.
 
