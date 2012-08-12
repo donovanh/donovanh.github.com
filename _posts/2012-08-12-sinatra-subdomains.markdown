@@ -25,7 +25,7 @@ Alternatively, if you want to be able to test against a large range of subdomain
 
 	curl get.pow.cx | sh
 
-Then setting up your test project:
+Then setting up a symlink to your project:
 
 	cd ~/.pow
     ln -s /path/to/myapp myapp
