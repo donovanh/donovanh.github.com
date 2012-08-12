@@ -21,7 +21,7 @@ Alternatively, if you want to be able to test against a large range of subdomain
 
 ##POW!!
 
-Pow is a handy wrapper for running and testing multiple apps on local ".dev" URLs. It's trivial to set up and fires up a server for you to save a few seconds each time. Installing is as easy as:
+[Pow!!][4] is a handy wrapper for running and testing multiple apps on local ".dev" URLs. It's trivial to set up and fires up a server for you to save a few seconds each time. Installing is as easy as:
 
 	curl get.pow.cx | sh
 
