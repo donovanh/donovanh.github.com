@@ -54,6 +54,7 @@ header
 footer
   padding-bottom: 40px
   background-color: $font-color
+  z-index: 10
   
   p
     color: $background-color
@@ -78,6 +79,9 @@ section.content, section.footer-content
   width: 100%
   float: left
   padding-right: 5%
+
+section.footer-content
+  z-index: 10
 
 sidebar
   width: 20%
@@ -146,6 +150,17 @@ sidebar
       
     a
       color: $font-color
+
+code 
+  background-color: #fff
+  @include adjust-font-size-to(16px)
+  @include border-radius(5px)
+  padding: 0 8px
+  display: inline-block
+
+pre code
+  padding: 10px 16px
+
 
 .bouncer-container *
   position: absolute

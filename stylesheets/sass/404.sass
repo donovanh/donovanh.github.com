@@ -1,0 +1,111 @@
+@import base
+/* Extra bouncer animation
+
+.move-bouncer-404
+  @include animation-name(move-bouncer-404)
+  @include animation-duration(5s)
+  @include animation-fill-mode(forwards)
+
+.bounce1, .bounce2, .bounce3
+  display: none
+
+.bouncer-container .bouncer-float-up
+  top: 350px
+  left: 381px
+  @include opacity(1)
+  @include animation(floatup 1s)
+
+.bouncer-container .bouncer-end-position-404
+  top: 300px
+  left: 381px
+  @include opacity(1)
+  @include animation(bobbing 3s infinite)
+
+.bouncer-container .mask
+  left: 340px
+  top: 336px
+  background-color: $font-color
+  z-index: 10
+  height: 80px
+
+@include keyframes(floatup)
+  100%
+    top: 300px
+
+@include keyframes(bobbing)
+  10%
+    top: 300px
+  60%
+    top: 320px
+  98%
+    top: 300px
+
+@include keyframes(move-bouncer-404)
+  0%
+    height: 40px
+    @include border-radius(25px, 20px)
+    top: 42px
+  5%
+    top: 0
+    height: 60px
+    @include border-radius(25px, 30px)
+  10%, 11%
+    top: 42px
+    left: 21px
+    @include opacity(1)
+    height: 40px
+    @include border-radius(25px, 20px)
+  15%
+    top: 0
+    @include opacity(1)
+    height: 60px
+    @include border-radius(25px, 30px)
+  21%, 22%
+    top: 42px
+    left: 91px
+    @include opacity(1)
+    height: 40px
+    @include border-radius(25px, 20px)
+  25%
+    top: 0
+    @include opacity(1)
+    height: 60px
+    @include border-radius(25px, 30px)
+  31%, 32%
+    top: 42px
+    left: 161px
+    @include opacity(1)
+    height: 40px
+    @include border-radius(25px, 20px)
+  35%
+    top: 0
+    @include opacity(1)
+    height: 60px
+    @include border-radius(25px, 30px)
+  41%, 42%
+    top: 42px
+    left: 231px
+    @include opacity(1)
+    height: 40px
+    @include border-radius(25px, 20px)
+  45%
+    top: 0
+    @include opacity(1)
+    height: 60px
+    @include border-radius(25px, 30px)
+  51%, 52%
+    top: 42px
+    left: 301px
+    @include opacity(1)
+    height: 40px
+    @include border-radius(25px, 20px)
+  55%, 74%
+    top: 0
+    left: 381px
+    @include opacity(1)
+    height: 60px
+    @include border-radius(25px, 30px)
+  80%,100%
+    left: 381px
+    top: 350px
+    @include opacity(1)
