@@ -13,6 +13,7 @@
     {% if page.newstylesheet %}
     <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css">
     {% endif %}
+
     <!--[if IE]>
       <link rel="stylesheet" href="/stylesheets/ie.css">
     <![endif]-->
@@ -21,7 +22,7 @@
     <link rel="canonical" href="{{ page.url | canonical }}">
     <script src="/javascripts/modernizr.js"></script>
 </head>
-<body>
+<body {% if page.bodyTag %}{{page.bodyTag}}{% endif %}>
   <div class="page-container">
   	<header>
   		<h1 class="bouncer-container"><a href="/">Donovan Hutchinson</a></h1>
@@ -57,6 +58,14 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
   <script src="/javascripts/main.js"></script>
+
+{% for j in page.javascripts %}
+  {% if j == 'angular' %}
+    <script src="/javascripts/angular.js"></script>
+  {% endif %}
+{% endfor %}
+
+
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
