@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Jekyll & GitHub Pages"
+title: "Using Jekyll &amp; GitHub Pages"
 description: "How I built this blog. (Hint: By using Jekyll and GitHub Pages)"
 category: 
 tags: [jekyl, GitHub pages]

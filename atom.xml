@@ -5,8 +5,8 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Hop.ie - Donovan Hutchinson</title>
- <link href="http://tom.preston-werner.com/atom.xml" rel="self"/>
- <link href="http://tom.preston-werner.com/"/>
+ <link href="http://hop.ie/atom.xml" rel="self"/>
+ <link href="http://hop.ie/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://hop.ie/</id>
  <author>
