@@ -21,7 +21,7 @@ h1
 
 /* Links
 
-a, acronym
+a
   color: $link-color
   text-decoration: none
   font-weight: bold
@@ -35,10 +35,9 @@ a, acronym
     @include transition(color 0.2s ease-out)
 
 acronym
-  border-bottom: 1px dashed $link-color
+  border-bottom: 1px dashed $font-color
 
   &:hover
-    border-color: $link-color-visited
     cursor: help
 
 input
