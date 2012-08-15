@@ -51,6 +51,12 @@ John Lindquist has [a directive screencast][7] available, which is a great intro
 
 One more example. In the above code I wrapped the <span class="ng-non-bindable">"Hello {{world}}"</span> text in code tags with the "ng-non-bindable" attribute. The attribute is itself a form of directive.
 
+##Community
+
+The community behind AngularJS is vibrant and there are plenty of examples and places to discuss issues. The [AngularJS Google Group][11] is active, along with the IRC channel (#angularjs on freenode), and the [official documentation][12] includes many examples. While some of the examples might have issues from the transition between versions 0.9 and 1.0, they seem to be catching up.
+
+The AngularJS site includes a great [showcase area][13] for completed projects, which even includes a wonderful [ermagerd translator][14].
+
 ##Templating, testing and more
 
 As shown above, AngularJS allows for the curly brace style of template variables. It offers custom functionality, including loops and other logic that can be delivered along with the templates, which makes directives even more powerful. It also includes tools for the injection of tests to ensure your code does what it is supposed to. I'll expand on these topics as my understanding of this interesting framework grows.
@@ -67,4 +73,8 @@ In the meantime, do check out the [AngularJS tutorial pages][9], and their [Yout
  [8]: http://docs.angularjs.org/guide/directive
  [9]: http://docs.angularjs.org/tutorial
  [10]: http://www.youtube.com/watch?v=WuiHuZq_cg4
+ [11]: https://groups.google.com/forum/?fromgroups#!forum/angular
+ [12]: http://docs.angularjs.org/
+ [13]: http://builtwith.angularjs.org/
+ [14]: http://ermahgerd.jmillerdesign.com/#!/translate
  
