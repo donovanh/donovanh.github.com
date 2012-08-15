@@ -21,7 +21,7 @@ h1
 
 /* Links
 
-a
+a, acronym
   color: $link-color
   text-decoration: none
   font-weight: bold
@@ -33,7 +33,22 @@ a
   &:hover
     color: $hover-color
     @include transition(color 0.2s ease-out)
-  
+
+acronym
+  border-bottom: 1px dashed $link-color
+
+  &:hover
+    border-color: $link-color-visited
+    cursor: help
+
+input
+  background-color: #fff
+  @include adjust-font-size-to(16px)
+  @include border-radius(5px)
+  padding: 4px 14px
+  display: inline-block
+  border: 2px solid #ddd
+
 /* Page structure
 
 .page-container
@@ -157,6 +172,7 @@ code
   @include border-radius(5px)
   padding: 0 8px
   display: inline-block
+  border: 1px solid #EEE
 
 pre code
   padding: 10px 16px
