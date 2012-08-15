@@ -23,13 +23,13 @@ Input methods such as text or textarea fields are handled most easily, and more 
 
 <input type="text" ng-model="world" placeholder="Say hello!" />
 
-The heading above with the variable:
+The heading above contains a "world" variable in curly braces:
 
 <code class="ng-non-bindable">
 	Hello {{world}}!
 </code>
 
-The input text field:
+The input text field references the "world":
 
 	<input type="text" ng-model="world" placeholder="Say hello!" />
 
