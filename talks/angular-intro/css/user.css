@@ -1,0 +1,264 @@
+.standalone {
+  padding-top:150px;
+}
+
+pre code {
+  background-color:#000 !important;
+}
+
+
+
+/*************************************************
+ * Overrides are in the theme file (simple)
+**************************************************/
+
+textarea.markdown-input {
+  position: absolute;
+  top: 120px;
+  bottom: 20px;
+  left: 30px;
+  width: 45%;
+  border: 4px solid #aaaaaa;
+  background-color: #eeeeee;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  padding: 16px;
+  resize: none;
+  font-size: 24px;
+}
+
+textarea.markdown-input:focus {
+  outline: none;
+}
+
+.preview {
+  width: 40%;
+  position: absolute;
+  top: 125px;
+  bottom: 25px;
+  right: 30px;
+  padding: 10px;
+  border: 2px solid #aaaaaa;
+  background-color: white;
+  overflow: auto;
+  z-index: 99;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+
+
+/* line 82, ../sass/screen.sass */
+.preview body {
+  margin: 20px 40px;
+  background-color: white;
+  color: black;
+  font: 13px "Myriad Pro", "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+/* line 91, ../sass/screen.sass */
+.preview a:link {
+  color: blue;
+  text-decoration: none;
+}
+/* line 94, ../sass/screen.sass */
+.preview a:visited {
+  color: #0000aa;
+  text-decoration: none;
+}
+/* line 97, ../sass/screen.sass */
+.preview a:hover, .preview a:active {
+  color: #ff6600;
+  text-decoration: underline;
+}
+/* line 106, ../sass/screen.sass */
+.preview * html code, .preview * html pre {
+  font-size: 101%;
+}
+/* line 111, ../sass/screen.sass */
+.preview pre, .preview code {
+  font-size: 11px;
+  font-family: monaco, courier, consolas, monospace;
+}
+/* line 115, ../sass/screen.sass */
+.preview pre {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #c7cfd5;
+  background: #f1f5f9;
+  margin: 20px 0;
+  padding: 8px;
+  text-align: left;
+}
+/* line 124, ../sass/screen.sass */
+.preview hr {
+  color: #919699;
+  size: 1;
+  width: 100%;
+  noshade: "noshade";
+}
+/* line 132, ../sass/screen.sass */
+.preview h1, .preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+  font-family: "Myriad Pro", "Lucida Grande", Lucida, Verdana, sans-serif;
+  font-weight: bold;
+}
+/* line 136, ../sass/screen.sass */
+.preview h1 {
+  margin-top: 1em;
+  margin-bottom: 25px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+/* line 143, ../sass/screen.sass */
+.preview h2 {
+  margin-top: 2.5em;
+  font-size: 24px;
+  color: black;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #919699;
+}
+/* line 150, ../sass/screen.sass */
+.preview h3 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 17px;
+  color: black;
+}
+/* line 156, ../sass/screen.sass */
+.preview h4 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 15px;
+  color: black;
+}
+/* line 162, ../sass/screen.sass */
+.preview h5 {
+  margin-top: 20px;
+  margin-bottom: 0.5em;
+  padding: 0;
+  font-size: 13px;
+  color: black;
+}
+/* line 169, ../sass/screen.sass */
+.preview h6 {
+  margin-top: 20px;
+  margin-bottom: 0.5em;
+  padding: 0;
+  font-size: 11px;
+  color: black;
+}
+/* line 176, ../sass/screen.sass */
+.preview p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+/* line 182, ../sass/screen.sass */
+.preview ul {
+  list-style: square outside;
+  margin: 0 0 0 30px;
+  padding: 0 0 5px 6px;
+}
+/* line 187, ../sass/screen.sass */
+.preview li {
+  margin-top: 0;
+}
+/* line 190, ../sass/screen.sass */
+.preview ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin: 0 0 0 30px;
+  padding: 0 0 12px 6px;
+}
+/* line 195, ../sass/screen.sass */
+.preview ol ol {
+  list-style-type: lower-alpha;
+  list-style-position: outside;
+  margin: 7px 0 0 30px;
+  padding: 0 0 0 10px;
+}
+/* line 201, ../sass/screen.sass */
+.preview ul ul {
+  margin-left: 40px;
+  padding: 0 0 0 6px;
+}
+/* line 206, ../sass/screen.sass */
+.preview li > p {
+  display: inline;
+}
+/* line 208, ../sass/screen.sass */
+.preview li > p + p {
+  display: block;
+}
+/* line 210, ../sass/screen.sass */
+.preview li > a p {
+  display: block;
+}
+/* line 215, ../sass/screen.sass */
+.preview table {
+  width: 100%;
+  border-top: 1px solid #919699;
+  border-left: 1px solid #919699;
+  border-spacing: 0;
+}
+/* line 220, ../sass/screen.sass */
+.preview table th {
+  padding: 4px 8px 4px 8px;
+  background: #e2e2e2;
+  font-size: 12px;
+  border-bottom: 1px solid #919699;
+  border-right: 1px solid #919699;
+}
+/* line 226, ../sass/screen.sass */
+.preview table th p {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+/* line 229, ../sass/screen.sass */
+.preview table td {
+  padding: 8px;
+  font-size: 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #919699;
+  border-right: 1px solid #919699;
+}
+/* line 235, ../sass/screen.sass */
+.preview table td p {
+  margin-bottom: 0px;
+}
+/* line 237, ../sass/screen.sass */
+.preview table td p + p {
+  margin-top: 5px;
+}
+/* line 239, ../sass/screen.sass */
+.preview table td p + p + p {
+  margin-top: 5px;
+}
+/* line 244, ../sass/screen.sass */
+.preview form {
+  margin: 0;
+}
+/* line 247, ../sass/screen.sass */
+.preview button {
+  margin: 3px 0 10px 0;
+}
+/* line 250, ../sass/screen.sass */
+.preview input {
+  vertical-align: middle;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+/* line 255, ../sass/screen.sass */
+.preview select {
+  vertical-align: middle;
+  padding: 0;
+  margin: 0 0 3px 0;
+}
+/* line 260, ../sass/screen.sass */
+.preview textarea {
+  margin: 0 0 10px 0;
+  width: 100%;
+}

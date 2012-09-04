@@ -1,0 +1,475 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Introduction to AngularJS</title>
+
+		<meta name="description" content="AngularJS - a framework for creating better web apps">
+		<meta name="author" content="Donovan Hutchinson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/user.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="lib/js/head.min.js"></script>
+	</head>
+	
+	<body ng-app="presentationApp" ng-controller="presentationCtrl">
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="front-cover">
+					<h1>Introduction to</h1>
+      				<img src="images/angularjs.jpeg" width="90%">
+      				<div style="height:50px"></div>
+      				<h2>A Superheroic MVW Framework</h2>
+      				<aside class="notes">
+						Hi, I'm Donovan. I'm a front end developer working with Oisin at Converser, and I'm here today to talk to you a bit about an interesting Javascript framework, AngularJS.
+
+						It's a framework aimed at helping people make web apps, and an interesting alternative to the likes of BackboneJS, Knockout and the likes.
+					</aside>
+				</section>
+
+
+				<section>
+					<img src="images/story.jpg" />
+					<aside class="notes">
+						But first, a bit of back story.
+					</aside>
+				</section>
+
+				<section>
+					<h2>A Conversation</h2>
+					<img src="images/conversation.png" />
+					<aside class="notes">
+						A few months ago we began working on a concept for a web based tool to let Converser customers create in-app conversations. By conversations, I mean a series of screens that might contain questions, multiple choices or images, and these conversations were to be sent out and seen by users of their apps.
+
+						The tool needed to be easy to use, but able to manage multiple pages, each containing many separate groups of data, which had to be editable.
+					</aside>
+				</section>
+
+				<section>
+					<h2>First version</h2>
+					<img src="images/server.png" />
+					<aside class="notes">
+						I'll admit, it was a bit of a mess to begin with. I tend to design things from the graphics down, and so I was busy thinking about whether we could use this or that HTML5 feature, and not as much time thinking about how I was to structure the data that was driving the app. Since a big part of the app was letting people interact and change the onscreen data, what I ended up doing was storing a lot of data in the DOM, and then grabbing all that data back out when it was time to save it back to the server.
+
+						This brought several issues. The app was pretty fragile. Making changes to the way the interaction worked, if I wanted to say, let people add extra pages or remove pages from a conversation, needed a lot of very careful manipulation of the order of divs in the DOM. Another big pain in the arse was when I had massaged the data from the server in order for it to be presented in an intuitive way onscreen. When saving, I had to reconstruct the data to send it back to the server. Again, fragile.
+
+						So naturally enough, the things we wanted the app to do increased, and it was clear that it would only end up becoming unmanageable unless I did something to separate all this data from the DOM and keep it in one place, ideally in a form that mirrored the way the server stored it.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Frameworks</h2>
+					<ul style="padding-top:30px;">
+						<li>Backbone</li>
+						<li>Knockout</li>
+						<li>Ember</li>
+						<li>... MVWTF</li>
+					</ul>
+					<aside class="notes">
+						So I started looking at javascript frameworks. The first I looked into was Backbone.js. I'd heard a lot about backbone and it has some really interesting guides online. I was pretty excited about it, it offers a light way to separate out the models and views, and even set up binding between the two so that data changing in the model could be passed on to the views.
+
+						I tried a few tutorials, tried even setting up a little heroku project using backbone as the approach to handling some onscreen data, and, well, it was OK I guess, but I struggled to really understand the workflow. The code seemed to make sense, but it just didn't quite gel in my mind enough to start using it. 
+
+						I think it was its agnostic, "do what you like" approach that made it more difficult to get into using it. I was too busy second guessing myself, not quite confident enough to make good use of it.
+
+						Still, the problem remained, we had a lovely looking app that did it's job pretty well, but was rapidly becoming a maintenance nightmare. One evening while flicking through pages for Knockout.JS, Ember,js and the likes, I came across a Google project called AngularJS.
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/angularjs.jpeg" style="padding-top:100px" width="90%">
+					<aside class="notes">
+						AngularJS looked like an interesting choice. Right there on the homepage it had examples that seemed almost magical in their simplicity, data bound using almost no code. Even better, a quick poke around showed a pleasant looking docs section and even a range of video tutorials.
+
+						I think it was the availability of guides that sold me on it, and I decided to give it a go.
+
+						Well, it's been a month now and I've learned a fair bit, not just about AngularJS, but about structuring a javascript-based app. Mostly I've learned that I know very little.
+
+						So, AngularJS.
+					</aside>
+				</section>
+
+
+				<section>
+					<h1 class="standalone">A grand aim</h1>
+					<aside class="notes">
+						AngularJS was released a couple of years ago with a grand aim. Rather than be a tool to help people simply structure their data, it aims to allow you ways to extend what the browser does and make the browser behave more like something designed for web apps.
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="standalone">HTML is static</h1>
+					<aside class="notes">
+						The problem it aims to tackle is that of HTML being so static and page-based. While the world wide web is excellent at providing static documents, albeit connected by hyperlinks, it's not really designed for single-page apps, where there's more going on than simply reading words or posting contact forms.
+
+						Under the hood, AngularJS has it's got a lot to it, from binding data, to creating your own tags, handling multiple views and even testing. My experience so far has taken me into the data binding part, and a fair amount of time learning how it lets you create your own HTML tags and attributes.
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="standalone">Opinionated</h1>
+					<aside class="notes">
+						Whereas something like Backbone is very light touch and lets you build your application exactly as you wish, there are some aspects to AngularJS that are more opinionated. It doesn't try to get out of your way. I mean, you can still use jQuery, you can throw in as much DOM manipulation and abuse it any way you want, but as I discovered, doing so can be more work than just letting Angular take care of the views and the data in them.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Two-way binding</h1>
+					<img src="images/twoway.png" />
+					<aside class="notes">
+						This is the core of what AngularJS offers. It is about managing the connection between where your data is stored and how it looks on screen. Anything else it does is about allowing ways to get that data into the page while maintaining this binding. Since this is so much the central idea of AngularJS, one of it's strengths is that it does this binding in a seamless, almost invisible convention based way. If you build things the AngularJS way, it just takes care of that connection for you without having to clutter up your javascript files with explicit connections between the data and the views.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Hello world</h2>
+      				<input placeholder="Give me a name!" ng-model="world" value="" style="padding:8px;font-size:24px;margin-bottom:20px" />
+      				<h3>Hello {{world}}!</h3>
+      				<h4 style="text-align:left">Code:</h4>
+<pre ng-non-bindable><code>&lt;ul&gt;
+  &lt;li&gt;&lt;input placeholder=&quot;Give me a name!&quot; ng-model=&quot;world&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Hello {{world}}!&lt;/h3&gt;
+</code></pre>
+					<aside class="notes">
+						Here's a little example of what I mean. Angular allows you to declare a model, in this case, this input text box is a model, and then using curly braces you can fire out the data into the view. When I type in this input box, the "Hello..." message is updated immediately. I haven't had to write a single line of javascript to get this to work, it's just done by telling Angular: here's the model, and here's where it goes. Anytime the model changes, you see it right there in the view.
+
+						It's as simple as telling AngularJS that the page is an Angular app. I just added the attribute "ng-app" to the body tag of the page, and from then on, any curly braces in the html, or any of the Angular-specific attributes, are picked up by Angular and it does it's thing.
+
+						So we have a hello world example, where we specify an input and specify where it is output, but what if you want to manage more data than that? When approaching the Converser app, I had these conversations with multiple pages, each of which had their own sets of data in the form of text, images, etc. All this data had to be bound to the views properly, and as people are going to want to edit the content and save it back to the system, a way to store all this data in the front end was needed. I needed to look into how Angular handles the model.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Moar data</h2>
+					<ul style="background-color:#efefef;border:1px solid #eee;">
+						<li ng-repeat="item in model.listItems">{{item}}</li>
+					</ul>
+						<div>
+							<h4 style="text-align:left">HTML:</h4>
+							<pre ng-non-bindable><code>&lt;ul&gt;
+  &lt;li ng-repeat=&quot;item in model.listItems&quot;&gt;{{item}}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+						</div>
+						<div>
+						<h4 style="text-align:left">JS:</h4>
+<pre ng-non-bindable><code>$scope.model = {
+  listItems: ['Item one',
+              'Item two',
+              'Banana']
+}
+</code></pre>
+						</div>
+					
+					<aside class="notes">
+						While getting started with AngularJS, the first thing I did was set up a model for the data I was to manage. This was pretty straightforward. The data for the model is stored in a controller function, and the controller is mapped to an area of the view so that it knows where the data will be used and where to look for changes.
+
+						Here's a way to show how the model is connected to the view. I've got a list here. The content of the list is populated by a little bit of Angular inline logic called "ng-repeat". Here we have the function in the javascript, the controller, which contains the data items. On the right we have the HTML that displays them. The HTML has in it's containing div this "ng-controller" attribute. This is how it knows what data to act on.
+
+						If this model data on the left changes, the change is reflected immediately in the data of the displayed list. This was immediately very useful for what displaying multiple pages in my editor app. The pages were stored in a model hash, and rather than adding divs to the DOM, removing them and all that messy stuff, all I had to do was add an entry to the model and the "ng-repeat" was given the extra item to display. All very elegant and fast.
+
+						So this is all very well when the data in your model is straightforward. But if you want to do more than just pass data back and forth? What if you wanted to manipulate the data in some way so that it looked different that how it is eventually stored by the server, but at the same time maintain this binding?
+
+						This is where directives come in.
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h1 class="standalone">Directives</h1>
+						<aside class="notes">
+							If binding is the main thing AngularJS is built around, directives are how it wraps the data in whatever way you want while still maintaining this binding. Directives are discreet modules that describe specific actions you want the browser to do. You can use directives to create your own HTML tags, specify how they handle the data inside the tag, both on the way from the model to the view and back again.
+
+							I'm a bit of a slow learner. When I started using AngularJS, I had skimmed across the notion of directives and frankly, I was keen to do what I could to avoid them as they looked a bit scary.
+
+							And they kind of are. But they're extremely handy, and what's great is that they can be built once, and then once you have the directive working, then they become tools that your web app can use again and again.
+						</aside>
+					</section>
+
+										<!-- Deeper info about directives -->
+
+					<section class="slide9">
+						<h2>Anatomy of a directive</h2>
+<pre><code>myModule.directive('directiveName', function factory(injectables) {
+  var directiveDefinitionObject = {
+    priority: 0,
+    template: '<div></div>',
+    templateUrl: 'directive.html',
+    replace: false,
+    transclude: false,
+    restrict: 'A',
+    scope: false,
+    compile: function compile(tElement, tAttrs, transclude) {
+      return {
+        pre: function preLink(scope, iElement, iAttrs, controller) { ... },
+        post: function postLink(scope, iElement, iAttrs, controller) { ... }
+      }
+    },
+    link: function postLink(scope, iElement, iAttrs) { ... }
+  };
+  return directiveDefinitionObject;
+});
+</code></pre>
+	 
+					</section>
+
+				</section>
+
+				<section>
+					<h2>Markdown example</h2>
+      				<textarea markdown placeholder="Give me some markdown!" class="markdown-input">
+#Header 1
+
+    Preformatted cod
+
+This is an example of a binding between a textarea and a preview div, thanks to [AngularJS][1].
+
+[1]: http://angularjs.com
+      				</textarea>
+      				<div class="preview"></div>
+					<aside class="notes">
+						Actually, as it turns out, directives can be quite simple. They have loads of options and I've not plumbed the depths of what they can do, but here's an illustrative example that shows how a directive canhelp manipulate some data.
+
+						We've got two text boxes here. The left is a textarea, the right is a preview. I can type a load of markdown here on the left, and immediately on the right, we get HTML. I'm using the javascript tool Showdown.js to handle the actual translation of the markdown, but the process of passing this markdown through the processor function and then putting it across here, is handled by a directive.
+
+						First through, here's the HTML I used in this example:
+					</aside>
+				</section>
+
+				<section>
+					<h2>Markdown Example HTML</h2>
+<pre ng-non-bindable><code>&lt;textarea markdown&gt;&lt;/textarea&gt;
+
+&lt;div class=&quot;preview&quot;&gt;&lt;/div&gt;
+</code></pre>
+					<aside class="notes">
+						Not a lot going on here. There's a textarea with an attribute "markdown", and a "section" with the id "preview". So how does it know that this "markdown" textarea is to show it's output over there on the "preview" section?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Markdown Example JS</h2>
+					<pre><code>angular.module('presentationApp.directives', []).
+directive('markdown', function() {
+  var converter = new Showdown.converter();
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+  	  element.bind('blur keyup change', function() {
+  	    var htmlText = converter.makeHtml(element.val());
+  	    $('.preview').html(htmlText);
+  	  });
+  	}
+  }
+});
+</code></pre>
+					<aside class="notes">
+						When you're initialising an Angular project, you bolt on any directives at loading time. What Angular does is it runs through the HTML looking for ways to connect these directives, and then applies their logic. What we have here is essentially a function called directive that is given two values, "markdown" which is the name of the function, and a function that listens for changes in the textarea and shoves them through the Showdown processor, and finally pastes the output into the preview div.
+
+						This means you can create your own tools for handling quite complex data manipulation, and compartmentalise it away from the view, keeping what's in the view quite streamlined.
+
+						The documentation on the Angular site has lots of examples around directives. You can bring in custom templates, even inject unit tests using the example code the Angular guys have set up, so while they are pretty complex, they're powerful.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Directives</h2>
+      				<ul style="padding-top:30px;">
+      					<li>Custom HTML tags and attributes</li>
+      					<li>Can apply templates</li>
+      					<li>Abstract complex logic from views</li>
+      					<li>Nestable</li>
+      				</ul>
+      				<aside class="notes">
+						AngularJS comes with a wide range of directives built in. They can be used in the form of html tags or as attributes. Some of what we saw earlier, ng-show, ng-model and ng-repeat are examples. They can be passed parameters or data, and then act on that data while keeping it connected to the model.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Techniques learned</h2>
+					<ul style="padding-top:30px;">
+						<li>Models for data</li>
+						<li>Binding to views</li>
+						<li>Manipulating with directives</li>
+					</ul>
+					<aside class="notes">
+						So what had I learned by this point. I'd learned how to set up my app data in a model hash, I'd learned ways to connect that data to the view without using much code, and I'd learned how to manipulate that data and present it how I want using directives. 
+					</aside>
+				</section>
+
+				<section>
+					<h2>Real world example</h2>
+      				<img src="images/deal.png" height="500" />
+					<aside class="notes">
+						So at the end of a month with some frustration and quite a lot of learning, here's the current version of our conversation maker tool.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Did it help?</h2>
+					<ul style="padding-top:30px;">
+						<li>Data management</li>
+						<li>Code structure</li>
+						<img src="images/yeah.png" width="90%" />
+					</ul>
+					<aside class="notes">
+						The important question is did it help. The concepts I've covered so far were great at achieving two things:
+
+						1) I put all the data that had been hanging out in various places in the DOM into one hash, which meant I always knew where it was. This made debugging a lot easier, and finding out what data was in place or missing at any point.
+
+						2) Better code structure. By declaring which bits of the model were bound to the view HTML, I didn't have anywhere near as many listeners that specified where the data was found, and the javascript became a lot easier to read and understand.
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="standalone">In summary</h1>
+				</section>
+
+				<section>
+					<h2>Good stuff</h2>
+					<ul style="padding-top:30px;">
+						<li>Opinionated</li>
+						<li>Extendable</li>
+						<li>Magical binding</li>
+						<li>Growing community</li>
+						<li>It does a lot</li>
+					</ul>
+					<aside class="notes">
+						Which brings me to some of the benefits of AngularJS. It's opinionated, do it this way or else approach, is for me a benefit as it has resulted in a project I'd be a little more confident passing over to someone else, and they'd be less likely to drop dead before they reach the end of the file.
+
+						It's been a bit of a learning curve for me understanding scope, understanding where the data *is* at any point, but what's been great is that since using it, I've found adding on extra functionality a much less daunting task. The data is always in one place, so I know that if I change the view, add extra directives for handling different types of data, it doesn't change the underlying data structure. That makes me feel a lot more relaxed about the code and more productive in the long run.
+
+						The way AngularJS does it's data binding is great. I don't need to specifically set up listening events for each piece of data in the app, I know that if I ensure that the views are using Angular's functions for displaying the data, it'll take care of maintaining that binding.
+
+						I've only really dipped my toes into what the framework can do, and it's actively developed so I'm interested in seeing where it goes. Since it's actively developed, I'm interested in seeing where it goes.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Not so good</h2>
+					<ul style="padding-top:30px;">
+						<li>Opinionated</li>
+						<li>Breaking changes</li>
+						<li>Not for every app</li>
+						<img src="images/gonzo.png" style="padding-top:30px" />
+					</ul>
+					<aside class="notes">
+						There were moments when I was banging my head against the wall so to speak. Especially around the idea of directives. This could have been my own fault really as I'm not great at reading documentation, I tend to poke first, swear second then turn to the guides. However one thing to look out for, this had me confused for a while, was a few breaking changes between version 0.9 and 1.0.1. The main change was within directives, specifically around declaring the scope of the data being worked on. I'd recommend checking changelogs around the 1.0 mark as the videos tend to reference the older method, even though they're just a few months old.
+
+						But yes, there is a little bit of learning around AngularJS. I do like it, but I'll admit I'm perhaps more open to giving Backbone another go as I've learned quite a bit in the past month about how MVWTF controllers work.
+
+						The AngularJS website itself notes that it's not a solution for every problem. It's great for most CRUD style apps, but maybe not so great for the likes of say, an IDE, which would probably need finer grain control of the DOM. Having said that, I've only scratched the surface so I could well be wrong about that.
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+      				<ul style="padding-top:30px;">
+      					<li>AngularJS: <a href="http://angularjs.org">http://angularjs.org</a></li>
+      					<li><a href="http://docs.angularjs.org/guide/">Developer Guide</a></li>
+      					<li><a href="http://docs.angularjs.org/api/">AngularJS Docs</a></li>
+      					<li><a href="https://github.com/angular/angular.js/blob/master/CHANGELOG.md">AngularJS Changelog</a></li>
+      					<li>Loads of <a href="http://www.youtube.com/results?search_query=angularjs">Youtube videos</a></li>
+      					<li><a href="https://groups.google.com/forum/?fromgroups#!forum/angular">Google Group</a></li>
+      					<li>IRC: #angularjs / Freenode</li>
+      					<li><A href="http://www.cheatography.com/proloser/cheat-sheets/angularjs/">Angular Cheatsheet</a></li>
+      				</ul>
+					<aside class="notes">
+						Some of the places I looked for and found lots of helpful info are here.
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Thanks</h2>
+      				<ul style="padding-top:30px;">
+      					<li>Donovan Hutchinson</li>
+      					<li><a href="http://converser.io">Converser.io</a></li>
+      					<li>Twitter: @donovanh</li>
+      					<li>Blog: <a href="http://hop.ie">http://hop.ie</a></li>
+      				</ul>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		<script src="js/reveal.min.js"></script>
+		<script>
+		head.js(
+			"http://code.angularjs.org/1.0.1/angular-1.0.1.min.js",
+			"js/app.js",
+			"lib/js/showdown.js",
+			"http://code.jquery.com/jquery-1.8.0.min.js");
+		</script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				keyboard: false,
+				
+				transition: Reveal.getQueryHash().transition || 'page',
+				// default/cube/page/concave/linear(2d)
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>
