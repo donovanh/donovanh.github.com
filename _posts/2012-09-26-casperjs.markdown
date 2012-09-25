@@ -114,6 +114,14 @@ Danny Croft has some great [instructions on setting up PhantomJS and CasperJS][1
 
 Having a scripted headless browser at your disposal is a powerful and fun tool. It's extremely useful for implementation tests, but already there are some great alternate uses coming through like [website performance testing][12], and even [scraping data for an API][13].
 
+What's most surprising to me is that I've actually found the process of testing *fun*. It's also reassuring to know that I can make changes and be confident that it does what it's meant to.
+
+##A note on versions
+
+Currently, CasperJS works best with version 1.6.1 of PhantomJS. Version 7 of PhantomJS is available but there might be a delay before CasperJS catches up with the extra fuctionality. Casper is currently rocking a well-tested 1.0.0-RC1.
+
+##Feedback
+
 If you enjoyed this article, found it offensive or just too long, you'll want to [send me a message on twitter][14] then.
 
 
