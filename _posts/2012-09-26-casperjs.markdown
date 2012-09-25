@@ -118,7 +118,7 @@ What's most surprising to me is that I've actually found the process of testing 
 
 ##A note on versions
 
-Currently, CasperJS works best with version 1.6.1 of PhantomJS. Version 7 of PhantomJS is available but there might be a delay before CasperJS catches up with the extra fuctionality. Casper is currently rocking a well-tested 1.0.0-RC1.
+Currently, CasperJS works best with version 1.6.1 of PhantomJS. Version 1.7 of PhantomJS is available but there might be a delay before CasperJS catches up with the extra fuctionality. Casper is currently rocking a well-tested 1.0.0-RC1.
 
 ##Feedback
 
