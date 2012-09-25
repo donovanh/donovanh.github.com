@@ -7,7 +7,7 @@ published: true
 ---
 Front-end development used to be straightforward. A little bit of HTML, some CSS for styling and setting the colours, and maybe sprinkle on some JavaScript to handle the rollovers and form validation. Well, it's not 1999 any more, it's time to stop partying and get serious. For a moment anyway.
 
-##Web apps are software now
+##Web apps be serious business
 
 I, like many web people, got into the industry through what started as a hobby and turned into a full time profession. For me this meant that I was never exposed to the formal software development processes that go on in larger teams, and even though I have spend much of the last decade putting together the front and back ends of large websites, taking the time to properly test the development has never been given priority.
 
