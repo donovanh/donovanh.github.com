@@ -106,7 +106,7 @@ When I discovered this way to test my web app using JavaScript, the first thing 
 
 There's a [great overview of multiple tests][10] on the CasperJS website and I would recommend checking it for the best way to handly running multiple tests. Having done that, I now have a suite of tests I can check individually and run in a big set whenever I need want to make sure everything's still in good order.
 
-##Setting up CasperJS and PhantonJS (OSX)
+##Setting up CasperJS and PhantomJS (OSX)
 
 Danny Croft has some great [instructions on setting up PhantomJS and CasperJS][11] so rather than copy and paste them here, I would thoroughly recommend checking out his guide.
 
