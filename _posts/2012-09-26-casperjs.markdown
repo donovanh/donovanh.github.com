@@ -98,7 +98,7 @@ Something the above doesn't show is any actual tests. CasperJS includes lots of 
 		this.test.assertEquals(this.getTitle(), 'The Page of Awesomeness', 'The page title was "The Page of Awesomeness"');
 	});
 
-Running the above test in the sequence would return a nice green *pass* if your page was called "The Page of Awesoeness", and a red *fail* if your page sucks.
+Running the above test in the sequence would return a nice green *pass* if your page was called "The Page of Awesomeness", and a red *fail* if your page sucks.
 
 ##Managing lots of tests
 
