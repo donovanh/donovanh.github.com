@@ -19,6 +19,7 @@
     <![endif]-->
     <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel="stylesheet" type="text/css">
     <link rel="canonical" href="{{ page.url | canonical }}">
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/hopie" title="hop.ie" />
     <script src="/javascripts/modernizr.js"></script>
@@ -37,7 +38,7 @@
   </div>
 	<footer class="clearfix">
 	  <section class="footer-content">
-	    <p>I am <a href="http://twitter.com/donovanh">@donovanh</a> on twitter.</p>
+	    <p>I am <a href="https://alpha.app.net/donovan">@donovan</a> on app.net.</p>
 	    <p>Brought to you by the power of <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com">GitHub Pages</a>. See the <a href="https://github.com/donovanh/donovanh.github.com">source code</a>!</p>
 		  <p>&copy; 2012 Donovan Hutchinson</p>
 		</section>
@@ -59,6 +60,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
   <script src="/javascripts/main.js"></script>
+  <script src="/javascripts/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
 {% for j in page.javascripts %}
   {% if j == 'angular' %}
