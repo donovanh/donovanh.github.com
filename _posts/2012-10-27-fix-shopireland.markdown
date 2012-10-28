@@ -25,7 +25,7 @@ The following list is far from exhaustive, but covers the main areas I'd like to
 
 ## Site speed
 
-*Note:* Server speed improvements have been put in place. [This post](/shopireland-speed) goes into greater detail.
+<em><strong>Note:</strong> Server speed improvements done! <a href="/shopireland-speed">This post</a> goes into greater detail.</em>
 
 The site has had some attention in this area but is still in need of improvement. As it makes heavy use of Amazon's product API, it is important that pages be cached and generated from the API only when needed. The original site had no caching and also did a lot of heavy database work on each view. Some patchy fixes to this have brought average page speeds down from 5 seconds to around 1.5 seconds, but I'd like it to be [under 1 second][5].
 
