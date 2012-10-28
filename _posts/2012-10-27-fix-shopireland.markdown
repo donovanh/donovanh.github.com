@@ -55,7 +55,7 @@ While the above seem a little dry, they all add up to creating a solid structure
 
 The plan is to update this page as I make my way through the above list, noting what I did or decided not to do, along with any related blog posts. If you have any suggestions, please send me an email at [d@hop.ie][4] or message me on the details below. I'd love to hear your thoughts!
 
- [irish shopping website]: http://shopireland.ie
+ [irish shopping website]: http://www.shopireland.ie
  [August 2004]: http://web.archive.org/web/20040805022210/http://www.shopireland.ie/
  [3]: http://schema.org/
  [4]: mailto:d@hop.ie

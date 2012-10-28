@@ -51,7 +51,7 @@ The average response time is 37ms, and this held up consistently across the test
 
 ## Result
 
-In the end, the page response time was improved from over 500ms to 37ms. It is also much more stable and the server is better able to serve a range of requests as much of the load it taken away from Apache and handled by nginx.
+In the end, the page response time was improved from over 500ms to 37ms. It is also much more stable and the server is better able to serve a range of requests as much of the load is taken away from Apache and handled by nginx.
 
 [1]: /fix-shopireland
 [2]: /head-in-the-clouds
