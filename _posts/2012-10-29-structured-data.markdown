@@ -13,11 +13,11 @@ Schema.org brings a set of recommendations for adding extra descriptive data to 
 
 An example of how this works is in describing the name of a movie. You might have the following heading in your HTML:
 
-	<h1>Plan 9 from Outer Space</h1>
+    <h1>Plan 9 from Outer Space</h1>
 
 This might be useful to humans, who would see it in context of a web page describing a movie and know what that implied, but a search engine would not. Instead you would add microdata to tell the search engine that it is in fact a name:
 
-	<h1 itemprop="name">Plan 9 from Outer Space</h1>
+    <h1 itemprop="name">Plan 9 from Outer Space</h1>
 
 The search engine would be able to evaluate this as the name of the item described, and not just a page section or title.
 
@@ -31,35 +31,35 @@ Potential uses could go much further with any online catalogue being able to use
 
 To make use of this, I decided to put some of the microdata into place on my shop. The schema.org website provides a great [introduction here][6]. The first step was to begin with a block of markup describing a product. Here's the data that I need to describe from the classic movie [Plan 9 From Outer Space][7]
 
-	
-	Plan 9 From Outer Space [DVD]
-	starring:
-		Bela Lugosi,
-		Tom Keene,
-		Mona McKinnon,
-		Duke Moore,
-		Vampira
-	Image: http://ecx.images-amazon.com/images/I/51iqYZ3qQaL._SL160_.jpg
-	Our Price: €15.95
-	Availability: Usually dispatched within 24 hours
-	Publisher: MPIC Video
-	Release date:11th April, 2009
+    
+    Plan 9 From Outer Space [DVD]
+    starring:
+      Bela Lugosi,
+      Tom Keene,
+      Mona McKinnon,
+      Duke Moore,
+      Vampira
+    Image: http://ecx.images-amazon.com/images/I/51iqYZ3qQaL._SL160_.jpg
+    Our Price: €15.95
+    Availability: Usually dispatched within 24 hours
+    Publisher: MPIC Video
+    Release date:11th April, 2009
 
 To describe the above data, I would usually wrap it in plain HTML. The above if described in HTML might look something like this:
 
-	<h2>Plan 9 From Outer Space [DVD]
-		starring:
-		<a href="/search/Bela+Lugosi/">Bela Lugosi</a>,
-		<a href="/search/Tom+Keene/">Tom Keene</a>,
-		<a href="/search/Mona+McKinnon/">Mona McKinnon</a>,
-		<a href="/search/Duke+Moore/">Duke Moore</a>,
-		<a href="/search/Vampira/">Vampira</a>
-	</h2>
-	<img src="http://ecx.images-amazon.com/images/I/51iqYZ3qQaL._SL160_.jpg" />
-	<p>Our Price: &euro;15.95</p>
-	<p>Availability: Usually dispatched within 24 hours</p>
-	<p>Publisher: MPIC Video</p>
-	<p>Release date: 11th April, 2009</p>
+    <h2>Plan 9 From Outer Space [DVD]
+      starring:
+      <a href="/search/Bela+Lugosi/">Bela Lugosi</a>,
+      <a href="/search/Tom+Keene/">Tom Keene</a>,
+      <a href="/search/Mona+McKinnon/">Mona McKinnon</a>,
+      <a href="/search/Duke+Moore/">Duke Moore</a>,
+      <a href="/search/Vampira/">Vampira</a>
+    </h2>
+    <img src="http://ecx.images-amazon.com/images/I/51iqYZ3qQaL._SL160_.jpg" />
+    <p>Our Price: &euro;15.95</p>
+    <p>Availability: Usually dispatched within 24 hours</p>
+    <p>Publisher: MPIC Video</p>
+    <p>Release date: 11th April, 2009</p>
 
 Using titles and paragraphs would be fine for humans to understand, but search engines won't know that one paragraph describes the price, and another the availability.
 
@@ -67,38 +67,38 @@ We can use microdata to label the movie name and other meta data such as the ite
 
 The first step is to wrap the item in a container that defined its scope. Scheme has a [long list][8] of schemes that can apply, but for this one I'll be using "[Movie][9]".
 
-	<div itemscope itemscheme="http://schema.org/Movie">
-		... content here
-	</div>
+    <div itemscope itemscheme="http://schema.org/Movie">
+      ... content here
+    </div>
 
 This tells the search engine that everything contained within will match the scheme provided at `http://schema.org/Movie`. Next, I add in some meta data and describe the name of the movie.
 
-	
-	<div itemscope itemscheme="http://schema.org/Movie">
-		<link itemprop="url" href="full_url" />
-		<h2><span itemprop="name">Plan 9 From Outer Space [DVD]</span></h2>
-	</div>
+    
+    <div itemscope itemscheme="http://schema.org/Movie">
+      <link itemprop="url" href="full_url" />
+      <h2><span itemprop="name">Plan 9 From Outer Space [DVD]</span></h2>
+    </div>
 
 The "itemprop" attribute is used to label the contents as being certain properties of the item. In this case, the "link" tag is used to describe the URL. The movie name is described using "itemprop=name". Next I add in the actors, image and other data.
 
-	<div itemscope itemscheme="http://schema.org/Movie">
-		<link itemprop="url" href="full_url" />
-		<h2><span itemprop="name">Plan 9 From Outer Space [DVD]</span>
-			starring:
-			<a href="/search/Bela+Lugosi/"><span itemprop="actor">Bela Lugosi</span></a>,
-			<a href="/search/Tom+Keene/"><span itemprop="actor">Tom Keene</span></a>,
-			<a href="/search/Mona+McKinnon/"><span itemprop="actor">Mona McKinnon</span></a>,
-			<a href="/search/Duke+Moore/"><span itemprop="actor">Duke Moore</span></a>,
-			<a href="/search/Vampira/"><span itemprop="actor">Vampira</span></a>
-		</h2>
+    <div itemscope itemscheme="http://schema.org/Movie">
+      <link itemprop="url" href="full_url" />
+      <h2><span itemprop="name">Plan 9 From Outer Space [DVD]</span>
+          starring:
+          <a href="/search/Bela+Lugosi/"><span itemprop="actor">Bela Lugosi</span></a>,
+          <a href="/search/Tom+Keene/"><span itemprop="actor">Tom Keene</span></a>,
+          <a href="/search/Mona+McKinnon/"><span itemprop="actor">Mona McKinnon</span></a>,
+          <a href="/search/Duke+Moore/"><span itemprop="actor">Duke Moore</span></a>,
+          <a href="/search/Vampira/"><span itemprop="actor">Vampira</span></a>
+      </h2>
 
-		<img itemprop="image" src="http://ecx.images-amazon.com/images/I/51iqYZ3qQaL._SL160_.jpg" />
-		<p><strong>Our Price:</strong> <span itemprop="price">&euro;15.95</span></p>
-		<p>Availability: <span itemprop="availability" href="http://schema.org/InStock">Usually dispatched within 24 hours</span></p>
-		
-		<p>Publisher: <span itemprop="publisher">MPIC Video</span></p>
-		<p>Release date: <span itemprop="datePublished" content="2009-04-11">11th April, 2009</span>
-	</div>
+      <img itemprop="image" src="http://ecx.images-amazon.com/images/I/51iqYZ3qQaL._SL160_.jpg" />
+      <p><strong>Our Price:</strong> <span itemprop="price">&euro;15.95</span></p>
+      <p>Availability: <span itemprop="availability" href="http://schema.org/InStock">Usually dispatched within 24 hours</span></p>
+      
+      <p>Publisher: <span itemprop="publisher">MPIC Video</span></p>
+      <p>Release date: <span itemprop="datePublished" content="2009-04-11">11th April, 2009</span>
+    </div>
 
 The pattern is the same as above. Each actor is wrapped in a span containing the "itemprop" attribute. The image tag itself contains the attribute so that the image source can be recognised by the search engines as the movie's cover art.
 
