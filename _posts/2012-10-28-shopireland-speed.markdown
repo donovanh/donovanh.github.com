@@ -9,15 +9,15 @@ As part of my great [website revamp][1], I'm starting off by looking at the site
 
 ## Close to home
 
-The first thing to decide was where the site is hosted. Previously it was hosted with Slicehost on the east coast of USA. The target market for this site is in Ireland, so my plan was to find a host that was closer.
+The first thing to decide was where the site is hosted. Previously it had been hosted with Slicehost on the east coast of USA. The target market for this site was in Ireland, so my plan was to find a host that was located closer.
 
 I tried [a few options][2], including setting up a server on Amazon's EC2. While Amazon had the potential to be the fastest with their Dublin location, I found their entry-level server too slow for my needs and the upgrades too expensive. After that I looked at a [Linode][3] virtual dedicated server option based in London.
 
-While not quite as fast as being hosted in Dublin, the difference was pretty small. Moving from a server in the USA to one in the UK shaved off a couple of hundred milliseconds from the response time. This is a small but noticeable difference and achieved by simply moving some files to another server.
+While not quite as close as being hosted in Dublin, the delay sending data between the London and Dublin was tiny. Moving from a server in the USA to the UK shaved off a couple of hundred milliseconds from the response time. This was a noticeable difference and achieved by simply moving some files to another server.
 
 ## Cache Rules Everything Around Me
 
-Having moved to a closer server, I decided to revamp my old caching system. I spend the best part of 4 evenings over the course of a week hacking a way at it before finding a much better solution that in the end took less than an hour to set up.
+Having moved to a closer server, I decided to revamp my old caching system. I spent the best part of 4 evenings over the course of a week hacking a way at it. While I learned many things about managing cache files before finding a much better solution that in the end took less than an hour to set up.
 
 ### It's all going to have to come out
 
