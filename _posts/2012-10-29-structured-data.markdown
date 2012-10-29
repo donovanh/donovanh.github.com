@@ -106,7 +106,7 @@ It's worth noting the availability and release date data. The availability prope
 
 ## Testing the result
 
-Google provides a handy tool within [Google Webmasters][10] imaginatively titled "Rich Data Testing Tool". It can be found under "Other Resources". Putting the data above into my own product listing and testing it resulted in the following:
+Google provides a handy tool within [Google Webmasters][10] imaginatively titled "Rich Data Testing Tool". It can be found under "Other Resources". Putting the data above into the "[Plan 9 from Outer Space][11]" product listing and testing it resulted in the following:
 
 <img src="/images/posts/movie-schema.png" style="max-width:792px;" alt="I schema for ice schema!" />
 
@@ -124,4 +124,5 @@ As this is part of an ongoing improvement to the shop website, I will continue t
 [8]: http://schema.org/docs/full.html
 [9]: http://schema.org/Movie
 [10]: http://www.google.com/webmasters
+[11]: http://www.shopireland.ie/dvd/B00005KH0Y/
 
