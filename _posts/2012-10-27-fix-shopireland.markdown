@@ -41,6 +41,8 @@ While improving the HTML I will take steps to adjust and improve the way the sit
 
 ## Information structure
 
+<em><strong>Note:</strong> Information structure added! <a href="/blog/structured-data/">This post</a> goes into greater detail.</em>
+
 A side effect of the HTML being non-semantic is that the data has no meaning to search engines. [Schema.org][3] provides an interesting way of describing the content within the HTML using microdata. I'd like to implement this across the product pages.
 
 ## Improved content
