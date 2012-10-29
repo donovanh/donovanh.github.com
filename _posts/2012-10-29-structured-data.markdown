@@ -108,7 +108,7 @@ It's worth noting the availability and release date data. The availability prope
 
 Google provides a handy tool within [Google Webmasters][10] imaginatively titled "Rich Data Testing Tool". It can be found under "Other Resources". Putting the data above into the "[Plan 9 from Outer Space][11]" product listing and testing it resulted in the following:
 
-<img src="/images/posts/movie-schema.png" style="max-width:792px;" alt="I schema for ice schema!" />
+<img src="/images/posts/movie-schema.png" style="max-width: 100%;" alt="I schema for ice schema!" />
 
 ## Future improvement
 
