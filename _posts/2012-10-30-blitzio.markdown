@@ -1,0 +1,44 @@
+---
+layout: post
+title: "On being prepared"
+description: "Testing your web server performance with Blitz.io."
+tags: [content]
+published: true
+---
+In a [recent post][1] I used a tool called [Blitz.io][2] to test and compare the server speeds of my old and new hosting setups. I didn't go into much detail at the time about the graphs or the data they provide, so I thought I'd expand a little on it here.
+
+## Ermagerd
+
+When I tried it for the first time, I was shocked at just how badly my site performed. The initial response times were over 500ms, and rather than continue at around that rate, they quickly slowed to under 2 seconds per response.
+
+Previous to this, I thought the site was pretty solid. I had put in place caching using PHP's cache_lite and installed APC to help the code run faster. Yet the combination of distance and a server with low RAM was pretty damning. Here's how I used this information to make the server better.
+
+## Setting up with Blitz.io
+
+The process of signing up and getting going is painless. As someone who works in UX, I appreciated the friendly, easy sign up. Something that could be easily portrayed as a dry, boring topic, is brought across as friendly and welcoming.
+
+### Sprint & Rush
+
+The way it works is straightforward. You enter the URL you'd like to test. The first step is that it pings the server (a sprint), and provides a summary of the headers returned. You can then run what is called a *rush*.
+
+A rush is when the server is hit by a number of users over the course of several seconds, minutes or longer. The resulting response times are graphed against the number of concurrent users. Running a sprint is straightforward if you're familiar with command line interfaces. For example, if I was to hit foo.com with 250 users over 1 minute, from a server based in Tokyo, I could use the following command:
+
+	-p 1-250:60 --region tokyo http://www.foo.com
+
+This would hit the foo.com site with a couple of thousand hits over the minute, and provide a graph of how the server fared:
+
+<img src="/images/posts/nginx-caching.png" width="100%" alt="Tidy." />
+
+It also provides a breakdown of the number of hits, total amount of data transferred, and any timeouts or errors.
+
+## Fun sport
+
+Something Blitz.io tries to do is make the process of testing your server a "fun sport". It is pretty good, if a little nail biting, watching the hundreds of connections hit the site and hoping, praying for no timeouts.
+
+For my use, I found it extremely handy. One of the biggest draws for me was the ability to test the server response from several locations, as my main target audience is based in Ireland. I was able to see how the server would fare if hit with lots of visitors from that area.
+
+If you have a server and haven't run any stress tests to see just how it handles, I'd recommend signing up and giving it a go.
+
+
+[1]: /blog/shopireland-speed
+[2]: http://blitz.io
