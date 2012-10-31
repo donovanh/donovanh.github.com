@@ -21,9 +21,9 @@ The process of signing up and getting going is painless. As someone who works in
 
 The way it works is straightforward. You enter the URL you'd like to test. The first step is that it pings the server (a sprint), and provides a summary of the headers returned. You can then run what is called a *rush*.
 
-A rush is when the server is hit by a number of users over the course of several seconds, minutes or longer. The resulting response times are graphed against the number of concurrent users. Running a sprint is straightforward if you're familiar with command line interfaces. For example, if I was to hit foo.com with 250 users over 1 minute, from a server based in Tokyo, I could use the following command:
+A rush is when the server is hit by a number of users over the course of several seconds, minutes or longer. The resulting response times are graphed against the number of concurrent users. Running a sprint is straightforward if you're familiar with command line interfaces. For example, if I was to hit foo.com with 250 users over 1 minute, from a server based in Japan, I could use the following command:
 
-	-p 1-250:60 --region tokyo http://www.foo.com
+	-p 1-250:60 --region japan http://www.foo.com
 
 This would hit the foo.com site with a couple of thousand hits over the minute, and provide a graph of how the server fared:
 
