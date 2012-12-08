@@ -411,6 +411,193 @@ html.no-js .bouncer-container
     @include border-radius(25px, 30px)
     
     
+/* Apple logo colours
+
+.apple, .butt:before, .top span:after, .butt:after
+  background: $font-color
+
+  .top
+    background: #415259
+    span
+      background: #415259
+    &:before, &:after
+      background: $font-color
+
+  .butt
+    span
+      background: #415259
+    background: #415259
+    &:before, &:after
+      background: $font-color
+
+  .bite
+    background: #415259
+
+.apple.colour
+  @include background-image(linear-gradient(#60bb44 0, #60bb44 16.6666667%, #fcb827 16.6666667%, #fcb827 33.33333%, #f6821f 33.33333%, #f6821f 50%, #df3a3e 50%, #df3a3e 66.666667%, #963d97 66.666667%, #963d97 83.33333%, #029ddd 83.33333%, #029ddd 100%))
+  
+  .butt:before, .butt:after
+    background-color: #029ddd
+
+  .top:after, .top:before, .top span::after
+    background-color: #60bb44
+
+@-webkit-keyframes spinY 
+  0%
+    -webkit-transform: rotateY(0deg)
+    -webkit-transform-origin: 0% 0% 5  
+  100%
+    -webkit-transform: rotateY(360deg)
+    -webkit-transform-origin: 0% 0% 5
+
+.apple-container
+  width: 40px
+  height: 40px
+  background-color: #415259
+  @include border-radius(35px)
+  position: relative
+  overflow: hidden
+  @include transition(width 0.2s ease-out)
+  margin-top: 1em
+
+  p
+    opacity: 0
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, Sans-serif
+    padding: 0 0 0 45px
+    line-height: 42px
+    font-size: 14px
+    @include transition(all 0.2s ease-out)
+    width: 260px
+    color: $font-color
+
+  &:hover
+    width: 180px
+    background-color: $background-color
+    @include transition(width 0.2s ease-out)
+
+    .apple
+      @include background-image(linear-gradient(#60bb44 0, #60bb44 16.6666667%, #fcb827 16.6666667%, #fcb827 33.33333%, #f6821f 33.33333%, #f6821f 50%, #df3a3e 50%, #df3a3e 66.666667%, #963d97 66.666667%, #963d97 83.33333%, #029ddd 83.33333%, #029ddd 100%))
+      -webkit-animation: spinY 2s linear infinite
+
+      .top
+        background: $background-color
+        span
+          background: $background-color
+
+      .butt
+        span
+          background: $background-color
+        background: $background-color
+
+      .bite
+        background: $background-color
+
+    .butt:before, .butt:after
+      background-color: #029ddd
+
+    .top:after, .top:before, .top span::after
+      background-color: #60bb44
+
+    p
+      opacity: 1
+      @include transition(all 0.2s ease-out)
+
+/* Shape
+
+.apple
+  width: 25px
+  height: 22px
+  border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%
+  position: absolute
+  top: 12px
+  left: 8px
+
+  .bite
+    position: absolute
+    width: 60%
+    height: 62%
+    right: -40%
+    top: 8%
+    border-radius: 60%
+
+  .butt
+    span
+      display: block
+      position: absolute
+      border-radius: 100% 100% 0% 0%
+      width: 24.5%
+      height: 400%
+      bottom: -239%
+      left: 38%
+    position: absolute
+    width: 100%
+    height: 4%
+    bottom: -1%
+    &:before
+      content: ''
+      position: absolute
+      width: 24%
+      height: 400%
+      border-radius: 0% 0% 100% 100%
+      left: 21%
+      bottom: 38%
+    &:after
+      content: ''
+      position: absolute
+      width: 23.4%
+      height: 400%
+      border-radius: 0% 0% 100% 100%
+      right: 21%
+      bottom: 38%
+
+  .top
+    span
+      display: block
+      position: absolute
+      border-radius: 0 0 60% 60%/0 0 100% 100%
+      width: 69%
+      height: 259%
+      top: -113%
+      left: 16%
+      z-index: 3
+      &:after
+        border-radius: 100% 0 100% 0
+        content: ""
+        height: 360%
+        left: 34%
+        position: absolute
+        top: -300%
+        width: 96%
+    position: absolute
+    width: 42%
+    height: 4%
+    top: 0px
+    left: 29%
+    &:before
+      content: ''
+      position: absolute
+      width: 62%
+      height: 260%
+      border-radius: 100% 100% 0% 0% / 100% 200% 0% 0%
+      left: -27%
+      top: 1%
+    &:after
+      content: ''
+      position: absolute
+      width: 62%
+      height: 260%
+      border-radius: 100% 100% 0% 0% / 200% 100% 0% 0%
+      right: -27%
+      top: 1%
+
+.apple-container
+  display: none
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  .apple-container
+    display: block
+  
+
 /* Overrides
 
 @import mediaqueries
