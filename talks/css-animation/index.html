@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>CSS Animation</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/user.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h3>THIS IS</h3>
+          <h1>DUBLINJS</h1>
+        </section>
+
+        <section>
+          <h3>IMPROVING WEBSITE UI WITH</h3>
+          <h1>CSS <span id="dancer">A</span>NIMATIONS</h1>
+          HTML5 Audio: http://css-tricks.com/play-sound-on-hover/
+          <aside class="notes">
+            I sincerely apologise for doing this to you, the internet, and anybody who might have accidentally seen this slide. You see, I had no choice. The memes compelled me.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Why Animate?</h1>
+            <ul>
+              <li>Draw attention</li>
+              <li>Present more information</li>
+              <li>Sleight of hand</li>
+              <li>Looks good</li>
+            </ul>
+          <aside class="notes">
+            Animation can look great. But animation isn't just about making designs "pop". It can have practical uses, making interactions easier and more meaningful. When a block of content slides into the screen, we're programmed to notice. Using animation to change the state of something on the screen is much easier to notice than a sudden state change. Showing content sliding out of another area can draw attention to the content's source, and by implication can help illustrate a page's structure.  
+          </aside>
+        </section>
+
+        <section>
+          <h1>JS Animation</h1>
+            <div class="half left">
+              <div id="js-button">Hover me</div>
+              <pre><code>
+$('#js-button').hover(
+function(e) {
+  $(e.target).animate({
+      padding: '30px 50px',
+      backgroundColor: 'red'
+    }, 500);
+},
+function(e) {
+  $(e.target).animate({
+    padding: '12px 20px',
+    backgroundColor: 'green'
+  }, 500);
+});
+              </code></pre>
+            </div>
+            <div class="half right">
+              <div id="accordion">
+                <h3>Section 1</h3>
+                <div>
+                  <p>
+                    Boop!
+                  </p>
+                </div>
+                <h3>Section 2</h3>
+                <div>
+                  <p>
+                    Beep!
+                  </p>
+                </div>
+                <h3>Section 3</h3>
+                <div>
+                  <p>
+                    Burp!
+                  </p>
+                </div>
+                <h3>Section 4</h3>
+                <div>
+                  <p>
+                    Bap!
+                  </p>
+                </div>
+              </div>
+              <pre><code>
+$("#accordion").accordion();
+              </code></pre>
+            </div>
+          <aside class="notes">
+            Many people got into JS through using it to perform simple display modification. Change image on hover, animating an element around the screen, and when jQuery and the like brought us easy to set up carousels, accordions and all sorts of ways to make a page dynamic.
+          </aside>
+        </section>
+
+        <section>
+          <h1>CSS</h1>
+          <div class="half left">
+            <div id="css-button">Hover me</div>
+            <pre><code>
+#css-button {
+  background-color: green;
+  border: 10px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  padding: 12px 20px;
+  -webkit-transition: all 500ms;
+}
+
+#css-button:hover {
+  background-color: red;
+  padding: 30px 50px;
+  -webkit-transition: all 500ms;
+}
+</code></pre>          </div>
+          <div class="half right" id="css-accordion">
+            <div class="item">
+              <h3>Section 1</h3>
+              <div class="content">
+                <p>
+                  Boop!
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Section 2</h3>
+              <div class="content">
+                <p>
+                  Beep!
+                </p>
+              </div>
+            </div>
+<pre><code>
+#css-accordion div.content {
+  background-color: #fff;
+  border: 2px solid #aaa;
+  border-radius: 0 0 10px 10px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+}
+
+#css-accordion .item.active div.content {
+  height: 60px;
+  opacity: 1;
+  -webkit-transition: all 500ms;
+}
+</code></pre>
+          </div>
+          <aside class="notes">
+            CSS is more commonly used for describing how things look on the screen. Fonts, colours, layouts. It's always been able to provide means of visual changes using the :hover state. However it's possible to build on this using more advanced techniques to create impressive, and more importantly, useful transitions on the page. 
+          </aside>
+        </section>
+
+        <section style="">
+          <h1>Character</h1>
+          <div class="half" style="width:22%">
+            &nbsp;
+            <div class="bouncer-container">
+              <span class="bouncer">
+                <span class="ear1"></span>
+                <span class="ear2"></span>
+                <span class="eye1"></span>
+                <span class="eye2"></span>
+                <span class="mouth"></span>
+              </span>
+              <span class="shadow"></span>
+            </div>
+          </div>
+          <div class="half" style="width:78%">
+            <pre><code>@keyframes move-bouncer {
+  0% {
+    height: 80px;
+    border-radius: 50px / 40px;
+    top: 100px;
+  }
+  44%, 60% {
+    top: 0;
+    height: 120px;
+    border-radius: 50px / 60px;
+  }
+  100% {
+    height: 80px;
+    border-radius: 50px / 40px;
+    top: 100px;
+  }
+}
+            </code></pre>
+          </div>
+          <aside class="notes">
+            Physical objects move and react in predictable ways. We can tap into these learned associations by creating content that emulates some of these ideas. It stimulates our imagination and gives extra depth and character to what would otherwise be static and less interesting.
+            The example here is the logo from hop.ie. It's created entirely in HTML and CSS. The animation is handled by a set of keyframes, shown here. 
+          </aside>
+        </section>
+
+        <section>
+          <h1>Cool CSS Stuff</h1>
+          <ul>
+            <li>Hardware acceleration</li>
+            <li>Transitions</li>
+            <li>Keyframe Animation</li>
+          <aside class="notes">
+            It's possible to do all sorts of careful DOM manipulation with JS, but the main argument for moving the animations and transitions layer to CSS is that it's closer to the hardware. CSS is able to make use of hardware acceleration, and can result in smoother transitions on smaller devices such as phones. As well as this, CSS has been introducing several powerful tools to manupulate how things move and transition on screen.
+
+            One thing though; I'm not advocating ditching JS in favour of CSS only. JavaScript does things CSS cannot, such as attaching event listeners. These work well when used to add or remove classes from page elements, and use CSS to handle the visual changes.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Transitions</h1>
+            <div id="download-button">
+              <span class="container beer">
+                <img src="./images/beer.png">
+                <span class="text">Beer O'Clock *</span>
+              </span>
+              <span class="container what">
+                <img src="./images/clock.png">
+                 <span class="text">What time is it?</span>
+              </span>
+            </div>
+            <p class="disclaimer">* not yet... soon</p>
+          <aside class="notes">
+  
+          </aside>
+        </section>
+
+        <section>
+          <h1>Keyframe Animation</h1>
+          Picture of the hop website logo animation with ghosted keyframe locations, and a dotted line between them showing movement
+          <aside class="notes">
+            This is used as the logo on hop.ie. Like the duck example, it's created solely using HTML and CSS. It can be styled with CSS, and on some blog posts I've added racing stripes or changed the colour of the logo.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Crazy shit</h1>
+          
+          <aside class="notes">
+             Clouds based on example here: http://www.clicktorelease.com/blog/how-to-make-clouds-with-css-3d
+          </aside>
+        </section>
+
+        <section>
+          <h1>Performance</h1>
+            <div class="half">
+              <div class="js-example">
+                <div class="one">D</div>
+                <div class="two">U</div>
+                <div class="three">B</div>
+                <div class="four">L</div>
+                <div class="five">I</div>
+                <div class="six">N</div>
+                <div class="seven style2">J</div>
+                <div class="eight style2">S</div>
+              </div>
+              <h2 style="padding-top: 200px">JS</h2>
+            </div>
+            <div class="half">
+              <div class="css-example">
+                <div class="one">D</div>
+                <div class="two">U</div>
+                <div class="three">B</div>
+                <div class="four">L</div>
+                <div class="five">I</div>
+                <div class="six">N</div>
+                <div class="seven style2">J</div>
+                <div class="eight style2">S</div>
+              </div>
+              <h2 style="padding-top: 200px">CSS</h2>
+            </div>
+          <aside class="notes">
+            Show two moving items, one with JS and one with CSS. Load it up until difference is obvious.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Compatibility</h1>
+            <ul>
+              <li>Modernizr</li>
+            </ul>
+            <blockquote>
+               &laquo;html class="js backgroundsize borderradius textshadow opacity cssgradients csstransforms3d csstransitions fontface generatedcontent"&raquo;
+            </blockquote>
+          <aside class="notes">
+            -- Modernizr.js
+            -- Describe how the hopper is pretty much broken in many browsers. Opera, Firefox and Safari have their own quirks, but the biggest one to be aware of is any version of Internet Explorer prior to v9 or so. Rather than detect browser vendor and present different content, I'm using modernizr to detect the browser's capability. When the page loads, the Modernizr JS detects whether the browser can support animation, and adds a class to the head of the document. The CSS then shows the animated area if this class is available, otherwise it uses a background PNG.
+            -- It's important to keep fallbacks in mind when using CSS transitions. It's often a judgement call though. When animation is used to provide, like in the hopper example, entertainment value only, then it's not such a big deal if it doesn't work in older browsers. However if you're using animation to draw attention to elements or provide usability benefits, it might be worth looking into using some better supported CSS properties as a fallback.
+            -- Support is pretty good: Depending on your audience, transitions might be perfectly good to use. However there will always be larger organisations, or in some cases geographical requirements that impact whether you'll want to rely on a modern CSS3 technique, but as front end engineers that's an ongoing consideration. Over the next few years we'll see less of IE8 and the likes, but we'll also need to be aware of how people use phones on mobile devices. But that's another talk.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Real-world uses</h1>
+          Illustration of the hop.ie site layout with translate3d pointed out and dotted lines showing movement
+
+          <aside class="notes">
+            Describe what's being shown in the illustration. Open beta.hop.ie and show it in action. Explain how JS is being used to manage the list of albums, and apply the class "current", "next" and "previous". CSS takes over and animates the in-between frames. It's also used for the background image. The CSS transition is applied to the background image so that when the source is changed, it transitions. Explain how performance was initially very bad using (TRBL) positioning. But when the positioning was done using Translate3D, it made better use of the hardware. Link Paul Irish's post on TRBL at end.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Real-world uses</h1>
+          
+          <aside class="notes">
+            -- Screenshot of converser.io maker with link
+            -- Open converser maker example in new tab. Describe what the page attempts to do. Those that were at my Angular talk might recognise this example. It's the interace we've built at Converser to help people create in-app conversations. We've added some new stuff since the last time, and we make use of CSS transitions all over the place. I'll walk through a few examples of how transitions are used to make the experience more enjoyable for the user.
+            -- Add / remove content - describe the add button animation and how it's transition draws attention to it. The content adding / removing helps describe what's going on visually.
+            -- Phone modes - transition between iPhones and S3. The background image, dimensions, colours and borders all transition. It wouldn't be possible to do all this with just JavaScript. However JS is used in part, handling the adding / removing of the classes from the DIVs.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Summary</h1>
+          
+          <aside class="notes">
+            -- CSS transitions and animations are smooth, backed up by hardware support, and contain a growing set of features that make them useful across wider applications. Plus, maybe it's just me but I feel better moving display concernssuch as transitions and on-screen movement into the CSS. It feels like the right place.
+            -- Slide: Hardware acceleration / Powerful tools / Browser support is getting there
+          </aside>
+        </section>
+
+        <section>
+          <h1>Further reading</h1>
+          
+          <aside class="notes">
+            -- Links:
+            -- UI Transitions: http://www.ui-transitions.com/
+            -- LukeW Notes on CSS3 Animations (Andy Clarke talk): http://www.lukew.com/ff/entry.asp?1354
+            -- Lynda.com CSS Animations course: http://www.lynda.com/CSS-tutorials/CSS-Animations/115434-2.html
+            -- Intro to CSS Animation: http://www.kirupa.com/html5/introduction_to_animation_html.htm
+            -- Smashing Magazine CSS Examples: http://coding.smashingmagazine.com/2012/06/21/powerful-new-cssjavascript-techniques/
+            -- Creative Bloq 55 examples of HTML5: http://www.creativebloq.com/web-design-tips/examples-of-html5-1233547
+            -- HTML5 Canvas Intro: http://www.html5canvastutorials.com/tutorials/html5-canvas-tutorials-introduction/
+          </aside>
+        </section>
+
+        <section>
+          <h1>The End</h1>
+          
+          <aside class="notes">
+            -- Make characters dance like at the start
+            -- Twitter username
+            -- Any questions?
+            -- This talk URL
+          </aside>
+        </section>
+
+
+        
+
+
+        <!-- Reveal example slides -->
+
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2>Vertical Slides</h2>
+            <p>
+              Slides can be nested inside of other slides,
+              try pressing <a href="#" class="navigate-down">down</a>.
+            </p>
+            <a href="#" class="image navigate-down">
+              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section>
+            <h2>Basement Level 1</h2>
+            <p>Press down or up to navigate.</p>
+          </section>
+          <section>
+            <h2>Basement Level 2</h2>
+            <p>Cornify</p>
+            <a class="test" href="http://cornify.com">
+              <img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
+            </a>
+          </section>
+          <section>
+            <h2>Basement Level 3</h2>
+            <p>That's it, time to go back up.</p>
+            <a href="#/2" class="image">
+              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+            </a>
+          </section>
+        </section>
+
+        <section>
+          <h2>Point of View</h2>
+          <p>
+            Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+          </p>
+        </section>
+
+        <section>
+          <h2>rvl.io</h2>
+          <p>
+            If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Works in Mobile Safari</h2>
+          <p>
+            Try it out! You can swipe through the slides and pinch your way to the overview.
+          </p>
+        </section>
+
+        <section>
+          <h2>Marvelous Unordered List</h2>
+          <ul>
+            <li>No order here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fantastic Ordered List</h2>
+          <ol>
+            <li>One is smaller than...</li>
+            <li>Two is smaller than...</li>
+            <li>Three!</li>
+          </ol>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Markdown support
+
+            For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+
+              <section data-markdown>
+                ## Markdown support
+
+                For those of you who like that sort of thing.
+                Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+              </section>
+          </script>
+        </section>
+
+        <section id="transitions">
+          <h2>Transition Styles</h2>
+          <p>
+            You can select from different transitions, like: <br>
+            <a href="?transition=cube#/transitions">Cube</a> -
+            <a href="?transition=page#/transitions">Page</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a> -
+            <a href="?transition=linear#/transitions">Linear</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?#/transitions">Default</a>
+          </p>
+        </section>
+
+        <section id="themes">
+          <h2>Themes</h2>
+          <p>
+            Reveal.js comes with a few themes built in: <br>
+            <a href="?theme=sky#/themes">Sky</a> -
+            <a href="?theme=beige#/themes">Beige</a> -
+            <a href="?theme=simple#/themes">Simple</a> -
+            <a href="?theme=serif#/themes">Serif</a> -
+            <a href="?theme=night#/themes">Night</a> -
+            <a href="?#/themes">Default</a>
+          </p>
+          <p>
+            <small>
+              * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+            </small>
+          </p>
+        </section>
+
+        <section>
+          <section data-state="alert">
+            <h2>Global State</h2>
+            <p>
+              Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+              will be added as a class to the document element when the slide is open. This lets you
+              apply broader style changes, like switching the background.
+            </p>
+            <a href="#" class="image navigate-down">
+              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section data-state="blackout">
+            <h2>"blackout"</h2>
+            <a href="#" class="image navigate-down">
+              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section data-state="soothe">
+            <h2>"soothe"</h2>
+            <a href="#" class="image navigate-next">
+              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(-90deg);">
+            </a>
+          </section>
+        </section>
+
+        <section data-state="customevent">
+          <h2>Custom Events</h2>
+          <p>
+            Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+          </p>
+          <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
+  console.log( '"customevent" has fired' );
+} );
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Clever Quotes</h2>
+          <p>
+            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            The nice thing about standards is that there are so many to choose from</q> and block:
+          </p>
+          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Pretty Code</h2>
+          <pre><code contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+          </code></pre>
+          <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+        </section>
+
+        <section>
+          <h2>Intergalactic Interconnections</h2>
+          <p>
+            You can link between slides internally,
+            <a href="#/2/3">like this</a>.
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Fragmented Views</h2>
+            <p>Hit the next arrow...</p>
+            <p class="fragment">... to step through ...</p>
+            <ol>
+              <li class="fragment"><code>any type</code></li>
+              <li class="fragment"><em>of view</em></li>
+              <li class="fragment"><strong>fragments</strong></li>
+            </ol>
+
+            <aside class="notes">
+              This slide has fragments which are also stepped through in the notes window.
+            </aside>
+          </section>
+          <section>
+            <h2>Fragment Styles</h2>
+            <p>There's a few styles of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment roll-in">roll-in</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment highlight-red">highlight-red</p>
+            <p class="fragment highlight-green">highlight-green</p>
+            <p class="fragment highlight-blue">highlight-blue</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Spectacular image!</h2>
+          <a class="image" href="http://lab.hakim.se/meny/" target="_blank">
+            <img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+          </a>
+        </section>
+
+        <section>
+          <h2>Stellar Links</h2>
+          <ul>
+            <li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
+            <li><a href="http://hakim.se/projects/reveal-js">Leave feedback on my site</a></li>
+            <li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>THE END</h1>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/user.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: 'sky', // available themes are in /css/theme
+        transition: 'cube',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
