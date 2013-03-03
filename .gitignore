@@ -8,4 +8,4 @@ Thumbs.db
 .rbenv-version
 .rvmrc
 
-sass-cache
+.sass-cache
