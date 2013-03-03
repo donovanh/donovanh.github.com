@@ -463,6 +463,7 @@
 /* line 298, ../sass/user.sass */
 .css-example div {
   -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: css-example-animation 2s infinite;
 }
 /* line 299, ../sass/user.sass */
 .css-example div.style2 {
@@ -470,50 +471,64 @@
   color: white;
 }
 
-/* line 304, ../sass/user.sass */
+/* line 305, ../sass/user.sass */
 .js-example div.one, .css-example div.one {
   top: 0;
   left: 0;
 }
 
-/* line 308, ../sass/user.sass */
+/* line 309, ../sass/user.sass */
 .js-example div.two, .css-example div.two {
   top: 0;
   left: 50px;
 }
 
-/* line 312, ../sass/user.sass */
+/* line 313, ../sass/user.sass */
 .js-example div.three, .css-example div.three {
   top: 0;
   left: 100px;
 }
 
-/* line 316, ../sass/user.sass */
+/* line 317, ../sass/user.sass */
 .js-example div.four, .css-example div.four {
   top: 0;
   left: 150px;
 }
 
-/* line 320, ../sass/user.sass */
+/* line 321, ../sass/user.sass */
 .js-example div.five, .css-example div.five {
   top: 0;
   left: 200px;
 }
 
-/* line 324, ../sass/user.sass */
+/* line 325, ../sass/user.sass */
 .js-example div.six, .css-example div.six {
   top: 0;
   left: 250px;
 }
 
-/* line 328, ../sass/user.sass */
+/* line 329, ../sass/user.sass */
 .js-example div.seven, .css-example div.seven {
   top: 0;
   left: 300px;
 }
 
-/* line 332, ../sass/user.sass */
+/* line 333, ../sass/user.sass */
 .js-example div.eight, .css-example div.eight {
   top: 0;
   left: 350px;
+}
+
+@-webkit-keyframes css-example-animation {
+  /* line 338, ../sass/user.sass */
+  50% {
+    -webkit-transform: translate(0, 150px);
+    opacity: 0.2;
+  }
+
+  /* line 341, ../sass/user.sass */
+  100% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+  }
 }

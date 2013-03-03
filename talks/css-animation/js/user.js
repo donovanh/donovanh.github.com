@@ -1,4 +1,6 @@
 $(function() {
+    var comparisonInterval = '';
+
     $( "#accordion" ).accordion();
 
     // Slide 2
@@ -16,4 +18,19 @@ $(function() {
             $(e.target).parent().addClass('active');
         }
     });
+
+    Reveal.addEventListener( 'comparison', function() {
+        animateLetters();
+        comparisonInterval = setInterval(function() {animateLetters();}, 2000);
+    });
+
+    Reveal.addEventListener( 'clear-comparison', function() {
+        window.clearInterval(comparisonInterval)
+    });
+
+    function animateLetters() {
+        $('.js-example div').stop().animate({top: '150px', opacity: '0.2'}, 1000, function() {
+            $('.js-example div').stop().animate({top: '0', opacity: '1'}, 1000);
+        });
+    }
 });

@@ -300,6 +300,7 @@
     background-color: #666
     color: #fff
   -webkit-transform: translate3d(0, 0, 0)
+  -webkit-animation: css-example-animation 2s infinite
 
 .js-example div.one, .css-example div.one
   top: 0
@@ -332,3 +333,11 @@
 .js-example div.eight, .css-example div.eight
   top: 0
   left: 350px
+
+@-webkit-keyframes css-example-animation
+  50%
+    -webkit-transform: translate(0, 150px)
+    opacity: 0.2
+  100%
+    -webkit-transform: translate(0, 0)
+    opacity: 1
