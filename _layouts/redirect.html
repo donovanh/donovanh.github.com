@@ -14,17 +14,17 @@
     <![endif]-->
     <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular" rel="stylesheet" type="text/css">
-    <link rel="canonical" href="{{ page.url | canonical }}">
+    <link rel="canonical" href='{{ page.target | canonical }}'>
     <script type="text/javascript">
     <!--
-      window.location = "{{ page.target }}"
+      window.location = '{{ page.target }}'
     //-->
     </script>
 </head>
 <body>
   <div class="page-container">
   	<header>
-  		<p>Redirecting to <a href="{{ page.target }}"></a></p>
+  		<p>Redirecting to <a href='{{ page.target }}'>{{ page.target }}</a></p>
   	</header>
 
 </body>

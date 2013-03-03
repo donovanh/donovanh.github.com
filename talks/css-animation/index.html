@@ -46,15 +46,35 @@
 
         <section>
           <h3>IMPROVING WEBSITE UI WITH</h3>
-          <h1>CSS <span id="dancer">A</span>NIMATIONS</h1>
-          HTML5 Audio: http://css-tricks.com/play-sound-on-hover/
+          <h1>CSS ANIMATIONS</h1>
+          <p>Follow along at:</p>
+          <p><a href="http://hop.ie/talks/css-animation">hop.ie/go/css</a></p>
+        </section>
+
+        <section>
+          <h1>Background</h1>
           <aside class="notes">
-            I sincerely apologise for doing this to you, the internet, and anybody who might have accidentally seen this slide. You see, I had no choice. The memes compelled me.
+            First, a bit about me. I'm a front-end developer. My day job exposes me to all sorts of cool and interesting technologies, SASS, server-side JavaScript, static website generators, rails apps and more. I also spend a fair amount of time thinking about usability, and how interact with web apps.
+
+            Outside of work, I like to create small, and mostly useless, web projects to try out ideas. Often things I've learned from these projects find their way into my day to day work, sometimes not, but it's a fun way to make sure I keep learning.
+
+            What I'm going to talk about this evening is a little different from what this meetup's name might suggest. I'm not going to talk about JavaScript. Instead, I'm going to talk a bit about a subject I find fun, namely using CSS for transitions and animations.
           </aside>
         </section>
 
         <section>
-          <h1>Why Animate?</h1>
+          <h1>Front-end devs</h1>
+          <aside class="notes">
+            First, can I get a show of hands. Who here creates or plays a part in creating user interfaces? OK. Say you're moving some stuff around on the screen. Who's used JavaScript to achieve this? I certainly have. I still do. However what I'd like to present this evening is how you can get better performance, better separation of logical and presentation code, and achieve more interesting effects by using CSS instead.
+
+            Oh by the way, who's used CSS for their UI transitions? Good, glad to see a few have already! I hope there's something of use in this talk.
+
+            If anyone wants to ask a question at any point, please go ahead. Sometimes the moment can be lost if you want till the end, and I'm happy to talk more on any subject, or be corrected.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Why</h1>
             <ul>
               <li>Draw attention</li>
               <li>Present more information</li>
@@ -62,12 +82,29 @@
               <li>Looks good</li>
             </ul>
           <aside class="notes">
-            Animation can look great. But animation isn't just about making designs "pop". It can have practical uses, making interactions easier and more meaningful. When a block of content slides into the screen, we're programmed to notice. Using animation to change the state of something on the screen is much easier to notice than a sudden state change. Showing content sliding out of another area can draw attention to the content's source, and by implication can help illustrate a page's structure.  
+            So, what do I mean when I talk about using transitions and animations.
+
+            Animation can look great. But it can also have practical uses, making interactions easier and more meaningful. When a block of content slides into the screen, we're programmed to notice. Using animation to change the state of something on the screen is much easier to notice than a sudden state change. Showing content sliding out of another area can draw attention to the content's source, and by implication can help illustrate a page's structure.  
           </aside>
         </section>
 
         <section>
-          <h1>JS Animation</h1>
+          <h1>CSS</h1>
+            <ul>
+              <li>CSS transitions</li>
+              <li>Keyframe animation</li>
+            </ul>
+          <aside class="notes">
+            JavaScript has been, and still is, extremely handy for taking care of DOM manipulation and handling where and how things happen on screen. It can be used for basic stuff like changing images on hover, or even animating elements around the screen, and when jQuery and the like brought us easy to set up carousels, accordions and all sorts of ways to make a page dynamic.
+
+            But at the same time, CSS has expanded it's tools. CSS transitions and keyframe animation.
+
+            First, an illustration of how things that we might handle in JavaScript might be handled using CSS.
+          </aside>
+        </section>
+
+        <section>
+          <h1>JavaScript</h1>
             <div class="half left">
               <div id="js-button">Hover me</div>
               <pre><code>
@@ -100,25 +137,13 @@ function(e) {
                     Beep!
                   </p>
                 </div>
-                <h3>Section 3</h3>
-                <div>
-                  <p>
-                    Burp!
-                  </p>
-                </div>
-                <h3>Section 4</h3>
-                <div>
-                  <p>
-                    Bap!
-                  </p>
-                </div>
               </div>
               <pre><code>
 $("#accordion").accordion();
               </code></pre>
             </div>
           <aside class="notes">
-            Many people got into JS through using it to perform simple display modification. Change image on hover, animating an element around the screen, and when jQuery and the like brought us easy to set up carousels, accordions and all sorts of ways to make a page dynamic.
+
           </aside>
         </section>
 
@@ -183,8 +208,15 @@ $("#accordion").accordion();
           </aside>
         </section>
 
+        <section>
+          <h1>Transitions</h1>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
         <section style="">
-          <h1>Character</h1>
+          <h1>Keyframe animations</h1>
           <div class="half" style="width:22%">
             &nbsp;
             <div class="bouncer-container">
@@ -225,7 +257,7 @@ $("#accordion").accordion();
         </section>
 
         <section>
-          <h1>Cool CSS Stuff</h1>
+          <h1>CSS</h1>
           <ul>
             <li>Hardware acceleration</li>
             <li>Transitions</li>
@@ -239,17 +271,33 @@ $("#accordion").accordion();
 
         <section>
           <h1>Transitions</h1>
-            <div id="download-button">
-              <span class="container beer">
-                <img src="./images/beer.png">
-                <span class="text">Beer O'Clock *</span>
-              </span>
-              <span class="container what">
-                <img src="./images/clock.png">
-                 <span class="text">What time is it?</span>
-              </span>
+            <div class="half">
+              <p>No transitions</p>
+              <div class="download-button no-transition">
+                <span class="container beer">
+                  <img src="./images/beer.png">
+                  <span class="text">Beer O'Clock *</span>
+                </span>
+                <span class="container what">
+                  <img src="./images/clock.png">
+                   <span class="text">What time is it?</span>
+                </span>
+              </div>
             </div>
-            <p class="disclaimer">* not yet... soon</p>
+            <div class="half">
+              <p>Transitions</p>
+              <div class="download-button transition">
+                <span class="container beer">
+                  <img src="./images/beer.png">
+                  <span class="text">Beer O'Clock *</span>
+                </span>
+                <span class="container what">
+                  <img src="./images/clock.png">
+                   <span class="text">What time is it?</span>
+                </span>
+              </div>
+              <p class="disclaimer">* not yet... soon</p>
+            </div>
           <aside class="notes">
   
           </aside>
