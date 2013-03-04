@@ -184,7 +184,7 @@
     text-indent: -9999px
     z-index: 0
   .bouncer
-    top: 0
+    @include transform(translate(0,0))
     left: 0
     width: 100px
     height: 120px
@@ -194,7 +194,7 @@
     border-radius: 50px / 60px
     opacity: 1
     z-index: 2
-    -webkit-animation: move-bouncer 1.2s infinite
+    -webkit-animation: move-bouncer 1.4s infinite
   .bouncer-end-position
     top: 10px
     left: 104px
@@ -253,30 +253,30 @@
     border-radius: 100px
     background-image: -webkit-radial-gradient(circle, #999999, transparent)
     opacity: 0
-    -webkit-animation: bouncer-shadow 1.2s infinite
+    -webkit-animation: bouncer-shadow 1.4s infinite
 
 @-webkit-keyframes move-bouncer
   0%
     height: 80px
     border-radius: 50px / 40px
-    top: 100px
-  44%, 60%
-    top: 0
+    @include transform(translate(0,100px))
+  48%, 54%
+    @include transform(translate(0,0))
     height: 120px
     border-radius: 50px / 60px
   100%
     height: 80px
     border-radius: 50px / 40px
-    top: 100px
+    @include transform(translate(0,100px))
 
 
 @-webkit-keyframes bouncer-shadow
   0%
-    opacity: 0
-  44%, 60%
-    opacity: 0.2
+    opacity: 0.1
+  48%, 54%
+    opacity: 0.4
   100%
-    opacity: 0
+    opacity: 0.1
 
 
 /* JS vs CSS Performance
@@ -341,3 +341,57 @@
   100%
     -webkit-transform: translate(0, 0)
     opacity: 1
+
+/* Cards
+
+.card
+  width: 260px
+  height: 340px
+  margin: 0 20px 0 !important
+  float: left
+  position: relative
+  @include perspective(800px)
+  color: #fff
+  text-align: center
+  
+  .front
+    width: 100%
+    height: 100%
+    position: absolute
+    background: url(/talks/css-animation/images/telefonica.jpg) no-repeat
+    @include border-radius(35px)
+    @include transition(all 500ms ease-in-out)
+    @include transform-style(preserve-3d)
+    @include backface-visibility(hidden)
+    @include box-shadow(0 0 20px #6f7e85)
+
+    h3
+      color: #fff
+      padding-top: 80px
+      font-size: 72px
+      @include text-shadow(0 -1px #3b4c54)
+
+  .back
+    width: 100%
+    height: 100%
+    background-color: #2b4546
+    @include border-radius(35px)
+    @include transition(all 500ms ease-in-out)
+    @include transform-style(preserve-3d)
+    @include transform(rotateY(180deg))
+    @include backface-visibility(hidden)
+    @include box-shadow(0 0 20px #6f7e85)
+
+    h3
+      color: #fff
+      padding-top: 80px
+      font-size: 120px
+      @include text-shadow(0 -1px #3b4c54)
+
+  &:hover
+
+    .front
+      @include transform(rotateY(180deg))
+
+    .back
+      @include transform(rotateY(360deg))

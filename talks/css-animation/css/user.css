@@ -311,7 +311,11 @@
 }
 /* line 186, ../sass/user.sass */
 .bouncer-container .bouncer {
-  top: 0;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
   left: 0;
   width: 100px;
   height: 120px;
@@ -321,7 +325,7 @@
   border-radius: 50px/60px;
   opacity: 1;
   z-index: 2;
-  -webkit-animation: move-bouncer 1.2s infinite;
+  -webkit-animation: move-bouncer 1.4s infinite;
 }
 /* line 198, ../sass/user.sass */
 .bouncer-container .bouncer-end-position {
@@ -398,7 +402,7 @@
   border-radius: 100px;
   background-image: -webkit-radial-gradient(circle, #999999, transparent);
   opacity: 0;
-  -webkit-animation: bouncer-shadow 1.2s infinite;
+  -webkit-animation: bouncer-shadow 1.4s infinite;
 }
 
 @-webkit-keyframes move-bouncer {
@@ -406,12 +410,20 @@
   0% {
     height: 80px;
     border-radius: 50px/40px;
-    top: 100px;
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px);
   }
 
   /* line 263, ../sass/user.sass */
-  44%, 60% {
-    top: 0;
+  48%, 54% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
     height: 120px;
     border-radius: 50px/60px;
   }
@@ -420,24 +432,28 @@
   100% {
     height: 80px;
     border-radius: 50px/40px;
-    top: 100px;
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px);
   }
 }
 
 @-webkit-keyframes bouncer-shadow {
   /* line 274, ../sass/user.sass */
   0% {
-    opacity: 0;
+    opacity: 0.1;
   }
 
   /* line 276, ../sass/user.sass */
-  44%, 60% {
-    opacity: 0.2;
+  48%, 54% {
+    opacity: 0.4;
   }
 
   /* line 278, ../sass/user.sass */
   100% {
-    opacity: 0;
+    opacity: 0.1;
   }
 }
 
@@ -531,4 +547,113 @@
     -webkit-transform: translate(0, 0);
     opacity: 1;
   }
+}
+
+/* Cards */
+/* line 347, ../sass/user.sass */
+.card {
+  width: 260px;
+  height: 340px;
+  margin: 0 20px 0 !important;
+  float: left;
+  position: relative;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  color: white;
+  text-align: center;
+}
+/* line 357, ../sass/user.sass */
+.card .front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(/talks/css-animation/images/telefonica.jpg) no-repeat;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  border-radius: 35px;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 0 0 20px #6f7e85;
+  -moz-box-shadow: 0 0 20px #6f7e85;
+  box-shadow: 0 0 20px #6f7e85;
+}
+/* line 368, ../sass/user.sass */
+.card .front h3 {
+  color: white;
+  padding-top: 80px;
+  font-size: 72px;
+  text-shadow: 0 -1px #3b4c54;
+}
+/* line 374, ../sass/user.sass */
+.card .back {
+  width: 100%;
+  height: 100%;
+  background-color: #2b4546;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  border-radius: 35px;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 0 0 20px #6f7e85;
+  -moz-box-shadow: 0 0 20px #6f7e85;
+  box-shadow: 0 0 20px #6f7e85;
+}
+/* line 385, ../sass/user.sass */
+.card .back h3 {
+  color: white;
+  padding-top: 80px;
+  font-size: 120px;
+  text-shadow: 0 -1px #3b4c54;
+}
+/* line 393, ../sass/user.sass */
+.card:hover .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 396, ../sass/user.sass */
+.card:hover .back {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }

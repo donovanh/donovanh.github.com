@@ -175,18 +175,14 @@ $("#accordion").accordion();
             <pre><code>
 #css-button {
   background-color: green;
-  border: 10px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  display: inline-block;
   padding: 12px 20px;
-  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 #css-button:hover {
   background-color: red;
   padding: 30px 50px;
-  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 </code></pre>          </div>
           <div class="half right" id="css-accordion">
@@ -208,19 +204,15 @@ $("#accordion").accordion();
             </div>
 <pre><code>
 #css-accordion div.content {
-  background-color: #fff;
-  border: 2px solid #aaa;
-  border-radius: 0 0 10px 10px;
   height: 0;
   opacity: 0;
-  overflow: hidden;
-  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 #css-accordion .item.active div.content {
   height: 60px;
   opacity: 1;
-  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 </code></pre>
           </div>
@@ -271,6 +263,18 @@ $("#accordion").accordion();
           <aside class="notes">
   
           </aside>
+        </section>
+
+        <section>
+          <h1>Transitions</h1>
+          <ul>
+            <li>Various CSS styles:</li>
+            <ul>
+              <li>Shape / size / colour</li>
+              <li>Translate3D / Opacity</li>
+            </ul>
+            <li>Easing</li>
+          </ul> 
         </section>
 
         <section data-state="clear-comparison">
@@ -345,6 +349,24 @@ $("#accordion").accordion();
           <aside class="notes">
             Show two moving items, one with JS and one with CSS. Load it up until difference is obvious.
           </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>Advanced CSS</h1>
+          <div class="cards" style="clear: both">
+            <div class="card">
+              <div class="front"><h3>Dublin JS</h3></div>
+              <div class="back"><h3>C</h3></div>
+            </div>
+            <div class="card">
+              <div class="front"><h3>Dublin JS</h3></div>
+              <div class="back"><h3>S</h3></div>
+            </div>
+            <div class="card">
+              <div class="front"><h3>Dublin JS</h3></div>
+              <div class="back"><h3>S</h3></div>
+            </div>
+          </div>
         </section>
 
         <section data-state="clear-comparison">
