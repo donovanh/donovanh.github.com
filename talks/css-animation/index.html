@@ -54,12 +54,7 @@
             Outside of work, I like to create small, and mostly useless, web projects to try out ideas. Often things I've learned from these projects find their way into my day to day work, sometimes not, but it's a fun way to make sure I keep learning.
 
             What I'm going to talk about this evening is a little different from what this meetup's name might suggest. I'm not going to talk about JavaScript. Instead, I'm going to talk a bit about a subject I find fun, namely using CSS for transitions and animations.
-          </aside>
-        </section>
 
-        <section>
-          <h1>Enough about me</h1>
-          <aside class="notes">
             First, can I get a show of hands. Who here creates or plays a part in creating user interfaces? OK. Say you're moving some stuff around on the screen. Who's used JavaScript to achieve this? I certainly have. I still do. However what I'd like to present this evening is how you can get better performance, better separation of logical and presentation code, and achieve more interesting effects by using CSS instead.
 
             Oh by the way, who's used CSS for their UI transitions? Good, glad to see a few have already! I hope there's something of use in this talk.
@@ -69,34 +64,68 @@
         </section>
 
         <section>
-          <h1>Why</h1>
+          <h1>Design</h1>
             <ul>
-              <li>Draw attention</li>
-              <li>Present more information</li>
-              <li>Sleight of hand</li>
-              <li>Looks good</li>
+              <li>Conveying information</li>
+              <li>Branding</li>
+              <li>Interaction</li>
             </ul>
           <aside class="notes">
-            So, what do I mean when I talk about using transitions and animations.
-
-            Animation can look great. But it can also have practical uses, making interactions easier and more meaningful. When a block of content slides into the screen, we're programmed to notice. Using animation to change the state of something on the screen is much easier to notice than a sudden state change. Showing content sliding out of another area can draw attention to the content's source, and by implication can help demonstrate a page's structure.  
+             
           </aside>
         </section>
 
         <section>
-          <h1>Transitions</h1>
-          <img src="/talks/css-animation/images/atob.png" style="border: none; box-shadow: none; background: none !important" />
+          <h1>Animation</h1>
+            <ul>
+              <li>Suggesting importance</li>
+              <li>Adding character</li>
+              <li>Affordance</li>
+            </ul>
           <aside class="notes">
-            Transitions are in themselves quite straightforward. By adding a line of SASS, or a few lines of vendor-prefixed CSS, you tell the browser to calculate the difference between two states and fill in the various key frames in between.
+             How can animation help achieve these goals. More than simply making things shinier.
+          </aside>
+        </section>
 
-            When I say different states, this could be a hover state, or it could be the addition or removal of a class using JavaScript. A CSS transition can take place on a specific aspect of the object, such as it's colour, border radius, padding or size. It can also be used to simply transition everything at once by specifying "all".
+        <section>
+          <h1>CSS &amp; JS</h1>
+            <ul>
+              <li>Different tools</li>
+            </ul>
+          <aside class="notes">
+             
+          </aside>
+        </section>
 
-            Here's an illustration of some transitions, starting with how it can be done with JavaScript.
+        <section>
+          <h1>CSS</h1>
+            <ul>
+              <li>Visual layouts</li>
+              <li>Incomplete browser support</li>
+              <li>New features:</li>
+              <ul>
+                <li>Transitions, Keyframes, Canvas and more</li>
+              </ul>
+            </ul>
+          <aside class="notes">
+             
           </aside>
         </section>
 
         <section>
           <h1>JavaScript</h1>
+            <ul>
+              <li>Functionality</li>
+              <li>Good browser support</li>
+              <li>Frameworks</li>
+            </ul>
+          <aside class="notes">
+             
+          </aside>
+        </section>
+
+        <section>
+          <h1>JavaScript example</h1>
             <div class="half left">
               <div id="js-button">Hover me</div>
               <pre><code>
@@ -140,7 +169,7 @@ $("#accordion").accordion();
         </section>
 
         <section>
-          <h1>CSS</h1>
+          <h1>CSS example</h1>
           <div class="half left">
             <div id="css-button">Hover me</div>
             <pre><code>
@@ -197,6 +226,50 @@ $("#accordion").accordion();
           </div>
           <aside class="notes">
             
+          </aside>
+        </section>
+
+        <section>
+          <h1>Transitions</h1>
+          <img src="/talks/css-animation/images/atob.png" style="border: none; box-shadow: none; background: none !important" />
+          <aside class="notes">
+            Transitions are in themselves quite straightforward. By adding a line of SASS, or a few lines of vendor-prefixed CSS, you tell the browser to calculate the difference between two states and fill in the various key frames in between.
+
+            When I say different states, this could be a hover state, or it could be the addition or removal of a class using JavaScript. A CSS transition can take place on a specific aspect of the object, such as it's colour, border radius, padding or size. It can also be used to simply transition everything at once by specifying "all".
+          </aside>
+        </section>
+
+        <section>
+          <h1>Multiple transitions</h1>
+            <div class="half">
+              <p>No transitions</p>
+              <div class="download-button no-transition">
+                <span class="container beer">
+                  <img src="./images/beer.png">
+                  <span class="text">Beer O'Clock *</span>
+                </span>
+                <span class="container what">
+                  <img src="./images/clock.png">
+                   <span class="text">What time is it?</span>
+                </span>
+              </div>
+            </div>
+            <div class="half">
+              <p>Transitions</p>
+              <div class="download-button transition">
+                <span class="container beer">
+                  <img src="./images/beer.png">
+                  <span class="text">Beer O'Clock *</span>
+                </span>
+                <span class="container what">
+                  <img src="./images/clock.png">
+                   <span class="text">What time is it?</span>
+                </span>
+              </div>
+              <p class="disclaimer">* not yet... soon</p>
+            </div>
+          <aside class="notes">
+  
           </aside>
         </section>
 
@@ -290,7 +363,7 @@ $("#accordion").accordion();
         </section>
 
         <section>
-          <h1>Real-world uses</h1>
+          <h1>Example 1</h1>
           <img src="images/hop.ie.jpg" />
           <p><a href="http://beta.hop.ie">beta.hop.ie</a></p>
 
@@ -300,7 +373,7 @@ $("#accordion").accordion();
         </section>
 
         <section>
-          <h1>Real-world uses</h1>
+          <h1>Example 2</h1>
           <img src="images/converser.io.jpg" />
           <p><a href="http://beta.hop.ie">converser.io</a></p>
 
@@ -309,40 +382,6 @@ $("#accordion").accordion();
             -- Open converser maker example in new tab. Describe what the page attempts to do. Those that were at my Angular talk might recognise this example. It's the interace we've built at Converser to help people create in-app conversations. We've added some new stuff since the last time, and we make use of CSS transitions all over the place. I'll walk through a few examples of how transitions are used to make the experience more enjoyable for the user.
             -- Add / remove content - describe the add button animation and how it's transition draws attention to it. The content adding / removing helps describe what's going on visually.
             -- Phone modes - transition between iPhones and S3. The background image, dimensions, colours and borders all transition. It wouldn't be possible to do all this with just JavaScript. However JS is used in part, handling the adding / removing of the classes from the DIVs.
-          </aside>
-        </section>
-
-        <section>
-          <h1>Multiple transitions</h1>
-            <div class="half">
-              <p>No transitions</p>
-              <div class="download-button no-transition">
-                <span class="container beer">
-                  <img src="./images/beer.png">
-                  <span class="text">Beer O'Clock *</span>
-                </span>
-                <span class="container what">
-                  <img src="./images/clock.png">
-                   <span class="text">What time is it?</span>
-                </span>
-              </div>
-            </div>
-            <div class="half">
-              <p>Transitions</p>
-              <div class="download-button transition">
-                <span class="container beer">
-                  <img src="./images/beer.png">
-                  <span class="text">Beer O'Clock *</span>
-                </span>
-                <span class="container what">
-                  <img src="./images/clock.png">
-                   <span class="text">What time is it?</span>
-                </span>
-              </div>
-              <p class="disclaimer">* not yet... soon</p>
-            </div>
-          <aside class="notes">
-  
           </aside>
         </section>
 

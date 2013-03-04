@@ -1,5 +1,19 @@
 CSS Talk plan
 
+Intent:
+
+- Explore the use of animation as a means of improving website UI
+Steps needed
+
+- What is design, in the context of website UI
+-- Conveying information / Branding / Interaction
+- How can animation help
+-- Suggesting importance / Adding character / Affordance / More than just shiny!
+
+
+
+
+
 - Welcome slide
 
 - Title slide + animation
