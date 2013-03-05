@@ -152,23 +152,22 @@
       @include transition(all, 500ms)
     &.beer img
       @include transition(all, 500ms)
-  &:hover
-    + .disclaimer
-      @include transition(all, 500ms)
-    span
-      &.beer img
-        @include transition(all, 500ms)
-      &.what img
-        @include transition(all, 500ms)
-  span.beer span.text
-    @include transition(all, 500ms)
-  &:hover span.beer span.text
-    @include transition(all, 500ms)
 
 .disclaimer
   opacity: 0
   @include transition(all, 500ms)
 
+.example-button p
+  display: block
+  width: 250px
+  margin: 0 auto
+  color: #fff
+  background-color: #9f8
+  @include background(linear-gradient(#9f8, #5a6))
+  border: 10px solid #ccffcc
+  @include border-radius(30px)
+  padding: 20px
+  
 
 /* Slide 5
 
@@ -353,6 +352,8 @@
   @include perspective(800px)
   color: #fff
   text-align: center
+  @include transform(translate(0, 0) scale(0.8))
+  @include transition(all 500ms ease-in-out)
   
   .front
     width: 100%
@@ -371,10 +372,16 @@
       font-size: 72px
       @include text-shadow(0 -1px #3b4c54)
 
+  &.two .front
+    background-position: -280px 0
+
+  &.three .front
+    background-position: -560px 0
+
   .back
     width: 100%
     height: 100%
-    background-color: #2b4546
+    background: #2b4546 url(/talks/css-animation/images/escheresque_ste.png)
     @include border-radius(35px)
     @include transition(all 500ms ease-in-out)
     @include transform-style(preserve-3d)
@@ -389,9 +396,11 @@
       @include text-shadow(0 -1px #3b4c54)
 
   &:hover
+    @include transform(translate(0, -20px) scale(1))
 
     .front
       @include transform(rotateY(180deg))
 
     .back
       @include transform(rotateY(360deg))
+      @include box-shadow(10px 20px 30px #6f7e85)

@@ -246,43 +246,8 @@
   -o-transition: all, 500ms;
   transition: all, 500ms;
 }
-/* line 156, ../sass/user.sass */
-.download-button.transition:hover + .disclaimer {
-  -webkit-transition: all, 500ms;
-  -moz-transition: all, 500ms;
-  -o-transition: all, 500ms;
-  transition: all, 500ms;
-}
-/* line 159, ../sass/user.sass */
-.download-button.transition:hover span.beer img {
-  -webkit-transition: all, 500ms;
-  -moz-transition: all, 500ms;
-  -o-transition: all, 500ms;
-  transition: all, 500ms;
-}
-/* line 161, ../sass/user.sass */
-.download-button.transition:hover span.what img {
-  -webkit-transition: all, 500ms;
-  -moz-transition: all, 500ms;
-  -o-transition: all, 500ms;
-  transition: all, 500ms;
-}
-/* line 163, ../sass/user.sass */
-.download-button.transition span.beer span.text {
-  -webkit-transition: all, 500ms;
-  -moz-transition: all, 500ms;
-  -o-transition: all, 500ms;
-  transition: all, 500ms;
-}
-/* line 165, ../sass/user.sass */
-.download-button.transition:hover span.beer span.text {
-  -webkit-transition: all, 500ms;
-  -moz-transition: all, 500ms;
-  -o-transition: all, 500ms;
-  transition: all, 500ms;
-}
 
-/* line 168, ../sass/user.sass */
+/* line 156, ../sass/user.sass */
 .disclaimer {
   opacity: 0;
   -webkit-transition: all, 500ms;
@@ -291,8 +256,29 @@
   transition: all, 500ms;
 }
 
+/* line 160, ../sass/user.sass */
+.example-button p {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  color: white;
+  background-color: #99ff88;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99ff88), color-stop(100%, #55aa66));
+  background: -webkit-linear-gradient(#99ff88, #55aa66);
+  background: -moz-linear-gradient(#99ff88, #55aa66);
+  background: -o-linear-gradient(#99ff88, #55aa66);
+  background: linear-gradient(#99ff88, #55aa66);
+  border: 10px solid #ccffcc;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
 /* Slide 5 */
-/* line 175, ../sass/user.sass */
+/* line 174, ../sass/user.sass */
 .bouncer-container {
   position: absolute;
   width: 200px;
@@ -300,16 +286,16 @@
   top: 250px;
   left: 15%;
 }
-/* line 176, ../sass/user.sass */
+/* line 175, ../sass/user.sass */
 .bouncer-container * {
   position: absolute;
 }
-/* line 183, ../sass/user.sass */
+/* line 182, ../sass/user.sass */
 .bouncer-container a {
   text-indent: -9999px;
   z-index: 0;
 }
-/* line 186, ../sass/user.sass */
+/* line 185, ../sass/user.sass */
 .bouncer-container .bouncer {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
@@ -327,19 +313,19 @@
   z-index: 2;
   -webkit-animation: move-bouncer 1.4s infinite;
 }
-/* line 198, ../sass/user.sass */
+/* line 197, ../sass/user.sass */
 .bouncer-container .bouncer-end-position {
   top: 10px;
   left: 104px;
 }
-/* line 201, ../sass/user.sass */
+/* line 200, ../sass/user.sass */
 .bouncer-container .ear1, .bouncer-container .ear2 {
   width: 16px;
   height: 56px;
   background-color: #2c3437;
   border-radius: 50%/50%;
 }
-/* line 206, ../sass/user.sass */
+/* line 205, ../sass/user.sass */
 .bouncer-container .ear1 {
   top: -24px;
   left: 20px;
@@ -349,7 +335,7 @@
   -o-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
-/* line 214, ../sass/user.sass */
+/* line 213, ../sass/user.sass */
 .bouncer-container .ear2 {
   top: -24px;
   right: 20px;
@@ -359,7 +345,7 @@
   -o-transform: rotate(15deg);
   transform: rotate(15deg);
 }
-/* line 222, ../sass/user.sass */
+/* line 221, ../sass/user.sass */
 .bouncer-container .eye1, .bouncer-container .eye2 {
   top: 20px;
   left: 40px;
@@ -368,17 +354,17 @@
   height: 12px;
   border-radius: 50%/50%;
 }
-/* line 229, ../sass/user.sass */
+/* line 228, ../sass/user.sass */
 .bouncer-container .eye1 {
   top: 24px;
   left: 44px;
 }
-/* line 232, ../sass/user.sass */
+/* line 231, ../sass/user.sass */
 .bouncer-container .eye2 {
   top: 24px;
   left: 64px;
 }
-/* line 235, ../sass/user.sass */
+/* line 234, ../sass/user.sass */
 .bouncer-container .mouth {
   top: 48px;
   left: 44px;
@@ -392,7 +378,7 @@
   -webkit-border-bottom-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-/* line 247, ../sass/user.sass */
+/* line 246, ../sass/user.sass */
 .bouncer-container .shadow {
   position: absolute;
   top: 168px;
@@ -406,7 +392,7 @@
 }
 
 @-webkit-keyframes move-bouncer {
-  /* line 259, ../sass/user.sass */
+  /* line 258, ../sass/user.sass */
   0% {
     height: 80px;
     border-radius: 50px/40px;
@@ -417,7 +403,7 @@
     transform: translate(0, 100px);
   }
 
-  /* line 263, ../sass/user.sass */
+  /* line 262, ../sass/user.sass */
   48%, 54% {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -428,7 +414,7 @@
     border-radius: 50px/60px;
   }
 
-  /* line 267, ../sass/user.sass */
+  /* line 266, ../sass/user.sass */
   100% {
     height: 80px;
     border-radius: 50px/40px;
@@ -441,24 +427,24 @@
 }
 
 @-webkit-keyframes bouncer-shadow {
-  /* line 274, ../sass/user.sass */
+  /* line 273, ../sass/user.sass */
   0% {
     opacity: 0.1;
   }
 
-  /* line 276, ../sass/user.sass */
+  /* line 275, ../sass/user.sass */
   48%, 54% {
     opacity: 0.4;
   }
 
-  /* line 278, ../sass/user.sass */
+  /* line 277, ../sass/user.sass */
   100% {
     opacity: 0.1;
   }
 }
 
 /* JS vs CSS Performance */
-/* line 284, ../sass/user.sass */
+/* line 283, ../sass/user.sass */
 .js-example div, .css-example div {
   position: absolute;
   padding: 10px;
@@ -470,79 +456,79 @@
   box-shadow: 0 5px 10px #aaaaaa;
 }
 
-/* line 294, ../sass/user.sass */
+/* line 293, ../sass/user.sass */
 .js-example div.style2 {
   background-color: #666666;
   color: white;
 }
 
-/* line 298, ../sass/user.sass */
+/* line 297, ../sass/user.sass */
 .css-example div {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-animation: css-example-animation 2s infinite;
 }
-/* line 299, ../sass/user.sass */
+/* line 298, ../sass/user.sass */
 .css-example div.style2 {
   background-color: #666666;
   color: white;
 }
 
-/* line 305, ../sass/user.sass */
+/* line 304, ../sass/user.sass */
 .js-example div.one, .css-example div.one {
   top: 0;
   left: 0;
 }
 
-/* line 309, ../sass/user.sass */
+/* line 308, ../sass/user.sass */
 .js-example div.two, .css-example div.two {
   top: 0;
   left: 50px;
 }
 
-/* line 313, ../sass/user.sass */
+/* line 312, ../sass/user.sass */
 .js-example div.three, .css-example div.three {
   top: 0;
   left: 100px;
 }
 
-/* line 317, ../sass/user.sass */
+/* line 316, ../sass/user.sass */
 .js-example div.four, .css-example div.four {
   top: 0;
   left: 150px;
 }
 
-/* line 321, ../sass/user.sass */
+/* line 320, ../sass/user.sass */
 .js-example div.five, .css-example div.five {
   top: 0;
   left: 200px;
 }
 
-/* line 325, ../sass/user.sass */
+/* line 324, ../sass/user.sass */
 .js-example div.six, .css-example div.six {
   top: 0;
   left: 250px;
 }
 
-/* line 329, ../sass/user.sass */
+/* line 328, ../sass/user.sass */
 .js-example div.seven, .css-example div.seven {
   top: 0;
   left: 300px;
 }
 
-/* line 333, ../sass/user.sass */
+/* line 332, ../sass/user.sass */
 .js-example div.eight, .css-example div.eight {
   top: 0;
   left: 350px;
 }
 
 @-webkit-keyframes css-example-animation {
-  /* line 338, ../sass/user.sass */
+  /* line 337, ../sass/user.sass */
   50% {
     -webkit-transform: translate(0, 150px);
     opacity: 0.2;
   }
 
-  /* line 341, ../sass/user.sass */
+  /* line 340, ../sass/user.sass */
   100% {
     -webkit-transform: translate(0, 0);
     opacity: 1;
@@ -550,7 +536,7 @@
 }
 
 /* Cards */
-/* line 347, ../sass/user.sass */
+/* line 346, ../sass/user.sass */
 .card {
   width: 260px;
   height: 340px;
@@ -564,8 +550,17 @@
   perspective: 800px;
   color: white;
   text-align: center;
+  -webkit-transform: translate(0, 0) scale(0.8);
+  -moz-transform: translate(0, 0) scale(0.8);
+  -ms-transform: translate(0, 0) scale(0.8);
+  -o-transform: translate(0, 0) scale(0.8);
+  transform: translate(0, 0) scale(0.8);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-/* line 357, ../sass/user.sass */
+/* line 358, ../sass/user.sass */
 .card .front {
   width: 100%;
   height: 100%;
@@ -594,18 +589,26 @@
   -moz-box-shadow: 0 0 20px #6f7e85;
   box-shadow: 0 0 20px #6f7e85;
 }
-/* line 368, ../sass/user.sass */
+/* line 369, ../sass/user.sass */
 .card .front h3 {
   color: white;
   padding-top: 80px;
   font-size: 72px;
   text-shadow: 0 -1px #3b4c54;
 }
-/* line 374, ../sass/user.sass */
+/* line 375, ../sass/user.sass */
+.card.two .front {
+  background-position: -280px 0;
+}
+/* line 378, ../sass/user.sass */
+.card.three .front {
+  background-position: -560px 0;
+}
+/* line 381, ../sass/user.sass */
 .card .back {
   width: 100%;
   height: 100%;
-  background-color: #2b4546;
+  background: #2b4546 url(/talks/css-animation/images/escheresque_ste.png);
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   -ms-border-radius: 35px;
@@ -634,14 +637,22 @@
   -moz-box-shadow: 0 0 20px #6f7e85;
   box-shadow: 0 0 20px #6f7e85;
 }
-/* line 385, ../sass/user.sass */
+/* line 392, ../sass/user.sass */
 .card .back h3 {
   color: white;
   padding-top: 80px;
   font-size: 120px;
   text-shadow: 0 -1px #3b4c54;
 }
-/* line 393, ../sass/user.sass */
+/* line 398, ../sass/user.sass */
+.card:hover {
+  -webkit-transform: translate(0, -20px) scale(1);
+  -moz-transform: translate(0, -20px) scale(1);
+  -ms-transform: translate(0, -20px) scale(1);
+  -o-transform: translate(0, -20px) scale(1);
+  transform: translate(0, -20px) scale(1);
+}
+/* line 401, ../sass/user.sass */
 .card:hover .front {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -649,11 +660,14 @@
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 396, ../sass/user.sass */
+/* line 404, ../sass/user.sass */
 .card:hover .back {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
   -ms-transform: rotateY(360deg);
   -o-transform: rotateY(360deg);
   transform: rotateY(360deg);
+  -webkit-box-shadow: 10px 20px 30px #6f7e85;
+  -moz-box-shadow: 10px 20px 30px #6f7e85;
+  box-shadow: 10px 20px 30px #6f7e85;
 }

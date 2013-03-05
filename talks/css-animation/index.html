@@ -42,12 +42,22 @@
         <section>
           <h3>IMPROVING WEBSITE UI WITH</h3>
           <h1>CSS ANIMATIONS</h1>
-          <p>Follow along at:</p>
-          <p><a href="http://hop.ie/talks/css-animation">hop.ie/go/css</a></p>
+          <p>This talk: <a href="http://hop.ie/talks/css-animation">hop.ie/go/css</a></p>
+          <p><a href="https://github.com/donovanh/donovanh.github.com/tree/master/talks/css-animation">Source files</a></p>
         </section>
 
         <section>
-          <h1>Background</h1>
+          <h1>About me</h1>
+          <div class="half" style="width: 40%">
+            <img src="https://secure.gravatar.com/avatar/1a6020189d9fe61133b965ca7a4a78b7?s=200" />
+          </div>
+          <div class="half" style="text-align: left">
+            <h2 style="font-size: 32px;padding-top:20px; font-weight: bold">Donovan Hutchinson</h2>
+            <p>Work: <a href="http://converser.io">Converser</a></p>
+            <p>Twitter: <a href="http://twitter.com">@donovanh</a></p>
+            <p>Blog: <a href="http://hop.ie">hop.ie</a></p>
+            <p>Email: <a href="mailto:d@hop.ie">d@hop.ie</a></p>
+          </div>
           <aside class="notes">
             First, a bit about me. I'm a front-end developer. My day job exposes me to all sorts of cool and interesting technologies, SASS, server-side JavaScript, static website generators, rails apps and more. I also spend a fair amount of time thinking about usability, and how interact with web apps.
 
@@ -56,44 +66,19 @@
             What I'm going to talk about this evening is a little different from what this meetup's name might suggest. I'm not going to talk about JavaScript. Instead, I'm going to talk a bit about a subject I find fun, namely using CSS for transitions and animations.
 
             First, can I get a show of hands. Who here creates or plays a part in creating user interfaces? OK. Say you're moving some stuff around on the screen. Who's used JavaScript to achieve this? I certainly have. I still do. However what I'd like to present this evening is how you can get better performance, better separation of logical and presentation code, and achieve more interesting effects by using CSS instead.
-
-            Oh by the way, who's used CSS for their UI transitions? Good, glad to see a few have already! I hope there's something of use in this talk.
-
-            If anyone wants to ask a question at any point, please go ahead. Sometimes the moment can be lost if you want till the end, and I'm happy to talk more on any subject, or be corrected.
-          </aside>
-        </section>
-
-        <section>
-          <h1>Design</h1>
-            <ul>
-              <li>Conveying information</li>
-              <li>Branding</li>
-              <li>Interaction</li>
-            </ul>
-          <aside class="notes">
-             
           </aside>
         </section>
 
         <section>
           <h1>Animation</h1>
             <ul>
-              <li>Suggesting importance</li>
-              <li>Adding character</li>
-              <li>Affordance</li>
+              <li>Conveying information</li>
+              <li>Adding character / branding</li>
+              <li>Affording interaction</li>
+              <li>Implementing with CSS</li>
             </ul>
           <aside class="notes">
              How can animation help achieve these goals. More than simply making things shinier.
-          </aside>
-        </section>
-
-        <section>
-          <h1>CSS &amp; JS</h1>
-            <ul>
-              <li>Different tools</li>
-            </ul>
-          <aside class="notes">
-             
           </aside>
         </section>
 
@@ -128,8 +113,7 @@
           <h1>JavaScript example</h1>
             <div class="half left">
               <div id="js-button">Hover me</div>
-              <pre><code>
-$('#js-button').hover(
+              <pre><code>$('#js-button').hover(
 function(e) {
   $(e.target).animate({
       padding: '30px 50px',
@@ -172,8 +156,7 @@ $("#accordion").accordion();
           <h1>CSS example</h1>
           <div class="half left">
             <div id="css-button">Hover me</div>
-            <pre><code>
-#css-button {
+            <pre><code>#css-button {
   background-color: green;
   padding: 12px 20px;
   transition: all 500ms;
@@ -202,8 +185,7 @@ $("#accordion").accordion();
                 </p>
               </div>
             </div>
-<pre><code>
-#css-accordion div.content {
+<pre><code>#css-accordion div.content {
   height: 0;
   opacity: 0;
   transition: all 500ms;
@@ -245,6 +227,9 @@ $("#accordion").accordion();
                    <span class="text">What time is it?</span>
                 </span>
               </div>
+              <p class="disclaimer">&nbsp;</p>
+<pre><code>* no transitions
+</code></pre>
             </div>
             <div class="half">
               <p>Transitions</p>
@@ -259,6 +244,17 @@ $("#accordion").accordion();
                 </span>
               </div>
               <p class="disclaimer">* not yet... soon</p>
+<pre><code>.download-button.transition
+  @include transition(all, 500ms)
+  span
+    &.container
+      img
+        @include transition(all, 500ms)
+    .text
+      @include transition(all, 500ms)
+    &.beer img
+      @include transition(all, 500ms)
+</code></pre>
             </div>
           <aside class="notes">
   
@@ -278,7 +274,122 @@ $("#accordion").accordion();
         </section>
 
         <section data-state="clear-comparison">
-          <h1>Keyframe animations</h1>
+          <section data-state="clear-comparison">
+            <h1>3D Transitions</h1>
+            <div class="cards" style="clear: both">
+              <div class="card one">
+                <div class="front"></div>
+                <div class="back"><h3>C</h3></div>
+              </div>
+              <div class="card two">
+                <div class="front"></div>
+                <div class="back"><h3>S</h3></div>
+              </div>
+              <div class="card three">
+                <div class="front"></div>
+                <div class="back"><h3>S</h3></div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="half">
+              <h1>HTML<br /><br /></h1>
+<pre style="font-size:18px"><code>&lt;div class=&quot;cards&quot; style=&quot;clear: both&quot;&gt;
+  &lt;div class=&quot;card one&quot;&gt;
+    &lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;back&quot;&gt;&lt;h3&gt;C&lt;/h3&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card two&quot;&gt;
+    &lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;back&quot;&gt;&lt;h3&gt;S&lt;/h3&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card three&quot;&gt;
+    &lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;back&quot;&gt;&lt;h3&gt;S&lt;/h3&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div class="half">
+              <h1>SASS (+ Compass)</h1>
+<pre style="font-size: 18px"><code>.card
+  width: 260px
+  height: 340px
+  margin: 0 20px 0 !important
+  float: left
+  position: relative
+  @include perspective(800px)
+  color: #fff
+  text-align: center
+  @include transform(translate(0, 0) scale(0.8))
+  @include transition(all 500ms ease-in-out)
+  
+  .front
+    width: 100%
+    height: 100%
+    position: absolute
+    background: url(/talks/css-animation/images/telefonica.jpg) no-repeat
+    @include border-radius(35px)
+    @include transition(all 500ms ease-in-out)
+    @include transform-style(preserve-3d)
+    @include backface-visibility(hidden)
+    @include box-shadow(0 0 20px #6f7e85)
+
+    h3
+      color: #fff
+      padding-top: 80px
+      font-size: 72px
+      @include text-shadow(0 -1px #3b4c54)
+
+  &.two .front
+    background-position: -280px 0
+
+  &.three .front
+    background-position: -560px 0
+
+  .back
+    width: 100%
+    height: 100%
+    background: #2b4546 url(/talks/css-animation/images/escheresque_ste.png)
+    @include border-radius(35px)
+    @include transition(all 500ms ease-in-out)
+    @include transform-style(preserve-3d)
+    @include transform(rotateY(180deg))
+    @include backface-visibility(hidden)
+    @include box-shadow(0 0 20px #6f7e85)
+
+    h3
+      color: #fff
+      padding-top: 80px
+      font-size: 120px
+      @include text-shadow(0 -1px #3b4c54)
+
+  &:hover
+    @include transform(translate(0, -20px) scale(1))
+
+    .front
+      @include transform(rotateY(180deg))
+
+    .back
+      @include transform(rotateY(360deg))
+      @include box-shadow(10px 20px 30px #6f7e85)
+
+</code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h1>Keyframes</h1>
+          <img src="/talks/css-animation/images/atod.png" style="border: none; box-shadow: none; background: none !important" />
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>Character</h1>
           <div class="half" style="width:22%">
             &nbsp;
             <div class="bouncer-container">
@@ -293,7 +404,7 @@ $("#accordion").accordion();
             </div>
           </div>
           <div class="half" style="width:78%">
-            <pre><code>@keyframes move-bouncer {
+<pre><code>@keyframes move-bouncer {
   0% {
     height: 80px;
     border-radius: 50px / 40px;
@@ -351,39 +462,6 @@ $("#accordion").accordion();
           </aside>
         </section>
 
-        <section data-state="clear-comparison">
-          <h1>Advanced CSS</h1>
-          <div class="cards" style="clear: both">
-            <div class="card">
-              <div class="front"><h3>Dublin JS</h3></div>
-              <div class="back"><h3>C</h3></div>
-            </div>
-            <div class="card">
-              <div class="front"><h3>Dublin JS</h3></div>
-              <div class="back"><h3>S</h3></div>
-            </div>
-            <div class="card">
-              <div class="front"><h3>Dublin JS</h3></div>
-              <div class="back"><h3>S</h3></div>
-            </div>
-          </div>
-        </section>
-
-        <section data-state="clear-comparison">
-          <h1>Differences</h1>
-          <ul>
-            <li>CSS offers:</li>
-            <li>Hardware acceleration</li>
-            <li>Built in Transitions</li>
-            <li>&amp; Keyframe Animation</li>
-          </ul>
-          <aside class="notes">
-            It's possible to do all sorts of careful DOM manipulation with JS, but the main argument for moving the animations and transitions layer to CSS is that it's closer to the hardware. CSS is able to make use of hardware acceleration, and can result in smoother transitions on smaller devices such as phones. As well as this, CSS has been introducing several powerful tools to manupulate how things move and transition on screen.
-
-            I'm not advocating ditching JS in favour of CSS only. JavaScript does things CSS cannot, such as attaching event listeners. These work well when used to add or remove classes from page elements, and use CSS to handle the visual changes.
-          </aside>
-        </section>
-
         <section>
           <h1>Example 1</h1>
           <img src="images/hop.ie.jpg" />
@@ -404,6 +482,66 @@ $("#accordion").accordion();
             -- Open converser maker example in new tab. Describe what the page attempts to do. Those that were at my Angular talk might recognise this example. It's the interace we've built at Converser to help people create in-app conversations. We've added some new stuff since the last time, and we make use of CSS transitions all over the place. I'll walk through a few examples of how transitions are used to make the experience more enjoyable for the user.
             -- Add / remove content - describe the add button animation and how it's transition draws attention to it. The content adding / removing helps describe what's going on visually.
             -- Phone modes - transition between iPhones and S3. The background image, dimensions, colours and borders all transition. It wouldn't be possible to do all this with just JavaScript. However JS is used in part, handling the adding / removing of the classes from the DIVs.
+          </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>CSS offers:</h1>
+          <ul>
+            <li>Hardware acceleration</li>
+            <li>Built in functionality: Transitions / Keyframes</li>
+            <li>Better separation of display and function code</li>
+          </ul>
+          <aside class="notes">
+            It's possible to do all sorts of careful DOM manipulation with JS, but the main argument for moving the animations and transitions layer to CSS is that it's closer to the hardware. CSS is able to make use of hardware acceleration, and can result in smoother transitions on smaller devices such as phones. As well as this, CSS has been introducing several powerful tools to manupulate how things move and transition on screen.
+
+            I'm not advocating ditching JS in favour of CSS only. JavaScript does things CSS cannot, such as attaching event listeners. These work well when used to add or remove classes from page elements, and use CSS to handle the visual changes.
+          </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>SASS / Less / Stylus</h1>
+          <div class="half" style="width: 33%">
+            A button
+            <div class="example-button">
+              <p>Nearly there</p>
+            </div>
+          </div>
+          <div class="half" style="width:33%">
+            SASS
+<pre><code>display: block
+  width: 250px
+  margin: 0 auto
+  color: #fff
+  background-color: #9f8
+  @include background(linear-gradient(#9f8, #5a6))
+  border: 10px solid #ccffcc
+  @include border-radius(30px)
+  padding: 20px
+</code></pre>
+          </div>
+          <div class="half" style="width:33%">
+            CSS
+<pre><code>display: block;
+  width: 250px;
+  margin: 0 auto;
+  color: white;
+  background-color: #99ff88;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99ff88), color-stop(100%, #55aa66));
+  background: -webkit-linear-gradient(#99ff88, #55aa66);
+  background: -moz-linear-gradient(#99ff88, #55aa66);
+  background: -o-linear-gradient(#99ff88, #55aa66);
+  background: linear-gradient(#99ff88, #55aa66);
+  border: 10px solid #ccffcc;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  padding: 20px;
+</code></pre>
+          </div>
+          <aside class="notes">
           </aside>
         </section>
 
