@@ -1,9 +1,17 @@
 Introduction to Node.js
 
-Goals:
+- Welcome
 
-Establish
+- About Me
+
+- Goals
+-- Establish what Node is about
+-- Try it yourself
+-- Walkthrough of Beta.hop.ie (screenshot)
+
 - What Node.js is
+
+
 
 - Non-blocking
 Just to set the scene a bit, I'd like to explain a little about what non-blocking means and why it's important to understanding why Node works the way it does. 
@@ -33,16 +41,47 @@ When they've finished in the toilets, people returning jump on the nearest free 
 
 V8 (picture of tomato juice)
 
+If you dislike JavaScript, you won't like Node. All development is in JavaScript. If on the other hand, you find JavaScript easier and more pleasant to work with than some of the other back-end languages, such as PHP or Ruby, then you might just find Node a great way to get things up and running quickly.
+
+Personally I've gone through the transition of starting off in graphics and design, spending a long time messing with PHP, and more recently, a bit of Ruby. Along the way I've been using JavaScript for a fair amount of front-end flashy stuff. However when I started using JavaScript on the back end too, it felt like a massive weight lifted. I could now work with data on the back-end, send it through Ajax requests to front end code, and have it all feel seamless and light.
+
+Coding for me is most fun when I can get the back-end, functional stuff up and running quickly, and get to the messing around with the front-end CSS and HTML more quickly. It gets me to the point where I can see something happening, and that helps me be creative.
+
 - What sort of apps is Node for?
+(Picture of Node with the distributed dots and lines in background)
 -- Small, distributed functionality
--- Not just web facing
--- Used to control helicopters, drive a set top box, even this presentation
+-- Not just web facing!
+
+So, what sort of apps would you want to build with Node? The way it works within a single thread is a hint here. Since it's not designed to multi-thread (at least not by default), it's best suited to light, small apps. Long running, CPU-heavy apps would block the single thread, so it's best to avoid anything that needs to hog the CPU.
+
+The best sort of structure for Node apps is lots of small apps that work in parallel or pass data around as needed.
+
+Something to bear in mind also, is that even though my own use of Node is very much from the perspective of building web-facing apps, it's not limited to this. You can use Node for all sorts of stuff. It's a framework that allows you to easily build quite low-level applications. I've seen it used in all sorts of applications, from powering a text editor, controlling remote control helicopters, even driving the front-end of a set-top box.
+
+Node's framework is flexible, lightweight, and suited to building all sorts of cool things. The reason it stays so versatile without becoming bogged down in code is the way it uses packages.
 
 - Packages / Modules (NPM)
 
-- Events
+Node without packages is basically a wrapper around the V8 JavaScript processing engine, with a few libraries to handle low-level system stuff. If you want to start using it for anything really interesting, you have two choices. Either write the functionality from scratch, or make use of the thousands of packages available.
 
-- Nesting
+I'd recommend the second option.
+
+These packages cover everything from the essential "http" module to database management tools, tools to help grab data from external APIs and all sorts of cool stuff. They can be very simple, mapping Mime-types, to the complex, such as building full web-facing apps.
+
+I don't like to reinvent the wheel when it comes to setting up projects, working with databases and other sources of data, and Node's community-created packages make it a genuine pleasure getting things done.
+
+- Events & Nesting
+
+Time for some practical stuff. You may have read or heard that Node works around an event-driven model. This is something I've had to adjust to, it's quite different from the programming style I'd been used to with PHP and Ruby. Let's compare a couple of code examples.
+
+(Left: Sequential ordering of commands including a database query)
+(Right: Similar job handled with JS using callbacks)
+
+
+
+- Hello World example
+
+
 
 - Practical / Workshop
 * Set up local laptop as Ad-hoc network with demo code running locally, plus a download page for getting install files *
