@@ -1,0 +1,94 @@
+Introduction to Node.js
+
+Goals:
+
+Establish
+- What Node.js is
+
+- Non-blocking
+Just to set the scene a bit, I'd like to explain a little about what non-blocking means and why it's important to understanding why Node works the way it does. 
+
+Here's a comparison that Ryan Dahl first showed, and is part of Jeff Kunkle's great video, that sets the stage for what Node tries to solve.
+
+The numbers here don't matter too much, but the proportion between them does. What it says here, is that level 1 and 2 caches, the path for data that is closest to the CPU, happen over an order of magnitude faster than RAM, and millions of times faster than reading from a disk. Network calls can vary but they're orders of magnitude slower again.
+
+The main aim of Node is to create a way of processing and handling requests that avoids the delays caused by these slower I/O operations. These operations take a long time, in CPU's timescale, and result in a lot of idle processor time.
+
+Without getting to deep into the technical details, Jeff's video goes into it in more detail, here's how I try to picture it.
+
+- Merry go-round illustration illustrating a blocking process (one person on the go round at a time) queue on one side, toilets on the other
+Imagine some eccentric millionaire decided to build a fun park. In a fit of insanity, he put the entrance to the toilets on the other side of a Merry-Go-Round. He also sets up some rules. First rule, only one person on the merry go round at a time.
+
+What happens is, a queue forms in front of the merry go round here. One person gets on at a time. Now, they may not need to go to the toilet, so in that case they go around, ignore the toilet, and get off back at the start. The next person gets on. This person's been taking advantage of the free burritos. He's wise enough to get off on the other side and make for the toilets. What happens now is that the merry go round has to sit empty, waiting for his toilet session to finish. Eventually, he emerges, sweating and climbs back onto the merry go round to finish the journey.
+
+So, the eccentic old guy thought, hey, not enough people are getting through. Let's build 4 of them. So they ran 4 merry go rounds at the same time. Massive investment of resources both building and manning these merry go rounds, and sure, 4 times as many people could get through. But each merry go round was spending a lot of time empty. The owner may be eccentric but he wanted to turn a profit.
+
+- Merry go-round illustration illustrating non-blocking (one person on the go round at a time) queue on one side, toilets on the other, busy
+
+So he changes the rules. Instead of limiting the number of people to 1, he let the merry go round fill up. Now, the free burrito stand is still giving them away hand over fist, so there are a lot of people looking to get to the toilets. However this time, instead of having the entire merry go round sit empty while people are making use of them, the spaces these people leave are filled by more people. Some of them might also need to go, but the system isn't waiting for them to return.
+
+When they've finished in the toilets, people returning jump on the nearest free seat. As you can see here, the result is just one merry go round in action, but it gets shit done.
+
+- JavaScript
+
+V8 (picture of tomato juice)
+
+- What sort of apps is Node for?
+-- Small, distributed functionality
+-- Not just web facing
+-- Used to control helicopters, drive a set top box, even this presentation
+
+- Packages / Modules (NPM)
+
+- Events
+
+- Nesting
+
+- Practical / Workshop
+* Set up local laptop as Ad-hoc network with demo code running locally, plus a download page for getting install files *
+Exercise 1: Hello world
+Step 1: Install Node.js (http://my_ip_address:3000/download to get the files)
+Step 2: Create new app.js file
+Step 3: Require http module
+Step 4: Set up createserver on port 4000
+Step 5: Have it respond with "Hello world" text
+
+Exercise 2: Solve a problem yourselves (in pairs if you like)
+- Decide on a problem
+- Yes there's an exam
+- Get people's IP addresses and show the output on screen
+- Ask them to talk about how they found the experience
+
+- Back to slides
+
+It's getting late, and I know you're all mad keen to get around the corner here for a pint, so I'll just go through these quickly.
+
+- Case Study: Music.Hop.ie
+As an example of how Node can be a great way to build something quickly, here's a website I built recently as a small evening project. Feel free to grab the code and go through it at home. You can download it locally from this machine as a ZIP file, or find it on Github. Here are the URLs.
+
+Alright, everyone got a chance to take down those URLs? Don't forget, these slides are online so you can always go back over them and grab whatever resources you want later.
+
+- Music.Hop.ie structure
+
+- Hosting on Ubuntu with Nginx
+
+- Debugging tips
+
+- Still interested? Watch Jeff's video:
+
+http://www.youtube.com/watch?v=L0pjVcIsU6A
+
+- Resources
+Find Node Packages: nodezoo
+Control presentations using remote device: http://dfcb.github.com/controldeck.js/
+Node app hosting (free for small apps DB): http://appfog.com
+NodeUp Podcast: 
+Stackoverflow
+Follow Node.js on twitter
+
+- Feedback / Questions
+Put up a live stream that people can add questions to, live.
+OR A VOTE! Did this talk:
+a) Rock b) Suck
+with Live updated tallies.
+
