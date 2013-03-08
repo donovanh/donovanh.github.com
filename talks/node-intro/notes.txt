@@ -77,6 +77,11 @@ Time for some practical stuff. You may have read or heard that Node works around
 (Left: Sequential ordering of commands including a database query)
 (Right: Similar job handled with JS using callbacks)
 
+On the left here we have a code example using PHP. It might be familiar to some. What it's doing is [TODO].
+
+On the right we have a similar example, but this is written in JavaScript. 
+
+- Routing vs. Files
 
 
 - Hello World example
@@ -109,6 +114,18 @@ Alright, everyone got a chance to take down those URLs? Don't forget, these slid
 
 - Music.Hop.ie structure
 
+- Site structure: Express
+
+The starting point for a web app like this has got to be Express. Going through how this works would be a talk in itself, but it's totally worth getting used to. It's a lightweight web app framework that models itself on how Sinatra works in the Ruby world. It gives you a start on the app structure, with views, static file handling, and templating.
+
+Here's how the file structure looks. (Shift to text editor, highlight file column.)
+
+- Templates & Stylesheets
+
+Jade (http://jade-lang.com/) works out of the box with Express. Not limited to this.
+
+Stylus (http://learnboost.github.com/stylus/docs/js.html) is a wonderful CSS pre-processor. Has anyone here used SASS or Less? It's similar that those. For those that haven't, CSS pre-processors are ways of creating great CSS while keeping it maintainable, and extendible. 
+
 - Hosting on Ubuntu with Nginx
 
 - Debugging tips
@@ -119,9 +136,9 @@ http://www.youtube.com/watch?v=L0pjVcIsU6A
 
 - Resources
 Find Node Packages: nodezoo
+Express app tutorial: http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus
 Control presentations using remote device: http://dfcb.github.com/controldeck.js/
 Node app hosting (free for small apps DB): http://appfog.com
-NodeUp Podcast: 
 Stackoverflow
 Follow Node.js on twitter
 
