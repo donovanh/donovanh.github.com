@@ -1,8 +1,7 @@
 Introduction to Node.js
 
 - Welcome
-
-- About Me
+-- Photo, twitter handle and title of talk
 
 - Goals
 -- Establish what Node is about
@@ -11,21 +10,37 @@ Introduction to Node.js
 
 - What Node.js is
 
+- Created by Ryan Dahl in 2009
+- Server-side software system
+- Javascript based
 
+Node.js. 
 
-- Non-blocking
+As of today, Node is up to version 0.8.22. It's still a little way off version 1, but it's come a long way since it was launched in 2009. Ryan Dahl developed Node as an event-driven, asynchronous server side framework, similar to Ruby's EventMachine or Python's Twisted.
+
+It's written in JavaScript, built on top of C, and all development in Node is JavaScript-based and it's particularly well suited to building scalable web applications.
+
+The main aim in Node, aside from making a platform that's easy and fun to built with, was to tackle the main issue that affects apps, data I/O.
+
+- Data I/O
 Just to set the scene a bit, I'd like to explain a little about what non-blocking means and why it's important to understanding why Node works the way it does. 
 
-Here's a comparison that Ryan Dahl first showed, and is part of Jeff Kunkle's great video, that sets the stage for what Node tries to solve.
+Here's a table that will help illustrate the issue of data I/O. When I saw data IO, I mean the moving of data from one place to another. That can be within the CPU, from disk, or even from external sources over networks. 
 
-The numbers here don't matter too much, but the proportion between them does. What it says here, is that level 1 and 2 caches, the path for data that is closest to the CPU, happen over an order of magnitude faster than RAM, and millions of times faster than reading from a disk. Network calls can vary but they're orders of magnitude slower again.
+The exact numbers here don't matter too much, but the proportion between them does. What it says here, is that level 1 and 2 caches, the path for data that is closest to the CPU, happen about 10 times faster than RAM, which is itself millions of times faster than reading from a disk. Network calls can vary but they're orders of magnitude slower again.
+
+These differences are pretty huge. The CPU can perform literally millions, or even hundreds of millions of cycles while waiting for the data to be returned from these sources.
 
 The main aim of Node is to create a way of processing and handling requests that avoids the delays caused by these slower I/O operations. These operations take a long time, in CPU's timescale, and result in a lot of idle processor time.
 
-Without getting to deep into the technical details, Jeff's video goes into it in more detail, here's how I try to picture it.
+The way Node handles might best be described with a metaphor.
+
+- Story Time
+
+Imagine an eccentric millionaire decided to build a fun park. 
 
 - Merry go-round illustration illustrating a blocking process (one person on the go round at a time) queue on one side, toilets on the other
-Imagine some eccentric millionaire decided to build a fun park. In a fit of insanity, he put the entrance to the toilets on the other side of a Merry-Go-Round. He also sets up some rules. First rule, only one person on the merry go round at a time.
+In a fit of insanity, he put the entrance to the toilets on the other side of a Merry-Go-Round. He also sets up some rules. First rule, only one person on the merry go round at a time.
 
 What happens is, a queue forms in front of the merry go round here. One person gets on at a time. Now, they may not need to go to the toilet, so in that case they go around, ignore the toilet, and get off back at the start. The next person gets on. This person's been taking advantage of the free burritos. He's wise enough to get off on the other side and make for the toilets. What happens now is that the merry go round has to sit empty, waiting for his toilet session to finish. Eventually, he emerges, sweating and climbs back onto the merry go round to finish the journey.
 
@@ -33,9 +48,17 @@ So, the eccentic old guy thought, hey, not enough people are getting through. Le
 
 - Merry go-round illustration illustrating non-blocking (one person on the go round at a time) queue on one side, toilets on the other, busy
 
-So he changes the rules. Instead of limiting the number of people to 1, he let the merry go round fill up. Now, the free burrito stand is still giving them away hand over fist, so there are a lot of people looking to get to the toilets. However this time, instead of having the entire merry go round sit empty while people are making use of them, the spaces these people leave are filled by more people. Some of them might also need to go, but the system isn't waiting for them to return.
+So he changes the rules. Instead of limiting the number of people to 1, he let the merry go round fill up. Now, the free burrito stand is still giving them away hand over fist, so there are a lot of people looking to get to the toilets. However, this time, instead of having the entire merry go round sit empty while people are making use of the facilities, the spaces these people leave are filled by more people. 
 
-When they've finished in the toilets, people returning jump on the nearest free seat. As you can see here, the result is just one merry go round in action, but it gets shit done.
+This means that the merry go round is always making use of the spaces. When people have finished in the toilet, they get on the next available space and finish their trip, without causing any of the other users any delays.
+
+- Event Loop (slide showing the illustration with the event loop in the middle and the I/O on the right, and queue of events on left)
+
+What I'm describing is the differenc between a blocking process and a non-blocking process. A blocking process would take one from the left here, and block the loop by only allowing one in at a time. If it needs to make use of I/O, everything has to wait till it's finished. As we saw earlier, this could be in the order of millions of CPU cycles.
+
+Node's approach is to load this event loop with more events while it can, making better use of all those spare cycles.
+
+The morale of the story? Node gets more shit done.
 
 - JavaScript
 
@@ -43,16 +66,16 @@ V8 (picture of tomato juice)
 
 If you dislike JavaScript, you won't like Node. All development is in JavaScript. If on the other hand, you find JavaScript easier and more pleasant to work with than some of the other back-end languages, such as PHP or Ruby, then you might just find Node a great way to get things up and running quickly.
 
-Personally I've gone through the transition of starting off in graphics and design, spending a long time messing with PHP, and more recently, a bit of Ruby. Along the way I've been using JavaScript for a fair amount of front-end flashy stuff. However when I started using JavaScript on the back end too, it felt like a massive weight lifted. I could now work with data on the back-end, send it through Ajax requests to front end code, and have it all feel seamless and light.
+Personally I've gone through the transition of starting off in graphics and design, spending a long time messing with PHP, and more recently, a bit of Ruby. Along the way I've been using JavaScript for a fair amount of front-end flashy stuff. However when I started using JavaScript on the back end too, it felt pretty good. I could work with data on the back-end, send it through Ajax requests to front end code, and have it all feel seamless and light.
 
 Coding for me is most fun when I can get the back-end, functional stuff up and running quickly, and get to the messing around with the front-end CSS and HTML more quickly. It gets me to the point where I can see something happening, and that helps me be creative.
 
 - What sort of apps is Node for?
 (Picture of Node with the distributed dots and lines in background)
--- Small, distributed functionality
+-- Lots of small, focussed functions
 -- Not just web facing!
 
-So, what sort of apps would you want to build with Node? The way it works within a single thread is a hint here. Since it's not designed to multi-thread (at least not by default), it's best suited to light, small apps. Long running, CPU-heavy apps would block the single thread, so it's best to avoid anything that needs to hog the CPU.
+So, what sort of apps would you want to build with Node? The way it works within a single thread is worth keeping in mind. Since it's not designed to multi-thread (at least not by default), it's best suited to light, small apps. Long running, CPU-heavy apps would block the single thread, so it's best to avoid anything that needs to hog the CPU.
 
 The best sort of structure for Node apps is lots of small apps that work in parallel or pass data around as needed.
 
@@ -72,7 +95,7 @@ I don't like to reinvent the wheel when it comes to setting up projects, working
 
 - Events & Nesting
 
-Time for some practical stuff. You may have read or heard that Node works around an event-driven model. This is something I've had to adjust to, it's quite different from the programming style I'd been used to with PHP and Ruby. Let's compare a couple of code examples.
+Node works around an event-driven model of development. There may be some adjustment needed if you're used to with PHP and Ruby. Let's compare a couple of code examples.
 
 (Left: Sequential ordering of commands including a database query)
 (Right: Similar job handled with JS using callbacks)
@@ -81,21 +104,18 @@ On the left here we have a code example using PHP. It might be familiar to some.
 
 On the right we have a similar example, but this is written in JavaScript. 
 
-- Routing vs. Files
-
-
-- Hello World example
-
-
-
 - Practical / Workshop
 * Set up local laptop as Ad-hoc network with demo code running locally, plus a download page for getting install files *
-Exercise 1: Hello world
-Step 1: Install Node.js (http://my_ip_address:3000/download to get the files)
-Step 2: Create new app.js file
-Step 3: Require http module
-Step 4: Set up createserver on port 4000
-Step 5: Have it respond with "Hello world" text
+Slide: Hello World example
+
+-- Install Node.js (http://my_ip_address:3000/download to get the files)
+
+Slide: Blank heading
+-- Create new app.js file
+-- Hello World code revealed line by line while talking about it
+
+Let's construct a complete working Node app. It'll be a server, listening on port 1337, and it'll respond with some text when you visit the URL.
+
 
 Exercise 2: Solve a problem yourselves (in pairs if you like)
 - Decide on a problem
@@ -105,8 +125,6 @@ Exercise 2: Solve a problem yourselves (in pairs if you like)
 
 - Back to slides
 
-It's getting late, and I know you're all mad keen to get around the corner here for a pint, so I'll just go through these quickly.
-
 - Case Study: Music.Hop.ie
 As an example of how Node can be a great way to build something quickly, here's a website I built recently as a small evening project. Feel free to grab the code and go through it at home. You can download it locally from this machine as a ZIP file, or find it on Github. Here are the URLs.
 
@@ -114,11 +132,11 @@ Alright, everyone got a chance to take down those URLs? Don't forget, these slid
 
 - Music.Hop.ie structure
 
-- Site structure: Express
+-- List of folders with label describing what they are for
 
 The starting point for a web app like this has got to be Express. Going through how this works would be a talk in itself, but it's totally worth getting used to. It's a lightweight web app framework that models itself on how Sinatra works in the Ruby world. It gives you a start on the app structure, with views, static file handling, and templating.
 
-Here's how the file structure looks. (Shift to text editor, highlight file column.)
+Here's how the file structure looks. (Shift to text editor, highlight file column. Focus on app code, walk through what it's doing. Show how template relates to it.)
 
 - Templates & Stylesheets
 
@@ -126,25 +144,64 @@ Jade (http://jade-lang.com/) works out of the box with Express. Not limited to t
 
 Stylus (http://learnboost.github.com/stylus/docs/js.html) is a wonderful CSS pre-processor. Has anyone here used SASS or Less? It's similar that those. For those that haven't, CSS pre-processors are ways of creating great CSS while keeping it maintainable, and extendible. 
 
-- Hosting on Ubuntu with Nginx
+- Hosting
+
+-- Self hosting
+-- Appfog
+-- Heroku
+
+This site is hosted on an Ubuntu server instance on Linode. I realised when building it that I was going to need a pretty large database to handle all the albums. I think it's around 50,000 currently. I run a few websites from this server instance so it made sense to put it here too.
+
+As far as setting up Node, MongoDB and Redis, I would recommend Googling one of the many excellent guides, especially if your server uses a different platform. The process of setting up Node was straightforward. I used the Aptitude package manager to install it and it went smoothly.
+
+One thing I might recommend though, is to consider using something like Nginx as a reverse proxy. You can set up Node to serve static assets, but rather than pile more people into the merry go round, I would recommend making use of Nginx's great static file handling and caching. There's a little bit of setup needed when using Nginx, but that would really need it's own talk.
+
+Other places I've seen include Appfog and Heroku. Both allow code to be deployed via the command line and offer a free tier of hosting. This generally includes a small database and limited amount of RAM. Both are great if you're starting out and want to get something online quickly, but they can get expensive if you need to scale. Having said that, they do provide a great service that could make scaling a large app much easier.
 
 - Debugging tips
 
-- Still interested? Watch Jeff's video:
+-- Node Inspector
+-- https://github.com/dannycoates/node-inspector
 
-http://www.youtube.com/watch?v=L0pjVcIsU6A
+If you've done much website development, you're no doubt quite familiar with the Developer Tools on Chrome, Safari or Firefox. These are great for seeing what's happening with your code, both CSS and JavaScript, on the front end. Debugging the code when it's running on the server isn't something these tools do though.
+
+I would recommend checking out Node Inspector. It fills that gap by offering a similar experience but allowing you to inspect the files on the back-end, and find any issues.
+
+- The Good
+
+-- Fast and scaleable
+-- Great community
+-- All JavaScript
+
+- The Bad
+
+-- CPU-intensive apps
+-- Learning curve
+-- All JavaScript
+
+- Conclusion
+
+As someone who, like many, has spent a good while working with PHP, MySQL, Ruby and the likes, I have found Node refreshing and exciting. There's something extremely pleasant about being able to write JavaScript to handle putting together data on the back-end, passing the data through, and picking up seamlessly with JavaScript functions on the front-end.
+
+What Node offers me is the ability to get from the point of having an idea to getting something working in less time. As someone who enjoys putting together little, fun web projects, any improvement to the time it takes to get going makes it all the more fun and lets me focus on the parts of development I enjoy.
+
+Node's popularity makes it a great place to develop. Community support is excellent, and the range of modules allows for making some amazing apps with little grunt work. 
+
+With the biggest bottleneck for web apps typically being the IO speeds, Node's non-blocking approach works to eliminate that problem. Node is fast, elegant, and makes development more fun.
 
 - Resources
+Ryan Dahl Intro to Node.js: http://www.yuiblog.com/blog/2010/05/20/video-dahl/
+Node.js Explained: http://www.youtube.com/watch?v=L0pjVcIsU6A
 Find Node Packages: nodezoo
 Express app tutorial: http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus
-Control presentations using remote device: http://dfcb.github.com/controldeck.js/
-Node app hosting (free for small apps DB): http://appfog.com
-Stackoverflow
+Google Group: http://groups.google.com/group/nodejs
+Stackoverflow / Node
 Follow Node.js on twitter
 
 - Feedback / Questions
-Put up a live stream that people can add questions to, live.
-OR A VOTE! Did this talk:
-a) Rock b) Suck
-with Live updated tallies.
+Put up a live stream that people can add questions to.
+
+Others
+
+Control presentations using remote device: http://dfcb.github.com/controldeck.js/
 
