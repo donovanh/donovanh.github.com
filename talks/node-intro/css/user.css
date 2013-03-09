@@ -1,0 +1,10 @@
+.half {
+  width: 50%;
+  float:left;
+}
+
+.transparent {
+   border:none !important;
+   background:none !important;
+   box-shadow:none !important;
+}

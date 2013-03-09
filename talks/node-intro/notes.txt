@@ -4,19 +4,19 @@ Introduction to Node.js
 -- Photo, twitter handle and title of talk
 
 - Goals
--- Establish what Node is about
+-- Establish what Node.js is about
 -- Try it yourself
--- Walkthrough of Beta.hop.ie (screenshot)
+-- Walkthrough of beta.hop.ie
 
 - What Node.js is
 
-- Created by Ryan Dahl in 2009
+- Created by Ryan Dahl in 2008
 - Server-side software system
 - Javascript based
 
 Node.js. 
 
-As of today, Node is up to version 0.8.22. It's still a little way off version 1, but it's come a long way since it was launched in 2009. Ryan Dahl developed Node as an event-driven, asynchronous server side framework, similar to Ruby's EventMachine or Python's Twisted.
+As of today, Node is up to version 0.8.22. It's still a little way off version 1, but it's come a long way since it was launched in 2008. Ryan Dahl developed Node as an event-driven, asynchronous server side framework, similar to Ruby's EventMachine or Python's Twisted.
 
 It's written in JavaScript, built on top of C, and all development in Node is JavaScript-based and it's particularly well suited to building scalable web applications.
 
@@ -64,6 +64,8 @@ The morale of the story? Node gets more shit done.
 
 V8 (picture of tomato juice)
 
+Node is built on top of Google's V8 JavaScript engine. It's regarded as one of the fastest.
+
 If you dislike JavaScript, you won't like Node. All development is in JavaScript. If on the other hand, you find JavaScript easier and more pleasant to work with than some of the other back-end languages, such as PHP or Ruby, then you might just find Node a great way to get things up and running quickly.
 
 Personally I've gone through the transition of starting off in graphics and design, spending a long time messing with PHP, and more recently, a bit of Ruby. Along the way I've been using JavaScript for a fair amount of front-end flashy stuff. However when I started using JavaScript on the back end too, it felt pretty good. I could work with data on the back-end, send it through Ajax requests to front end code, and have it all feel seamless and light.
@@ -71,9 +73,6 @@ Personally I've gone through the transition of starting off in graphics and desi
 Coding for me is most fun when I can get the back-end, functional stuff up and running quickly, and get to the messing around with the front-end CSS and HTML more quickly. It gets me to the point where I can see something happening, and that helps me be creative.
 
 - What sort of apps is Node for?
-(Picture of Node with the distributed dots and lines in background)
--- Lots of small, focussed functions
--- Not just web facing!
 
 So, what sort of apps would you want to build with Node? The way it works within a single thread is worth keeping in mind. Since it's not designed to multi-thread (at least not by default), it's best suited to light, small apps. Long running, CPU-heavy apps would block the single thread, so it's best to avoid anything that needs to hog the CPU.
 
@@ -93,29 +92,47 @@ These packages cover everything from the essential "http" module to database man
 
 I don't like to reinvent the wheel when it comes to setting up projects, working with databases and other sources of data, and Node's community-created packages make it a genuine pleasure getting things done.
 
-- Events & Nesting
+- Code order
 
-Node works around an event-driven model of development. There may be some adjustment needed if you're used to with PHP and Ruby. Let's compare a couple of code examples.
+Node works around an event-driven model of development. There may be some adjustment needed if you're not used to this style of coding.
 
-(Left: Sequential ordering of commands including a database query)
-(Right: Similar job handled with JS using callbacks)
+Here's an example that illustrates how code in Node.js is executed. This is a simple 4 line operation that uses console.log to output two things. The content of a text file called "hello.txt", and the text "Hello from Node!".
 
-On the left here we have a code example using PHP. It might be familiar to some. What it's doing is [TODO].
+Looking at the order the code is processed. In most forms of development, you'd go through it from the top down. First you'd load this text file, and log the contents. In this case the hello.txt file contains "Hello from disk!" text. You would then log the second message, "Hello from Node!". So you'd expect to see "Hello from Disk" then "Hello from Node". 
 
-On the right we have a similar example, but this is written in JavaScript. 
+That's not how Node does it. Node does execute the code from top down, but when this disk operation is doing it's thing, Node continues and executes the second console log, then when the disk IO returns with the contents, it outputs those contents. The result is you see "Hello from Node" followed by "Hello from disk".
 
-- Practical / Workshop
+Believe it or not, this is an entire Node app. You can save this as a JavaScript file and run it. In fact, let's do that now.
+
+- Your turn
 * Set up local laptop as Ad-hoc network with demo code running locally, plus a download page for getting install files *
-Slide: Hello World example
-
 -- Install Node.js (http://my_ip_address:3000/download to get the files)
 
-Slide: Blank heading
+- Hello World
 -- Create new app.js file
 -- Hello World code revealed line by line while talking about it
 
 Let's construct a complete working Node app. It'll be a server, listening on port 1337, and it'll respond with some text when you visit the URL.
 
+I've broken the code down into a few blocks so I can describe what's happening.
+
+Line 1: The first line is setting up a variable called http. It's telling Node to require the HTTP module. In the previous example, the first thing the code had was a require for the FS, or file system module. In this case, we won't be manipulating files, instead we're going to be listening for an HTTP connection.
+
+Line 2: There are a few things happening here. HTTP contains a method called "createserver". This is used to initialise the server, and it is supplied with a function to call whenever a request occurs.
+
+This anonymous function isn't called straight away like a callback, but instead it's attached to an event called "request". When the server receives a request, it runs this function and passes in two objects, "request", and "response".
+
+We're using the "response" object in the two lines that follow. In this case, since it's a very simple example, all it's doing is establishing the server response code (200), specifying the content type, and then finishing by returning some content within the response.end method.
+
+To help break the code up a bit I'm storing the result of this createserver method as an object called "server".
+
+Line 3: The next thing the server needs is a place to listen for requests. Here we specify post 1337.
+
+Line 4: Finally, we add a console log message to let us know that the Node app has worked.
+
+That's it! Save this file, and on your command line navigate to the folder where it's saved. You can then run: node server.js to execute the code.
+
+Opening your browser in localhost:1337, and you should see the text output.
 
 Exercise 2: Solve a problem yourselves (in pairs if you like)
 - Decide on a problem
@@ -125,20 +142,48 @@ Exercise 2: Solve a problem yourselves (in pairs if you like)
 
 - Back to slides
 
-- Case Study: Music.Hop.ie
-As an example of how Node can be a great way to build something quickly, here's a website I built recently as a small evening project. Feel free to grab the code and go through it at home. You can download it locally from this machine as a ZIP file, or find it on Github. Here are the URLs.
+- Case Study: Beta.Hop.ie
+As an example of how Node can be a great way to build something quickly, here's a website I built recently as a small evening project. Feel free to grab the code and go through it at home. You can download it locally from this machine as a ZIP file from the downloads page.
 
-Alright, everyone got a chance to take down those URLs? Don't forget, these slides are online so you can always go back over them and grab whatever resources you want later.
+/* SWITCH TO EDITOR */
 
-- Music.Hop.ie structure
+This is a personal project I've been working on for a couple of months. A while ago I started listening to music on Spotify. Now, something I like it trying different music I've not heard before, and I quickly found an odd thing. Spotify started recommending music that was based on tracks I'd listened to, and I quickly found I was being limited to albums Spotify thought I would like.
 
--- List of folders with label describing what they are for
+Well, I'd been looking for an excuse to build something with Node for a while, so I decided to make an app that would recommend music without any of the "recommendation" engine stuff. Instead it would simply present random albums, along with a link to listen on Spotify.
 
-The starting point for a web app like this has got to be Express. Going through how this works would be a talk in itself, but it's totally worth getting used to. It's a lightweight web app framework that models itself on how Sinatra works in the Ruby world. It gives you a start on the app structure, with views, static file handling, and templating.
+When designing the app, I had to do two things. Firstly I needed to build a large database of albums from which to pick random albums, and I had to have a front-end to present these. The structure I came up with was made up of 2 Node apps.
 
-Here's how the file structure looks. (Shift to text editor, highlight file column. Focus on app code, walk through what it's doing. Show how template relates to it.)
+The worker: The first app was tasked with filling the database. This is a simple enough app, it's just two files. I'll quickly go through the main stuff these are doing. Do stop me with any questions or if you'd like me to explain anything further.
 
-- Templates & Stylesheets
+/* Show app itself */
+
+The second app is the website. What this app is trying to do is listen for a web request, and if it's a request for the index page, it responds with the page's HTML/CSS/JavaScript. It also starts off embedding 10 random albums on the page. What then happens is, the user browses along through these albums, and once they've got about halfway through, the app issues an AJAX request to the server and asks for more albums.
+
+So there's an request listening endpoint in the app listening for this second request, and it responds with a JSON object containing 10 more albums.
+
+Finally, if I was refresh the page here I'd expect to see this specific album, so I've got an endpoint in place for loading just one album.
+
+Here's how the code looks.
+
+- Main web app file structure
+
+This is the file structure for the app. It's based on a module available for Node called Express. Express is a lightweight web app framework that models itself on how Sinatra works in the Ruby world.
+
+The starting point for a web app like this has got to be Express. Going through how this works would be a talk in itself, but it's totally worth getting used to. It's  It gives you a start on the app structure, with views, static file handling, and templating.
+
+A couple of things to notice. Firstly, package.json. This is what defines the dependencies for the app. With this file, you can download the app and run "nmp install", and it'll go fetch any modules the app needs to run.
+
+Other folders here are the public folder, where the JavaScripts, Stylesheets and images live. The views folder, which contains template files for the front-end, and the node modules folder, where the modules the app depends on live. You don't generally need to edit the contents of this node modules folder, it's created and managed by the Node Package Manager.
+
+The main thing to look at here is the app.js file. Here's what it does.
+
+/* Go through app.js file */
+
+Now, is there anything here you'd like me to explain further? Do feel free to grab the code and have a look through if you want to see what I've done.
+
+/* BACK TO SLIDES */
+
+- Front-end
 
 Jade (http://jade-lang.com/) works out of the box with Express. Not limited to this.
 
@@ -150,7 +195,7 @@ Stylus (http://learnboost.github.com/stylus/docs/js.html) is a wonderful CSS pre
 -- Appfog
 -- Heroku
 
-This site is hosted on an Ubuntu server instance on Linode. I realised when building it that I was going to need a pretty large database to handle all the albums. I think it's around 50,000 currently. I run a few websites from this server instance so it made sense to put it here too.
+The Hop music site is hosted on an Ubuntu server instance on Linode. I realised when building it that I was going to need a pretty large database to handle all the albums. I think it's around 50,000 currently. I run a few websites from this server instance so it made sense to put it here too.
 
 As far as setting up Node, MongoDB and Redis, I would recommend Googling one of the many excellent guides, especially if your server uses a different platform. The process of setting up Node was straightforward. I used the Aptitude package manager to install it and it went smoothly.
 
@@ -167,6 +212,8 @@ If you've done much website development, you're no doubt quite familiar with the
 
 I would recommend checking out Node Inspector. It fills that gap by offering a similar experience but allowing you to inspect the files on the back-end, and find any issues.
 
+- Summary
+
 - The Good
 
 -- Fast and scaleable
@@ -178,8 +225,6 @@ I would recommend checking out Node Inspector. It fills that gap by offering a s
 -- CPU-intensive apps
 -- Learning curve
 -- All JavaScript
-
-- Conclusion
 
 As someone who, like many, has spent a good while working with PHP, MySQL, Ruby and the likes, I have found Node refreshing and exciting. There's something extremely pleasant about being able to write JavaScript to handle putting together data on the back-end, passing the data through, and picking up seamlessly with JavaScript functions on the front-end.
 
@@ -195,8 +240,6 @@ Node.js Explained: http://www.youtube.com/watch?v=L0pjVcIsU6A
 Find Node Packages: nodezoo
 Express app tutorial: http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus
 Google Group: http://groups.google.com/group/nodejs
-Stackoverflow / Node
-Follow Node.js on twitter
 
 - Feedback / Questions
 Put up a live stream that people can add questions to.

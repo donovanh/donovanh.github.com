@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Introduction to Node.js</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/user.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -38,46 +39,226 @@
 			<div class="slides">
 
 				<section>
-					<h3>Introduction to</h3>
+					<h3>Introduction to Node.js</h3>
+					<div class="half" style="width: 40%">
+            <img src="https://secure.gravatar.com/avatar/1a6020189d9fe61133b965ca7a4a78b7?s=200" />
+					</div>
+					<div class="half">
+						<ul>
+							<li>Donovan Hutchinson</li>
+							<li><a href="http://twitter.com/donovanh">@donovanh</a></li>
+							<li>This talk: http://IPADDRESS:3000</li>
+							<li>Web URL: http://hop.ie/go/node/</li>
+						</ul>
+					</div>
+					<p style="clear:both"></p>
+					<img src="images/node-logo.png" class="transparent" />
+					
+				</section>
+
+				<section>
+					<h1>Goals</h1>
+					<ul>
+						<li>Establish what Node.js is about</li>
+						<li>Try it yourself</li>
+						<li>Walkthrough of beta.hop.ie</li>
+					</ul>
+				</section>
+
+				<section>
 					<h1>Node.js</h1>
-					<p>
-						<small>Follow along at http://IPADDRESS:3000</small>
-					</p>
+					<ul>
+						<li>Created by Ryan Dahl in 2008</li>
+						<li>Server-side software system</li>
+						<li>JavaScript based</li>
+					</ul>
 				</section>
 
 				<section>
-					<h1></h1>
-
+					<h1>Data I/O</h1>
+					<table style="width:400px;margin:20px auto;">
+						<tr>
+							<th>L1</th>
+							<td>3 cycles</td>
+						</tr>
+						<tr>
+							<th>L2</th>
+							<td>14 cycles</td>
+						</tr>
+						<tr>
+							<th>RAM</th>
+							<td>250 cycles</td>
+						</tr>
+						<tr>
+							<th>Disk</th>
+							<td>41,000,000</td>
+						</tr>
+						<tr>
+							<th>Network</th>
+							<td>240,000,000</td>
+						</tr>
+					</table>
+					<p><small>Source: Ryan Dahl 2008 / Jeff Kunkle 2012</small></p>
 				</section>
 
 				<section>
-					<h1></h1>
-					
+					<h1>Story Time!</h1>
+					<img src="images/cat.jpg" />
 				</section>
 
 				<section>
-					<h1></h1>
-					
+					<h2>Merry-Go-Round</h2>
+					picture of merry go round with one person on it and big queue
 				</section>
 
 				<section>
-					<h1></h1>
-					
+					<h1>Attempt #2</h1>
+					More people on roundabout going to and from toilet also
 				</section>
 
 				<section>
-					<h1></h1>
-					
+					<h1>Event Loop</h1>
+					similar structure to the merry go round, except with the actual labels (processes/event loop/IO)
+					<p><small>Source: Jeff Kunkle, 2012</small></p>
 				</section>
 
 				<section>
-					<h1></h1>
-					
+					<h1>JavaScript</h1>
+					<img src="images/v8.png" width="400" />
 				</section>
 
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h3>What sort of</h3>
+					<h1>apps?</h1>
+					<img src="images/nodejs_background.png" />
+				</section>
+
+				<section>
+					<h1>Modules</h1>
+					<img src="images/npm.png" class="transparent" />
+					<p>Currently: 24,640+ modules available</p>
+				</section>
+
+				<section>
+					<h1>Code order</h1>
+<pre><code>var fs = require('fs');
+var contents = fs.readFile('./hello.txt','utf8', function(err,contents){
+   console.log(contents);
+});
+console.log("Hello from Node!\n");
+</code></pre>
+				</section>
+
+				<section>
+					<h1>Your turn</h1>
+					<ul>
+						<li>Install Node: http://IPADDRESS:3000/downloads</li>
+						<li>Create a new directory</li>
+						<li>Create new file: server.js</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Hello World</h1>
+					<pre class="fragment"><code>var http = require('http');</code></pre>
+					<pre class="fragment"><code>var server = http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('OMG Bacon\n');
+});</code></pre>
+						<pre class="fragment"><code>server.listen(1337, '127.0.0.1');</code></pre>
+						<pre class="fragment"><code>console.log('Server running at http://127.0.0.1:1337/');</code></pre>
+						<p class="fragment">Now run <pre class="fragment"><code>node server.js</code></pre></p>
+					</ul>
+					<p><small>Source: Nodejs.org</small></p>
+				</section>
+
+				<section>
+					<h1>Exercise 2</h1>
+					<ul>
+						<li>Create two text files: joke.txt &amp; punchline.txt</li>
+						<li>Create app that outputs the joke to the browser</li>
+						<p><br />Solution: http://IPADDRESS:3000/downloads</p>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Case Study</h3>
+					<h1>Beta.Hop.ie</h1>
+					<img src="images/hop.jpg" />
+				</section>
+
+				<section>
+					<h1>Front-end</h1>
+					<ul>
+						<li><a href="http://jade-lang.com">Jade</a></li>
+						<li><a href="http://learnboost.github.com/stylus/docs/js.html">Stylus</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Hosting</h1>
+					<ul>
+						<li>Self hosting</li>
+						<li>Appfog</li>
+						<li>Heroku</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Debugging</h1>
+					<ul>
+						<li>Node Inspector</li>
+						<p><br /><a href="https://github.com/dannycoates/node-inspector">https://github.com/dannycoates/node-inspector</a></p>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Summary</h1>
+					<div class="half">
+						<p>The good</p>
+						<ul>
+							<li>Fast and scaleable</li>
+							<li>Great community</li>
+							<li>All JavaScript</li>
+						</ul>
+					</div>
+					<div class="half">
+						<p>The bad</p>
+						<ul>
+							<li>CPU-intensive apps</li>
+							<li>Learning curve</li>
+							<li>All JavaScript</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h1>Resources</h1>
+					<ul>
+						<li><a href="http://www.yuiblog.com/blog/2010/05/20/video-dahl/">Ryan Dahl Intro to Node.js</a></li>
+						<li><a href="http://www.youtube.com/watch?v=L0pjVcIsU6A">Node.js Explained</a></li>
+						<li><a href="http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus">Express app tutorial</a></li>
+						<li><a href="http://nodezoo.com/">NodeZoo</a></li>
+						<li><a href="http://groups.google.com/group/nodejs">Google Group</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+					<div class="half">
+						<div id="feedback-output">
+
+						</div>
+						<input type="text" name="feedback" id="feedback" />
+						<button id="send-feedback">Send</button>
+					</div>
+					<div class="half">
+						<p>Get in touch</p>
+						<ul>
+							<li>Twitter: <a href="http://twitter.com/donovanh">@donovanh</a></li>
+							<li>Email: <a href="mailto:d@hop.ie">d@hop.ie</a></li>
+						</ul>
+					</div>
 				</section>
 
 			</div>
@@ -97,7 +278,7 @@
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				theme: 'sky', // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
