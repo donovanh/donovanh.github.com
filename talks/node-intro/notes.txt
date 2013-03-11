@@ -121,9 +121,15 @@ That's it! Save this file, and on your command line navigate to the folder where
 
 Opening your browser in localhost:1337, and you should see the text output.
 
-Exercise 2: Solve a problem yourselves (in pairs if you like)
+- Real World App: Express & MongoDB
 
-- Back to slides
+Show the process of creating an app.
+
+Basic app
+----
+express --css stylus demo-app
+npm install
+----
 
 - Case Study: Beta.Hop.ie
 As an example of how Node can be a great way to build something quickly, here's a website I built recently as a small evening project. Feel free to grab the code and go through it at home. You can download it locally from this machine as a ZIP file from the downloads page.
@@ -190,9 +196,4 @@ Express app tutorial: http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-w
 Google Group: http://groups.google.com/group/nodejs
 
 - Feedback / Questions
-Put up a live stream that people can add questions to.
-
-Others
-
-Control presentations using remote device: http://dfcb.github.com/controldeck.js/
 
