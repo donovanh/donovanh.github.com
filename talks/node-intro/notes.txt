@@ -1,64 +1,53 @@
+Talk about:
+
+
 Introduction to Node.js
 
 - Welcome
 -- Photo, twitter handle and title of talk
 
-- Goals
+Hi! I'm Donovan. Today we're going to be talking about Node.js.
+
+If you'd like to follow along this presentation, or maybe relive it later, you can find it on this website. Hop.ie/go/node.
+
+Now, before I start, can I get a show of hands if you've used Node before?
+
+Cool. Now I hope you understand I'll be expecting lots of questions from you lot. If anyone does want to ask a question, just raise your hand anytime. Also, we'll have a break halfway through where we'll be looking at a practical exercise, so if you have any requests or things you'd like me to focus on, let me know.
+
+Ok. <deep breath>
+
+- Plan
 -- Establish what Node.js is about
 -- Try it yourself
 -- Walkthrough of beta.hop.ie
 
+Let's see now. Here's the plan. I'd like to cover 3 things today. First, we're going to take a look at what Node.js is. After that I'll be walking through a simple "Hello World" type example and we'll all have a go setting up a basic Node app.
+
+Then, if we've time, I'd like to talk about an app I built using Node.
+
 - What Node.js is
 
-- Created by Ryan Dahl in 2008
-- Server-side software system
-- Javascript based
+-- JavaScript based software system
+-- Non-blocking
+-- Event driven
+-- Launched in 2009
 
 Node.js. 
 
-As of today, Node is up to version 0.8.22. It's still a little way off version 1, but it's come a long way since it was launched in 2008. Ryan Dahl developed Node as an event-driven, asynchronous server side framework, similar to Ruby's EventMachine or Python's Twisted.
+/* MY STORY OF HOW I FOUND NODE, ie through JS, not being content with PHP, interesting new tech, great community */
 
-It's written in JavaScript, built on top of C, and all development in Node is JavaScript-based and it's particularly well suited to building scalable web applications.
+/* Not only are these things cool / these things are also cool */
 
-The main aim in Node, aside from making a platform that's easy and fun to built with, was to tackle the main issue that affects apps, data I/O.
+One of the things Ryan Dahl was trying to solve: making apps more fast and efficient.
 
-- Data I/O
-Just to set the scene a bit, I'd like to explain a little about what non-blocking means and why it's important to understanding why Node works the way it does. 
 
-Here's a table that will help illustrate the issue of data I/O. When I saw data IO, I mean the moving of data from one place to another. That can be within the CPU, from disk, or even from external sources over networks. 
 
-The exact numbers here don't matter too much, but the proportion between them does. What it says here, is that level 1 and 2 caches, the path for data that is closest to the CPU, happen about 10 times faster than RAM, which is itself millions of times faster than reading from a disk. Network calls can vary but they're orders of magnitude slower again.
+- Input / Output
 
-These differences are pretty huge. The CPU can perform literally millions, or even hundreds of millions of cycles while waiting for the data to be returned from these sources.
 
-The main aim of Node is to create a way of processing and handling requests that avoids the delays caused by these slower I/O operations. These operations take a long time, in CPU's timescale, and result in a lot of idle processor time.
+- Doctor and fast food example
 
-The way Node handles might best be described with a metaphor.
 
-- Story Time
-
-Imagine an eccentric millionaire decided to build a fun park. 
-
-- Merry go-round illustration illustrating a blocking process (one person on the go round at a time) queue on one side, toilets on the other
-In a fit of insanity, he put the entrance to the toilets on the other side of a Merry-Go-Round. He also sets up some rules. First rule, only one person on the merry go round at a time.
-
-What happens is, a queue forms in front of the merry go round here. One person gets on at a time. Now, they may not need to go to the toilet, so in that case they go around, ignore the toilet, and get off back at the start. The next person gets on. This person's been taking advantage of the free burritos. He's wise enough to get off on the other side and make for the toilets. What happens now is that the merry go round has to sit empty, waiting for his toilet session to finish. Eventually, he emerges, sweating and climbs back onto the merry go round to finish the journey.
-
-So, the eccentic old guy thought, hey, not enough people are getting through. Let's build 4 of them. So they ran 4 merry go rounds at the same time. Massive investment of resources both building and manning these merry go rounds, and sure, 4 times as many people could get through. But each merry go round was spending a lot of time empty. The owner may be eccentric but he wanted to turn a profit.
-
-- Merry go-round illustration illustrating non-blocking (one person on the go round at a time) queue on one side, toilets on the other, busy
-
-So he changes the rules. Instead of limiting the number of people to 1, he let the merry go round fill up. Now, the free burrito stand is still giving them away hand over fist, so there are a lot of people looking to get to the toilets. However, this time, instead of having the entire merry go round sit empty while people are making use of the facilities, the spaces these people leave are filled by more people. 
-
-This means that the merry go round is always making use of the spaces. When people have finished in the toilet, they get on the next available space and finish their trip, without causing any of the other users any delays.
-
-- Event Loop (slide showing the illustration with the event loop in the middle and the I/O on the right, and queue of events on left)
-
-What I'm describing is the differenc between a blocking process and a non-blocking process. A blocking process would take one from the left here, and block the loop by only allowing one in at a time. If it needs to make use of I/O, everything has to wait till it's finished. As we saw earlier, this could be in the order of millions of CPU cycles.
-
-Node's approach is to load this event loop with more events while it can, making better use of all those spare cycles.
-
-The morale of the story? Node gets more shit done.
 
 - JavaScript
 
@@ -80,17 +69,13 @@ The best sort of structure for Node apps is lots of small apps that work in para
 
 Something to bear in mind also, is that even though my own use of Node is very much from the perspective of building web-facing apps, it's not limited to this. You can use Node for all sorts of stuff. It's a framework that allows you to easily build quite low-level applications. I've seen it used in all sorts of applications, from powering a text editor, controlling remote control helicopters, even driving the front-end of a set-top box.
 
-Node's framework is flexible, lightweight, and suited to building all sorts of cool things. The reason it stays so versatile without becoming bogged down in code is the way it uses packages.
+Node's framework is flexible, lightweight, and suited to building all sorts of cool things. The reason it stays so versatile without becoming bogged down in code is the way it uses modules.
 
-- Packages / Modules (NPM)
+- Modules (NPM)
 
-Node without packages is basically a wrapper around the V8 JavaScript processing engine, with a few libraries to handle low-level system stuff. If you want to start using it for anything really interesting, you have two choices. Either write the functionality from scratch, or make use of the thousands of packages available.
+Node without packages is basically a wrapper around the V8 JavaScript processing engine, with a few libraries to handle low-level system stuff. If you want to start using it for anything really interesting, you have two choices. Either write the functionality from scratch, or make use of the thousands of modules available.
 
-I'd recommend the second option.
-
-These packages cover everything from the essential "http" module to database management tools, tools to help grab data from external APIs and all sorts of cool stuff. They can be very simple, mapping Mime-types, to the complex, such as building full web-facing apps.
-
-I don't like to reinvent the wheel when it comes to setting up projects, working with databases and other sources of data, and Node's community-created packages make it a genuine pleasure getting things done.
+These modules cover everything from the essential "http" module to database management tools, tools to help grab data from external APIs and all sorts of cool stuff. They can be very simple, mapping Mime-types, to the complex, such as building full web-facing apps.
 
 - Code order
 
@@ -103,6 +88,8 @@ Looking at the order the code is processed. In most forms of development, you'd 
 That's not how Node does it. Node does execute the code from top down, but when this disk operation is doing it's thing, Node continues and executes the second console log, then when the disk IO returns with the contents, it outputs those contents. The result is you see "Hello from Node" followed by "Hello from disk".
 
 Believe it or not, this is an entire Node app. You can save this as a JavaScript file and run it. In fact, let's do that now.
+
+/* open terminal and run hello.js */
 
 - Your turn
 * Set up local laptop as Ad-hoc network with demo code running locally, plus a download page for getting install files *
@@ -135,57 +122,22 @@ That's it! Save this file, and on your command line navigate to the folder where
 Opening your browser in localhost:1337, and you should see the text output.
 
 Exercise 2: Solve a problem yourselves (in pairs if you like)
-- Decide on a problem
-- Yes there's an exam
-- Get people's IP addresses and show the output on screen
-- Ask them to talk about how they found the experience
 
 - Back to slides
 
 - Case Study: Beta.Hop.ie
 As an example of how Node can be a great way to build something quickly, here's a website I built recently as a small evening project. Feel free to grab the code and go through it at home. You can download it locally from this machine as a ZIP file from the downloads page.
 
-/* SWITCH TO EDITOR */
+- Site structure
+(diagram of the site structure with front end, angular, node app (3 routes) and mongo database with redis key store)
 
-This is a personal project I've been working on for a couple of months. A while ago I started listening to music on Spotify. Now, something I like it trying different music I've not heard before, and I quickly found an odd thing. Spotify started recommending music that was based on tracks I'd listened to, and I quickly found I was being limited to albums Spotify thought I would like.
-
-Well, I'd been looking for an excuse to build something with Node for a while, so I decided to make an app that would recommend music without any of the "recommendation" engine stuff. Instead it would simply present random albums, along with a link to listen on Spotify.
-
-When designing the app, I had to do two things. Firstly I needed to build a large database of albums from which to pick random albums, and I had to have a front-end to present these. The structure I came up with was made up of 2 Node apps.
-
-The worker: The first app was tasked with filling the database. This is a simple enough app, it's just two files. I'll quickly go through the main stuff these are doing. Do stop me with any questions or if you'd like me to explain anything further.
-
-/* Show app itself */
-
-The second app is the website. What this app is trying to do is listen for a web request, and if it's a request for the index page, it responds with the page's HTML/CSS/JavaScript. It also starts off embedding 10 random albums on the page. What then happens is, the user browses along through these albums, and once they've got about halfway through, the app issues an AJAX request to the server and asks for more albums.
-
-So there's an request listening endpoint in the app listening for this second request, and it responds with a JSON object containing 10 more albums.
-
-Finally, if I was refresh the page here I'd expect to see this specific album, so I've got an endpoint in place for loading just one album.
-
-Here's how the code looks.
-
-- Main web app file structure
-
-This is the file structure for the app. It's based on a module available for Node called Express. Express is a lightweight web app framework that models itself on how Sinatra works in the Ruby world.
-
-The starting point for a web app like this has got to be Express. Going through how this works would be a talk in itself, but it's totally worth getting used to. It's  It gives you a start on the app structure, with views, static file handling, and templating.
-
-A couple of things to notice. Firstly, package.json. This is what defines the dependencies for the app. With this file, you can download the app and run "nmp install", and it'll go fetch any modules the app needs to run.
-
-Other folders here are the public folder, where the JavaScripts, Stylesheets and images live. The views folder, which contains template files for the front-end, and the node modules folder, where the modules the app depends on live. You don't generally need to edit the contents of this node modules folder, it's created and managed by the Node Package Manager.
-
-The main thing to look at here is the app.js file. Here's what it does.
-
-/* Go through app.js file */
-
-Now, is there anything here you'd like me to explain further? Do feel free to grab the code and have a look through if you want to see what I've done.
-
-/* BACK TO SLIDES */
+- Getting the data
+(diagram of the second app, the helper, that gets data from APIs)
 
 - Front-end
+(put up code examples of each)
 
-Jade (http://jade-lang.com/) works out of the box with Express. Not limited to this.
+Jade (http://jade-lang.com/) works out of the box with Express.
 
 Stylus (http://learnboost.github.com/stylus/docs/js.html) is a wonderful CSS pre-processor. Has anyone here used SASS or Less? It's similar that those. For those that haven't, CSS pre-processors are ways of creating great CSS while keeping it maintainable, and extendible. 
 
@@ -195,11 +147,7 @@ Stylus (http://learnboost.github.com/stylus/docs/js.html) is a wonderful CSS pre
 -- Appfog
 -- Heroku
 
-The Hop music site is hosted on an Ubuntu server instance on Linode. I realised when building it that I was going to need a pretty large database to handle all the albums. I think it's around 50,000 currently. I run a few websites from this server instance so it made sense to put it here too.
-
-As far as setting up Node, MongoDB and Redis, I would recommend Googling one of the many excellent guides, especially if your server uses a different platform. The process of setting up Node was straightforward. I used the Aptitude package manager to install it and it went smoothly.
-
-One thing I might recommend though, is to consider using something like Nginx as a reverse proxy. You can set up Node to serve static assets, but rather than pile more people into the merry go round, I would recommend making use of Nginx's great static file handling and caching. There's a little bit of setup needed when using Nginx, but that would really need it's own talk.
+The Hop music site is hosted on an Ubuntu server instance on Linode. Setting it up was easy enough, I followed some online guides to get things set up properly with Nginx in front.
 
 Other places I've seen include Appfog and Heroku. Both allow code to be deployed via the command line and offer a free tier of hosting. This generally includes a small database and limited amount of RAM. Both are great if you're starting out and want to get something online quickly, but they can get expensive if you need to scale. Having said that, they do provide a great service that could make scaling a large app much easier.
 
