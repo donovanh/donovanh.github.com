@@ -11,14 +11,5 @@ layout: default
 
 	<section class="entry">{{ content }}</section>
 
-	<section class="tags">
-	  <ul>
-	    <li>Filed under:</li>
-	  {% for tag in page.tags %}
-	    <li><a href="#">{{ tag | capitalize }}</a></li>
-	  {% endfor %}
-	  </ul>
-	</section>
-
 </article>
 
