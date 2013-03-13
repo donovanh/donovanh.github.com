@@ -36,7 +36,7 @@ Middleman is installed [as a Ruby gem](https://rubygems.org/gems/middleman), and
 
 Before starting, you'll need to have [Ruby installed](http://ruby.about.com/od/tutorials/a/installruby.htm). Then, get into Middleman by grabbing the gem:
 
-    $ https://rubygems.org/gems/middleman
+    $ gem install middleman
 
 Once installed, you can initialise a new Middleman project:
 
