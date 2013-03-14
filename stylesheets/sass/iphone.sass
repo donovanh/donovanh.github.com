@@ -1,44 +1,89 @@
-@import "compass/css3"
+@import base
 
 .phone-container
+  margin: 100px auto
   width: 251px
   height: 537px
   perspective: 500
-  -webkit-perspective: 500
+  @include perspective(500px)
 
   *
     position: absolute
     @include transition(all 1500ms)
 
   .phone
-    -webkit-transform-style: preserve-3d 
-    -webkit-transform: rotateY(40deg)
-    &:hover
-      -webkit-transform: rotateY(180deg)
+    left: 125px
+    @include transform-style(preserve-3d)
+    @include transform(rotateY(-80deg))
+    @include animation(rotate-phone 5s linear infinite)
 
   .front
     width: 251px
     height: 537px
     background: url(/images/phone_parts/front.png) no-repeat
-    -webkit-transform: rotateY(0deg) translateZ(14px)
+    @include transform(translateX(-125px) rotateY(0deg) translateZ(14px))
 
   .back
     width: 251px
     height: 537px
     background: url(/images/phone_parts/back.png) no-repeat
-    -webkit-transform: rotateY(180deg) translateZ(13px)
+    @include transform(translateX(-125px) rotateY(180deg) translateZ(13px))
  
   .left
     width: 31px
     height: 537px
     background: url(/images/phone_parts/left_side.png) no-repeat
-    -webkit-transform: rotateY(-90deg) translate3d(0,0,13px)
+    @include transform(translateX(-138px) rotateY(-90deg))
     @include border-radius(20px)
-    -webkit-backface-visibility: hidden
+    @include backface-visibility(hidden)
+    
+  .left-top
+    content: ' '
+    background: black
+    width: 29px
+    height: 30px
+    top: 10px
+    @include transform(translateX(-125px) rotateY(-90deg) rotateX(10deg))
+
+  .left-bottom
+    content: ' '
+    background: black
+    width: 29px
+    height: 20px
+    @include transform(translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg))
 
   .right
     width: 31px
     height: 537px
     background: url(/images/phone_parts/right_side.png) no-repeat
-    -webkit-transform: rotateY(90deg) translate3d(15px, 0, 220px)
-    -webkit-backface-visibility: hidden
+    @include transform(translateX(107px) rotateY(90deg))
+    @include backface-visibility(hidden)
+
+  .right-top
+    content: ' '
+    background: black
+    width: 29px
+    height: 30px
+    top: 10px
+    @include transform(translateX(100px) rotateY(-90deg) rotateX(-20deg))
+
+  .right-bottom
+    content: ' '
+    background: black
+    width: 29px
+    height: 20px
+    @include transform(translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg))
+
+  .shadow
+    width: 250px
+    height: 20px
+    @include transform(translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px))
+    @include box-shadow(0 60px 60px #000)
+
+@include keyframes(rotate-phone)
+  0%
+    @include rotateY(0)
+  100%
+    @include rotateY(360deg)
+
+
