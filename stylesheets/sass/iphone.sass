@@ -1,0 +1,44 @@
+@import "compass/css3"
+
+.phone-container
+  width: 251px
+  height: 537px
+  perspective: 500
+  -webkit-perspective: 500
+
+  *
+    position: absolute
+    @include transition(all 1500ms)
+
+  .phone
+    -webkit-transform-style: preserve-3d 
+    -webkit-transform: rotateY(40deg)
+    &:hover
+      -webkit-transform: rotateY(180deg)
+
+  .front
+    width: 251px
+    height: 537px
+    background: url(/images/phone_parts/front.png) no-repeat
+    -webkit-transform: rotateY(0deg) translateZ(14px)
+
+  .back
+    width: 251px
+    height: 537px
+    background: url(/images/phone_parts/back.png) no-repeat
+    -webkit-transform: rotateY(180deg) translateZ(13px)
+ 
+  .left
+    width: 31px
+    height: 537px
+    background: url(/images/phone_parts/left_side.png) no-repeat
+    -webkit-transform: rotateY(-90deg) translate3d(0,0,13px)
+    @include border-radius(20px)
+    -webkit-backface-visibility: hidden
+
+  .right
+    width: 31px
+    height: 537px
+    background: url(/images/phone_parts/right_side.png) no-repeat
+    -webkit-transform: rotateY(90deg) translate3d(15px, 0, 220px)
+    -webkit-backface-visibility: hidden

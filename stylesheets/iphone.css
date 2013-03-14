@@ -1,0 +1,51 @@
+.phone-container {
+  width: 251px;
+  height: 537px;
+  perspective: 500;
+  -webkit-perspective: 500;
+}
+.phone-container * {
+  position: absolute;
+  -webkit-transition: all 1500ms;
+  -moz-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  transition: all 1500ms;
+}
+.phone-container .phone {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(40deg);
+}
+.phone-container .phone:hover {
+  -webkit-transform: rotateY(180deg);
+}
+.phone-container .front {
+  width: 251px;
+  height: 537px;
+  background: url(/images/phone_parts/front.png) no-repeat;
+  -webkit-transform: rotateY(0deg) translateZ(14px);
+}
+.phone-container .back {
+  width: 251px;
+  height: 537px;
+  background: url(/images/phone_parts/back.png) no-repeat;
+  -webkit-transform: rotateY(180deg) translateZ(13px);
+}
+.phone-container .left {
+  width: 31px;
+  height: 537px;
+  background: url(/images/phone_parts/left_side.png) no-repeat;
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 13px);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-backface-visibility: hidden;
+}
+.phone-container .right {
+  width: 31px;
+  height: 537px;
+  background: url(/images/phone_parts/right_side.png) no-repeat;
+  -webkit-transform: rotateY(90deg) translate3d(15px, 0, 220px);
+  -webkit-backface-visibility: hidden;
+}
