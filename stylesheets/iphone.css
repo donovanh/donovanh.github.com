@@ -788,7 +788,6 @@ html {
   backface-visibility: hidden;
 }
 .phone-container .left-top {
-  content: " ";
   background: black;
   width: 29px;
   height: 30px;
@@ -800,7 +799,6 @@ html {
   transform: translateX(-125px) rotateY(-90deg) rotateX(10deg);
 }
 .phone-container .left-bottom {
-  content: " ";
   background: black;
   width: 29px;
   height: 20px;
@@ -826,7 +824,6 @@ html {
   backface-visibility: hidden;
 }
 .phone-container .right-top {
-  content: " ";
   background: black;
   width: 29px;
   height: 30px;
@@ -838,7 +835,6 @@ html {
   transform: translateX(100px) rotateY(-90deg) rotateX(-20deg);
 }
 .phone-container .right-bottom {
-  content: " ";
   background: black;
   width: 29px;
   height: 20px;
