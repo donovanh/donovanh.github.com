@@ -700,12 +700,8 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-* html {
-  font-size: 125%;
-}
-
 html {
-  font-size: 20px;
+  font-size: 125%;
   line-height: 1.5em;
 }
 
@@ -846,8 +842,6 @@ input {
   line-height: 1.875em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   padding: 4px 14px;
   display: inline-block;
@@ -938,8 +932,8 @@ sidebar p {
   z-index: 4;
 }
 .entry aside {
-  border-style: dashed;
   border-width: 0.05em;
+  border-style: dashed;
   padding: 1.45em;
 }
 
@@ -969,8 +963,6 @@ sidebar p {
   border: 1px solid white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   padding: 5px 8px;
   z-index: 5;
@@ -991,8 +983,6 @@ sidebar p {
   z-index: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
 }
 .sharing li a {
@@ -1005,8 +995,6 @@ code {
   line-height: 1.875em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   padding: 0 8px;
   display: inline-block;
@@ -1690,8 +1678,6 @@ html.no-js .bouncer-container .mask, html.no-js .bouncer-container .bouncer, htm
   background-color: #415259;
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
-  -ms-border-radius: 35px;
-  -o-border-radius: 35px;
   border-radius: 35px;
   position: relative;
   overflow: hidden;

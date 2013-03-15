@@ -700,12 +700,8 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-* html {
-  font-size: 125%;
-}
-
 html {
-  font-size: 20px;
+  font-size: 125%;
   line-height: 1.5em;
 }
 
