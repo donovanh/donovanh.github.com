@@ -115,7 +115,7 @@ One area I had trouble with was the corners. Since they're curved, I cropped the
 
 Rather than explain setting up each of the pieces, here's a chance to see each piece of the iPhone above being assembled. In the CSS code, uncomment each "/\*" to see the associated piece of the phone animate into place. You can change the transforms and see the changes take effect on the displayed phone.
 
-<div style="width:30%;float:left">
+<div class="thirty-percent">
     <div class="phone-container ex">
       <div class="phone">
         <div class="front"> </div>
@@ -130,7 +130,7 @@ Rather than explain setting up each of the pieces, here's a chance to see each p
       </div>
     </div>
 </div>
-<div style="width:70%;float:left;">
+<div class="seventy-percent">
 <style>
 .phone-container.ex * {
   position: absolute;

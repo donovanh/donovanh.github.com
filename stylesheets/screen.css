@@ -1887,6 +1887,17 @@ pre > .editable-styles {
     display: block;
   }
 }
+/* Phone example */
+.thirty-percent {
+  width: 30%;
+  float: left;
+}
+
+.seventy-percent {
+  width: 70%;
+  float: left;
+}
+
 /* Overrides */
 @media only screen and (max-width: 800px) {
   /* Style adjustments for smaller screens */
@@ -1929,6 +1940,12 @@ pre > .editable-styles {
     margin-top: -26px;
     font-size: 0.7em;
     line-height: 2.14286em;
+  }
+
+  .thirty-percent, .seventy-percent {
+    width: 90%;
+    margin: 0 auto;
+    float: none;
   }
 
   .bouncer-container {
