@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hands-on: Build a 3D iPhone"
-description: ""
+title: "Make a 3D iPhone with CSS"
+description: "Transformers. Headaches in disguise."
 tags: [css]
 newstylesheet: "iphone"
 published: true
@@ -72,7 +72,7 @@ One the container has been given a perspective, you can then set up the pieces t
 
     transform: effect1(value) effect2(value) effect3(value)...
 
-As shown above, the effects can be chained. It's important to keep in mind that they apply from left to right. Also, when applying <code>rotate</code>, keep in mind that the axes are also rotated. Here's an example:
+As shown above, the effects can be chained. It's important to keep in mind that they apply from left to right. Here's an example:
 
     transform: translateX(50px) translateY(50px) rotateY(45deg)
 
@@ -103,9 +103,17 @@ The above would <code>translate</code> the object along the X axis 100 pixels, t
     <section class="rotate-example"></section>
 </div>
 
+## iPhone 5
+
+Using the free iPhone5 template [from Carter Digital](http://carterdigital.com.au/download/iphone_5_gui_psd/free_iphone_5_gui_psd.zip), I cobbled together the front and side pieces. The side pieces needed some adjustment as all pictures I could find where at an angle.
+
+<img src="/images/phone_parts/parts.png" width="100%" alt="All the phone bits." />
+
+One area I had trouble with was the corners. Since they're curved, I cropped the top and bottom off the side images, and replaced them with an angled black div. It's a bit like a low polygon action game look, but it hides the gap where there should be a curved corner.
+
 ## Try it for yourself!
 
-Rather than explain each step, here's a chance to see each piece of the iPhone above being assembled. In the CSS code on the right, uncomment each "/\*" to see the associated piece of the phone animate into place. You can change the transforms and see the changes take effect on the left.
+Rather than explain setting up each of the pieces, here's a chance to see each piece of the iPhone above being assembled. In the CSS code, uncomment each "/\*" to see the associated piece of the phone animate into place. You can change the transforms and see the changes take effect on the displayed phone.
 
 <div style="width:30%;float:left">
     <div class="phone-container ex">
@@ -135,6 +143,9 @@ Rather than explain each step, here's a chance to see each piece of the iPhone a
   opacity: 1;
   -webkit-transform-style: preserve-3d;
 
+}
+.phone-container.ex .shadow {
+  opacity: 0.7 !important;
 }
 </style>
 <pre id="phone-example-code"><style type="text/css" class="editable-styles" contenteditable="true">.phone-container.ex .front {
@@ -184,7 +195,7 @@ Rather than explain each step, here's a chance to see each piece of the iPhone a
 
 ## Animating the result
 
-In this example I've added a drop shadow using CSS, and animated the entire phone using a couple of keyframes. If you'd like to see more of the source, the [full iPhone CSS](/stylesheets/iphone.css) contains all the rules and browser prefixes.
+In this example I've added a drop shadow using CSS, and animated the entire phone using a couple of keyframes. To see this and more, grab the [full iPhone CSS source](/stylesheets/iphone.css) for all the rules and browser prefixes.
 
 Please let me know if you have any questions or feedback. My email is [d@hop.ie](mailto:d@hop.ie) and I can also be reached on Twitter at [@donovanh](http://twitter.com/donovanh).
 
