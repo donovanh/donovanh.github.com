@@ -64,6 +64,8 @@
   transform: translateX(-138px) rotateY(-90deg);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   border-radius: 20px;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -75,32 +77,32 @@
   background: black;
   width: 29px;
   height: 30px;
-  top: 10px;
-  -webkit-transform: translateX(-125px) rotateY(-90deg) rotateX(10deg);
-  -moz-transform: translateX(-125px) rotateY(-90deg) rotateX(10deg);
-  -ms-transform: translateX(-125px) rotateY(-90deg) rotateX(10deg);
-  -o-transform: translateX(-125px) rotateY(-90deg) rotateX(10deg);
-  transform: translateX(-125px) rotateY(-90deg) rotateX(10deg);
+  top: 4px;
+  -webkit-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  -moz-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  -ms-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  -o-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
 }
 .phone-container .left-bottom {
   background: black;
   width: 29px;
-  height: 20px;
-  -webkit-transform: translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg);
-  -moz-transform: translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg);
-  -ms-transform: translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg);
-  -o-transform: translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg);
-  transform: translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg);
+  height: 25px;
+  -webkit-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  -moz-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  -ms-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  -o-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
 }
 .phone-container .right {
   width: 31px;
   height: 537px;
   background: url(/images/phone_parts/right_side.png) no-repeat;
-  -webkit-transform: translateX(107px) rotateY(90deg);
-  -moz-transform: translateX(107px) rotateY(90deg);
-  -ms-transform: translateX(107px) rotateY(90deg);
-  -o-transform: translateX(107px) rotateY(90deg);
-  transform: translateX(107px) rotateY(90deg);
+  -webkit-transform: translateX(105px) rotateY(90deg);
+  -moz-transform: translateX(105px) rotateY(90deg);
+  -ms-transform: translateX(105px) rotateY(90deg);
+  -o-transform: translateX(105px) rotateY(90deg);
+  transform: translateX(105px) rotateY(90deg);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -110,23 +112,23 @@
 .phone-container .right-top {
   background: black;
   width: 29px;
-  height: 30px;
-  top: 10px;
-  -webkit-transform: translateX(100px) rotateY(-90deg) rotateX(-20deg);
-  -moz-transform: translateX(100px) rotateY(-90deg) rotateX(-20deg);
-  -ms-transform: translateX(100px) rotateY(-90deg) rotateX(-20deg);
-  -o-transform: translateX(100px) rotateY(-90deg) rotateX(-20deg);
-  transform: translateX(100px) rotateY(-90deg) rotateX(-20deg);
+  height: 29px;
+  top: 4px;
+  -webkit-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  -moz-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  -ms-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  -o-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
 }
 .phone-container .right-bottom {
   background: black;
   width: 29px;
-  height: 20px;
-  -webkit-transform: translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg);
-  -moz-transform: translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg);
-  -ms-transform: translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg);
-  -o-transform: translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg);
-  transform: translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg);
+  height: 25px;
+  -webkit-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  -moz-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  -ms-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  -o-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
 }
 .phone-container .shadow {
   width: 250px;

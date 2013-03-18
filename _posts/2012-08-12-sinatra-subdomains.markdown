@@ -30,7 +30,7 @@ Then setting up a symlink to your project:
 	cd ~/.pow
     ln -s /path/to/myapp myapp
 
-*\*Note: The docs seem to leave out the second "myapp" above when creating the symlink. This worked for me.
+*\*Note: The docs seem to leave out the second "myapp" above when creating the symlink. This worked for me.*
 
 Restarting the server involves creating a text file in a <code>tmp</code> directory in your project, called *restart.txt*:
 

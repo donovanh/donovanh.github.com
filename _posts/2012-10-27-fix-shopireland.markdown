@@ -5,13 +5,13 @@ description: "Sometimes an old project is worth giving an overhaul. This is my p
 tags: [development]
 published: true
 ---
-For the majority of the last decade I've run a reasonably popular [irish shopping website][]. It started as a project where I would have a go learning some web service stuff, and try my hand at some SEO. Over the years I've revamped and adjusted how it works, but on the surface, it's the same site that launched [in August 2004][].
+For the majority of the last decade I've run a reasonably popular [irish shopping website][1]. It started as a project where I would have a go learning some web service stuff, and try my hand at some SEO. Over the years I've revamped and adjusted how it works, but on the surface, it's the same site that launched [in August 2004][2].
 
 Over the years it went through some major ups and downs. At it's busiest it was serving 1.5 million unique visitors per month, and killing the dedicated server every day. At the moment it's down to a more modest 8 thousand or so visitors per month. Not a bad figure, but I'm keen to improve the experience.
 
 ##Why now?
 
-A couple of things have happened at once that have spurred me into action on this project. A new child arrives at the end of November, plus the site's host recently made the [move to the cloud]. The site seems to have reached the bottom of it's gradual decline in the search engines and be on the way back up.
+A couple of things have happened at once that have spurred me into action on this project. A new child arrives at the end of November, plus the site's host recently made the move to the cloud. The site seems to have reached the bottom of it's gradual decline in the search engines and be on the way back up.
 
 ##Main areas to improve
 
@@ -57,8 +57,8 @@ While the above seem a little dry, they all add up to creating a solid structure
 
 The plan is to update this page as I make my way through the above list, noting what I did or decided not to do, along with any related blog posts. If you have any suggestions, please send me an email at [d@hop.ie][4] or message me on the details below. I'd love to hear your thoughts!
 
- [irish shopping website]: http://www.shopireland.ie
- [August 2004]: http://web.archive.org/web/20040805022210/http://www.shopireland.ie/
+ [1]: http://www.shopireland.ie
+ [2]: http://web.archive.org/web/20040805022210/http://www.shopireland.ie/
  [3]: http://schema.org/
  [4]: mailto:d@hop.ie
  [5]: http://www.useit.com/papers/responsetime.html
