@@ -1019,6 +1019,34 @@ pre code {
   tab-size: 2;
 }
 
+/* Nav for post pages */
+nav.pagination {
+  padding: 24px 0;
+  font-style: italic;
+  position: relative;
+}
+nav.pagination .previous {
+  position: absolute;
+  left: 0;
+  top: 24px;
+}
+nav.pagination .previous:before {
+  content: "\00ab ";
+}
+nav.pagination .page_number {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+nav.pagination .next {
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+nav.pagination .next:after {
+  content: " \00bb";
+}
+
 .bouncer-container * {
   position: absolute;
 }

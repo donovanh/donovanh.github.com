@@ -179,6 +179,31 @@ pre code
   padding: 10px 16px
   tab-size: 2
 
+/* Nav for post pages
+
+nav.pagination
+  padding: 24px 0
+  font-style: italic
+  position: relative
+
+  .previous
+    position: absolute
+    left: 0
+    top: 24px
+    &:before
+      content: '\00ab '
+
+  .page_number
+    text-align: center
+    display: inline-block
+    width: 100%
+
+  .next
+    position: absolute
+    right: 0
+    top: 24px
+    &:after
+      content: ' \00bb'
 
 .bouncer-container *
   position: absolute

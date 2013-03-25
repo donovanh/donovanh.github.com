@@ -1,3 +1,27 @@
+Commands for Express setup & deploy:
+
+npm install -g express
+express my_app
+cd my_app && npm install
+node app
+/* perform editing, restart */
+heroku login
+subl Procfile >> web: node app.js
+git init
+git add .
+git commit -m "init"
+heroku create refresh-demo
+git push heroku master
+/* visit refresh-demo.herokuapp.com */
+/* If error: heroku ps:scale web=1 */
+heroku domains:add refresh.hop.ie
+/* visit refresh.hop.ie */
+
+
+
+
+
+
 Talk about:
 
 
