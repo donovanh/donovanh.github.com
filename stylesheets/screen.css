@@ -854,6 +854,20 @@ input {
   border: 2px solid #dddddd;
 }
 
+img.bordered {
+  border: 2px solid #2c3437;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+img.left {
+  float: left;
+  margin: 10px 20px 10px 0;
+}
+
 /* Page structure */
 .page-container {
   background-color: #ffffee;
@@ -1021,17 +1035,17 @@ pre code {
 
 /* Nav for post pages */
 nav.pagination {
-  padding: 24px 0;
+  padding: 50px 10px 24px 10px;
   font-style: italic;
   position: relative;
 }
 nav.pagination .previous {
   position: absolute;
   left: 0;
-  top: 24px;
+  top: 50px;
 }
 nav.pagination .previous:before {
-  content: "\00ab ";
+  content: "\00ab\00a0";
 }
 nav.pagination .page_number {
   text-align: center;
@@ -1041,10 +1055,10 @@ nav.pagination .page_number {
 nav.pagination .next {
   position: absolute;
   right: 0;
-  top: 24px;
+  top: 50px;
 }
 nav.pagination .next:after {
-  content: " \00bb";
+  content: "\00a0\00bb";
 }
 
 .bouncer-container * {
