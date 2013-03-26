@@ -1994,3 +1994,14 @@ pre > .editable-styles {
     top: 30px;
   }
 }
+@media only screen and (max-width: 400px) {
+  section.content {
+    padding: 0 15px;
+  }
+
+  p {
+    font-size: 0.75em;
+    line-height: 2em;
+    line-height: 2.1em;
+  }
+}
