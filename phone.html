@@ -40,7 +40,12 @@ SASS:
   margin: 100px auto
   width: 251px
   height: 537px
-  @include perspective(800px)
+  @include perspective(1000px)
+  //for elevation on hover:
+  $elevation: 40px
+  $elevationDuration: 1s
+  $elevationTimingFunction: ease-in-out
+  @include transition(bottom $elevationDuration $elevationTimingFunction)
 
   *
     position: absolute
@@ -63,7 +68,7 @@ SASS:
     height: 537px
     background: url(/images/phone_parts/back.png) no-repeat
     @include transform(translateX(-125px) rotateY(180deg) translateZ(13px))
- 
+
   .left
     width: 31px
     height: 537px
@@ -71,45 +76,54 @@ SASS:
     @include transform(translateX(-138px) rotateY(-90deg))
     @include border-radius(20px)
     @include backface-visibility(hidden)
-    
+
   .left-top
     background: black
     width: 29px
     height: 30px
-    top: 10px
-    @include transform(translateX(-125px) rotateY(-90deg) rotateX(10deg))
+    top: 4px
+    @include transform(translateX(-129px) rotateY(-90deg) rotateX(30deg))
 
   .left-bottom
     background: black
     width: 29px
-    height: 20px
-    @include transform(translateX(-125px) translateY(495px) rotateY(-90deg) rotateX(-10deg))
+    height: 25px
+    @include transform(translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg))
 
   .right
     width: 31px
     height: 537px
     background: url(/images/phone_parts/right_side.png) no-repeat
-    @include transform(translateX(107px) rotateY(90deg))
+    @include transform(translateX(105px) rotateY(90deg))
     @include backface-visibility(hidden)
 
   .right-top
     background: black
     width: 29px
-    height: 30px
-    top: 10px
-    @include transform(translateX(100px) rotateY(-90deg) rotateX(-20deg))
+    height: 29px
+    top: 4px
+    @include transform(translateX(98px) rotateY(-90deg) rotateX(-30deg))
 
   .right-bottom
     background: black
     width: 29px
-    height: 20px
-    @include transform(translateX(100px) translateY(495px) rotateY(-90deg) rotateX(20deg))
+    height: 25px
+    @include transform(translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg))
 
   .shadow
     width: 250px
     height: 20px
     @include transform(translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px))
     @include box-shadow(0 60px 60px #000)
+    @inclue transition(top $elevationDuration $elevationTimingFunction)
+
+  &:hover
+    position: relative
+    bottom: $elevation
+
+    .shadow
+      position: relative
+      top: $elevation
 
 @include keyframes(rotate-phone)
   0%

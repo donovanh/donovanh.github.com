@@ -1,202 +1,52 @@
-.phone-container {
-  margin: 100px auto;
-  width: 251px;
-  height: 537px;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-}
-.phone-container * {
-  position: absolute;
-  -webkit-transition: all 1500ms;
-  -moz-transition: all 1500ms;
-  -o-transition: all 1500ms;
-  transition: all 1500ms;
-}
-.phone-container .phone {
-  left: 125px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: rotateY(-80deg);
-  -moz-transform: rotateY(-80deg);
-  -ms-transform: rotateY(-80deg);
-  -o-transform: rotateY(-80deg);
-  transform: rotateY(-80deg);
-  -webkit-animation: rotate-phone 5s linear infinite;
-  -moz-animation: rotate-phone 5s linear infinite;
-  -ms-animation: rotate-phone 5s linear infinite;
-  -o-animation: rotate-phone 5s linear infinite;
-  animation: rotate-phone 5s linear infinite;
-}
-.phone-container .front {
-  width: 251px;
-  height: 537px;
-  background: url(/images/phone_parts/front.png) no-repeat;
-  -webkit-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
-  -moz-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
-  -ms-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
-  -o-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
-  transform: translateX(-125px) rotateY(0deg) translateZ(14px);
-}
-.phone-container .back {
-  width: 251px;
-  height: 537px;
-  background: url(/images/phone_parts/back.png) no-repeat;
-  -webkit-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
-  -moz-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
-  -ms-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
-  -o-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
-  transform: translateX(-125px) rotateY(180deg) translateZ(13px);
-}
-.phone-container .left {
-  width: 31px;
-  height: 537px;
-  background: url(/images/phone_parts/left_side.png) no-repeat;
-  -webkit-transform: translateX(-138px) rotateY(-90deg);
-  -moz-transform: translateX(-138px) rotateY(-90deg);
-  -ms-transform: translateX(-138px) rotateY(-90deg);
-  -o-transform: translateX(-138px) rotateY(-90deg);
-  transform: translateX(-138px) rotateY(-90deg);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.phone-container .left-top {
-  background: black;
-  width: 29px;
-  height: 30px;
-  top: 4px;
-  -webkit-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
-  -moz-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
-  -ms-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
-  -o-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
-  transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
-}
-.phone-container .left-bottom {
-  background: black;
-  width: 29px;
-  height: 25px;
-  -webkit-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
-  -moz-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
-  -ms-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
-  -o-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
-  transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
-}
-.phone-container .right {
-  width: 31px;
-  height: 537px;
-  background: url(/images/phone_parts/right_side.png) no-repeat;
-  -webkit-transform: translateX(105px) rotateY(90deg);
-  -moz-transform: translateX(105px) rotateY(90deg);
-  -ms-transform: translateX(105px) rotateY(90deg);
-  -o-transform: translateX(105px) rotateY(90deg);
-  transform: translateX(105px) rotateY(90deg);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.phone-container .right-top {
-  background: black;
-  width: 29px;
-  height: 29px;
-  top: 4px;
-  -webkit-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
-  -moz-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
-  -ms-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
-  -o-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
-  transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
-}
-.phone-container .right-bottom {
-  background: black;
-  width: 29px;
-  height: 25px;
-  -webkit-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
-  -moz-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
-  -ms-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
-  -o-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
-  transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
-}
-.phone-container .shadow {
-  width: 250px;
-  height: 20px;
-  -webkit-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
-  -moz-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
-  -ms-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
-  -o-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
-  transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
-  -webkit-box-shadow: 0 60px 60px black;
-  -moz-box-shadow: 0 60px 60px black;
-  box-shadow: 0 60px 60px black;
-}
+/*
+Syntax error: The line was indented 2 levels deeper than the previous line.
+        on line 91 of C:/wamp/www/GitHub/donovanh.github.com/stylesheets/sass/iphone.sass
 
-@-moz-keyframes rotate-phone {
-  0% {
-    -moz-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -moz-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@-webkit-keyframes rotate-phone {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@-o-keyframes rotate-phone {
-  0% {
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -o-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@-ms-keyframes rotate-phone {
-  0% {
-    -ms-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -ms-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes rotate-phone {
-  0% {
-    transform: rotateY(0);
-  }
-
-  100% {
-    transform: rotateY(360deg);
-  }
-}
+Backtrace:
+C:/wamp/www/GitHub/donovanh.github.com/stylesheets/sass/iphone.sass:91
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:458:in `tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:345:in `_to_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `block in modified'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `block in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+C:/Ruby193/bin/compass:23:in `load'
+C:/Ruby193/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: The line was indented 2 levels deeper than the previous line.\A         on line 91 of C:/wamp/www/GitHub/donovanh.github.com/stylesheets/sass/iphone.sass"; }
