@@ -7,6 +7,7 @@
   -ms-perspective: 800px;
   -o-perspective: 800px;
   perspective: 800px;
+  transform: translate(0);
 }
 .phone-container * {
   position: absolute;
