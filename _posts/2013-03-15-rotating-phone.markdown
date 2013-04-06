@@ -201,5 +201,9 @@ In this example I've added a drop shadow using CSS, and animated the entire phon
 
 If you're shaking your head at something I've messed up, I'm happy to receive pull requests [on Github](https://github.com/donovanh/donovanh.github.com). You'll find this entire site source code, but also [the iPhone SASS](https://github.com/donovanh/donovanh.github.com/blob/master/stylesheets/sass/iphone.sass) and [this post](https://github.com/donovanh/donovanh.github.com/blob/master/_posts/2013-03-15-rotating-phone.markdown).
 
+### Update
+
+Many thanks to [Adam Lynch](https://github.com/adam-lynch) for adding the floating animation.
+
 Please let me know if you have any questions or feedback. My email is [d@hop.ie](mailto:d@hop.ie) and I can also be reached on Twitter at [@donovanh](http://twitter.com/donovanh).
 
