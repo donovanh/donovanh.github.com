@@ -1,18 +1,23 @@
 @import compass/css3
 @import animation
 
+$rotationDuration: 2.5s
+//for elevation of phone:
+$elevation: 40px
+$elevationDuration: $rotationDuration
+$elevationTimingFunction: ease-in-out
+
 .phone-container
+  position: relative
   margin: 100px auto
   width: 251px
   height: 537px
   @include perspective(1000px)
-  //for elevation on hover:
-  $elevation: 40px
-  $elevationDuration: 1s
-  $elevationTimingFunction: ease-in-out
-  @include transition(bottom $elevationDuration $elevationTimingFunction)
+  @include animation(elevate-phone $elevationDuration $elevationTimingFunction infinite alternate)
+  @include perspective(800px)
 
-  *position: absolute
+  *
+    position: absolute
     @include transition(all 1500ms)
 
   .phone
@@ -79,15 +84,7 @@
     height: 20px
     @include transform(translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px))
     @include box-shadow(0 60px 60px #000)
-    @inclue transition(top $elevationDuration $elevationTimingFunction)
-
-  &:hover
-    position: relative
-    bottom: $elevation
-
-    .shadow
-      position: relative
-      top: $elevation
+    @include animation(lower-shadow $elevationDuration $elevationTimingFunction infinite alternate)
 
 @include keyframes(rotate-phone)
   0%
@@ -95,4 +92,14 @@
   100%
     @include rotateY(360deg)
 
+@include keyframes(elevate-phone)
+  0%
+    bottom: 0
+  100%
+    bottom: $elevation
 
+@include keyframes(lower-shadow)
+  0%
+    margin-top: 0
+  100%
+    margin-top: $elevation
