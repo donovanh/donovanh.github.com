@@ -1,7 +1,18 @@
 .phone-container {
+  position: relative;
   margin: 100px auto;
   width: 251px;
   height: 537px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-animation: elevate-phone 2.5s ease-in-out infinite alternate;
+  -moz-animation: elevate-phone 2.5s ease-in-out infinite alternate;
+  -ms-animation: elevate-phone 2.5s ease-in-out infinite alternate;
+  -o-animation: elevate-phone 2.5s ease-in-out infinite alternate;
+  animation: elevate-phone 2.5s ease-in-out infinite alternate;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;
@@ -142,6 +153,11 @@
   -webkit-box-shadow: 0 60px 60px black;
   -moz-box-shadow: 0 60px 60px black;
   box-shadow: 0 60px 60px black;
+  -webkit-animation: lower-shadow 2.5s ease-in-out infinite alternate;
+  -moz-animation: lower-shadow 2.5s ease-in-out infinite alternate;
+  -ms-animation: lower-shadow 2.5s ease-in-out infinite alternate;
+  -o-animation: lower-shadow 2.5s ease-in-out infinite alternate;
+  animation: lower-shadow 2.5s ease-in-out infinite alternate;
 }
 
 @-moz-keyframes rotate-phone {
@@ -199,5 +215,105 @@
 
   100% {
     transform: rotateY(360deg);
+  }
+}
+
+@-moz-keyframes elevate-phone {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+@-webkit-keyframes elevate-phone {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+@-o-keyframes elevate-phone {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+@-ms-keyframes elevate-phone {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+@keyframes elevate-phone {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+@-moz-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 40px;
+  }
+}
+
+@-webkit-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 40px;
+  }
+}
+
+@-o-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 40px;
+  }
+}
+
+@-ms-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 40px;
+  }
+}
+
+@keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 40px;
   }
 }
