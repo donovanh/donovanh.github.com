@@ -295,9 +295,9 @@ Since the text animation starts at the same time as the tumbling, it needs a lon
 
 With these in place, the last animation is the flash of background colour when the tumbling stops.
 
-### Animation 4: Background colour
+### Animation 4: Background flash
 
-The background starts black, then when the tumbling finishes, briefly flashes white and then green. This colour sequence is timed to coincide with the appearance of the text. The keyframes:
+The background starts black, then when the tumbling finishes, briefly flashes white before the background image is shown. This colour sequence is also timed to coincide with the appearance of the text. The keyframes:
 
     @include keyframes(animate-background)
       0%
@@ -307,7 +307,9 @@ The background starts black, then when the tumbling finishes, briefly flashes wh
       84%
         background: #fff
       87%, 100%
-        background: #409227
+        background: #000
+
+A similar set of keyframes is used to show the background image after the screen flashes.
 
 ## See it in action
 
