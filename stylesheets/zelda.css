@@ -896,8 +896,9 @@ html {
 }
 
 .zelda-style {
-  font-size: 60px;
+  font-size: 80px;
   font-family: "EB Garamond";
+  font-weight: bold;
   text-align: center;
   -webkit-text-fill-color: #b62f22;
   -moz-text-fill-color: #b62f22;

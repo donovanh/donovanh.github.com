@@ -4,18 +4,18 @@ title: "Zelda: A link to the CSS"
 description: "Making 3D triangles using CSS and putting together a full-page animation."
 tags: [css]
 newstylesheet: "zelda"
-published: false
+published: true
 ---
 
 A month ago I posted about [making an iPhone using CSS](/blog/rotating-phone/). This month I thought I'd take some of the lessons from that and push it a little further, by this time making 3D triangles.
 
 Full code used here is [available on Github](http://github.com/donovanh/zelda) and makes use of [these SASS mixins](https://gist.github.com/donovanh/5426633).
 
-## Zelda
+## Zelda: Linked to the Past
 
-This week, a new release of the popular Zelda game franchise was announced for the Nintendo 3DS. It is to be set in the world of "A link to the past", a game that was released in the early 90's on the Super Nintendo platform.
+This week, a new release of the popular Zelda game franchise was announced for the Nintendo 3DS. It is to be set in the world of "A Link to the Past", a game that was released in the early 90's on the Super Nintendo platform.
 
-"A link to the past" was possibly my favourite game when growing up so what better way to celebrate than to recreate the opening sequence to the old SNES game, using nothing but HTML and CSS?
+It was always my favourite game when growing up, so what better way to celebrate than to recreate part of the opening sequence to the old SNES game using nothing but HTML and CSS?
 
 The idea was to create something that would look like this:
 
@@ -67,7 +67,7 @@ I've included the processed CSS in the above example to illustrate how borders a
 
 ## Setting the stage
 
-Once we have the shape in place, we'll need to place a back piece, and position them in 3D space. To achieve this, a containing "stage" div is used. We can apply a perspective value to the stage and any objects on it will be then drawn in relation to each other.
+Once we have the shape in place, we'll need to place a back piece and position them both in 3D space. A containing "stage" div is needed to achieve this. We can apply a perspective value to the stage and any objects on it will be then drawn in relation to each other.
 
 <div class="example-with-code clearfix">
   <div class="left">
@@ -94,8 +94,12 @@ figure.back
   </div>
 </div>
 
-The 3D positioning is achieved by using the "translateZ" transform type. The front face is brought forward 80 pixels and the back face pushed back 80px.
+The 3D positioning is achieved by using the [translateZ transform](http://docs.webplatform.org/wiki/css/properties/transform). The front face is brought forward 80 pixels and the back face pushed back 80px.
+
 I also rotated the back panel 180 degrees on the Y axis so that it now faces out toward the back.
+
+The *perspective* value relates to the depth of the scene, and larger values produce more extreme distortion. Similar to this, the *perspective-origin* value is used to move the viewpoint. In this case, the viewpoint is looking down from 200 pixels up, and from off to the right side of the stage.
+
 ## Sides
 
 With the front and back in place, there are gaps to fill on the sides. To fill these, rectangular divs can be positioned like so:
@@ -113,25 +117,14 @@ With the front and back in place, there are gaps to fill on the sides. To fill t
     </div>
   </div>
   <div class="right">
-<pre><code>$triangleLightColour: #ffe403
-$triangleDarkColour: #ffd200
-
-figure
-  &amp;.front
-    +arrow(150px, 150px, up, $triangleLightColour)
-    @include transform(translateZ(20px))
-
-  &amp;.back
-    +arrow(150px, 150px, up, $triangleLightColour)
-    @include transform(translateZ(-20px) rotateY(180deg))
-
+<pre><code>figure
   &amp;.side1
     content: " "
     display: block
     position: absolute
     height: 168px
     width: 40px
-    background-color: $triangleDarkColour
+    background-color: #ffd200
     @include transform(translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg))
 
   &amp;.side2
@@ -140,12 +133,12 @@ figure
     position: absolute
     height: 168px
     width: 40px
-    background-color: $triangleDarkColour
+    background-color: #ffd200
     @include transform(translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg))
 
   &amp;.side3
     content: " "
-    background-color: $triangleDarkColour
+    background-color: #ffd200
     width: 150px
     height: 40px
     @include transform(translateY(130px) rotateX(-90deg))
@@ -238,9 +231,83 @@ The finishing touch was to add a border around the text:
 
 ## Bringing it together
 
-To achieve the animation I put together a few different animations and timed them so that they all worked together. Using keyframe animation in CSS is made much easier by using SASS, and I used a few basic mixins to make the process easier. Since compass doesn't support animation, keyframe, or text stroke, you might want to grab [this gist](https://gist.github.com/donovanh/5426633).
+To achieve the animation I put together a few different animations and timed them so that they all worked together. Using keyframe animation in CSS is made much easier by using SASS, and I used a few basic mixins to make the process easier. Since compass doesn't support animation or keyframes you might want to grab [this gist](https://gist.github.com/donovanh/5426633).
 
+### Animation 1: Rotating
 
+The spinning effect is creating using the following keyframes:
+
+    @include keyframes(rotate)
+      0%
+        @include transform(rotateY(0))
+      100%
+        @include transform(rotateY(360deg))
+
+To apply this animation to the figures, the following SASS is used. Note, it makes use of the "animation" mixin [found here](https://gist.github.com/donovanh/5426633):
+    
+    figure
+      @include animation(rotate 5s infinite linear)
+
+This calls the "animation" mixin and passes in the name of the keyframes (rotate), the duration of 5 seconds, repeated forever. It also specifies that the animation easing be "linear", which maintains a constant speed throughout the animation.
+
+### Animation 2: Tumbling triangles
+
+The introduction of the figures sees them tumble into place. This is done by transitioning them from an initial position offset to the top, left or right, while applying 360 degrees of rotation. These combine in the following keyframes:
+
+    @include keyframes(introduce-1)
+      0%
+        top: -200px
+        opacity: 0
+      45%
+        top: -100px
+        @include transform(rotateY(180deg) rotateX(-180deg))
+        opacity: 1
+      90%, 100%
+        top: 0
+        @include transform(rotateY(360deg) rotateX(-360deg))
+
+By putting the ending position of the animation at both 90% and 100%, it ensures that the animation stays still for a moment at the end of it's tumbling.
+
+Applying both these to the figures at the same time looks like this:
+
+    @include animation(rotate 5s infinite linear, introduce-1 5s linear)
+
+### Animation 3: Text
+
+The text overlay is invisible at first, and I wanted it to wait until after the tumbling animation had finished before fading into place. To achieve this, the following keyframes apply to the text:
+
+    @include keyframes(showZeldaText)
+      0%, 80%
+        @include transform(scale(0.6) translateZ(-100px))
+        opacity: 0
+        -webkit-filter: blur(2px)
+      90%
+        -webkit-filter: blur(0)
+      100%
+        @include transform(scale(1) translateZ(0))
+        opacity: 1
+
+For 90% of the time, the text is invisible. Then in the last 10% the text scales up from 60% scale to 100%, while the opacity changes from invisible to visible.
+
+Since the text animation starts at the same time as the tumbling, it needs a longer time to run so that it lines up properly. In this case, I set it to run for 6.5 seconds:
+
+    @include animation(showZeldaText 6.5s linear)
+
+With these in place, the last animation is the flash of background colour when the tumbling stops.
+
+### Animation 4: Background colour
+
+The background starts black, then when the tumbling finishes, briefly flashes white and then green. This colour sequence is timed to coincide with the appearance of the text. The keyframes:
+
+    @include keyframes(animate-background)
+      0%
+        background: #000
+      83%
+        background: #000
+      84%
+        background: #fff
+      87%, 100%
+        background: #409227
 
 ## See it in action
 
@@ -253,8 +320,6 @@ The HTML and CSS is [available on Github](https://github.com/donovanh/zelda). Pl
 ## Issues
 
 IE10 support is basic, so any browser support improvements would be a good thing. There's also a bit of a glitch where the tumbling animation on the elements doesn't always start. It seems to happen in all browsers. Any suggestions on fixing that would be appreciated.
-
-## Feedback
 
 I hope you enjoyed this post. I am more than happy to respond to questions and suggestions on Twitter at [@donovanh](http://twitter.com/donovanh).
 
