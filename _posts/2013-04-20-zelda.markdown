@@ -7,7 +7,7 @@ newstylesheet: "zelda"
 published: true
 ---
 
-A month ago I posted about [making an iPhone using CSS](/blog/rotating-phone/). This month I thought I'd take some of the lessons from that and push it a little further, by this time making 3D triangles.
+A month ago I posted about [making an iPhone using CSS](/blog/rotating-phone/). This month I thought I'd take some of the lessons from that and push it a little further.
 
 Full code used here is [available on Github](http://github.com/donovanh/zelda) and makes use of [these SASS mixins](https://gist.github.com/donovanh/5426633).
 
