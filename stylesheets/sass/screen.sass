@@ -187,6 +187,26 @@ pre code
   padding: 10px 16px
   tab-size: 2
 
+.example-with-code
+  
+  .left
+    width: 50%
+    float: left
+
+  .right
+    width: 50%
+    float: left
+
+    pre
+      margin: 0
+      height: 190px
+
+      code
+        padding: 5px 8px
+        font-size: 14px
+        height: 100%
+        overflow: auto
+
 /* Nav for post pages
 
 nav.pagination
@@ -390,14 +410,10 @@ html.no-js .bouncer-container
       
       
 .move-mask
-  @include animation-name(move-box)
-  @include animation-duration(2s)
-  @include animation-fill-mode(forwards)
+  @include animation(move-box 2s forwards)
 
 .move-bouncer
-  @include animation-name(move-bouncer)
-  @include animation-duration(2s)
-  @include animation-fill-mode(forwards)
+  @include animation(move-bouncer 2s forwards)
 
 
 @include keyframes(move-box)

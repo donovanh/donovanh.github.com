@@ -1,0 +1,117 @@
+/* Styles used in the /blog/zelda post
+@import base
+
+$animationDuration: 5s
+$triangleColour: #ffd200
+$triangleLightColour: #ffe403
+$triangleDarkColour: #ffd200
+
+.stage
+  position: relative
+  width: 90%
+  height: 200px
+  background-color: #666
+  border: 1px solid #000
+  @include border-radius(5px)
+  @include perspective(800px)
+  @include perspective-origin(120% -200px)
+
+  .triangle
+    position: absolute
+    top: 0
+    left: 75px
+    width: 150px
+    height: 150px
+    @include transform-style(preserve-3d)
+
+    figure
+      display: block
+      position: absolute
+      @include backface-visibility(hidden)
+
+  &.example1 figure.front
+    +arrow(150px, 150px, up, $triangleLightColour)
+    @include transform(translateY(20px))
+
+  &.example2 figure.front
+    +arrow(150px, 150px, up, $triangleLightColour)
+    @include transform(translateZ(80px))
+
+  &.example2 figure.back
+    +arrow(150px, 150px, up, #ffd200)
+    @include transform(translateZ(-80px))
+
+  &.example3, &.example4
+
+    .triangle
+      top: 20px
+      @include animation(rotate 5s linear infinite)
+
+    figure
+      &.front
+        +arrow(150px, 150px, up, $triangleLightColour)
+        @include transform(translateZ(20px))
+
+      &.back
+        +arrow(150px, 150px, up, $triangleLightColour)
+        @include transform(translateZ(-20px) rotateY(180deg))
+
+      &.side1
+        content: " "
+        display: block
+        position: absolute
+        height: 168px
+        width: 40px
+        background-color: $triangleDarkColour
+        @include transform(translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg))
+
+      &.side2
+        content: " "
+        display: block
+        position: absolute
+        height: 168px
+        width: 40px
+        background-color: $triangleDarkColour
+        @include transform(translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg))
+
+      &.side3
+        content: " "
+        background-color: $triangleDarkColour
+        width: 150px
+        height: 40px
+        @include transform(translateY(130px) rotateX(-90deg))
+
+  &.example4
+    @include perspective-origin(120% -200px)
+
+    .scaler
+      @include transform(scale(0.8))
+      position: absolute
+      top: -20px
+      left: 40px
+    .triangle
+      top: 0
+      @include animation(rotate $animationDuration infinite linear)
+
+      &.two
+        top: 150px
+        left: 0
+
+      &.three
+        top: 150px
+        left: 150px
+
+.zelda-style
+  font-size: 60px
+  font-family: "EB Garamond"
+  text-align: center
+  @include text-fill-color(#b62f22)
+  @include text-stroke-color(#8b3536)
+  @include text-stroke-width(2px)
+  margin: 10px auto
+
+@include keyframes(rotate)
+  0%
+    @include transform(rotateY(0))
+  100%
+    @include transform(rotateY(360deg))

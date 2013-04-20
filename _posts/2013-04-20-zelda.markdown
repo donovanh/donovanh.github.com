@@ -1,0 +1,260 @@
+---
+layout: post
+title: "Zelda: A link to the CSS"
+description: "Making 3D triangles using CSS and putting together a full-page animation."
+tags: [css]
+newstylesheet: "zelda"
+published: false
+---
+
+A month ago I posted about [making an iPhone using CSS](/blog/rotating-phone/). This month I thought I'd take some of the lessons from that and push it a little further, by this time making 3D triangles.
+
+Full code used here is [available on Github](http://github.com/donovanh/zelda) and makes use of [these SASS mixins](https://gist.github.com/donovanh/5426633).
+
+## Zelda
+
+This week, a new release of the popular Zelda game franchise was announced for the Nintendo 3DS. It is to be set in the world of "A link to the past", a game that was released in the early 90's on the Super Nintendo platform.
+
+"A link to the past" was possibly my favourite game when growing up so what better way to celebrate than to recreate the opening sequence to the old SNES game, using nothing but HTML and CSS?
+
+The idea was to create something that would look like this:
+
+<a href="http://hop.ie/zelda"><img src="/images/posts/zelda.png" alt="Zelda: A link to the CSS" style="max-width:100%" /></a>
+
+If you're running a modern version of Chrome, Safari or Firefox, check out the [live demo](http://hop.ie/zelda).
+
+## Getting started: HTML
+
+To get started, I created the HTML structure to which I'd be applying the styles. The layout requires three 3D triangles, and some text to sit on top. I began with a single triangle:
+
+    <div class="stage">
+      <div class="triangle">
+        <figure class="front"></figure>
+        <figure class="back"></figure>
+        <figure class="side1"></figure>
+        <figure class="side2"></figure>
+        <figure class="side3"></figure>
+      </div>
+    </div>
+
+The front and back pieces needed to be triangular, with 3 rectangles covering the left, right and bottom sides.
+
+As luck would have it, I happened across a great [triangle SASS mixin](http://minimalmonkey.com/sass-triangle-mixin/) recently. It works by applying borders the full width of the object and where the borders intersect, they create a 45% line. Handy. Applying this to the <code>front</code> figure above, we get something like this:
+
+<div class="example-with-code clearfix">
+  <div class="left">
+    <div class="stage example example1">
+      <div class="triangle">
+        <figure class="front"></figure>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+<pre><code>SASS:
++arrow(150px, 150px, up, #ffe403)
+
+CSS:
+{
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid #ffe403;
+}
+</code></pre>
+  </div>
+</div>
+
+I've included the processed CSS in the above example to illustrate how borders are being used to generate the shape.
+
+## Setting the stage
+
+Once we have the shape in place, we'll need to place a back piece, and position them in 3D space. To achieve this, a containing "stage" div is used. We can apply a perspective value to the stage and any objects on it will be then drawn in relation to each other.
+
+<div class="example-with-code clearfix">
+  <div class="left">
+    <div class="stage example example2">
+      <div class="triangle">
+        <figure class="front"> </figure>
+        <figure class="back"> </figure>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+<pre><code>.stage
+  @include perspective(800px)
+  @include perspective-origin(120% -200px)
+
+figure.front
+  +arrow(150px, 150px, up, #ffe403)
+  @include transform(translateZ(80px))
+
+figure.back
+  +arrow(150px, 150px, up, #ffd200)
+  @include transform(translateZ(-80px))
+</code></pre>
+  </div>
+</div>
+
+The 3D positioning is achieved by using the "translateZ" transform type. The front face is brought forward 80 pixels and the back face pushed back 80px.
+I also rotated the back panel 180 degrees on the Y axis so that it now faces out toward the back.
+## Sides
+
+With the front and back in place, there are gaps to fill on the sides. To fill these, rectangular divs can be positioned like so:
+
+<div class="example-with-code clearfix">
+  <div class="left">
+    <div class="stage example example3">
+      <div class="triangle">
+        <figure class="front"> </figure>
+        <figure class="back"> </figure>
+        <figure class="side1"> </figure>
+        <figure class="side2"> </figure>
+        <figure class="side3"> </figure>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+<pre><code>$triangleLightColour: #ffe403
+$triangleDarkColour: #ffd200
+
+figure
+  &amp;.front
+    +arrow(150px, 150px, up, $triangleLightColour)
+    @include transform(translateZ(20px))
+
+  &amp;.back
+    +arrow(150px, 150px, up, $triangleLightColour)
+    @include transform(translateZ(-20px) rotateY(180deg))
+
+  &amp;.side1
+    content: " "
+    display: block
+    position: absolute
+    height: 168px
+    width: 40px
+    background-color: $triangleDarkColour
+    @include transform(translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg))
+
+  &amp;.side2
+    content: " "
+    display: block
+    position: absolute
+    height: 168px
+    width: 40px
+    background-color: $triangleDarkColour
+    @include transform(translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg))
+
+  &amp;.side3
+    content: " "
+    background-color: $triangleDarkColour
+    width: 150px
+    height: 40px
+    @include transform(translateY(130px) rotateX(-90deg))
+</code></pre>
+  </div>
+</div>
+
+One small adjustment made in this example was to rotate the back panel 180 degrees to ensure it was facing outwards. With the back-faces hidden, it would have been invisible otherwise. 
+
+## Three triangles
+
+With one triangle done, it was straightforward to position three of them on the stage. I copied the div called "triangle" above, and replicated it three times. I then added a class "one", "two" and "three" to each so they could be referenced individually:
+
+<div class="example-with-code clearfix">
+  <div class="left">
+    <div class="stage example example4">
+      <div class="scaler">
+        <div class="triangle one">
+          <figure class="front"> </figure>
+          <figure class="back"> </figure>
+          <figure class="side1"> </figure>
+          <figure class="side2"> </figure>
+          <figure class="side3"> </figure>
+        </div>
+        <div class="triangle two">
+          <figure class="front"> </figure>
+          <figure class="back"> </figure>
+          <figure class="side1"> </figure>
+          <figure class="side2"> </figure>
+          <figure class="side3"> </figure>
+        </div>
+        <div class="triangle three">
+          <figure class="front"> </figure>
+          <figure class="back"> </figure>
+          <figure class="side1"> </figure>
+          <figure class="side2"> </figure>
+          <figure class="side3"> </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+<pre><code>.triangle
+  @include animation(rotate 5s infinite linear)
+
+  &amp;.two
+    top: 150px
+    left: 0
+
+  &amp;.three
+    top: 150px
+    left: 150px
+</code></pre>
+  </div>
+</div>
+
+## Styling the text
+
+To create the proper Zelda atmosphere, the right fonts were needed. For the main font, [EB Garamond](http://www.google.com/fonts/specimen/EB+Garamond) seemed a decent choice. The smaller text looks good with [Old Standard TT](http://www.google.com/fonts/specimen/Old+Standard+TT).
+
+Including these fonts involves referencing them in the head of your HTML:
+
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+
+You can then use them in your CSS:
+
+    h1
+      font-family: "EB Garamond"
+
+The finishing touch was to add a border around the text:
+
+<div class="example-with-code clearfix">
+  <div class="left">
+    <div class="stage">
+      <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'></link>
+      <h1 class="zelda-style">ZELDA</h1>
+    </div>
+  </div>
+  <div class="right">
+<pre><code>.zelda-style
+  font-family: "EB Garamond"
+  @include text-fill-color(#b62f22)
+  @include text-stroke-color(#8b3536)
+  @include text-stroke-width(2px)
+  margin: 10px auto
+</code></pre>
+  </div>
+</div>
+
+## Bringing it together
+
+To achieve the animation I put together a few different animations and timed them so that they all worked together. Using keyframe animation in CSS is made much easier by using SASS, and I used a few basic mixins to make the process easier. Since compass doesn't support animation, keyframe, or text stroke, you might want to grab [this gist](https://gist.github.com/donovanh/5426633).
+
+
+
+## See it in action
+
+Here's a [live demo](http://hop.ie/zelda). It works reasonably in recent versions of Chrome, Safari and Firefox. 
+
+## Have a go
+
+The HTML and CSS is [available on Github](https://github.com/donovanh/zelda). Please fork, share, and have a play with it. If you'd like to add to or fix something, pull requests are a fast way to becoming one of my favourite people. Do it!
+
+## Issues
+
+IE10 support is basic, so any browser support improvements would be a good thing. There's also a bit of a glitch where the tumbling animation on the elements doesn't always start. It seems to happen in all browsers. Any suggestions on fixing that would be appreciated.
+
+## Feedback
+
+I hope you enjoyed this post. I am more than happy to respond to questions and suggestions on Twitter at [@donovanh](http://twitter.com/donovanh).
+
