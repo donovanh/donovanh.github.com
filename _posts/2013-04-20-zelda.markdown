@@ -231,7 +231,7 @@ The finishing touch was to add a border around the text:
 
 ## Bringing it together
 
-To achieve the animation I put together a few different animations and timed them so that they all worked together. Using keyframe animation in CSS is made much easier by using SASS, and I used a few basic mixins to make the process easier. Since compass doesn't support animation or keyframes you might want to grab [this gist](https://gist.github.com/donovanh/5426633).
+To achieve the animation I put together a few different animations and timed them so that they all worked together. Using keyframe animation in CSS is made much easier by using SASS, and I used a few basic mixins to make the process easier. I’m using Sass with the [Compass](http://compass-style.org/) framework, but to add support for animation and keyframes to Compass, you’ll need [this gist](https://gist.github.com/donovanh/5426633).
 
 ### Animation 1: Rotating
 
