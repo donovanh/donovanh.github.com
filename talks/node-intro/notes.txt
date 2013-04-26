@@ -17,6 +17,10 @@ git push heroku master
 heroku domains:add refresh.hop.ie
 /* visit refresh.hop.ie */
 
+Things to mention:
+
+- Frameworks: Meteor / Sails / Hood.ie
+
 
 
 
