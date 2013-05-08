@@ -902,44 +902,7 @@ header.top.top {
   max-width: 720px;
   margin: 0 auto;
 }
-header.top aside {
-  position: absolute;
-  left: 80px;
-  top: 20px;
-  width: 100px;
-  height: 70px;
-  z-index: 1;
-  opacity: 0;
-}
-header.top:hover aside {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  left: 75px;
-  opacity: 1;
-}
-header.top section.contact-details {
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  line-height: 1.4em;
-}
 
-@media only screen and (min-width: 500px) {
-  header.top aside {
-    top: 36px;
-  }
-}
-@media only screen and (min-width: 720px) {
-  header.top:hover aside {
-    left: 60px;
-  }
-}
 .internal header.post h1, .content h1 {
   padding: 0.5em 0 0;
   margin: 0;
