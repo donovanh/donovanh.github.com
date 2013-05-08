@@ -978,18 +978,6 @@ section.content, section.footer-content {
 }
 
 /* Home stylers */
-.home {
-  /* Replace with custom shape code in YAML
-   * img
-   *   &.corners1-1-0-0
-   *     @include border-radius(80px 80px 300px 300px)
-   *   &.corners0-0-1-1
-   *     @include border-radius(300px 300px 80px 80px)
-   *   &.corners1-0-0-1
-   *     @include border-radius(80px 300px 300px 80px)
-   *   &.corners0-0-0-1
-   *     @include border-radius(300px 300px 300px 80px) */
-}
 .home .page {
   max-width: 100%;
 }
@@ -1018,11 +1006,11 @@ section.content, section.footer-content {
   -moz-box-shadow: 0 0 20px rgba(100, 100, 100, 0.4);
   box-shadow: 0 0 20px rgba(100, 100, 100, 0.4);
   border: 1px solid white;
-  -webkit-border-radius: 300px;
-  -moz-border-radius: 300px;
-  -ms-border-radius: 300px;
-  -o-border-radius: 300px;
-  border-radius: 300px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+  border-radius: 150px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;

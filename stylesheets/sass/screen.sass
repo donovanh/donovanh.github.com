@@ -184,7 +184,7 @@ section.content, section.footer-content
       margin: 1em auto -1em auto
       @include box-shadow(0 0 20px rgba(100,100,100,0.4))
       border: 1px solid #fff
-      @include border-radius(300px)
+      @include border-radius(150px)
       @include transition(all 0.4s ease)
       overflow: hidden
       position: relative
@@ -198,18 +198,6 @@ section.content, section.footer-content
         width: 100%
         height: 100%
         background: rgba(0,0,0,0.5)
-
-  /*
-    Replace with custom shape code in YAML
-    img
-      &.corners1-1-0-0
-        @include border-radius(80px 80px 300px 300px)
-      &.corners0-0-1-1
-        @include border-radius(300px 300px 80px 80px)
-      &.corners1-0-0-1
-        @include border-radius(80px 300px 300px 80px)
-      &.corners0-0-0-1
-        @include border-radius(300px 300px 300px 80px)
 
 @media only screen and (min-width: 500px)
   .home
