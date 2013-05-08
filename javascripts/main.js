@@ -1,14 +1,13 @@
-(function(){
-	// On load, show the bouncer
-	if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius') && !$('html').hasClass('no-js')) {
-		if ($('header#404').length > 0) 
-			show404Bouncer();
-		else
-			showBouncer();
-	} else {
-		$('html').addClass('no-js');
-	}
-}());
+// On load, show the bouncer
+if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius') && !$('html').hasClass('no-js')) {
+	if ($('header#404').length > 0) 
+		show404Bouncer();
+	else
+		showBouncer();
+} else {
+	$('html').addClass('no-js');
+}
+
 
 function showBouncer() {
 	$('.bouncer-container a').append($('#bouncer-template').html());
