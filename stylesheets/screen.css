@@ -982,6 +982,7 @@ section.content, section.footer-content {
   max-width: 100%;
 }
 .home .content {
+  margin-top: -2em;
   width: 100%;
   padding: 0;
 }
