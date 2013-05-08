@@ -35,8 +35,8 @@ Thankfully Amazon allow the Micro instance to be run for a year before charging,
 
 I'd love to hear your experiences if you've used similar services. I can be reached on [@donovanh][] on Twitter and [@donovan][] on app.net.
 
- [Slicehost]: http://slicehost.com
- [Rackspace]: http://www.rackspace.com/cloud/
- [Elastic Compute Cloud]: http://aws.amazon.com/ec2/
- [@donovanh]: http://twitter.com/donovanh
- [@donovan]: http://alpha.app.net/donovan
+[Slicehost]: http://slicehost.com
+[Rackspace]: http://www.rackspace.com/cloud/
+[Elastic Compute Cloud]: http://aws.amazon.com/ec2/
+[@donovanh]: http://twitter.com/donovanh
+[@donovan]: http://alpha.app.net/donovan

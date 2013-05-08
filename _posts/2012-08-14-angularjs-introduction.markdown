@@ -63,18 +63,18 @@ As shown above, AngularJS allows for the curly brace style of template variables
 
 In the meantime, do check out the [AngularJS tutorial pages][9], and their [Youtube videos][10] for more info.
 
- [1]: http://backbonejs.org/
- [2]: http://knockoutjs.com/
- [3]: http://emberjs.com/
- [4]: http://angularjs.org/
- [5]: http://net.tutsplus.com/tutorials/javascript-ajax/5-awesome-angularjs-features/
- [6]: http://blog.petermolgaard.com/2012/05/31/how-to-implement-a-blink-tag-in-angularjs/
- [7]: http://johnlindquist.com/2012/04/16/angularjs_directive_tutorial.html
- [8]: http://docs.angularjs.org/guide/directive
- [9]: http://docs.angularjs.org/tutorial
- [10]: http://www.youtube.com/watch?v=WuiHuZq_cg4
- [11]: https://groups.google.com/forum/?fromgroups#!forum/angular
- [12]: http://docs.angularjs.org/
- [13]: http://builtwith.angularjs.org/
- [14]: http://ermahgerd.jmillerdesign.com/#!/translate
+[1]: http://backbonejs.org/
+[2]: http://knockoutjs.com/
+[3]: http://emberjs.com/
+[4]: http://angularjs.org/
+[5]: http://net.tutsplus.com/tutorials/javascript-ajax/5-awesome-angularjs-features/
+[6]: http://blog.petermolgaard.com/2012/05/31/how-to-implement-a-blink-tag-in-angularjs/
+[7]: http://johnlindquist.com/2012/04/16/angularjs_directive_tutorial.html
+[8]: http://docs.angularjs.org/guide/directive
+[9]: http://docs.angularjs.org/tutorial
+[10]: http://www.youtube.com/watch?v=WuiHuZq_cg4
+[11]: https://groups.google.com/forum/?fromgroups#!forum/angular
+[12]: http://docs.angularjs.org/
+[13]: http://builtwith.angularjs.org/
+[14]: http://ermahgerd.jmillerdesign.com/#!/translate
  

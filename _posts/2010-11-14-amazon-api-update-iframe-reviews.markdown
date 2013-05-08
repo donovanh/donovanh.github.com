@@ -32,5 +32,5 @@ As we are using an iframe, it will often have scrollbars to scroll through the s
 
 Please note that the EditorialReviews data is still provided. Thankfully!
 
- [1]: http://www.shopireland.ie
- [2]: https://affiliate-program.amazon.co.uk/gp/advertising/api/detail/main.html
+[1]: http://www.shopireland.ie
+[2]: https://affiliate-program.amazon.co.uk/gp/advertising/api/detail/main.html

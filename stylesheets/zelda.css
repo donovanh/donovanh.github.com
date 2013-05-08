@@ -708,7 +708,7 @@ td {
 
 html {
   font-size: 20px;
-  line-height: 1.5em;
+  line-height: 1.8em;
 }
 
 /* Colours */
@@ -719,11 +719,11 @@ html {
   height: 200px;
   background-color: #666666;
   border: 1px solid black;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;

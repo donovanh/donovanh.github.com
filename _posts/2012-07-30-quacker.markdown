@@ -45,18 +45,17 @@ The documentation can be a little confusing at times but there are plenty of gre
 
 Building this website would have been much more work if it wasn't for the amazing resources shared on [GitHub][14]. It's a great place to discover tools, see how others have approached issues, and both learn about and share code. With that in mind I'm very happy to be [sharing my Quacker source][2] and I hope it is useful.
 
- [1]: http://quack.herokuapp.com
- [2]: https://github.com/donovanh/Quacker
- [3]: http://en.wikipedia.org/wiki/MacGuffin
- [4]: http://www.sinatrarb.com/
- [5]: http://twitter.com/stevebiscuit
- [6]: http://www.sinatrarb.com/intro
- [7]: http://haml.info/
- [8]: https://github.com/intridea/omniauth
- [9]: https://github.com/ikayzo/microsoft_translator
- [10]: https://github.com/donovanh/Quacker/blob/master/Gemfile
- [11]: http://compass-style.org/
- [12]: http://heroku.com
- [13]: https://devcenter.heroku.com/articles/git
- [14]: http://github.com
- 
+[1]: http://quack.herokuapp.com
+[2]: https://github.com/donovanh/Quacker
+[3]: http://en.wikipedia.org/wiki/MacGuffin
+[4]: http://www.sinatrarb.com/
+[5]: http://twitter.com/stevebiscuit
+[6]: http://www.sinatrarb.com/intro
+[7]: http://haml.info/
+[8]: https://github.com/intridea/omniauth
+[9]: https://github.com/ikayzo/microsoft_translator
+[10]: https://github.com/donovanh/Quacker/blob/master/Gemfile
+[11]: http://compass-style.org/
+[12]: http://heroku.com
+[13]: https://devcenter.heroku.com/articles/git
+[14]: http://github.com

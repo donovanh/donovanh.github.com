@@ -4,6 +4,7 @@ title: "ShopIreland.ie: Site speed"
 description: "Where we're going, we don't need roads."
 tags: [development]
 published: true
+imageURL: shopireland.jpg
 ---
 As part of my great [website revamp][1], I'm starting off by looking at the site speed and finding ways to improve it.
 

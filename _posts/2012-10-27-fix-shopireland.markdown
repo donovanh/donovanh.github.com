@@ -4,6 +4,7 @@ title: "Time to fix ShopIreland.ie"
 description: "Sometimes an old project is worth giving an overhaul. This is my plan for ShopIreland.ie."
 tags: [development]
 published: true
+imageURL: shopireland.jpg
 ---
 For the majority of the last decade I've run a reasonably popular [irish shopping website][1]. It started as a project where I would have a go learning some web service stuff, and try my hand at some SEO. Over the years I've revamped and adjusted how it works, but on the surface, it's the same site that launched [in August 2004][2].
 
@@ -57,9 +58,9 @@ While the above seem a little dry, they all add up to creating a solid structure
 
 The plan is to update this page as I make my way through the above list, noting what I did or decided not to do, along with any related blog posts. If you have any suggestions, please send me an email at [d@hop.ie][4] or message me on the details below. I'd love to hear your thoughts!
 
- [1]: http://www.shopireland.ie
- [2]: http://web.archive.org/web/20040805022210/http://www.shopireland.ie/
- [3]: http://schema.org/
- [4]: mailto:d@hop.ie
- [5]: http://www.useit.com/papers/responsetime.html
+[1]: http://www.shopireland.ie
+[2]: http://web.archive.org/web/20040805022210/http://www.shopireland.ie/
+[3]: http://schema.org/
+[4]: mailto:d@hop.ie
+[5]: http://www.useit.com/papers/responsetime.html
 

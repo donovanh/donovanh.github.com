@@ -4,6 +4,7 @@ title: "Structured data"
 description: "I, for one, welcome our robot overlords."
 tags: [content]
 published: true
+imageURL: schema.jpg
 ---
 In June, 2011, Google, Bing and Yahoo! [unveiled][1] the website [schema.org][2]. The intent was to introduce "a common set of schemas for structured data markup on web pages". After leaving it for a year to see if it was going to stick around, it was time to add it to my [irish shopping website][3].
 

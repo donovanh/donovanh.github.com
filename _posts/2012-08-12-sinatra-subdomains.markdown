@@ -85,8 +85,8 @@ While this works well for <code>crazy.myapp.dev</code> and <code>mad.myapp.dev/b
 
 You'll now be set up to start putting together the logic for handling one, two or many subdomains. Good luck!
 
- [1]: http://www.sinatrarb.com/
- [2]: http://rubydoc.info/gems/sinatra-subdomain/0.1.2/frames
- [3]: https://twitter.com/fnando
- [4]: http://pow.cx
- [5]: http://pow.cx/manual.html
+[1]: http://www.sinatrarb.com/
+[2]: http://rubydoc.info/gems/sinatra-subdomain/0.1.2/frames
+[3]: https://twitter.com/fnando
+[4]: http://pow.cx
+[5]: http://pow.cx/manual.html

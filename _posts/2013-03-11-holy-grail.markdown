@@ -4,6 +4,8 @@ title: "The Holy Grail"
 description: "Build, deploy and host a website capable of receiving 40 million+ hits per day. For free."
 tags: [development, static, github]
 published: true
+cornerStyle: corners1-1-0-0
+imageURL: middleman.png
 ---
 
 What if I told you there's a way to build websites using all the latest fun tools that can be generated, deployed and hosted on a bulletproof server, all for free? Well, check this out.

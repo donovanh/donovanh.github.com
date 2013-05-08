@@ -17,18 +17,24 @@
     <!--[if IE]>
       <link rel="stylesheet" href="/stylesheets/ie.css">
     <![endif]-->
-    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel="stylesheet" type="text/css">
     <link rel="canonical" href="{{ page.url | canonical }}">
     <meta name="google-site-verification" content="4b2gG2_kr5STLh0RhE34iPvU59o591CoG9N6iYOazvw" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
     <script src="/javascripts/modernizr.js"></script>
 </head>
-<body {% if page.bodyTag %}{{page.bodyTag}}{% endif %}>
+<body class="{% if page.bodyTag %}{{page.bodyTag}}{% else %}internal{% endif %}">
   <div class="page-container">
-  	<header>
-  		<h1 class="bouncer-container"><a href="/">Donovan Hutchinson</a></h1>
+  	<header class="top">
+  		<h1 class="bouncer-container"><a href="/">hop.ie</a></h1>
+      <aside>
+        <section class="contact-details">
+          <a href="mailto:d@hop.ie">d@hop.ie</a><br>
+          <a href="http://twitter.com/donovanh">@donovanh</a>
+        </span>
+      </aside>
   	</header>
 
   	<div class="page clearfix">
@@ -39,26 +45,13 @@
   </div>
 	<footer class="clearfix">
 	  <section class="footer-content">
-	    <p>Hi, I'm <a href="/about">Donovan Hutchinson</a>. I write about web development and sometimes stand up and talk about it too.</p>
-      <p>Follow <a href="http://twitter.com/donovanh">@donovanh</a> or the <a href="/feed.xml">RSS feed</a>.</p>
-	    <p class="source">Brought to you by the power of <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com">GitHub Pages</a>. See the <a href="https://github.com/donovanh/donovanh.github.com">source code</a>!</p>
-		  <p>&copy; Donovan Hutchinson</p>
-      <div class="apple-container">
-        <div class="apple">
-            <div class="top"><span></span></div>
-            <div class="butt"><span></span></div>
-            <div class="bite"></div>
-        </div>
-        <p>Made With A Mac</p>
-      </div>
+	    <p>Hi, I'm <a href="/about">Donovan Hutchinson</a>. This is where I write about web development.</p>
+      <p>You can follow me at <a href="http://twitter.com/donovanh">@donovanh</a> or by <a href="/feed.xml">RSS</a>.</p>
+		  <p class="copy">&copy; Donovan Hutchinson</p>
 		</section>
 	</footer>
 
   <script id="bouncer-template" type="text/html">
-    <span class="mask"></span>
-    <span class="bounce1"></span>
-	  <span class="bounce2"></span>
-	  <span class="bounce3"></span>
 	  <span class="bouncer">
 	    <span class="ear1"></span>
 	    <span class="ear2"></span>
@@ -67,7 +60,7 @@
 	    <span class="mouth"></span>
 	  </span>
   </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
   <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
   <script src="/javascripts/main.js"></script>
   <script src="/javascripts/highlight.pack.js"></script>

@@ -4,6 +4,7 @@ title: "On being prepared"
 description: "Testing your web server performance with Blitz.io."
 tags: [development]
 published: true
+imageURL: blitz.png
 ---
 In a [recent post][1] I used a tool called [Blitz.io][2] to test and compare the server speeds of my old and new hosting setups. I didn't go into much detail at the time about the graphs or the data they provide, so I thought I'd expand a little on it here.
 

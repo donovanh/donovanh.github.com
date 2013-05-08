@@ -4,7 +4,9 @@ title: "Zelda: A link to the CSS"
 description: "Making 3D triangles using CSS and putting together a full-page animation."
 tags: [css]
 newstylesheet: "zelda"
+imageURL: zelda.png
 published: true
+cornerStyle: corners1-1-0-0
 ---
 
 A month ago I posted about [making an iPhone using CSS](/blog/rotating-phone/). This month I thought I'd take some of the lessons from that and push it a little further.

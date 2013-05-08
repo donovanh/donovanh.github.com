@@ -3,20 +3,22 @@
   section.content, section.footer-content
     width: auto
     float: none
-    padding: 0 20px
-    
   p
     @include adjust-font-size-to(17px)
+  .entry
+    p:first-child
+      @include adjust-font-size-to(20px)
   img
     max-width: 100%
   h1
-    @include adjust-font-size-to(24px)
+    @include adjust-font-size-to(36px)
+    padding-top: 0.5em
   h2
     @include adjust-font-size-to(22px)
   pre code
     @include adjust-font-size-to(12px)
     line-height: 18px
-  header
+  header.top
     min-height: 90px
     
   article
@@ -30,11 +32,21 @@
     float: none
       
   .bouncer-container
-    top: 30px
+    top: 16px
+    left: -20px
 
 @media only screen and (max-width: 400px)
-  section.content
-    padding: 0 15px
+  .bouncer-container
+    @include transform(scale(0.8))
+    top: 5px
+    left: -30px
+  header.top
+    height: 70px
+    aside
+      right: 16px
+  h1
+    @include adjust-font-size-to(24px)
+    padding-top: 0.5em
   p
     @include adjust-font-size-to(16px)
     @include adjust-leading-to(1.1)
