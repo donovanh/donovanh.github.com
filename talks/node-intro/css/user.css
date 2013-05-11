@@ -18,8 +18,8 @@
   width: 100%;
   height: 700px;
   margin: 0;
-  position: absolute;
-  top: -40px;
+  position: absolute !important;
+  top: -320px;
   background-color: #fffaff;
   border: 4px solid #ced5d3;
   -webkit-border-radius: 2em;
