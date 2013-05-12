@@ -39,7 +39,10 @@
       <div class="slides">
 
         <section>
-          <aside class="tweets" id="tweet-container"></aside>
+          <div style="position:absolute;top:-300px;width: 800px">
+            <h2>#refreshdublin</h2>
+            <aside class="tweets" id="tweet-container"></aside>
+          </div>
         </section>
 
         <section>
@@ -353,7 +356,7 @@ a.button
 
       /* Initialise the Tweets plugin */
       $.tweets({
-        searchPhrase: 'hop.ie OR refreshdublin AND -rt',
+        searchPhrase: 'refreshdublin',
         templateID: '',
         destinationID: 'tweet-container',
         tweetSource: 'http://tweets.hop.ie',
