@@ -54,7 +54,7 @@
                 var outputHTML = '';
                 if (data.results !== undefined && data.results.length > 0) {
                   $.each(data.results, function(index, tweet) {
-                    tweet.text = replaceURLWithHTMLLinks(tweet.text);
+                    tweet.text = linkify_entities(tweet);
                     tweet.relative_timestamp = time_ago(tweet.created_at);
                     var template = Handlebars.compile(plugin.settings.templateHTML);
                     outputHTML += template(tweet);
@@ -93,7 +93,7 @@
         }
 
         var addToTopOfList = function(tweet, settings) {
-          tweet.text = replaceURLWithHTMLLinks(tweet.text);
+          tweet.text = linkify_entities(tweet);
           tweet.relative_timestamp = time_ago(tweet.created_at);
           tweet.from_user = tweet.user.screen_name;
           tweet.profile_image_url = tweet.user.profile_image_url;
@@ -133,11 +133,6 @@
             var relativeDate = time_ago(originalDate);
             $(dateHTML).find('a').text(relativeDate);
           });
-        }
-
-        var replaceURLWithHTMLLinks = function(text) {
-          var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-          return text.replace(exp,"<a href='$1'>$1</a>"); 
         }
 
         var time_ago = function(time){
@@ -185,6 +180,57 @@
                       return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
               }
           return time;
+        }
+
+        var escapeHTML = function (text) {
+            return $('<div/>').text(text).html()
+        }
+           
+        var linkify_entities = function (tweet) {
+            if (!(tweet.entities)) {
+                return escapeHTML(tweet.text)
+            }
+            
+            // This is very naive, should find a better way to parse this
+            var index_map = {}
+            
+            $.each(tweet.entities.urls, function(i,entry) {
+                console.log(entry);
+                index_map[entry.indices[0]] = [entry.indices[1], function(text) {return "<a href='"+escapeHTML(entry.url)+"'>"+escapeHTML(entry.display_url)+"</a>"}]
+            })
+            
+            $.each(tweet.entities.hashtags, function(i,entry) {
+                index_map[entry.indices[0]] = [entry.indices[1], function(text) {return "<a href='http://twitter.com/search?q="+escape("#"+entry.text)+"'>"+escapeHTML(text)+"</a>"}]
+            })
+            
+            $.each(tweet.entities.user_mentions, function(i,entry) {
+                index_map[entry.indices[0]] = [entry.indices[1], function(text) {return "<a title='"+escapeHTML(entry.name)+"' href='http://twitter.com/"+escapeHTML(entry.screen_name)+"'>"+escapeHTML(text)+"</a>"}]
+            })
+            
+            var result = ""
+            var last_i = 0
+            var i = 0
+            
+            // iterate through the string looking for matches in the index_map
+            for (i=0; i < tweet.text.length; ++i) {
+                var ind = index_map[i]
+                if (ind) {
+                    var end = ind[0]
+                    var func = ind[1]
+                    if (i > last_i) {
+                        result += escapeHTML(tweet.text.substring(last_i, i))
+                    }
+                    result += func(tweet.text.substring(i, end))
+                    i = end - 1
+                    last_i = end
+                }
+            }
+            
+            if (i > last_i) {
+                result += escapeHTML(tweet.text.substring(last_i, i))
+            }
+            
+            return result
         }
 
         init();

@@ -5,6 +5,6 @@ function (request, response) {
     200,
     {'Content-Type': 'text/plain'}
   );
-  response.end('OMG Bacon\n');
+  response.end('YES THIS IS COMPUTER\n');
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
