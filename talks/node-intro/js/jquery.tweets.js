@@ -93,6 +93,9 @@
         }
 
         var addToTopOfList = function(tweet, settings) {
+          if (tweet.user === undefined) {
+            return;
+          }
           tweet.text = linkify_entities(tweet);
           tweet.relative_timestamp = time_ago(tweet.created_at);
           tweet.from_user = tweet.user.screen_name;
