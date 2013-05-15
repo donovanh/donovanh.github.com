@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Talking about Node.js"
+description: "A quick update about today's Node.js talk at Refresh Dublin"
+tags: [talks]
+imageURL: node.png
+published: true
+---
+
+This evening I'll be giving a talk at [Refresh Dublin](http://refreshingcitiesdublin.org/), introducing [Node.js](http://nodejs.org).
+
+As a focus of the talk, I'll be discussing an open source [Tweets app](http://github.com/donovanh/tweets/) I put together. This is a simple Node.js app that provides a way for front-end sites and services to use the Twitter search API results without exposing authentication credentials on the client side.
+
+A more through blog post will follow on how the Node.js app was put together, along with the corresponding [Tweets jQuery app](http://github.com/donovanh/tweets-plugin/). Both projects are available online now, so feel free to download, change, improve and send pull requests!
+
+If you'd like a bit of a preview, [the slides are online already](http://hop.ie/talks/node-intro/).
+
+I'm looking forward to the event, and especially the chats that occur afterward in the pub. Hopefully I'll be able to catch up with some of you then.
+
