@@ -15,14 +15,14 @@ if ($('.video-wrapper').length > 0) {
 }
 
 function resizeVideoTo80Percent() {
-	if ($(window).width() < 740) {
+	if ($(window).width() < 720) {
 		var videoWidth = $(window).width() * 0.8;
 		var videoHeight = $(window).width() * 0.50;
 		$('.video-wrapper').width(videoWidth);
 		$('.video-wrapper iframe').width(videoWidth).height(videoHeight);
 	} else {
-		$('.video-wrapper').width(740);
-		$('.video-wrapper iframe').width(720).height(460);
+		$('.video-wrapper').width(720);
+		$('.video-wrapper iframe').width(720).height($('.video-wrapper iframe').attr('data-height'));
 	}
 }
 
