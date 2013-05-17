@@ -7,10 +7,8 @@ imageURL: node-intro.jpg
 published: true
 ---
 
-
 <div class="video-wrapper">
-  <iframe src="http://www.youtube.com/embed/cJVXP1bU68Y?hd=1&amp;modestbranding=1&amp;showinfo=0&amp;vq=hd720" width="720" height="400" data-height="520" frameborder="0">
-
+  <iframe src="http://player.vimeo.com/video/66389561" width="720" height="400" data-height="506" frameborder="0">
   </iframe>
 </div>
 
