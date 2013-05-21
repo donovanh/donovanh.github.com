@@ -837,6 +837,10 @@ a:hover {
   transition: color 0.1s ease-out;
 }
 
+.gittip a {
+  color: #b4186c !important;
+}
+
 acronym {
   border-bottom: 1px dashed #2c3437;
 }
