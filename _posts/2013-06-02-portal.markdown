@@ -7,25 +7,34 @@ imageURL:
 published: false
 ---
 
-[What we'll cover]
+It is no longer necessary to use JavaScript to create impressive 3D projects in the web browser. Read how to create and animate a Portal-inspired scene using only CSS.
 
-## Thinking with Portals
+## Portal Orientation Video No. 1
 
-As an example to show the various stages of creating, styling and then animating a 3D scene, we'll create a scene from the [Portal Training Video](http://www.youtube.com/watch?v=gr_9Fw_gC4I). We'll create the stylised, cartoony look of the first part of the video in which a silhouetted character jumps through a portal and emerges from the other side. It will look something like this:
+As an example to show the various stages of creating, styling and then animating a 3D scene, we'll create a scene from the [Portal Training Video](http://www.youtube.com/watch?v=gr_9Fw_gC4I). We'll create the stylised, cartoony look of the first part of the video in which a silhouetted character jumps through a portal and emerges from the other side. This is the original video:
 
-[Screenshot of 3D portal scene]
+<div class="video-wrapper">
+  <iframe src="http://www.youtube.com/embed/V5paXrfkYmI" width="720" height="405" data-height="405" frameborder="0">
+  </iframe>
+</div>
 
-## Prefixes
+This video blew my mind when it was first released. Let's focus on the initial scene, with the isometric, cartoony graphics and see if it can be reproduced using nothing but HTML and CSS.
+
+In particular, this is the scene we will build:
+
+<img src="/images/posts/portal/video.jpg" alt="Portal video screenshot" />
+
+### A quick note on prefixes
 
 I've removed the prefixed versions of rules in the following CSS. I would recommend either using something like [prefix free](http://leaverou.github.io/prefixfree/) or [SASS](http://sass-lang.com/) to manage these for you. Otherwise, be aware that most browser prefixes will need to applied. Full versions of the CSS and SASS can be found [on Github](https://github.com/donovanh/portal) along with the HTML.
 
-## Gaining perspective
+## Getting started: Perspective
 
 We need to set a scene in which we can build our 3D creation. To do this we'll need to use an HTML element and give it the needed properties that tell the browser to expect 3D content within it. Start with some HTML:
 
     <article class="container">...</article>
 
-In this case the container is an `article` tag. In HTML5, *article* represents a standalone piece of content that could be reproduced elsewhere and still make sense. The first property to apply is [perspective](http://docs.webplatform.org/wiki/css/properties/perspective). This property takes a value in pixels, and represents the *depth* of the 3D scene. A smaller value will produce a more dramatic effect, and it's usual to set it somewhere betweeh 800 and 1200 pixels.
+In this case the container is an `article` tag. In HTML5, *article* represents a standalone piece of content that could be reproduced elsewhere and still make sense. The first property to apply is [perspective](http://docs.webplatform.org/wiki/css/properties/perspective). This property takes a value in pixels, and represents the depth of the 3D scene. A smaller value will produce a more dramatic effect, and it's usual to set it somewhere betweeh 800 and 1200 pixels.
 
 [Examples of perspective - try an animated gif]
 
@@ -164,7 +173,7 @@ Next, add in some platforms and the sides of the pit:
 
 The end result of all this should be a scene that looks like this:
 
-[SCENE WITH SIDES, PLATFORMS, PITS, NOT ROTATED, NO SHADOW]
+<img src="/images/posts/portal/layout01.png" alt="Initial layout of the stage divs" />
 
 It doesn't look right yet. We need to rotate the entire scene to see it properly. Add a `transform` to the *scene* section:
 
@@ -177,7 +186,7 @@ It doesn't look right yet. We need to rotate the entire scene to see it properly
 
 The result should look more like this:
 
-[STAGE WITH WALLS AND PIT IN PLACE, NO SHADOW]
+<img src="/images/posts/portal/layout02.png" alt="Initial layout rotated to show the stage properly" />
 
 ### Shady business
 
@@ -193,12 +202,14 @@ The video features a nice shadow beneath the platforms. We can reproduce this us
 
 The rules above add a box shadow to the *shadow* div, which is itself transparent. The box shadow is offset by 600 pixels so that the actual *shadow* div doesn't get in the way of the shadow. The whole lot is rotated and positioned off-stage, so that only the shadow part is visible on the stage. The result should be something like this:
 
-[STAGE WITH WALLS AND PIT IN PLACE, WITH SHADOW]
+<img src="/images/posts/portal/layout03.png" alt="Initial layout with a shadow" />
 
 
 ## Red VS Blue
 
 Next up we need to add some decoration and the glowing portals.
+
+<img src="/images/posts/portal/portal.png" alt="Red portal" />
 
 [TODO]
 

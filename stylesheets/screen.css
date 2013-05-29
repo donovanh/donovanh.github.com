@@ -931,6 +931,9 @@ footer a, footer a:visited {
 }
 
 /* Post layout bits */
+article h2, article h3 {
+  margin-top: 1.75em;
+}
 article header .date {
   margin-top: -36px;
   color: #888888;
@@ -1018,7 +1021,7 @@ section.content, section.footer-content {
   }
 }
 code {
-  background-color: #fafafa !important;
+  background-color: #eaeaee !important;
   font-size: 0.8em;
   line-height: 2.25em;
   -webkit-border-radius: 15px;
@@ -1380,7 +1383,7 @@ html.no-js .bouncer-container a:hover {
 }
 
 pre > .editable-styles {
-  border: 1px solid #eeeeee;
+  border: 1px solid white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;

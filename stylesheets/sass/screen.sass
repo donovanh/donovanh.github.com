@@ -116,10 +116,13 @@ footer
 
 /* Post layout bits
 
-article header
-  .date
-    margin-top: -36px
-    color: #888
+article
+  h2, h3
+    margin-top: 1.75em
+  header
+    .date
+      margin-top: -36px
+      color: #888
 
 section.content, section.footer-content
   width: 100%
@@ -188,7 +191,7 @@ section.content, section.footer-content
         height: 300px
 
 code 
-  background-color: #fafafa !important
+  background-color: $code_bg_color !important
   @include adjust-font-size-to(16px)
   @include border-radius(15px)
   padding: 0 8px
@@ -362,7 +365,7 @@ html.no-js .bouncer-container
     @include border-radius(25px, 30px)
 
 pre > .editable-styles 
-  border: 1px solid #eee
+  border: 1px solid #fff
   @include border-radius(5px)
 
 .editable-styles 
