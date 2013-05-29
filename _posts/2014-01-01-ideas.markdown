@@ -1,0 +1,9 @@
+---
+layout: post
+title: "What are ideas worth?"
+description: "Sometimes ideas can mark the beginning of amazing journeys. But what's the value, is it the idea or the journey?"
+tags: [opinion]
+imageURL: 
+published: false
+---
+

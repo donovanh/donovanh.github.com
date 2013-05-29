@@ -878,7 +878,7 @@ img.left {
 
 /* Page structure */
 .page-container {
-  background: #f1f3f3;
+  background: #fafafe;
   padding-bottom: 1em;
 }
 
@@ -921,7 +921,7 @@ footer {
   text-align: center;
 }
 footer p {
-  color: white;
+  color: #fafafe;
   text-shadow: none;
   padding-top: 1.8em;
   margin: 0;
@@ -955,6 +955,12 @@ section.content, section.footer-content {
   width: 100%;
   padding: 1em 0 0;
   position: relative;
+}
+.home article a {
+  color: #1c3243;
+}
+.home article a:hover {
+  color: #ff1c7c;
 }
 .home article h1 {
   padding-top: 1em;
@@ -1105,7 +1111,7 @@ nav.pagination .previous {
   position: absolute;
   top: 42px;
   left: -50px;
-  background-color: white;
+  background-color: #fafafe;
   z-index: 1;
 }
 .bouncer-container .bouncer {
@@ -1164,7 +1170,7 @@ nav.pagination .previous {
 .bouncer-container .eye1, .bouncer-container .eye2 {
   top: 10px;
   left: 20px;
-  background-color: white;
+  background-color: #fafafe;
   width: 5px;
   height: 6px;
   -webkit-border-radius: 50% 50%;
@@ -1184,7 +1190,7 @@ nav.pagination .previous {
   left: 22px;
   width: 15px;
   height: 8px;
-  background-color: white;
+  background-color: #fafafe;
   -moz-border-radius-bottomleft: 25px;
   -webkit-border-bottom-left-radius: 25px;
   border-bottom-left-radius: 25px;

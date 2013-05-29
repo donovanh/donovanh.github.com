@@ -1,0 +1,221 @@
+---
+layout: post
+title: "Portal CSS"
+description: "Lean how to set up a 3D scene in CSS, and add animation."
+tags: [3D, CSS]
+imageURL: 
+published: false
+---
+
+[What we'll cover]
+
+## Thinking with Portals
+
+As an example to show the various stages of creating, styling and then animating a 3D scene, we'll create a scene from the [Portal Training Video](http://www.youtube.com/watch?v=gr_9Fw_gC4I). We'll create the stylised, cartoony look of the first part of the video in which a silhouetted character jumps through a portal and emerges from the other side. It will look something like this:
+
+[Screenshot of 3D portal scene]
+
+## Prefixes
+
+I've removed the prefixed versions of rules in the following CSS. I would recommend either using something like [prefix free](http://leaverou.github.io/prefixfree/) or [SASS](http://sass-lang.com/) to manage these for you. Otherwise, be aware that most browser prefixes will need to applied. Full versions of the CSS and SASS can be found [on Github](https://github.com/donovanh/portal) along with the HTML.
+
+## Gaining perspective
+
+We need to set a scene in which we can build our 3D creation. To do this we'll need to use an HTML element and give it the needed properties that tell the browser to expect 3D content within it. Start with some HTML:
+
+    <article class="container">...</article>
+
+In this case the container is an `article` tag. In HTML5, *article* represents a standalone piece of content that could be reproduced elsewhere and still make sense. The first property to apply is [perspective](http://docs.webplatform.org/wiki/css/properties/perspective). This property takes a value in pixels, and represents the *depth* of the 3D scene. A smaller value will produce a more dramatic effect, and it's usual to set it somewhere betweeh 800 and 1200 pixels.
+
+[Examples of perspective - try an animated gif]
+
+For this scene to feel like it's a large room, we will set the perspective value quite high at 2,600 pixels. Allowing for the various browser prefixes, we use the following:
+
+    article.container {
+        perspective: 2600px;
+    }
+
+### Unique Point of View
+
+The container for the scene has a depth, so the next step is to determine the viewing angle. By adjusting the [perspective-origin](http://docs.webplatform.org/wiki/css/properties/perspective-origin) property, we can establish a point of view above, below or to the side of the scene.
+
+    .container {
+      perspective-origin: 50% -1400px;
+    }
+
+The `perspective-origin` property takes two values, a horizontal and a vertical offset. In this case we're positioning the camera at half-way across the scene, and 1,400 pixels up.
+
+To determine these values, I adjusted the value in the Chrome web inspector panel and judged it by eye. When setting up your scene, your value might be higher or lower than this. It will depend on the effect you want to convey. Also keep in mind that this value can be animated, creating some interesting perspective-change effects.
+
+## Let's build
+
+With the scene set, we can start putting together our 3D masterpiece. When beginning to build 3D objects with HTML and CSS, it's worth taking a moment to understand how this approach differs from other 3D software.
+
+### No vectors, Victor
+
+The objects we position in HTML are normal HTML elements. They have a width, height, and are rectangular. This means that as you build a 3D object, you place each rectangle in place. This differs from some other methods that involve describing points and lines to create shapes. It also means that there aren't as many primatives, such as circles or teapots, to draw upon.
+
+The HTML elements are placed within the 3D scene using the `transform` property. 
+
+### Transformin'
+
+The `transform` property consists of a series of adjustments to the HTML element. These adjustments can take the form of `translate` to move the element, `rotate` to adjust it's angle, `skew` and even `scale`. Each of these can be stacked to create more complex transforms, for example:
+
+    transform: rotateY(45deg) translateZ(-100px);
+
+This rule will rotate an element 45 degrees around the Y axis, then move it back 100 pixels on the Z axis. The effect would look like this:
+
+[IMAGE OF TRANSFORM]
+
+### Putting together the pieces
+
+Let's apply some of this theory to a collection of HTML figures, and position them in the right way to create a nice 3D setting. Start with some HTML:
+
+    <section class="stage">
+        <div class="shadow"></div>
+        <div class="back-left"></div>
+        <div class="back-right"></div>
+        <div class="platform-left"><span></span></div>
+        <div class="platform-right"><span></span></div>
+        <div class="pit-left"></div>
+        <div class="pit-right"></div>
+        <div class="pit-back"></div>
+    </section>
+
+The above includes a *stage* section, which we will be using to contain all the elements. A set of divs within the stage section form the main parts of the structure. They take the form of back pieces, platforms, the sides of the pit, and a shadow to place underneath them.
+
+Beginning with the *back-left* piece, we'll transform each into place according to the following sketch:
+
+[TOP DOWN VIEW OF THE PIECES]
+
+As the sketch shows, the *back-left* piece is aligned to the left, but the *back-right* piece is right in front of the viewer. To adjust for this, we'll rotate the entire stage 45 degrees later.
+
+Before applying transforms however, we need to give the divs some shared properties:
+
+    .stage div {
+        position: absolute;
+        transform-style: preserve-3d;
+    }
+
+Each div will be positioned absolutely, and the `transform-style` property to instruct the browser that 3D transforms are to be applied in relation to the perspective we set earlier.
+
+With this done we can start positioning divs:
+
+    .stage .back-left {
+        width: 500px;
+        height: 120px;
+        background-color: #6b522b;
+        transform: rotateY(90deg) translateX(-256px);
+        border-top: 6px solid #8a683d;
+        border-left: 6px solid #574625;
+    }
+
+The above rules describe a height of 500 pixels, which is the side length of our 3D scene, a height of 120 pixels and a light brown background colour. The div is then rotated 90 degrees and pushed back along the X axis. The div has a 6 pixel border applied to create the illusion of depth.
+
+A similar transform is applied to the *back-right* div:
+
+    .stage .back-left {
+        width: 446px;
+        height: 120px;
+        background-color: #9c7442;
+        transform: translateX(253px) translateZ(3px);
+        border-top: 6px solid #b5854a;
+        border-right: 6px solid #78552c;
+    }
+
+This div is a little smaller, as it looks like the room in the original Portal video is not quite square.
+
+Next, add in some platforms and the sides of the pit:
+
+    .stage .platform-left {
+        width: 446px;
+        height: 220px;
+        background-color: #bcb3a8;
+        transform: rotateX(90deg) translateY(396px) translateX(253px) translateZ(-13px);
+        border-bottom: 6px solid #857964;
+    }
+    .stage .platform-right {
+        width: 446px;
+        height: 164px;
+        background-color: #bcb3a8;
+        transform: rotateX(90deg) translateY(88px) translateX(253px) translateZ(-41px);
+        border-right: 6px solid #554c3d;
+        border-bottom: 6px solid #847660;
+    }
+    .stage .pit-left {
+        width: 447px;
+        height: 800px;
+        background-color: #4d4233;
+        transform: translate3D(254px, 125px, 285px);
+    }
+    .stage .pit-right {
+        width: 451px;
+        height: 800px;
+        top: -1400px;
+        background-color: #847660;
+        transform: translate3D(254px, 125px, 173px);
+    }
+    .stage .pit-back {
+        width: 170px;
+        height: 220px;
+        background-color: #6b522b;
+        transform: rotateY(90deg) translate3D(-200px, 87px, 168px);
+    }
+
+The end result of all this should be a scene that looks like this:
+
+[SCENE WITH SIDES, PLATFORMS, PITS, NOT ROTATED, NO SHADOW]
+
+It doesn't look right yet. We need to rotate the entire scene to see it properly. Add a `transform` to the *scene* section:
+
+    .stage {
+        width: 460px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        transform: rotateY(-45deg);
+    }
+
+The result should look more like this:
+
+[STAGE WITH WALLS AND PIT IN PLACE, NO SHADOW]
+
+### Shady business
+
+The video features a nice shadow beneath the platforms. We can reproduce this using the CSS `box-shadow` property.
+
+    .stage .shadow {
+        width: 550px;
+        height: 550px;
+        background-color: transparent;
+        transform: rotateX(90deg) translateZ(-166px) translateX(550px);
+        box-shadow: -600px 0 50px #afa79f;
+    }
+
+The rules above add a box shadow to the *shadow* div, which is itself transparent. The box shadow is offset by 600 pixels so that the actual *shadow* div doesn't get in the way of the shadow. The whole lot is rotated and positioned off-stage, so that only the shadow part is visible on the stage. The result should be something like this:
+
+[STAGE WITH WALLS AND PIT IN PLACE, WITH SHADOW]
+
+
+## Red VS Blue
+
+Next up we need to add some decoration and the glowing portals.
+
+[TODO]
+
+## Adding character(s)
+
+With the portals and door in place, we need a person to jump through one and arrive on the other side.
+
+[TODO]
+
+
+
+
+## Add some animation
+
+- Animating the objects
+-- Keyframes
+-- Animation 
+-- Animation-delay
+
+
