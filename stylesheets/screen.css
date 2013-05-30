@@ -863,12 +863,17 @@ input {
 }
 
 img.bordered {
-  border: 2px solid #2c3437;
+  border: 2px solid #eaeaee;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+}
+
+img.centered {
+  display: block;
+  margin: auto;
 }
 
 img.left {
