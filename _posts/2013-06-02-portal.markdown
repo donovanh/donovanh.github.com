@@ -4,10 +4,12 @@ title: "Portal CSS"
 description: "Lean how to set up a 3D scene in CSS, and add animation."
 tags: [3D, CSS]
 imageURL: portal.png
-published: true
+published: false
 ---
 
-It is no longer necessary to use JavaScript to create impressive 3D projects in the web browser. Read how to create and animate a Portal-inspired scene using only CSS.
+You don't need JavaScript to create impressive 3D projects in the web browser. In this port I will show how to create and animate a Portal-inspired scene using only CSS.
+
+Check out the [online Portal CSS demo](http://hop.ie/)
 
 ## Portal Orientation Video No. 1
 
