@@ -323,9 +323,13 @@ Two borders are used to create the effect. The bottom and left borders match the
 
 With the portals and door in place, we need a person to jump through one and arrive on the other side.
 
-[TODO]
+### First dude
 
+<img src="http://hop.ie/images/posts/portal/dude1.png" alt="The first of two characters to animate through the scene" />
 
+### Second dude
+
+<img src="http://hop.ie/images/posts/portal/dude2.png" alt="The second of two characters to animate through the scene" />
 
 
 ## Add some animation
@@ -337,5 +341,9 @@ With the portals and door in place, we need a person to jump through one and arr
 
 
 ## Narbacular results
+
+## Caveats
+
+## Download and / or contribute
 
 
