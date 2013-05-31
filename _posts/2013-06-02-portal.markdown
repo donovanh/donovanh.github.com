@@ -4,7 +4,7 @@ title: "Portal CSS"
 description: "Lean how to set up a 3D scene in CSS, and add animation."
 tags: [3D, CSS]
 imageURL: portal.png
-published: false
+published: true
 ---
 
 It is no longer necessary to use JavaScript to create impressive 3D projects in the web browser. Read how to create and animate a Portal-inspired scene using only CSS.
@@ -18,7 +18,7 @@ As an example to show the various stages of creating, styling and then animating
   </iframe>
 </div>
 
-This video blew my mind when it was first released. Let's focus on the initial scene, with the isometric, cartoony graphics and see if it can be reproduced using nothing but HTML and CSS.
+This video blew my mind when it was first released. The isometric, cartoony graphics were such a lovely contrast to the in-game style yet still managed to nicely introduce the game. In this post I will see if this cartoony style can be reproduced using nothing but HTML and CSS.
 
 In particular, this is the scene we will build:
 
@@ -28,7 +28,7 @@ In particular, this is the scene we will build:
 
 I've removed the prefixed versions of rules in the following CSS. I would recommend either using something like [prefix free](http://leaverou.github.io/prefixfree/) or [SASS](http://sass-lang.com/) to manage these for you. Otherwise, be aware that most browser prefixes will need to applied. Full versions of the CSS and SASS can be found [on Github](https://github.com/donovanh/portal) along with the HTML.
 
-## Getting started: Perspective
+## Perspective
 
 We need to set a scene in which we can build our 3D creation. To do this we'll need to use an HTML element and give it the needed properties that tell the browser to expect 3D content within it. Start with some HTML:
 
@@ -36,7 +36,7 @@ We need to set a scene in which we can build our 3D creation. To do this we'll n
 
 In this case the container is an `article` tag. In HTML5, *article* represents a standalone piece of content that could be reproduced elsewhere and still make sense.
 
-The first property to apply is [perspective](http://docs.webplatform.org/wiki/css/properties/perspective). This property takes a value in pixels, and represents the depth of the 3D scene. A smaller value will produce a more dramatic effect, and it's usual to set it somewhere betweeh 800 and 1200 pixels.
+The first property to apply is [perspective](http://docs.webplatform.org/wiki/css/properties/perspective). This property takes a value in pixels, and represents the depth of the 3D scene. A smaller value will produce a more dramatic effect, and it's usual to set it somewhere betweeh 800 and 1,200 pixels.
 
 <img src="http://hop.ie/images/posts/portal/perspective.gif" alt="Alternating between a perspective value of 900 pixels and 2000 pixels" class="bordered centered" />
 
@@ -58,10 +58,6 @@ The `perspective-origin` property takes two values, a horizontal and a vertical 
 
 To determine these values, I adjusted the value in the Chrome web inspector panel and judged it by eye. When setting up your scene, your value might be higher or lower than this. It will depend on the effect you want to convey. Also keep in mind that this value can be animated, creating some interesting perspective-change effects.
 
-## Let's build
-
-With the scene set, we can start putting together our 3D masterpiece. When beginning to build 3D objects with HTML and CSS, it's worth taking a moment to understand how this approach differs from other 3D software.
-
 ### No vectors, Victor
 
 The objects we position in HTML are normal HTML elements. They have a width, height, and are rectangular. This means that as you build a 3D object, you place each rectangle in place. This differs from some other methods that involve describing points and lines to create shapes. It also means that there aren't as many primatives, such as circles or teapots, to draw upon.
@@ -82,9 +78,17 @@ This rule will rotate an element 45 degrees around the Y axis, then move it back
 
 ### Transform origin property
 
-TODO http://docs.webplatform.org/wiki/css/properties/transform-origin
+When rotating elements around the place, it's worth keeping in mind that the transforms have an origin that can be set. The [transform origin](http://docs.webplatform.org/wiki/css/properties/transform-origin) is a point referred to by specifying the X, Y and Z values. This is the default:
 
-Let's apply some of this theory to a collection of HTML figures, and position them in the right way to create a nice 3D setting. Start with some HTML:
+    .default-origin {
+        transform-origin: 50% 50% 0;
+    }
+
+When building this example I kept the default but it's worth knowing that it's there.
+
+## Let's build
+
+With the scene set, we can start putting together our 3D masterpiece. When beginning to build 3D objects with HTML and CSS, it's worth taking a moment to understand how this approach differs from other 3D software.
 
     <section class="stage">
         <div class="shadow"></div>
@@ -99,9 +103,11 @@ Let's apply some of this theory to a collection of HTML figures, and position th
 
 The above includes a *stage* section, which we will be using to contain all the elements. A set of divs within the stage section form the main parts of the structure. They take the form of back pieces, platforms, the sides of the pit, and a shadow to place underneath them.
 
-Beginning with the *back-left* piece, we'll transform each into place according to the following sketch:
+When I started building this scene, I tried to place the walls directly onto the stage, rotating it and adjusting its position. However since the scene is being viewed from an isometric angle, an easier approach is to place the parts of the scene and then rotate the entire scene 45 degrees at once.
 
-[TOP DOWN VIEW OF THE PIECES]
+With that in mind, the HTML elements are transformed into place according to the following sketch:
+
+<img src="http://hop.ie/images/posts/portal/sketch.png" alt="Plan view of the scene" class="centered" />
 
 As the sketch shows, the *back-left* piece is aligned to the left, but the *back-right* piece is right in front of the viewer. To adjust for this, we'll rotate the entire stage 45 degrees later.
 
@@ -308,7 +314,9 @@ Styling the door involves a few borders and then a transform that positions it i
         transform: translate3D(450px, 34px, 4px);
     }
 
-Two borders are used to create the effect. The bottom border matches the platform colour, making it look like the platform extends into the space in the wall, and the left border matches the border used on the right side of the right wall.
+Two borders are used to create the effect. The bottom and left borders match the platform and the side of the right wall, giving the impression of depth. Since there is no top border specified, the left border stops flush with the top of the div, which in this case works well.
+
+
 
 
 ## Adding character(s)

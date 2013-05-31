@@ -874,37 +874,37 @@ html {
   animation: lower-shadow 2.5s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes rotate-phone {
+@-moz-keyframes rotate-phone {
   0% {
-    -webkit-transform: rotateY(0);
     -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -webkit-transform: rotateY(360deg);
     -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
 
-@-moz-keyframes rotate-phone {
+@-webkit-keyframes rotate-phone {
   0% {
     -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
     -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@-o-keyframes rotate-phone {
+  0% {
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
     -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
@@ -912,18 +912,12 @@ html {
 
 @-ms-keyframes rotate-phone {
   0% {
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
     -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
@@ -946,6 +940,16 @@ html {
   }
 }
 
+@-moz-keyframes elevate-phone {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
 @-webkit-keyframes elevate-phone {
   0% {
     bottom: 0;
@@ -956,7 +960,7 @@ html {
   }
 }
 
-@-moz-keyframes elevate-phone {
+@-o-keyframes elevate-phone {
   0% {
     bottom: 0;
   }
@@ -986,6 +990,16 @@ html {
   }
 }
 
+@-moz-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 40px;
+  }
+}
+
 @-webkit-keyframes lower-shadow {
   0% {
     margin-top: 0;
@@ -996,7 +1010,7 @@ html {
   }
 }
 
-@-moz-keyframes lower-shadow {
+@-o-keyframes lower-shadow {
   0% {
     margin-top: 0;
   }

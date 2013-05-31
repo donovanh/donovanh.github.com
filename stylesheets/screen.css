@@ -1227,10 +1227,9 @@ html.no-js .bouncer-container a:hover {
   animation: move-bouncer 2s forwards;
 }
 
-@-webkit-keyframes move-bouncer {
+@-moz-keyframes move-bouncer {
   0% {
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
     top: 42px;
@@ -1239,7 +1238,6 @@ html.no-js .bouncer-container a:hover {
   15% {
     top: 0;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -1250,7 +1248,6 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
@@ -1261,17 +1258,15 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 }
 
-@-moz-keyframes move-bouncer {
+@-webkit-keyframes move-bouncer {
   0% {
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1280,7 +1275,6 @@ html.no-js .bouncer-container a:hover {
     top: 0;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1291,7 +1285,6 @@ html.no-js .bouncer-container a:hover {
     opacity: 1;
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1302,7 +1295,38 @@ html.no-js .bouncer-container a:hover {
     opacity: 1;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
+    border-radius: 25px / 30px;
+  }
+}
+
+@-o-keyframes move-bouncer {
+  0% {
+    height: 40px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  15% {
+    top: 0;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  30%, 33% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  45%, 100% {
+    top: 0;
+    left: 41px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
     border-radius: 25px / 30px;
   }
 }
@@ -1310,8 +1334,6 @@ html.no-js .bouncer-container a:hover {
 @-ms-keyframes move-bouncer {
   0% {
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1319,8 +1341,6 @@ html.no-js .bouncer-container a:hover {
   15% {
     top: 0;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1330,8 +1350,6 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1341,8 +1359,6 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 }

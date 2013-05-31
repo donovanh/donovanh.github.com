@@ -757,13 +757,19 @@ html {
   height: 80px;
 }
 
+@-moz-keyframes floatup {
+  100% {
+    top: 300px;
+  }
+}
+
 @-webkit-keyframes floatup {
   100% {
     top: 300px;
   }
 }
 
-@-moz-keyframes floatup {
+@-o-keyframes floatup {
   100% {
     top: 300px;
   }
@@ -777,6 +783,20 @@ html {
 
 @keyframes floatup {
   100% {
+    top: 300px;
+  }
+}
+
+@-moz-keyframes bobbing {
+  10% {
+    top: 300px;
+  }
+
+  60% {
+    top: 320px;
+  }
+
+  98% {
     top: 300px;
   }
 }
@@ -795,7 +815,7 @@ html {
   }
 }
 
-@-moz-keyframes bobbing {
+@-o-keyframes bobbing {
   10% {
     top: 300px;
   }
@@ -837,10 +857,9 @@ html {
   }
 }
 
-@-webkit-keyframes move-bouncer-404 {
+@-moz-keyframes move-bouncer-404 {
   0% {
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
     top: 42px;
@@ -849,7 +868,6 @@ html {
   5% {
     top: 0;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -860,7 +878,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
@@ -870,7 +887,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -881,7 +897,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
@@ -891,7 +906,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -902,7 +916,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
@@ -912,7 +925,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -923,7 +935,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
@@ -933,7 +944,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -944,7 +954,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
@@ -955,7 +964,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
@@ -968,11 +976,10 @@ html {
   }
 }
 
-@-moz-keyframes move-bouncer-404 {
+@-webkit-keyframes move-bouncer-404 {
   0% {
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -981,7 +988,6 @@ html {
     top: 0;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -992,7 +998,6 @@ html {
     opacity: 1;
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1002,7 +1007,6 @@ html {
     opacity: 1;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1013,7 +1017,6 @@ html {
     opacity: 1;
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1023,7 +1026,6 @@ html {
     opacity: 1;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1034,7 +1036,6 @@ html {
     opacity: 1;
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1044,7 +1045,6 @@ html {
     opacity: 1;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1055,7 +1055,6 @@ html {
     opacity: 1;
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1065,7 +1064,6 @@ html {
     opacity: 1;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1076,7 +1074,6 @@ html {
     opacity: 1;
     height: 40px;
     -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1087,7 +1084,113 @@ html {
     opacity: 1;
     height: 60px;
     -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
+    border-radius: 25px / 30px;
+  }
+
+  80%,100% {
+    left: 381px;
+    top: 350px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes move-bouncer-404 {
+  0% {
+    height: 40px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  5% {
+    top: 0;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  10%, 11% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  15% {
+    top: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  21%, 22% {
+    top: 42px;
+    left: 91px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  25% {
+    top: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  31%, 32% {
+    top: 42px;
+    left: 161px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  35% {
+    top: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  41%, 42% {
+    top: 42px;
+    left: 231px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  45% {
+    top: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  51%, 52% {
+    top: 42px;
+    left: 301px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  55%, 74% {
+    top: 0;
+    left: 381px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
     border-radius: 25px / 30px;
   }
 
@@ -1102,8 +1205,6 @@ html {
 @-ms-keyframes move-bouncer-404 {
   0% {
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1111,8 +1212,6 @@ html {
   5% {
     top: 0;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1122,8 +1221,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1132,8 +1229,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1143,8 +1238,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1153,8 +1246,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1164,8 +1255,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1174,8 +1263,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1185,8 +1272,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1195,8 +1280,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1206,8 +1289,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
-    -moz-border-radius: 25px / 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1217,8 +1298,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
-    -moz-border-radius: 25px / 30px;
     border-radius: 25px / 30px;
   }
 
