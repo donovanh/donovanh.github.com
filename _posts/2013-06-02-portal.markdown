@@ -1,28 +1,30 @@
 ---
 layout: post
 title: "Portal CSS"
-description: "Lean how to set up a 3D scene in CSS, and add animation."
+description: "Learn how to set up a 3D scene in CSS, and add animation."
 tags: [3D, CSS]
 imageURL: portal.png
-published: false
+published: true
 ---
 
-You don't need JavaScript to create impressive 3D projects in the web browser. In this port I will show how to create and animate a Portal-inspired scene using only CSS.
+You don't need JavaScript to create impressive 3D projects in the web browser. In this post I will show how to create and animate a Portal-inspired scene using only CSS.
 
-Check out the [online Portal CSS demo](http://hop.ie/)
+See the [online Portal CSS demo](http://hop.ie/portal/), and download the [source on Github](https://github.com/donovanh/portal).
 
 ## Portal Orientation Video No. 1
 
-As an example to show the various stages of creating, styling and then animating a 3D scene, we'll create a scene from the [Portal Training Video](http://www.youtube.com/watch?v=gr_9Fw_gC4I). We'll create the stylised, cartoony look of the first part of the video in which a silhouetted character jumps through a portal and emerges from the other side. This is the original video:
+As an example to show the various stages of creating, styling and then animating a 3D scene, this post will aim to recreate a scene from the [Portal Training Video](http://www.youtube.com/watch?v=gr_9Fw_gC4I). In particular, the stylised, cartoony look of the first part of the video in which a silhouetted character jumps through a portal and emerges from the other side. This is the original video:
 
 <div class="video-wrapper">
   <iframe src="http://www.youtube.com/embed/V5paXrfkYmI" width="720" height="405" data-height="405" frameborder="0">
   </iframe>
 </div>
 
-This video blew my mind when it was first released. The isometric, cartoony graphics were such a lovely contrast to the in-game style yet still managed to nicely introduce the game. In this post I will see if this cartoony style can be reproduced using nothing but HTML and CSS.
+This video blew my mind when it was first released. Portal (which was developed from [Narbacular Drop](http://en.wikipedia.org/wiki/Narbacular_Drop)) introduced a fun twist on the 3D platform genre.
 
-In particular, this is the scene we will build:
+The isometric, cartoony graphics in the introduction video are very different from the game yet manage to capture some of it's style. In this post I will see if this cartoony style can be reproduced using nothing but HTML and CSS.
+
+In particular, this is the scene that will be created:
 
 <img src="http://hop.ie/images/posts/portal/video.jpg" alt="Portal video screenshot" />
 
@@ -30,7 +32,11 @@ In particular, this is the scene we will build:
 
 I've removed the prefixed versions of rules in the following CSS. I would recommend either using something like [prefix free](http://leaverou.github.io/prefixfree/) or [SASS](http://sass-lang.com/) to manage these for you. Otherwise, be aware that most browser prefixes will need to applied. Full versions of the CSS and SASS can be found [on Github](https://github.com/donovanh/portal) along with the HTML.
 
-## Perspective
+### There's science to be done
+
+The following project has been developed and tested primarily in Chrome. It uses CSS that won't work properly in Internet Explorer. It covers some interesting 3D CSS techniques that while they aren't yet mainstream, can prove useful in other front-end development.
+
+## Getting started
 
 We need to set a scene in which we can build our 3D creation. To do this we'll need to use an HTML element and give it the needed properties that tell the browser to expect 3D content within it. Start with some HTML:
 
@@ -295,7 +301,7 @@ The HTML we added earlier included a `span` tag within each of the two platforms
 
 The two spans are positioned absolutely and given a red and blue gradient, positioned beneath each of the portals. A pseudo-selector could have been used to achieve this effect, but since animating pseudo-selectors is not well supported (even within versions of Webkit), a separate span is used in this case.
 
-### Adorable
+### The Door
 
 One of the unexpected successes was the use of borders to create what looks like an opening in the right wall, representing the exit. To create this door I use a single div and some coloured borders that make it look like it's inset.
 
@@ -318,34 +324,263 @@ Styling the door involves a few borders and then a transform that positions it i
 
 Two borders are used to create the effect. The bottom and left borders match the platform and the side of the right wall, giving the impression of depth. Since there is no top border specified, the left border stops flush with the top of the div, which in this case works well.
 
+## Characters
 
+With the portals and door in place, we need a person to jump through one and arrive on the other side. The first step is to create the person that jumps through the two portals.
 
+In my initial testing, I tried using one character and having the animation stop at the first portal, and immediately continue from the other side. However when I animated the single character there was a flicker as it moved between portals. To avoid this, I instead used two characters and animated them separately.
 
-## Adding character(s)
-
-With the portals and door in place, we need a person to jump through one and arrive on the other side.
-
-### First dude
+### Building the character
 
 <img src="http://hop.ie/images/posts/portal/dude1.png" alt="The first of two characters to animate through the scene" />
 
-### Second dude
+The beginning character shape is made up of 2 main parts, a head and body. Legs are added using pseudo-selectors on the body. A similar structure is also included to be used as a shadow:
+
+    <div class="dude one">
+      <figure class="head"></figure>
+      <figure class="body"></figure>
+      <div class="dude-shadow one">
+        <figure class="head"></figure>
+        <figure class="body"></figure>
+      </div>
+    </div>
+
+Since the shadow is contained within the character's containing div, it can be animated at the same time. The CSS is as follows:
+
+    .dude, .dude-shadow {
+        width: 30px;
+        height: 100px;
+    }
+    .dude figure, .dude-shadow figure {
+      display: block;
+      background-color: black;
+      position: absolute;
+    }
+    .dude figure.head, .dude-shadow figure.head {
+        top: 0;
+        left: 3px;
+        width: 20px;
+        height: 20px;
+        border-radius: 22px;
+    }
+    .dude figure.body, .dude-shadow figure.body {
+        top: 21px;
+        width: 26px;
+        height: 30px;
+        border-radius: 30px 30px 0 0;
+    }
+    .dude figure.body:before, .dude figure.body:after, .dude-shadow figure.body:before, .dude-shadow figure.body:after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 15px;
+      background-color: black;
+      top: 30px;
+    }
+    .dude figure.body:before, .dude-shadow figure.body:before {
+      left: 3px;
+    }
+    .dude figure.body:after, .dude-shadow figure.body:after {
+      left: 14px;
+    }
+
+These rules double up in each case, describing both the character and their shadow. Each of the parts is absolutely positioned and `border-radius` is used to create the round shapes. The leg pseudo-selectors are described at once then each positioned in separate rules.
+
+### Character 1
+
+With the character shape specified, position the character at the starting position:
+
+    .stage .dude.one {
+        transform: translate3D(514px, 50px, 375px) rotateY(78deg);
+    }
+    .stage .dude-shadow.one {
+        transform: translateX(-12px) rotateX(90deg) translateY(8px);
+        opacity: 0.1;
+    }
+
+The CSS transforms position both the character itself but also the shadow. The opacity of the shadow is set to 0.1 rather than set it a grey colour. This allows background details to be seen behind the shadow.
+
+The first character is now at the starting position, and rotated to a similar angle to that in the video. We will add animation later to have them jump through the portals.
+
+### Armed
 
 <img src="http://hop.ie/images/posts/portal/dude2.png" alt="The second of two characters to animate through the scene" />
 
+The second character has some more detail, arms. The idea being when the character jumps through the portal, they'll celebeate by raising their arms. Here's the HTML:
 
-## Add some animation
+    <div class="dude two">
+        <figure class="head"></figure>
+        <figure class="body"></figure>
+        <figure class="arm left"></figure>
+        <figure class="arm right"></figure>
+        <div class="dude-shadow two">
+            <figure class="head"></figure>
+            <figure class="body"></figure>
+            <figure class="arm left"></figure>
+            <figure class="arm right"></figure>
+        </div>
+    </div>
 
-- Animating the objects
--- Keyframes
--- Animation 
--- Animation-delay
+The second character will begin the animation invisible, and then jump through the portal about halfway through the animation (after the first character reaches their portal). To set this up, this second character is positioned at the portal.
 
+    .stage .dude.two {
+        transform: translate3D(610px, 40px, 10px) rotateY(15deg);
+    }
+    .stage .dude.two figure.arm {
+        position: absolute;
+        width: 20px;
+        height: 8px;
+        background: black;
+        top: 20px;
+    }
+    .stage .dude.two figure.arm.left {
+        left: -13px;
+        transform: rotateZ(40deg);
+    }
+    .stage .dude.two figure.arm.right {
+        right: -10px;
+        transform: rotateZ(-40deg);
+    }
+    .stage .dude-shadow.two {
+        transform: translateY(12px) translateX(-16px) translateZ(-6px) rotateZ(-90deg) rotateY(90deg) rotateZ(50deg) skewX(30deg) scaleX(0.8);
+        opacity: 0.1;
+    }
 
-## Narbacular results
+A second animation will be applied to the arms, in which they will also be invisible to begin with but then appear later.
 
-## Caveats
+## The stage is set
 
-## Download and / or contribute
+With the characters and the backdrop in place, the scene is ready for some animation.
+
+<img src="http://hop.ie/images/posts/portal/stage_set.png" alt="The scene is ready, with 2 characters ready to be animated." />
+
+Let's look at how to make it look like the little person jumps through the first portal and arrives at the other.
+
+## Animation
+
+If you [view the demo](http://hop.ie/portal/) you'll see a few animations taking place. Rather than go through all the animations that set up the scene, I'll focus on the animation of the character jumping through the portals.
+
+### Keyframe animation
+
+Timing and animating the HTML elements is achieved by using [keyframes](http://docs.webplatform.org/wiki/css/atrules/@keyframes), and then attaching the set of keyframes to an element using the [animation](http://docs.webplatform.org/wiki/css/properties/animation) property.
+
+The first thing is to animate the first character, to have them approach and then jump into the left portal. Here's a set of keyframes that achieves this:
+
+    @keyframes move-dude-one {
+        /* Character flies into scene */
+        0% {
+            transform: translate3D(514px, -10px, 375px) rotateY(78deg) scaleY(2);
+        }
+        /* Waits a moment */
+        1%, 18% {
+            transform: translate3D(514px, 50px, 375px) rotateY(78deg) scaleY(1);
+            opacity: 1;
+        }
+        /* Moves toward the portal */
+        34%, 39% {
+            transform: translate3D(284px, 40px, 375px) rotateY(78deg);
+            opacity: 1;
+        }
+        /* Pauses, them jumps in */
+        41%, 42% {
+            transform: translate3D(234px, 40px, 375px) rotateY(78deg);
+            opacity: 1;
+        }
+        /* Vanishes */
+        43%, 100% {
+            transform: translate3D(234px, 40px, 375px) rotateY(78deg);
+            opacity: 0;
+        }
+    }
+    /* Note: Use prefixes, such as @-webkit-keyframes, @-moz-keyframes, etc! */
+
+Keyframes are a series of steps, described using percentages. The percentage relates to the animation time, so that if an animation was to last 10 seconds, 10% would be the 1 second mark. 90% would be the 9 second mark.
+
+To have the characters jumping through the portals in a nice loop, we'll set two animations that are each 10 seconds long so that they match. I have put some inline comments that describe each stage of the animation. The `transform` property is used at each stage to set the characters position and angle.
+
+At 43% through the animation, the character's `opacity` is set to 0. This is when the first character vanishes into the portal. The second character should therefore appear at 43% through it's animation.
+
+Before we do that, let's apply this first animation to the first character:
+
+    .dude.one {
+        animation: move-dude-one 10s linear infinite;
+        opacity: 0;
+    }
+
+The `animation` property above applies the animation to the *dude one* element. It attaches it with the animation name, sets it to last for 10 seconds, and suggests that it loop infinitely.
+
+An opacity of 0 is set to ensure the character is invisible before the animation starts.
+
+Having done that let's set up the corresponding animation keyframes for the second character:
+
+    @keyframes move-dude-two {
+        /* Dude be invisible */
+        0%, 42% {
+            transform: translate3D(610px, 40px, 10px) rotateY(15deg);
+            opacity: 0;
+        }
+        /* Apparato! */
+        42.5% {
+            transform: translate3D(610px, 40px, 10px) rotateY(15deg);
+            display: block;
+            opacity: 1;
+        }
+        /* Move onto the platform */
+        46%, 75% {
+            transform: translate3D(610px, 40px, 120px) rotateY(15deg);
+            opacity: 1;
+        }
+        /* Stand there for a bit */
+        76%, 97% {
+            transform: translate3D(610px, -10px, 120px) rotateY(15deg) scaleY(2);
+            opacity: 0;
+        }
+        /* Fly up into the sky! */
+        98%, 100% {
+            transform: translate3D(610px, -10px, 120px) rotateY(15deg) scaleY(2);
+            opacity: 0;
+        }
+    }
+
+    @keyframes arms {
+        /* No arms */
+        0%, 53% {
+            opacity: 0;
+        }
+        /* Yes arms! */
+        54%, 100% {
+            opacity: 1;
+        }
+    }
+
+As planned, this animation begins around the 42% mark. The character leaps out of the portal, stands around for a bit, then is whisked away into the sky. A second set of keyframes describe the arms animation. These start off invisible and then show around halfway through the animation.
+
+We can apply these keyframes to the second dude's element as follows:
+
+    .dude.two {
+        animation: move-dude-two 10s linear infinite;
+        opacity: 0;
+    }
+
+    .dude.two figure.arm {
+        animation: arms 10s linear infinite;
+        opacity: 0;
+    }
+
+In this way the two animations are being applied. Since both are set to last 10 seconds, and loop infinitely, they should match up nicely with the timing of the first animation.
+
+If you haven't already, [check out the finished result](http://hop.ie/portal/) in a modern browser, though preferably not Internet Explorer.
+
+## Caveats & browser quirks
+
+While we're on the subject of browsers, I should note that this is not going to work currently in Internet Explorer. Firefox is a bit *meh* but not bad, Safari's almost there (waiting for Apple to patch webkit at long last), and Chrome is 100%. Hey, browsers gonna browse.
+
+Performance is pretty good across various devices (browser issues aside). Testing on an iPhone with Safari and it performs better than Chrome on a laptop. This is because the CSS rules used (3D transforms) make use of the graphic hardware.
+
+## Demo and contact info
+
+Check out the [online Portal CSS demo](http://hop.ie/) or download the [source from Github](https://github.com/donovanh/portal).
+
+I'd love to hear your thoughts on this and any other posts. I can be reached [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh).
 
 
