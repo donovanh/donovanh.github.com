@@ -143,7 +143,7 @@ The above rules describe a height of 500 pixels, which is the side length of our
 
 A similar transform is applied to the *back-right* div:
 
-    .stage .back-left {
+    .stage .back-right {
         width: 446px;
         height: 120px;
         background-color: #9c7442;
