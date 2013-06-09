@@ -146,12 +146,18 @@ section.content, section.footer-content
     width: 100%
     padding: 1em 0 0
     position: relative
+    @include perspective(1000px)
+    @include perspective-origin(50% 200px)
 
     a
       color: #1c3243
-
+      
       &:hover
         color: $hover-color
+
+        img
+          @include transform(rotateY(0))
+          @include box-shadow(0 0 20px rgba(255,255,255,0.4))
     h1 
       padding-top: 1em
 
@@ -163,12 +169,14 @@ section.content, section.footer-content
       width: 150px
       height: 150px
       margin: 1em auto -1em auto
-      @include box-shadow(0 0 20px rgba(100,100,100,0.4))
+      
       border: 1px solid #fff
       @include border-radius(150px)
       @include transition(all 0.4s ease)
       overflow: hidden
       position: relative
+      @include transform-style(preserve-3d)
+      @include transform(rotateY(28deg))  
 
       &:after
         content: ""

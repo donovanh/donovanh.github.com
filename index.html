@@ -11,9 +11,9 @@ bodyTag: home
     	<header>
         <a href="{{ post.url }}">
           {% if post.imageURL %} 
-            <img src="/images/home/{{post.imageURL}}" alt='Read "{{post.title}}"' alt="{{ post.description }}" class="{{ post.cornerStyle }}">
+            <img src="/images/home/{{post.imageURL}}" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
           {% else %}
-            <img src="/images/home/default.png" alt='Read "{{post.title}}"' alt="{{ post.description }}" class="{{ post.cornerStyle }}">
+            <img src="/images/home/default.png" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
           {% endif %}
       	  <h1>{{ post.title }}</h1>
         </a>
