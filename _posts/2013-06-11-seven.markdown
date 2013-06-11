@@ -7,7 +7,7 @@ imageURL: seven.png
 published: true
 ---
 
-Making use of the amazing background gradients in CSS to create a rich, full-screen banner that loads in less than half a second and weighs less than 2Kb.
+Making use of the amazing background gradients in CSS to create a rich, full-screen banner that loads in less than half a second and is only around 2Kb in size.
 
 ## WWDC and iOS 7
 
