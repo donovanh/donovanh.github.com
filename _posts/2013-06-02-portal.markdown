@@ -582,6 +582,6 @@ Performance is pretty good across various devices (browser issues aside). Testin
 
 ## Demo and contact info
 
-Check out the [online Portal CSS demo](http://hop.ie/) or download the [source from Github](https://github.com/donovanh/portal).
+Check out the [online Portal CSS demo](http://hop.ie/portal) or download the [source from Github](https://github.com/donovanh/portal).
 
 I'd love to hear your thoughts on this and any other posts. I can be reached [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh).

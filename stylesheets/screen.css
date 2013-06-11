@@ -837,10 +837,6 @@ a:hover {
   transition: color 0.1s ease-out;
 }
 
-.gittip a {
-  color: #b4186c !important;
-}
-
 acronym {
   border-bottom: 1px dashed #2c3437;
 }
@@ -942,6 +938,9 @@ article h2, article h3 {
 article header .date {
   margin-top: -36px;
   color: #888888;
+}
+article img {
+  max-width: 100%;
 }
 
 section.content, section.footer-content {
