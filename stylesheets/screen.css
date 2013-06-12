@@ -1477,6 +1477,7 @@ pre > .editable-styles {
   top: 24px;
   right: -220px;
   padding-right: 30px;
+  display: none;
 }
 
 #fusion_ad {
@@ -1487,10 +1488,12 @@ pre > .editable-styles {
   line-height: 22px;
   text-align: center;
   border-radius: 5px;
+  font-family: "HelveticaNeue-Light", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 #fusion_ad a {
   display: block;
   color: #2c3437 !important;
+  font-weight: normal !important;
 }
 #fusion_ad img {
   display: block;
