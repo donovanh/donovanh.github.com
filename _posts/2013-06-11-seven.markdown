@@ -119,7 +119,7 @@ The result of these properties being added should look like this:
 
 <img src="/images/posts/seven/step2b.png" alt="First gradient applied to text">
 
-The next step is to apply another gradient to the second seven. Since this seven sits in front, it needs to fade to transparent. Its gradient CSS looks like this:
+The next step is to apply another gradient to the second seven. Since this seven sits in front, it needs to have a gradient that starts red and ends transparent. Add some colour stops to achieve this effect.
 
     span.text.part2 {
         background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #c71f1f), color-stop(30%, #c71f1f), color-stop(40%, #a24b92), color-stop(50%, #3791ea), color-stop(60%, rgba(33, 47, 127, 0)));
