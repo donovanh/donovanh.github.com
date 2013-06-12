@@ -7,7 +7,7 @@ imageURL: seven.png
 published: true
 ---
 
-Making use of the amazing background gradients in CSS to create a rich, full-screen banner that loads in less than half a second and is only around 2Kb in size.
+Making use of the amazing background gradients in CSS to create a rich, full-screen banner that loads in less than half a second and is only around 2KB in size.
 
 ## WWDC and iOS 7
 
@@ -46,7 +46,7 @@ First through, we need to set up some HTML to which we will apply the CSS:
         <span class="text part2">7</span>
     </article>
 
-Here we have an article that contains two spans, each of which has a 7. The reason for including two 7s will become apparent in a moment. Before applying gradients, set up the 7s so that they sit in an iOS-like icon in the middle of the screen.
+Here we have an article that contains two spans, each of which has a 7. The reason for including two 7s will become apparent in a moment.  Before applying gradients, we set up these two spans so that they sit in an iOS-like icon in the middle of the screen.
 
 The containing article is positioned and styled:
 
@@ -68,7 +68,7 @@ The containing article is positioned and styled:
 
 This creates the container as a 512 by 512 pixel box and positions it in the middle, both vertically and horizontally, of the screen. The use of absolute positioning is not only a handy way of placing fixed-size elements in the centre of screens, it'll also help when we introduce a background pattern later. For now the black background will provide contrast.
 
-Next, set some attributes for the text.
+Next, set some properties for the text.
 
     .container span.text {
         font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Arial, Sans-serif;
@@ -78,7 +78,7 @@ Next, set some attributes for the text.
         left: 124px;
     }
 
-The font is "Helvetica Neue UltraLight", and I've added a fallback of Arial. This isn't ideal, so I'll also use the [@font-face](http://docs.webplatform.org/wiki/css/atrules/@font-face) rule to handle fetching an embedded fontin case it's not available in the browser. The text spans are positioned absolutely, so that both 7s will sit directly on top of each other, and both are set to 512 pixels in size.
+The font is "Helvetica Neue UltraLight", and I've added a fallback of Arial. This isn't ideal, so I'll also use the [@font-face](http://docs.webplatform.org/wiki/css/atrules/@font-face) rule to handle fetching an embedded font in case it's not available in the browser. The text spans are positioned absolutely, so that both 7s will sit directly on top of each other, and both are set to 512 pixels in size.
 
     @font-face {
         font-family: "HelveticaNeue-UltraLight";
@@ -117,7 +117,7 @@ While this is nice, it doesn't apply to the number in the HTML. To achieve this,
 
 The result of these properties being added should look like this:
 
-TODO: Image of the first 7 with gradient on an icon and black background
+<img src="/images/posts/seven/step2b.png" alt="First gradient applied to text">
 
 The next step is to apply another gradient to the second seven. Since this seven sits in front, it needs to fade to transparent. Its gradient CSS looks like this:
 
@@ -131,7 +131,7 @@ In this case the gradient starts at the bottom with the red colour, and ends wit
 
 Now we're getting somewhere:
 
-<img src="/images/posts/seven/step3.png" alt="The text with gradient applied">
+<img src="/images/posts/seven/step3.png" alt="The text with both gradients applied">
 
 Next step is to create the fancy polka-dotted background.
 
