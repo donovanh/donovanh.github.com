@@ -82,9 +82,11 @@
 
   </script>
   <script type="text/javascript">
-    $.getScript('http://adn.fusionads.net/api/1.0/ad.js?zoneid=251&rand=' + Math.floor(Math.random()*9999999), function() {
-      $('.ad-container').fadeIn();
-    });
+    if ($('.ad-container').length > 0) {
+      $.getScript('http://adn.fusionads.net/api/1.0/ad.js?zoneid=251&rand=' + Math.floor(Math.random()*9999999), function() {
+        $('.ad-container').fadeIn();
+      });
+    }
   </script>
 </body>
 </html>
