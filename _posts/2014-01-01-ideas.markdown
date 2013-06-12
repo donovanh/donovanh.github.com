@@ -1,9 +1,27 @@
 ---
 layout: post
-title: "What are ideas worth?"
-description: "Sometimes ideas can mark the beginning of amazing journeys. But what's the value, is it the idea or the journey?"
-tags: [opinion]
+title: "Things to work on"
+description: ""
+tags: [list]
 imageURL: 
 published: false
 ---
 
+Article: Publishing articles with webkit and CSS
+- css-regions
+
+Do a thorough look into flexbox (maybe with some 3D also for proper craziness)
+- flexbox and how to fall back to non-supported browsers
+
+Article: Windows 8 layout using flexbox (new syntax)
+
+Using Airplay devices with HTML (in iOS)
+
+Canvas: The next step in 3D, games etc
+
+Make a book about creating 3D stuff in CSS and publish on iBooks (woo)
+
+How to create push notifications for your Safari users
+
+Safari console api for Performance Analysis
+(console.time, console.profile/profileEnd, console.markTimeline)

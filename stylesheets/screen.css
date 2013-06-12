@@ -889,6 +889,9 @@ img.left {
   margin: 0 auto;
 }
 
+.entry {
+  position: relative;
+}
 .entry p:first-child {
   margin-top: 0;
   padding-top: 1em;
@@ -1468,6 +1471,59 @@ pre > .editable-styles {
 }
 
 /* Overrides */
+.ad-container {
+  width: 140px;
+  position: absolute;
+  top: 24px;
+  right: -220px;
+  padding-right: 30px;
+}
+
+#fusion_ad {
+  background-color: #fafafe;
+  padding: 8px;
+  width: 130px;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 5px;
+}
+#fusion_ad a {
+  display: block;
+  color: #2c3437 !important;
+}
+#fusion_ad img {
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.fusion-link {
+  font-family: "Source Code Pro", sans-serif;
+  display: block;
+  width: 130px;
+  color: #2c3437 !important;
+  font-size: 10px;
+  line-height: 18px;
+  text-align: center;
+  margin: 4px 0 0;
+}
+
+@media only screen and (max-width: 960px) {
+  .ad-container {
+    right: -180px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .ad-container {
+    right: -168px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .ad-container {
+    right: -168px;
+  }
+}
 @media only screen and (max-width: 800px) {
   /* Style adjustments for smaller screens */
   section.content, section.footer-content {
