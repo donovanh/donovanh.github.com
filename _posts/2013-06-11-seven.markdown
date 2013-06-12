@@ -78,16 +78,7 @@ Next, set some properties for the text.
         left: 124px;
     }
 
-The font is "Helvetica Neue UltraLight", and I've added a fallback of Arial. This isn't ideal, so I'll also use the [@font-face](http://docs.webplatform.org/wiki/css/atrules/@font-face) rule to handle fetching an embedded font in case it's not available in the browser. The text spans are positioned absolutely, so that both 7s will sit directly on top of each other, and both are set to 512 pixels in size.
-
-    @font-face {
-        font-family: "HelveticaNeue-UltraLight";
-        font-style: normal;
-        font-weight: 100;
-        src: local("HelveticaNeue-UltraLight"), local("HelveticaNeue-Ultra-Light"), url(/seven/fonts/helveticaneueultralight-webfont.woff) format("woff");
-    }
-
-This CSS tells the browser to go fetch the font file if it's not available on the system.
+The font is "Helvetica Neue UltraLight", and I've added a fallback of "Roboto". This is a free Google font that should be somewhat similar, for those systems that might not have the font available. The text spans are positioned absolutely, so that both 7s will sit directly on top of each other, and both are set to 512 pixels in size.
 
 With the two 7s placed on top of each other, and the icon in place, it should look a bit like this:
 
