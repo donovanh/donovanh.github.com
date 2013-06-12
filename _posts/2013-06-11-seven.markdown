@@ -71,7 +71,7 @@ This creates the container as a 512 by 512 pixel box and positions it in the mid
 Next, set some properties for the text.
 
     .container span.text {
-        font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Arial, Sans-serif;
+        font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Roboto, Arial, Sans-serif;
         font-size: 512px;
         position: absolute;
         top: 0;
