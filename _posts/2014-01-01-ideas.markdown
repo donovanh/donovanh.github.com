@@ -10,6 +10,8 @@ published: false
 Article: Publishing articles with webkit and CSS
 - css-regions
 
+Let's talk about gradients
+
 Do a thorough look into flexbox (maybe with some 3D also for proper craziness)
 - flexbox and how to fall back to non-supported browsers
 

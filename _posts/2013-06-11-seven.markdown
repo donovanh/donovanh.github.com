@@ -252,6 +252,12 @@ This adjusts the container to be smaller on screens that display fewer than 350 
 
 Check out the [online 7 demo](http://hop.ie/seven) or download the [source from Github](https://github.com/donovanh/seven).
 
+### Update: Lighter version!
+
+[Keith Chu](http://codepen.io/catharsis) has put together a great [lighter version](http://codepen.io/catharsis/pen/pkIdw). It reduces the number of HTML elements and makes use of multiple backgrounds to reduce the amount of CSS. 
+
+I've included the lighter version in the github repo also for reference.
+
 I love feedback. Reach me [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh).
 
 <style type="text/css">
