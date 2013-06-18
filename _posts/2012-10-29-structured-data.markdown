@@ -121,7 +121,7 @@ As this is part of an ongoing improvement to the shop website, I will continue t
 [4]: http://en.wikipedia.org/wiki/Microdata_(HTML)
 [5]: http://www.google.com/shopping
 [6]: http://schema.org/docs/gs.html
-[7]: /B00005KH0Y/
+[7]: http://www.shopireland.ie/dvd/B00005KH0Y/
 [8]: http://schema.org/docs/full.html
 [9]: http://schema.org/Movie
 [10]: http://www.google.com/webmasters
