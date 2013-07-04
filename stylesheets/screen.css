@@ -859,7 +859,7 @@ input {
 }
 
 img.bordered {
-  border: 2px solid #eaeaee;
+  border: 2px solid white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1055,9 +1055,11 @@ section.content, section.footer-content {
   }
 }
 code {
-  background-color: #eaeaee !important;
+  background-color: white !important;
   font-size: 0.8em;
   line-height: 2.25em;
+  line-height: 1.75em;
+  letter-spacing: -1px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;

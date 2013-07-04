@@ -17,9 +17,7 @@ Instead of this I'll make use of the second approach, which is to make use of CS
 
 ## Demo and source code
 
-All the examples mentioned can be found on the [CSS Spheres demo page](/balls/) online, and you can download the [source code on Github](http://github.com/donovanh/balls/).
-
-They are also [on Codepen](http://codepen.io/donovanh).
+All the examples mentioned can be found via [my Codepen account](http://codepen.io/donovanh), or by selecting the "Edit on Codepen" links in each example.
 
 ## Basic shape
 
@@ -236,7 +234,7 @@ We'll need an extra element to contain the 8, as well as some styles to place it
       font-family: Arial;
       font-size: 90px;
       line-height: 104px;
-      -webkit-transform: skewX(10deg) skewY(2deg);
+      -webkit-transform: skewX(8deg) skewY(2deg);
     }
 
 The 100% border radius is again used to create a circle, and this circle is positioned at the top right using the `transform` property. Rather that put the number 8 into the content, I'm using the `before` psuedo-selector to add the content via CSS, and then skewing the number in a similar way to the containing circle.
@@ -388,9 +386,7 @@ With some shading and animation added, a 3D-style globe can be created. Select "
 
 ## Feedback
 
-All the examples mentioned can be found on the [CSS Spheres demo page](/balls/) online, and you can download the [source code on Github](http://github.com/donovanh/balls/).
-
-They can also be found via [my Codepen account](http://codepen.io/donovanh). Many thanks to Chris and the team for making such a fantastic resource.
+All the examples mentioned can be found via [my Codepen account](http://codepen.io/donovanh). Many thanks to Chris and the team for making such a fantastic resource.
 
 If you have any questions about the above, I can be [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh). 
 
