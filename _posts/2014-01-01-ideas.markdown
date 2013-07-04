@@ -21,7 +21,7 @@ Using Airplay devices with HTML (in iOS)
 
 Canvas: The next step in 3D, games etc
 
-Make a book about creating 3D stuff in CSS and publish on iBooks (woo)
+Make a book about creating 3D stuff in CSS and publish on iBooks (woop.ie?)
 
 How to create push notifications for your Safari users
 
