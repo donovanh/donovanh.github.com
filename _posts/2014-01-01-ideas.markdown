@@ -19,11 +19,10 @@ Article: Windows 8 layout using flexbox (new syntax)
 
 Using Airplay devices with HTML (in iOS)
 
+Canvas: Ray tracing using particles
 Canvas: The next step in 3D, games etc
 
 Make a book about creating 3D stuff in CSS and publish on iBooks (woop.ie?)
-
-How to create push notifications for your Safari users
 
 Safari console api for Performance Analysis
 (console.time, console.profile/profileEnd, console.markTimeline)

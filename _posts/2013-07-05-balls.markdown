@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "CSS balls"
-description: "Create great looking spheres using CSS."
+description: "Create great looking spheres using CSS gradients."
 tags: [spheres]
-imageURL: ball.png
+imageURL: eyeball.jpg
 published: true
 ---
 
@@ -17,7 +17,7 @@ Instead of this I'll make use of the second approach, which is to make use of CS
 
 ## Demo and source code
 
-All the examples mentioned can be found via [my Codepen account](http://codepen.io/donovanh), or by selecting the "Edit on Codepen" links in each example.
+All the examples mentioned can be found via [my Codepen account](http://codepen.io/donovanh), or by selecting the "Edit on Codepen" links in each example below.
 
 ## Basic shape
 
@@ -64,7 +64,11 @@ You should get something like this:
 
 <div class="codepen" data-height="400" data-type="result" data-href="zDqAs" data-user="donovanh" data-safe="true"> </div>
 
-The `radial-gradient` property takes a few arguments. The first is the center position for the start of the gradient. Then, the type of shape (circle, or ellipse) is specified. Lastly a series of colours is specified. You can specify more than two colours, but it is then necessary to include a distance with each one so that the gradient knows when to blend each colour into the next. With just two specified, it assumes the first is 0% and the latter is 100%.
+### Radial gradients
+
+The `radial-gradient` property takes a few arguments. The first is the center position for the start of the gradient. Then, the type of shape (circle, or ellipse) is specified. Lastly a series of colours is specified. You can specify more than two colours, but it is then necessary to include a distance with each one so that the gradient knows when to blend each colour into the next.
+
+In this example just two colours are specified. This lets the browser assumes the first is 0% and the latter is 100%, and it draws the gradient between these to colours. If we wanted other steps in the gradient, we could specify distances in pixels or percentages, as you'll see later.
 
 So we have something that looks a bit 3D-ish. It's *ok*, but let's try to make it look a bit nicer.
 
@@ -383,6 +387,12 @@ This flat image was stretched a little at the top and bottom to be used as a bac
 With some shading and animation added, a 3D-style globe can be created. Select "Result" in this Codepen to see it in action. I've set it to display the HTML by default as the performance on this example was pretty slow, causing the fan to kick in on my development laptop.
 
 <div class="codepen" data-height="400" data-type="html" data-href="GBIiv" data-user="donovanh" data-safe="true"> </div>
+
+## Resources
+
+Some [good info about radial gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient) in case you'd like to know more.
+
+Looking for more 3D examples? Check out [Zelda - A link to the CSS](/blog/zelda/) or [Portal CSS](/blog/portal/) for inspiration.
 
 ## Feedback
 
