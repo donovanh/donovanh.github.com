@@ -11,9 +11,11 @@ Recently I've talked about creating [CSS triangles](/blog/zelda/), which used bo
 
 ## Flat design
 
-There are two ways we could approach making spheres with CSS. One is to create an actual 3D sphere using lots of elements. There are some [beautiful](http://codepen.io/peterwestendorp/pen/wGECk) [examples](http://www.cssplay.co.uk/menu/cssplay-3D-sphere.html) of these. One downside though is that these require the browser display many elements, which can impact performance.
+There are two ways we could approach making spheres with CSS.
 
-Instead of this I'll make use of the second approach, which is to make use of CSS gradients to add shading and create the 3D effect on a single plane.
+One is to create an actual 3D sphere using lots of elements. There are some [beautiful](http://codepen.io/peterwestendorp/pen/wGECk) [examples](http://www.cssplay.co.uk/menu/cssplay-3D-sphere.html) of these. A potential downside though is that these require the browser display many elements, which can impact performance. They also tend to look a bit rough as a smooth sphere would require many elements.
+
+Instead of this I'll try a second approach, making use of CSS gradients to add shading and create the 3D effect on a single element.
 
 ## Demo and source code
 
