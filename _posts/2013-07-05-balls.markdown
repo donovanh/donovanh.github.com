@@ -380,7 +380,7 @@ Adding some CSS gradients can create the illusion of depth.
 
 ### Around the world
 
-Animation can also be applied to the position of background images, such as to create a spinning globe.
+Animation can also be applied to the position of background images. Using this we can create a spinning globe.
 
 This flat image was stretched a little at the top and bottom to be used as a background image.
 
