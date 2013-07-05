@@ -76,7 +76,7 @@ So we have something that looks a bit 3D-ish. It's *ok*, but let's try to make i
 
 ## Shadows & 3D
 
-Depending on what sort shading you apply to the surface, you can create different looking spheres. We can use a combination of highlights to make textures. Let's start with a softly lit rubber ball.
+Depending on what sort shading you apply to the surface, you can create different looking spheres. First though lets set up a scene to place the ball in.
 
 The HTML we'll use for this has a couple more elements:
 
