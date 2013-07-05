@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CSS balls"
+title: "CSS Balls"
 description: "Create great looking spheres using CSS gradients."
 tags: [spheres]
 imageURL: eyeball.jpg
