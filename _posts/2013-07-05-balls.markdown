@@ -25,18 +25,19 @@ All the examples mentioned can be found via [my Codepen account](http://codepen.
 
 Before adding details, we'll create the initial circle shape. Begin with the HTML:
 
-    <i class="circle"></i>
+    <figure class="circle"></figure>
 
-We're using an `i` element here, but it could be any element really. Since it's more common to use `em` now, the `i` tag doesn't get used much, so it's safe enough to use in this instance.
+We're using an `figure` element here, but it could be any element. Figure is an element used in HTML5 to represent an image or diagram that is a part of the content that could be removed without affecting the content's meaning.
 
-To create a circle from this `i` element, I'll give it a width and height, and a border radius of 100%:
+To create a circle from this `figure` element, I'll give it a width and height, and a border radius of 50%. Anything over 50% will result in a fully rounded corner.
 
     .circle {
       display: block;
       background: black;
-      border-radius: 100%;
+      border-radius: 50%;
       height: 300px;
       width: 300px;
+      margin: 0;
     }
 
 Hey presto, a wild circle appears.
@@ -54,9 +55,10 @@ We can do this using the following CSS:
     .circle {
       display: block;
       background: black;
-      border-radius: 100%;
+      border-radius: 50%;
       height: 300px;
       width: 300px;
+      margin: 0;
       background: -webkit-radial-gradient(100px 100px, circle, #5cabff, #000);
       background: -moz-radial-gradient(100px 100px, circle, #5cabff, #000);
       background: radial-gradient(100px 100px, circle, #5cabff, #000);
@@ -81,7 +83,7 @@ Depending on what sort shading you apply to the surface, you can create differen
 The HTML we'll use for this has a couple more elements:
 
     <section class="stage">
-      <i class="ball"><span class="shadow"></span></i>
+      <figure class="ball"><span class="shadow"></span></figure>
     </section>
 
 The "ball" element has been given a span which we'll use to create a shadow, and it has been wrapped in a `stage` div. The stage div is useful when we want to set some perspective and position the shadow, making it look more 3D.
@@ -123,7 +125,8 @@ Very rarely in the real world would you find objects lit from just one angle. Su
       display: inline-block;
       width: 100%;
       height: 100%;
-      border-radius: 100%;
+      margin: 0;
+      border-radius: 50%;
       position: relative;
       background: -webkit-radial-gradient(50% 120%, circle cover, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
       );
@@ -135,7 +138,7 @@ Very rarely in the real world would you find objects lit from just one angle. Su
       left: 5%;
       width: 90%;
       height: 90%;
-      border-radius: 100%;
+      border-radius: 50%;
       background: -webkit-radial-gradient(50% 0px, circle, #ffffff, rgba(255, 255, 255, 0) 58%);
       -webkit-filter: blur(5px);
       z-index: 2;
@@ -165,7 +168,8 @@ To achieve this we'll make use of a soft under light as before, but adjust the t
       display: inline-block;
       width: 100%;
       height: 100%;
-      border-radius: 100%;
+      margin: 0;
+      border-radius: 50%;
       position: relative;
       background: -webkit-radial-gradient(50% 120%, circle cover, #323232, #0a0a0a 80%, #000000 100%);
     }
@@ -173,7 +177,7 @@ To achieve this we'll make use of a soft under light as before, but adjust the t
       content: "";
       position: absolute;
       background: -webkit-radial-gradient(50% 120%, circle cover, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
-      border-radius: 100%;
+      border-radius: 50%;
       bottom: 2.5%;
       left: 5%;
       opacity: 0.6;
@@ -189,7 +193,7 @@ To achieve this we'll make use of a soft under light as before, but adjust the t
       position: absolute;
       top: 5%;
       left: 10%;
-      border-radius: 100%;
+      border-radius: 50%;
       background: -webkit-radial-gradient(50% 50%, circle cover, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
       -webkit-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
       -webkit-filter: blur(10px);
@@ -210,10 +214,10 @@ While we're making a pool ball, let's go the extra step and add the number 8.
 We'll need an extra element to contain the 8, as well as some styles to place it on the ball.
 
     <section class="stage">
-      <i class="ball">
+      <figure class="ball">
         <span class="shadow"></span>
         <span class="eight"></span>
-      </i>
+      </figure>
     </section>
 
     .ball .eight {
@@ -221,7 +225,7 @@ We'll need an extra element to contain the 8, as well as some styles to place it
       height: 110px;
       margin: 30%;
       background: white;
-      border-radius: 100%;
+      border-radius: 50%;
       -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
       position: absolute;
     }
@@ -232,7 +236,7 @@ We'll need an extra element to contain the 8, as well as some styles to place it
       text-align: center;
       height: 80px;
       width: 100px;
-      left: 45px;
+      left: 50px;
       margin-left: -40px;
       top: 44px;
       margin-top: -40px;
@@ -240,7 +244,6 @@ We'll need an extra element to contain the 8, as well as some styles to place it
       font-family: Arial;
       font-size: 90px;
       line-height: 104px;
-      -webkit-transform: skewX(8deg) skewY(2deg);
     }
 
 The 100% border radius is again used to create a circle, and this circle is positioned at the top right using the `transform` property. Rather that put the number 8 into the content, I'm using the `before` psuedo-selector to add the content via CSS, and then skewing the number in a similar way to the containing circle.
@@ -256,10 +259,10 @@ One of the great things about CSS transforms is that they can be animated. Using
 First step is to adjust some of the colours use in the 8-ball example. A few tweaks and it's looking a lot more like an eye. First, the HTML:
 
     <section class="stage">
-      <i class="ball">
+      <figure class="ball">
         <span class="shadow"></span>
         <span class="pupil"></span>
-      </i>
+      </figure>
     </section>
 
 The bulk of the CSS is similar to the 8-ball, with the exception of the iris and pupil parts.
@@ -268,7 +271,7 @@ The bulk of the CSS is similar to the 8-ball, with the exception of the iris and
       width: 40%;
       height: 40%;
       margin: 30%;
-      border-radius: 100%;
+      border-radius: 50%;
       background: -webkit-radial-gradient(50% 50%, circle cover, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
       -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
       position: absolute;
@@ -280,7 +283,7 @@ The bulk of the CSS is similar to the 8-ball, with the exception of the iris and
       position: absolute;
       width: 37.5%;
       height: 37.5%;
-      border-radius: 100%;
+      border-radius: 50%;
       top: 31.25%;
       left: 31.25%;
       background: black;
@@ -291,7 +294,7 @@ The bulk of the CSS is similar to the 8-ball, with the exception of the iris and
       position: absolute;
       width: 31.25%;
       height: 31.25%;
-      border-radius: 100%;
+      border-radius: 50%;
       top: 18.75%;
       left: 18.75%;
       background: rgba(255, 255, 255, 0.2);
