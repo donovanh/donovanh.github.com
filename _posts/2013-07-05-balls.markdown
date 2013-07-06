@@ -403,7 +403,7 @@ Looking for more 3D examples? Check out [Zelda - A link to the CSS](/blog/zelda/
 
 All the examples mentioned can be found via [my Codepen account](http://codepen.io/donovanh). Many thanks to Chris and the team for making such a fantastic resource.
 
-If you have any questions about the above, I can be [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh). 
+If you have any questions about the above, get in touch [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh). 
 
 
 <script src="http://codepen.io/assets/embed/ei.js"> </script>
