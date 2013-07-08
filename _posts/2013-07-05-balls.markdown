@@ -261,7 +261,7 @@ First step is to adjust some of the colours use in the 8-ball example. A few twe
     <section class="stage">
       <figure class="ball">
         <span class="shadow"></span>
-        <span class="pupil"></span>
+        <span class="iris"></span>
       </figure>
     </section>
 
