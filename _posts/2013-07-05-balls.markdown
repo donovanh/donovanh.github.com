@@ -391,6 +391,8 @@ This flat image was stretched a little at the top and bottom to be used as a bac
 
 With some shading and animation added, a 3D-style globe can be created. Select "Result" in this Codepen to see it in action. I've set it to display the HTML by default as the performance on this example was pretty slow, causing the fan to kick in on my development laptop.
 
+Note: Many thanks to Sidoruk Sergey ‏[@Sidoruk_SV](http://twitter.com/Sidoruk_SV) for upgrading this globe. It's looking great.
+
 <div class="codepen" data-height="400" data-type="html" data-href="GBIiv" data-user="donovanh" data-safe="true"> </div>
 
 ## Resources
