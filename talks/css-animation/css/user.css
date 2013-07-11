@@ -565,7 +565,9 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: url(/talks/css-animation/images/telefonica.jpg) no-repeat;
+  background: url(../images/swrve.jpeg) no-repeat;
+  background-size: auto 120%;
+  background-position: -320px 0;
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   -ms-border-radius: 35px;
@@ -589,26 +591,18 @@
   -moz-box-shadow: 0 0 20px #6f7e85;
   box-shadow: 0 0 20px #6f7e85;
 }
-/* line 369, ../sass/user.sass */
+/* line 371, ../sass/user.sass */
 .card .front h3 {
   color: white;
   padding-top: 80px;
   font-size: 72px;
   text-shadow: 0 -1px #3b4c54;
 }
-/* line 375, ../sass/user.sass */
-.card.two .front {
-  background-position: -280px 0;
-}
-/* line 378, ../sass/user.sass */
-.card.three .front {
-  background-position: -560px 0;
-}
-/* line 381, ../sass/user.sass */
+/* line 377, ../sass/user.sass */
 .card .back {
   width: 100%;
   height: 100%;
-  background: #2b4546 url(/talks/css-animation/images/escheresque_ste.png);
+  background: #2b4546 url(../images/escheresque_ste.png);
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   -ms-border-radius: 35px;
@@ -637,14 +631,14 @@
   -moz-box-shadow: 0 0 20px #6f7e85;
   box-shadow: 0 0 20px #6f7e85;
 }
-/* line 392, ../sass/user.sass */
+/* line 388, ../sass/user.sass */
 .card .back h3 {
   color: white;
   padding-top: 80px;
   font-size: 120px;
   text-shadow: 0 -1px #3b4c54;
 }
-/* line 398, ../sass/user.sass */
+/* line 394, ../sass/user.sass */
 .card:hover {
   -webkit-transform: translate(0, -20px) scale(1);
   -moz-transform: translate(0, -20px) scale(1);
@@ -652,7 +646,7 @@
   -o-transform: translate(0, -20px) scale(1);
   transform: translate(0, -20px) scale(1);
 }
-/* line 401, ../sass/user.sass */
+/* line 397, ../sass/user.sass */
 .card:hover .front {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -660,7 +654,7 @@
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 404, ../sass/user.sass */
+/* line 400, ../sass/user.sass */
 .card:hover .back {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);

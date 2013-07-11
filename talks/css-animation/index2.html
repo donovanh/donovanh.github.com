@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>CSS Animation</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/user.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h3>DOING CRAZY STUFF WITH</h3>
+          <h1>CSS ANIMATIONS</h1>
+          <p>This talk: <a href="http://hop.ie/talks/css-animation">hop.ie/go/css</a></p>
+        </section>
+
+        <section>
+          <h1>About me</h1>
+          <div class="half" style="width: 40%">
+            <img src="https://secure.gravatar.com/avatar/1a6020189d9fe61133b965ca7a4a78b7?s=200" />
+          </div>
+          <div class="half" style="text-align: left">
+            <h2 style="font-size: 32px;padding-top:20px; font-weight: bold">Donovan Hutchinson</h2>
+            <p>Twitter: <a href="http://twitter.com">@donovanh</a></p>
+            <p>Blog: <a href="http://hop.ie">hop.ie</a></p>
+            <p>Email: <a href="mailto:d@hop.ie">d@hop.ie</a></p>
+          </div>
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <h1>Animation</h1>
+            <ul>
+              <li>Conveying information</li>
+              <li>Adding character / branding</li>
+              <li>Affording interaction</li>
+              <li>Implementing with CSS</li>
+            </ul>
+          <aside class="notes">
+             How can animation help achieve these goals. More than simply making things shinier.
+          </aside>
+        </section>
+
+        <section>
+          <h1>CSS</h1>
+            <ul>
+              <li>Visual layouts</li>
+              <li>Incomplete browser support</li>
+              <li>New features:</li>
+              <ul>
+                <li>Transitions, Keyframes, Canvas and more</li>
+              </ul>
+            </ul>
+          <aside class="notes">
+             
+          </aside>
+        </section>
+
+        <section>
+          <h1>JavaScript</h1>
+            <ul>
+              <li>Functionality</li>
+              <li>Good browser support</li>
+              <li>Frameworks</li>
+            </ul>
+          <aside class="notes">
+             
+          </aside>
+        </section>
+
+        <section>
+          <h1>JavaScript example</h1>
+            <div class="half left">
+              <div id="js-button">Hover me</div>
+              <pre><code>$('#js-button').hover(
+function(e) {
+  $(e.target).animate({
+      padding: '30px 50px',
+      backgroundColor: 'red'
+    }, 500);
+},
+function(e) {
+  $(e.target).animate({
+    padding: '12px 20px',
+    backgroundColor: 'green'
+  }, 500);
+});
+              </code></pre>
+            </div>
+            <div class="half right">
+              <div id="accordion">
+                <h3>Section 1</h3>
+                <div>
+                  <p>
+                    Boop!
+                  </p>
+                </div>
+                <h3>Section 2</h3>
+                <div>
+                  <p>
+                    Beep!
+                  </p>
+                </div>
+              </div>
+              <pre><code>
+$("#accordion").accordion();
+              </code></pre>
+            </div>
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+        <section>
+          <h1>CSS example</h1>
+          <div class="half left">
+            <div id="css-button">Hover me</div>
+            <pre><code>#css-button {
+  background-color: green;
+  padding: 12px 20px;
+  transition: all 500ms;
+}
+
+#css-button:hover {
+  background-color: red;
+  padding: 30px 50px;
+  transition: all 500ms;
+}
+</code></pre>          </div>
+          <div class="half right" id="css-accordion">
+            <div class="item">
+              <h3>Section 1</h3>
+              <div class="content">
+                <p>
+                  Boop!
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Section 2</h3>
+              <div class="content">
+                <p>
+                  Beep!
+                </p>
+              </div>
+            </div>
+<pre><code>#css-accordion div.content {
+  height: 0;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+#css-accordion .item.active div.content {
+  height: 60px;
+  opacity: 1;
+  transition: all 500ms;
+}
+</code></pre>
+          </div>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+        <section>
+          <h1>Transitions</h1>
+          <img src="images/atob.png" style="border: none; box-shadow: none; background: none !important" />
+          <aside class="notes">
+            Transitions are in themselves quite straightforward. By adding a line of SASS, or a few lines of vendor-prefixed CSS, you tell the browser to calculate the difference between two states and fill in the various key frames in between.
+
+            When I say different states, this could be a hover state, or it could be the addition or removal of a class using JavaScript. A CSS transition can take place on a specific aspect of the object, such as it's colour, border radius, padding or size. It can also be used to simply transition everything at once by specifying "all".
+          </aside>
+        </section>
+
+        <section>
+          <h1>Multiple transitions</h1>
+            <div class="half">
+              <p>No transitions</p>
+              <div class="download-button no-transition">
+                <span class="container beer">
+                  <img src="./images/beer.png">
+                  <span class="text">Beer O'Clock *</span>
+                </span>
+                <span class="container what">
+                  <img src="./images/clock.png">
+                   <span class="text">What time is it?</span>
+                </span>
+              </div>
+              <p class="disclaimer">&nbsp;</p>
+<pre><code>* no transitions
+</code></pre>
+            </div>
+            <div class="half">
+              <p>Transitions</p>
+              <div class="download-button transition">
+                <span class="container beer">
+                  <img src="./images/beer.png">
+                  <span class="text">Beer O'Clock *</span>
+                </span>
+                <span class="container what">
+                  <img src="./images/clock.png">
+                   <span class="text">What time is it?</span>
+                </span>
+              </div>
+              <p class="disclaimer">* not yet... soon</p>
+<pre><code>.download-button.transition
+  @include transition(all, 500ms)
+  span
+    &.container
+      img
+        @include transition(all, 500ms)
+    .text
+      @include transition(all, 500ms)
+    &.beer img
+      @include transition(all, 500ms)
+</code></pre>
+            </div>
+          <aside class="notes">
+  
+          </aside>
+        </section>
+
+        <section>
+          <h1>Transitions</h1>
+          <ul>
+            <li>Various CSS styles:</li>
+            <ul>
+              <li>Shape / size / colour</li>
+              <li>Translate3D / Opacity</li>
+            </ul>
+            <li>Easing</li>
+          </ul> 
+        </section>
+
+        <section data-state="clear-comparison">
+          <section data-state="clear-comparison">
+            <h1>3D Transitions</h1>
+            <div class="cards" style="clear: both">
+              <div class="card one">
+                <div class="front"></div>
+                <div class="back"><h3>C</h3></div>
+              </div>
+              <div class="card two">
+                <div class="front"></div>
+                <div class="back"><h3>S</h3></div>
+              </div>
+              <div class="card three">
+                <div class="front"></div>
+                <div class="back"><h3>S</h3></div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="half">
+              <h1>HTML<br /><br /></h1>
+<pre style="font-size:18px"><code>&lt;div class=&quot;cards&quot; style=&quot;clear: both&quot;&gt;
+  &lt;div class=&quot;card one&quot;&gt;
+    &lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;back&quot;&gt;&lt;h3&gt;C&lt;/h3&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card two&quot;&gt;
+    &lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;back&quot;&gt;&lt;h3&gt;S&lt;/h3&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card three&quot;&gt;
+    &lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;back&quot;&gt;&lt;h3&gt;S&lt;/h3&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div class="half">
+              <h1>SASS (+ Compass)</h1>
+<pre style="font-size: 18px"><code>.card
+  width: 260px
+  height: 340px
+  margin: 0 20px 0 !important
+  float: left
+  position: relative
+  @include perspective(800px)
+  color: #fff
+  text-align: center
+  @include transform(translate(0, 0) scale(0.8))
+  @include transition(all 500ms ease-in-out)
+  
+  .front
+    width: 100%
+    height: 100%
+    position: absolute
+    background: url(images/swrve.jpeg) no-repeat
+    @include border-radius(35px)
+    @include transition(all 500ms ease-in-out)
+    @include transform-style(preserve-3d)
+    @include backface-visibility(hidden)
+    @include box-shadow(0 0 20px #6f7e85)
+
+    h3
+      color: #fff
+      padding-top: 80px
+      font-size: 72px
+      @include text-shadow(0 -1px #3b4c54)
+
+  &.two .front
+    background-position: -280px 0
+
+  &.three .front
+    background-position: -560px 0
+
+  .back
+    width: 100%
+    height: 100%
+    background: #2b4546 url(images/escheresque_ste.png)
+    @include border-radius(35px)
+    @include transition(all 500ms ease-in-out)
+    @include transform-style(preserve-3d)
+    @include transform(rotateY(180deg))
+    @include backface-visibility(hidden)
+    @include box-shadow(0 0 20px #6f7e85)
+
+    h3
+      color: #fff
+      padding-top: 80px
+      font-size: 120px
+      @include text-shadow(0 -1px #3b4c54)
+
+  &:hover
+    @include transform(translate(0, -20px) scale(1))
+
+    .front
+      @include transform(rotateY(180deg))
+
+    .back
+      @include transform(rotateY(360deg))
+      @include box-shadow(10px 20px 30px #6f7e85)
+
+</code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h1>Keyframes</h1>
+          <img src="images/atod.png" style="border: none; box-shadow: none; background: none !important" />
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>Character</h1>
+          <div class="half" style="width:22%">
+            &nbsp;
+            <div class="bouncer-container">
+              <span class="bouncer">
+                <span class="ear1"></span>
+                <span class="ear2"></span>
+                <span class="eye1"></span>
+                <span class="eye2"></span>
+                <span class="mouth"></span>
+              </span>
+              <span class="shadow"></span>
+            </div>
+          </div>
+          <div class="half" style="width:78%">
+<pre><code>@keyframes move-bouncer {
+  0% {
+    height: 80px;
+    border-radius: 50px / 40px;
+    top: 100px;
+  }
+  44%, 60% {
+    top: 0;
+    height: 120px;
+    border-radius: 50px / 60px;
+  }
+  100% {
+    height: 80px;
+    border-radius: 50px / 40px;
+    top: 100px;
+  }
+}
+            </code></pre>
+          </div>
+          <aside class="notes">
+            Physical objects move and react in predictable ways. We can tap into these learned associations by creating content that emulates some of these ideas. It stimulates our imagination and gives extra depth and character to what would otherwise be static and less interesting.
+            The example here is the logo from hop.ie. It's created entirely in HTML and CSS. The animation is handled by a set of keyframes, shown here. 
+          </aside>
+        </section>
+
+        <section data-state="comparison">
+          <h1>Performance</h1>
+            <div class="half">
+              <div class="js-example">
+                <div class="one">D</div>
+                <div class="two">U</div>
+                <div class="three">B</div>
+                <div class="four">L</div>
+                <div class="five">I</div>
+                <div class="six">N</div>
+                <div class="seven style2">J</div>
+                <div class="eight style2">S</div>
+              </div>
+              <h2 style="padding-top: 200px">JS</h2>
+            </div>
+            <div class="half">
+              <div class="css-example">
+                <div class="one">D</div>
+                <div class="two">U</div>
+                <div class="three">B</div>
+                <div class="four">L</div>
+                <div class="five">I</div>
+                <div class="six">N</div>
+                <div class="seven style2">J</div>
+                <div class="eight style2">S</div>
+              </div>
+              <h2 style="padding-top: 200px">CSS</h2>
+            </div>
+          <aside class="notes">
+            Show two moving items, one with JS and one with CSS. Load it up until difference is obvious.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Example</h1>
+          <h2>PORTAL CSS</h2>
+          <p><a href="http://hop.ie/portal">http://hop.ie/portal</a>
+
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>CSS offers:</h1>
+          <ul>
+            <li>Hardware acceleration</li>
+            <li>Built in functionality: Transitions / Keyframes</li>
+            <li>Better separation of display and function code</li>
+          </ul>
+          <aside class="notes">
+            It's possible to do all sorts of careful DOM manipulation with JS, but the main argument for moving the animations and transitions layer to CSS is that it's closer to the hardware. CSS is able to make use of hardware acceleration, and can result in smoother transitions on smaller devices such as phones. As well as this, CSS has been introducing several powerful tools to manupulate how things move and transition on screen.
+
+            I'm not advocating ditching JS in favour of CSS only. JavaScript does things CSS cannot, such as attaching event listeners. These work well when used to add or remove classes from page elements, and use CSS to handle the visual changes.
+          </aside>
+        </section>
+
+        <section data-state="clear-comparison">
+          <h1>SASS / Less / Stylus</h1>
+          <div class="half" style="width: 33%">
+            A button
+            <div class="example-button">
+              <p>Nearly there</p>
+            </div>
+          </div>
+          <div class="half" style="width:33%">
+            SASS
+<pre><code>display: block
+  width: 250px
+  margin: 0 auto
+  color: #fff
+  background-color: #9f8
+  @include background(linear-gradient(#9f8, #5a6))
+  border: 10px solid #ccffcc
+  @include border-radius(30px)
+  padding: 20px
+</code></pre>
+          </div>
+          <div class="half" style="width:33%">
+            CSS
+<pre><code>display: block;
+  width: 250px;
+  margin: 0 auto;
+  color: white;
+  background-color: #99ff88;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99ff88), color-stop(100%, #55aa66));
+  background: -webkit-linear-gradient(#99ff88, #55aa66);
+  background: -moz-linear-gradient(#99ff88, #55aa66);
+  background: -o-linear-gradient(#99ff88, #55aa66);
+  background: linear-gradient(#99ff88, #55aa66);
+  border: 10px solid #ccffcc;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  padding: 20px;
+</code></pre>
+          </div>
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <h1>Compatibility</h1>
+            <ul>
+              <li>Support is improving!</li>
+              <li>Use prefixes</li>
+              <li>For everything else, there's Modernizr</li>
+            </ul>
+          <aside class="notes">
+            The hopper logo I used on hop.ie is currently broken in many browsers. Opera, Firefox and Safari have their own quirks, but the biggest one to be aware of is any version of Internet Explorer prior to v9 or so. Rather than detect browser vendor and present different content, I'm using modernizr to detect the browser's capability. When the page loads, the Modernizr JS detects whether the browser can support animation, and adds a class to the head of the document. The CSS then shows the animated area if this class is available, otherwise it uses a background PNG.
+            
+            It's important to keep fallbacks in mind when using CSS transitions. It's often a judgement call though. When animation is used to provide, like in the hopper example, entertainment value only, then it's not such a big deal if it doesn't work in older browsers. However if you're using animation to draw attention to elements or provide usability benefits, it might be worth looking into using some better supported CSS properties as a fallback.
+
+            On an optimistic note though, Chrome has just dropped the "-webkit-transitions" prefix! Support is improving and will continue to do so. When the likes of Chrome drop their prefix, it's a sign that the property is considered stable.
+            
+            Depending on your audience, transitions might be perfectly good to use. However there will always be larger organisations, or in some cases geographical requirements that impact whether you'll want to rely on a modern CSS3 technique, but as front end engineers that's an ongoing consideration. Over the next few years we'll see less of IE8 and the likes, but we'll also need to be aware of how people use phones on mobile devices. But that's another talk.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Summary</h1>
+          <ul>
+            <li>Smoother animations</li>
+            <li>Less visual code in your JS</li>
+            <li>CSS getting more feature-rich</li>
+            <li>Crazy fun!</li>
+          </ul>
+          <aside class="notes">
+            CSS transitions and animations are smooth, backed up by hardware support, and contain a growing set of features that make them useful across wider applications. Plus, maybe it's just me but I feel better moving display concerns such as transitions and on-screen movement into the CSS. It feels like the right place.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Further reading</h1>
+          <ul>
+            <li><a href="http://www.ui-transitions.com">UI Transitions</a></li>
+            <li><a href="http://docs.webplatform.org/wiki/tutorials/css_transforms">CSS Transforms tutorial</a></li>
+            <li><a href="http://www.lukew.com/ff/entry.asp?1354">LukeW Notes on CSS3 Animations</a></li>
+            <li><a href="http://www.lynda.com/CSS-tutorials/CSS-Animations/115434-2.html">Lynda.com CSS Animations course</a></li>
+            <li><a href="http://www.kirupa.com/html5/introduction_to_animation_html.htm">Intro to CSS Animation</a></li>
+            <li><a href="http://coding.smashingmagazine.com/2012/06/21/powerful-new-cssjavascript-techniques/">Smashing Magazine CSS Examples</a></li>
+            <li><a href="http://www.creativebloq.com/web-design-tips/examples-of-html5-1233547">Creative Bloq 55 examples of HTML5</a></li>
+          </ul>
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+        <section>
+          <h1>THANKS</h1>
+          <ul>
+            <li>Twitter: donovanh</li>
+            <li>Blog: hop.ie</li>
+            <li>This talk: <a href="http://hop.ie/go/css">hop.ie/go/css</a></li>
+          </ul>
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+
+ 
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/user.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: 'sky', // available themes are in /css/theme
+        transition: 'cube',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

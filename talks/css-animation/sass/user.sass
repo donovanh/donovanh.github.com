@@ -359,7 +359,9 @@
     width: 100%
     height: 100%
     position: absolute
-    background: url(/talks/css-animation/images/telefonica.jpg) no-repeat
+    background: url(../images/swrve.jpeg) no-repeat
+    background-size: auto 120%
+    background-position: -320px 0
     @include border-radius(35px)
     @include transition(all 500ms ease-in-out)
     @include transform-style(preserve-3d)
@@ -372,16 +374,10 @@
       font-size: 72px
       @include text-shadow(0 -1px #3b4c54)
 
-  &.two .front
-    background-position: -280px 0
-
-  &.three .front
-    background-position: -560px 0
-
   .back
     width: 100%
     height: 100%
-    background: #2b4546 url(/talks/css-animation/images/escheresque_ste.png)
+    background: #2b4546 url(../images/escheresque_ste.png)
     @include border-radius(35px)
     @include transition(all 500ms ease-in-out)
     @include transform-style(preserve-3d)
