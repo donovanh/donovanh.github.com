@@ -7,15 +7,24 @@ imageURL:
 published: false
 ---
 
+ShopIreland Ideas:
+- Games
+-- Magnifying glass blurry image overlay - guess the artist / celebrity
+-- Random item one-armed bandit (with occasional prizes?)
+-- 3D effects on text / buttons / images on products
+-- "Mystery" item option in shopping cart - "Add a MYSTERY item? (quote Forrest Gump perhaps)"
+
 Article: Publishing articles with webkit and CSS
 - css-regions
 
-Let's talk about gradients
+Tridiv - An easy way to make complex 3D objects with CSS
+
+All about gradients
 
 Do a thorough look into flexbox (maybe with some 3D also for proper craziness)
 - flexbox and how to fall back to non-supported browsers
 
-Article: Windows 8 layout using flexbox (new syntax)
+GamesMaster: Using HTML with built-in camera, 3D transforms and transparent image overlays
 
 Using Airplay devices with HTML (in iOS)
 
