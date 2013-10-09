@@ -19,7 +19,7 @@ The Quacker site is admittedly a bit of a [MacGuffin][3], but I'm quite happy wi
 
 [Sinatra][4] is a beautifully light Ruby based framework for quickly building light web applications. I'd been introduced to it by the excellent [@stevebiscuit][5] last year. This was the first time I'd really taken a good look at it, and I'm glad I did.
 
-###As simple as 1,2,3,4
+### As simple as 1,2,3,4
 
 Moving from front-end code into the back-end coding can be a bit of a mental jump, but with Sinatra, it's pretty easy. It works by describing URLs and then actions that take place at that URL. For example, a home page can be served up by defining a GET request, but login action can be associated with POST requests to the same URL. A great introduction can be [found here][6].
 
@@ -27,7 +27,7 @@ One of the benefits of this light, fast framework is the availability of Ruby ge
 
 A complete list of dependencies can be found in my [Gemfile][10].
 
-##HAML & SASS
+## HAML & SASS
 
 I'll admit that when I first started using [HAML][7] I was confused by it's use of significant whitespace but it's grown on me. I am now much faster (and happier) putting together HTML layouts using HAML. If you're in the business of churning out reams of HTML layout code, take the time to check this one out.
 
@@ -35,7 +35,7 @@ I'll admit that when I first started using [HAML][7] I was confused by it's use 
 
 [Compass][11] is a framework that gives you tools to generate CSS that does a lot, while having to write very little code. Variables, mixins, and the ability to reuse classes make it a must-have when starting any web projects. The end result is well-optimised CSS that can be set to be generated as a compressed single file, perfect for deployment.
 
-The documentation can be a little confusing at times but there are plenty of great examples. I would recommend getting a small local project instantiated using Compass and play around with how it works. One tip that has saved me a load of time: Set up a <code>_base</code> file to store all your variables and requires.
+The documentation can be a little confusing at times but there are plenty of great examples. I would recommend getting a small local project instantiated using Compass and play around with how it works. One tip that has saved me a load of time: Set up a `base` file to store all your variables and requires.
 
 ##Hosting with Heroku
 

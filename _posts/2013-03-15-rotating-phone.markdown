@@ -78,6 +78,7 @@ As shown above, the effects can be chained. It's important to keep in mind that 
     transform: translateX(50px) translateY(50px) rotateY(45deg)
 
 The above would <code>translate</code> the object along the X axis 100 pixels, then translate it along the Y axis 100 pixels, then rotate it 45 degrees. It should look something like this:
+
 <style>
 .rotate-container {
     width: 200px;

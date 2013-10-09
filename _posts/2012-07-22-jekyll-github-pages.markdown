@@ -51,7 +51,7 @@ In the meantime if you'd like to poke at the code behind this site, it's [on Git
 
  [1]: http://jekyllrb.com/
  [2]: http://pages.github.com
- [3]: https://github.com/mojombo/jekyll/wiki/install
+ [3]: http://jekyllrb.com/docs/installation/
  [4]: https://github.com/plusjade/jekyll-bootstrap
  [5]: https://github.com/maciakl/Sample-Jekyll-Site
  [6]: https://github.com/donovanh/donovanh.github.com
