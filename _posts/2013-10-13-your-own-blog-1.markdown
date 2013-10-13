@@ -1,36 +1,37 @@
 ---
 layout: post
-title: "A blog in a day"
+title: "Your own blog - Part one"
 description: "Design, build and deploy your own blog in less than a day's work."
 tags: [development]
-imageURL: shopirelandnews.jpg
+imageURL: blog_part1.jpg
 published: true
 ---
 
-There are many services that provide you with your own blog, there's a lot to be learned from designing and building your own. In this post I show you how to create your own self-hosted blog.
+There are many services that provide you with a blog, with the price being that they get to store and make use of your content. For those of us that prefer to run our own sites and keep the content under our own control, setting up our own blog is a better option.
 
-One of my side projects is the Irish shopping website [Shop Ireland](http://www.shopireland.ie). It's been a little neglected lately so I thought I'd add something new to the site, and give it more of a voice.
+There's also a lot to be learned from designing and building your own. In this series I'll cover setting up, customising your layout and publishing your own blog.
 
-The result is the [Shop Ireland News](http://blog.shopireland.ie).
+## Case study
+
+One of my side projects is the Irish shopping website [Shop Ireland](http://www.shopireland.ie). It's been a little neglected lately so I thought I'd add something new to the site, and give it more of a voice. The result is the [Shop Ireland News](http://blog.shopireland.ie).
+
+It will be acting as a case study, and you can [download the blog's source code](https://github.com/donovanh/shopblog) from Github. Feel free to use it as a basis for your own work if you wish. A link back is always appreciated but not required.
 
 ## Table of Contents
 
+- [Planning](#planning)
 - [Choosing a platform](#choosing_a_platform)
 - [Introducing Jekyll](#introducing_jekyll)
 - [Setting up your development environment](#setting_up_your_development_environment)
 - [Creating layouts](#creating_layouts)
-- [CSS using SASS](#css_using_sass)
-- [Responsiveness](#responsiveness)
-- [Pagination](#pagination)
-- [Icons](#icons)
-- [404 Page](#404_page)
 - [Creating a blog post](#creating_a_blog_post)
-- [Social media & sharing](#social_media_&_sharing)
-- [Going live](#going_live)
+- [Creating standalone pages](#creating_standalone_pages)
+- [CSS using SASS](#css_using_sass)
+- [Building on a framework](#building_on_a_framework)
 
 ## Planning
 
-I'm not one for intricate plans. In this case I made a list of what I'd need in a blog. I'll not enumerate everything but basically it had to have a list of posts, individual posts pages, comments and a way for people to share the posts.
+What I wanted from the blog was quite simple, and would be something I hope to expand upon as time goes on. The basic blog would need to have a list of posts, individual posts pages, comments, and a way for people to share the posts.
 
 At the same time I didn't want to spend a lot of time setting up or managing the blog, so it needed to be low maintenance. 
 
@@ -46,11 +47,11 @@ An interesting Jekyll-based alternative is [Octopress](http://octopress.org/). I
 
 Jekyll is a Ruby gem that acts as a local web server on your computer. It's "blog aware", meaning it is by default set up to help generate a blog, and it works by generating a set of static HTML files which can then be hosted anywhere.
 
-It's also supported [by Github](https://help.github.com/articles/using-jekyll-with-pages), meaning that if you're familiar with pushing code to Github, you can push your Jekyll site and have it hosted there.
+It's also supported [by Github](https://help.github.com/articles/using-jekyll-with-pages). If you can push code to Github, you can push your Jekyll site and have it hosted there.
 
 ## Setting up your development environment
 
-Before starting working on the blog, some setup is needed. First, install Jekyll. Full [install instructions](http://jekyllrb.com/docs/installation/) cover the basics, and if you're using Windows, you can [do it this way](http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html).
+The first step is to install Jekyll. Full [install instructions](http://jekyllrb.com/docs/installation/) cover the basics, and if you're using Windows, you can [do it this way](http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html).
 
 With Jekyll in place, you need some starting template to run Jekyll against. I'm a fan of [Necolas's Jekyll boilerplate](https://github.com/necolas/jekyll-boilerplate) but you can also download [my Shop Ireland blog source code](https://github.com/donovanh/shopblog) if you prefer. Download it by running this in a terminal:
 
@@ -69,7 +70,7 @@ This will navigate into your folder and tell Jekyll to run a server. Go to [loca
 
 Within your blog directory you should find a "_layouts" folder. Within it should be `default.html` and `post.html` files. These are the layout files that are used to contain the content of your site.
 
-### Liquid templating
+### Liquid markup
 
 Jekyll makes use of [Liquid markup](http://liquidmarkup.org/) for templates. This is a basic but handy way of adding some logic to the layout files, and allows us to create loops that generate the static HTML files.
 
@@ -83,29 +84,57 @@ Within it, you should find a `{% raw  %}{{ content }}{% endraw %}` marker. This 
 
 In this case, a page can set it's own `title` value, and it can be accessed within the template within the `page` object.
 
-### Posts layout
+### Posts template
 
-When you're happy with the general overall layout, the `post.html` file contains the HTML used by the individual blog post pages. The content from this file is automatically inserted into the `{% raw  %}{{ content }}{% endraw %}` part of the `default.html` layout file.
+With a content container in place, the nest step is to set up the blog post template. The `post.html` file contains the HTML used by the individual blog post pages. The content from this file is automatically inserted into the `{% raw  %}{{ content }}{% endraw %}` part of the `default.html` layout file.
 
 At the top of this `post.html` file you'll find some text:
 
-    ---
+    \---
     layout: default
-    ---
+    \---
 
 This part of the file is used by Jekyll, and it's where you can set any values to be used in the templates. In this case, it's defining the "layout" to be "default". This tells Jekyll to process the file using the `default.html` layout file. If you have other layout files, changing the name here will direct Jekyll to use that file.
 
-### Standalone pages
+## Creating a blog post
+
+Jekyll's blog posts are all stored in the `_posts` folder. Creating a new blog post means creating a new markdown file within this folder, and the name of the file dictates both when it will be published as well as the URL (slug) of the post.
+
+One advantage of this is that all your blog posts are stored in text files in one place, and not in a database somewhere. They can be easy to back up, and some interesting workflows can be set up including publishing via Dropbox.
+
+To see how the posts are created, start by making a new file in the `_posts` folder:
+
+    2013-08-27-my-great-post.markdown
+
+This post is consider to have been published on 27th August, 2013, and the URL is be something like `yourblog.com/my-great-post` (depending on the `permalink` value in your \_config.yml file).
+
+With this set up, you can add in some more information by setting some YAML at the top of your blog post:
+
+    \---
+    layout: post
+    title: "Your blog post title"
+    description: "A description of your post"
+    tags: [multiple,tags]
+    published: true
+    \---
+
+This stuff tells Jekyll to use the `post.html` layout template and sets some useful meta-data for your blog post. With that in place you can begin writing your post.
+
+### Markdown
+
+Markdown is a neat [text-to-HTML conversion tool](http://daringfireball.net/projects/markdown/), and is a popular way to write content without all the usual tags and HTML cruft. The result is quite readible and a lot faster to write than writing straight HTML. Lots of examples can be found on the documentation, and you can see it in action by browsing the [hop.ie posts](https://github.com/donovanh/donovanh.github.com/tree/master/_posts) directory of this very blog.
+
+## Creating standalone pages
 
 You can create standalone pages for your site by creating HTML files. If you include the settings text at the top, Jekyll will automatically take the contents of your HTML file and insert into the right template. To show this, open the `index.html` file. 
 
 This file is the home page for the blog, so contains a loop of all the site's posts. It could be any HTML content we wish. Note the settings at the top:
 
-    ---
+    \---
     layout: default
     title: Shop Ireland News
     bodyTag: home
-    ---
+    \---
 
 This tells Jekyll to use the default.html file for layout, and show the title as [Shop Ireland News](http://blog.shopireland.ie).
 
@@ -127,21 +156,38 @@ Running Compass is then as simple as running a command on your project folder:
 
 There are lots of ways of handling CSS pre-processing, so do feel free to try others and find what suits you best.
 
-## Responsiveness
+## Building on a framework
 
-## Pagination
+When building the blog, I needed to get a layout together that would be responsive and easy to extend. With a limited amount of time available, the best course was to use a CSS framework.
 
-## Icons
+There are [loads of CSS frameworks](http://mashable.com/2013/04/26/css-boilerplates-frameworks/) to choose from. I briefly tried a few but ended up settling on [Bootstrap](http://getbootstrap.com). It's a popular framework built by Twitter, and very popular. Since I'm using SASS to manage my CSS, I chose to use a [Bootstrap SASS](https://github.com/thomas-mcdonald/bootstrap-sass).
 
-## 404 page
+Looking in the `sass/vendor` folder, you'll find the `bootstrap.scss` file. This file is imported by the `_base.sass` file to bring in the various Bootstrap tools. 
 
-## Creating a blog post§
+Along with defining sensible default styling, Bootstrap brings a grid-based layout system that is also responsive. When setting up the blg, I made use of this grid structure to define the columns:
 
-## Social media & sharing (setting up twitter, facebook, etc)
+    <div class="container">
+      <section class="row">
+        <section class="col-md-8">
+          ...
+        </section>
+        <aside class="col-md-4">
+          ...
+        </aside>
+      </section>
+    </div>
 
-## Analytics
+Bootstrap's column system provides 12 "columns". In this example, I'm setting up a `section` that is 8 columns wide, and followed by a 4-column wide `aside`. The `row` container ensures that the two elements sit side by side and any further content is placed beneath.
 
-## Going live (inc alternatives to Github)
+The [Getting Started](http://getbootstrap.com/getting-started/) guide is a great place to learn more about what Bootstrap provides.
+
+## Coming up in Part two
+
+If you've been following along, you should have a locally running basic blog. It should have a home page showing a list of blog posts which can be selected and read.
+
+In part two I will cover setting up pagination on the home page, how to create custom icons, adding some discussion options and social sharing, and finally deploy the finished blog.
+
+You should follow me on Twitter [here](http://twitter.com/donovanh) for an alert on the next part!
 
 
 
