@@ -4,7 +4,7 @@ title: "Your own blog - Part one"
 description: "Design, build and deploy your own blog in less than a day's work."
 tags: [development]
 imageURL: blog_part1.jpg
-published: true
+published: false
 ---
 
 There are many services that provide you with a blog, with the price being that they get to store and make use of your content. For those of us that prefer to run our own sites and keep the content under our own control, setting up our own blog is a better option.
