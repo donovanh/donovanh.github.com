@@ -62,6 +62,12 @@ Within this loop you can access any of the posts settings using the `post.value`
 
 ## Comments
 
+Blogging platforms like [Wordpress](http://wordpress.org) ship with comments systems built in. Since the blog we're working with is made up of static HTML pages, we don't have the option. However there are some great JavaScript-based services.
+
+A popular solution is [Disqus](http://disqus.com/). It's easy to set up, includes full comment administration tools, and best of all, free. 
+
+To get started select "Add Disqus to Your Site", and register your site. When you've completed setup you'll be given a JavaScript snippet. Place it in the `posts.html` layout template, where you'd like the comments to appear, and you're done.
+
 ## Icons
 
 With the page content in place for a blog home page, individual blog pages, and on-page styling, it's time to turn our attention to some of the small details that show you really care. Let's make an icon to appear in people's bookmarks and at the top of the browser, the favicon.
