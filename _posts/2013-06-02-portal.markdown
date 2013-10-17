@@ -241,7 +241,7 @@ The HTML needed for the two portals is simple enough:
     <div class="portal red"></div>
     <div class="portal blue"></div>
 
-There is a `div` for each of the two portals, one red and the other blue. They both have a similar style, with gradients used to create glowing effect. Since they are only one HTML element, the CSS includes a pseudo-selector we can style to achieve the full effect.
+There is a `div` for each of the two portals, one red and the other blue. They both have a similar style, with gradients used to create glowing effect. Since they are only one HTML element, the CSS includes a pseudo-element we can style to achieve the full effect.
 
 The first step is to establish the general portal shape:
 
@@ -253,7 +253,7 @@ The first step is to establish the general portal shape:
         box-shadow: 0 0 15px 4px white;
     }
 
-This sets up the portal and uses the `border-radius` property to create an oval shape, and a white box shadow creates a glow. A pseudo-selector is then added that has similar dimensions, and the white border: 
+This sets up the portal and uses the `border-radius` property to create an oval shape, and a white box shadow creates a glow. A pseudo-element is then added that has similar dimensions, and the white border: 
 
     .stage .portal:before {
         content: "";
@@ -302,7 +302,7 @@ The HTML we added earlier included a `span` tag within each of the two platforms
         background: radial-gradient(top, #cdebe8, #c2cbc1 40px, #bcb3a8 60px);
     }
 
-The two spans are positioned absolutely and given a red and blue gradient, positioned beneath each of the portals. A pseudo-selector could have been used to achieve this effect, but since animating pseudo-selectors is not well supported (even within versions of Webkit), a separate span is used in this case.
+The two spans are positioned absolutely and given a red and blue gradient, positioned beneath each of the portals. A pseudo-element could have been used to achieve this effect, but since animating pseudo-elements is not well supported (even within versions of Webkit), a separate span is used in this case.
 
 ### The Door
 
@@ -337,7 +337,7 @@ In my initial testing, I tried using one character and having the animation stop
 
 <img src="http://hop.ie/images/posts/portal/dude1.png" alt="The first of two characters to animate through the scene" />
 
-The beginning character shape is made up of 2 main parts, a head and body. Legs are added using pseudo-selectors on the body. A similar structure is also included to be used as a shadow:
+The beginning character shape is made up of 2 main parts, a head and body. Legs are added using pseudo-elements on the body. A similar structure is also included to be used as a shadow:
 
     <div class="dude one">
       <figure class="head"></figure>
@@ -387,7 +387,7 @@ Since the shadow is contained within the character's containing div, it can be a
       left: 14px;
     }
 
-These rules double up in each case, describing both the character and their shadow. Each of the parts is absolutely positioned and `border-radius` is used to create the round shapes. The leg pseudo-selectors are described at once then each positioned in separate rules.
+These rules double up in each case, describing both the character and their shadow. Each of the parts is absolutely positioned and `border-radius` is used to create the round shapes. The leg pseudo-elements are described at once then each positioned in separate rules.
 
 ### Character 1
 

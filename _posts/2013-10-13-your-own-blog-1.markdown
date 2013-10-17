@@ -7,9 +7,9 @@ imageURL: blog_part1.jpg
 published: true
 ---
 
-There are many services that provide you with a blog, with the price being that they get to store and make use of your content. For those of us that prefer to run our own sites and keep the content under our own control, setting up our own blog is a better option.
+There are many services that provide you with a blog. However, they get to store and make use of your content. For those of us that prefer to run our own sites and keep the content under our own control, setting up our own is a better option.
 
-There's also a lot to be learned from designing and building your own. In this series I'll cover setting up, customising your layout and publishing your own blog.
+There's also a lot to be learned from the DIY approach. In this series I'll cover setting up, customising your layout and publishing your own blog using Jekyll.
 
 ## Case study
 
@@ -94,7 +94,7 @@ At the top of this `post.html` file you'll find some text:
     layout: default
     \---
 
-This part of the file is used by Jekyll, and it's where you can set any values to be used in the templates. In this case, it's defining the "layout" to be "default". This tells Jekyll to process the file using the `default.html` layout file. If you have other layout files, changing the name here will direct Jekyll to use that file.
+This part of the file is used by Jekyll, and is called [frontmatter](http://jekyllrb.com/docs/variables/). It's where you can set any values to be used in the templates. In this case, it's defining the "layout" to be "default". This tells Jekyll to process the file using the `default.html` layout file. If you have other layout files, changing the name here will direct Jekyll to use that file.
 
 ## Creating a blog post
 
@@ -108,7 +108,7 @@ To see how the posts are created, start by making a new file in the `_posts` fol
 
 This post is consider to have been published on 27th August, 2013, and the URL is be something like `yourblog.com/my-great-post` (depending on the `permalink` value in your \_config.yml file).
 
-With this set up, you can add in some more information by setting some YAML at the top of your blog post:
+With this set up, you can add in some more information by setting some YAML frontmatter at the top of your blog post:
 
     \---
     layout: post
@@ -118,7 +118,7 @@ With this set up, you can add in some more information by setting some YAML at t
     published: true
     \---
 
-This stuff tells Jekyll to use the `post.html` layout template and sets some useful meta-data for your blog post. With that in place you can begin writing your post.
+This tells Jekyll to use the `post.html` layout template and sets some useful meta-data for your blog post. With that in place you can begin writing your post.
 
 ### Markdown
 
@@ -128,7 +128,7 @@ Markdown is a neat [text-to-HTML conversion tool](http://daringfireball.net/proj
 
 You can create standalone pages for your site by creating HTML files. If you include the settings text at the top, Jekyll will automatically take the contents of your HTML file and insert into the right template. To show this, open the `index.html` file. 
 
-This file is the home page for the blog, so contains a loop of all the site's posts. It could be any HTML content we wish. Note the settings at the top:
+This file is the home page for the blog, so contains a loop of all the site's posts. It could be any HTML content we wish. Note the frontmatter at the top:
 
     \---
     layout: default

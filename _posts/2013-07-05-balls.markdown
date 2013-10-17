@@ -119,7 +119,7 @@ It's starting to look a bit better now. Let's add more shading to the ball itsel
 
 ## Multiple shaders
 
-Very rarely in the real world would you find objects lit from just one angle. Surfaces reflect light onto other surfaces and the end results in various light sources mixed together. To create a more realistic looking ball, we'll make it look light there are two light sources by using a pseudo-selector to add two gradients.
+Very rarely in the real world would you find objects lit from just one angle. Surfaces reflect light onto other surfaces and the end results in various light sources mixed together. To create a more realistic looking ball, we'll make it look light there are two light sources by using a pseudo-element to add two gradients.
 
     .ball {
       display: inline-block;
@@ -150,7 +150,7 @@ The first gradient is a subtle under-lighting effect and it applied to the `ball
 
 The second gradient is a highlight, placed at the top. It's set to be 90% of the ball's width and 90% of its height. The gradient is centered at the top so that it fades out at around halfway down the ball.
 
-I've used the `before` pseudo-selector rather than create a new element to contain the shading.
+I've used the `before` pseudo-element rather than create a new element to contain the shading.
 
 Since this highlight gradient has a sharp edge, I've made of the webkit-only `blur` effect to soften the highlight. Unfortunately this is currently only a webkit feature (Chrome and Safari) but it may be more useful in future across other browsers.
 
@@ -199,7 +199,7 @@ To achieve this we'll make use of a soft under light as before, but adjust the t
       -webkit-filter: blur(10px);
     }
 
-Here we have the initial colour being applied as a subtle gradient on the ball itself. The `before` pseudo-selector contains a lighter highlight, which again starts at the bottom of the ball and creates the effect of reflected light from the surface.
+Here we have the initial colour being applied as a subtle gradient on the ball itself. The `before` pseudo-element contains a lighter highlight, which again starts at the bottom of the ball and creates the effect of reflected light from the surface.
 
 The new addition here is the `after` psuedo-selector. It contains a circular gradient that starts almost opaque white at the center, and fades to transparent at around the 24% mark. This creates a white shiny effect, but to make it look like it's reflecting off a three dimensional object, we apply a CSS `transform`.
 
@@ -300,7 +300,7 @@ The bulk of the CSS is similar to the 8-ball, with the exception of the iris and
       background: rgba(255, 255, 255, 0.2);
     }
 
-A blue gradient forms the coloured part of the iris, and then the pupil and a highlight are created as pseudo-selectors. I've also added the animation property to the iris element. Animations are attached to elements using a format like this:
+A blue gradient forms the coloured part of the iris, and then the pupil and a highlight are created as pseudo-elements. I've also added the animation property to the iris element. Animations are attached to elements using a format like this:
 
     animation: animation-name 5s ease-out infinite;
 
@@ -342,7 +342,7 @@ The `-webkit` prefixed version is included here, but you might want to create mo
 
 Using a combination of shading and animation can produce all sorts of interesting and varied effects. How about some bubbles?
 
-Creating the bubble look is similar to before, using more transparency in the main colour and two pseudo-selectors to add shine.
+Creating the bubble look is similar to before, using more transparency in the main colour and two pseudo-elements to add shine.
 
 The animation makes use of the `scale` transform to make the entire bubble wobble.
 
@@ -367,13 +367,13 @@ The animation makes use of the `scale` transform to make the entire bubble wobbl
       }
     }
 
-The animation applies to the entire bubble and its pseudo-selectors.
+The animation applies to the entire bubble and its pseudo-elements.
 
 <div class="codepen" data-height="400" data-type="result" data-href="pvrzK" data-user="donovanh" data-safe="true"> </div>
 
 ## Using images
 
-So far all the balls have been created without using any images. Applying a background image can add more detail, and still take advantage of the CSS shading within the pseudo-selectors. For example, an unshaded texture of a tennis ball:
+So far all the balls have been created without using any images. Applying a background image can add more detail, and still take advantage of the CSS shading within the pseudo-elements. For example, an unshaded texture of a tennis ball:
 
 <img src="http://hop.ie/balls/images/tennisball.png" style="max-width:200px" alt="Unshaded tennis ball image">
 

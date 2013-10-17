@@ -194,7 +194,7 @@ Rather than apply the dot pattern directly to the background element, we need to
 
 <img src="/images/posts/seven/rotate.jpg" alt="Awkward rotation" class="bordered">
 
-To get around this we can create a [pseudo-selector](http://docs.webplatform.org/wiki/css/selectors/pseudo-elements) and apply the pattern to that. Pseudo-selectors can be added to an element to give us extra "elements" that we can style, referred to as *before* and *after*. Here's the *before* pseudo-selector:
+To get around this we can create a [pseudo-element](http://docs.webplatform.org/wiki/css/selectors/pseudo-elements) and apply the pattern to that. pseudo-elements can be added to an element to give us extra "elements" that we can style, referred to as *before* and *after*. Here's the *before* pseudo-element:
 
     .background:before {
         content: "";
@@ -208,7 +208,7 @@ To get around this we can create a [pseudo-selector](http://docs.webplatform.org
         -webkit-transform: rotateZ(45deg);
     }
 
-The *before* element contains the pattern and is itself rotated 45 degrees on the Z axis. At this point it's almost there, it needs the white gradient from the top of the banner. We can use the second pseudo-selector to contain that gradient:
+The *before* element contains the pattern and is itself rotated 45 degrees on the Z axis. At this point it's almost there, it needs the white gradient from the top of the banner. We can use the second pseudo-element to contain that gradient:
 
     .background:after {
         content: "";
@@ -222,7 +222,7 @@ The *before* element contains the pattern and is itself rotated 45 degrees on th
         background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, white), color-stop(60%, rgba(255, 255, 255, 0)));
     }
 
-The gradient on this pseudo-selector starts at white and fades to transparent. It's positioned a little above the top to allow for the tiled effect of the background element.
+The gradient on this pseudo-element starts at white and fades to transparent. It's positioned a little above the top to allow for the tiled effect of the background element.
 
 Putting it all together, we get something like this:
 
