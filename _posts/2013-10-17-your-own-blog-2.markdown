@@ -3,7 +3,7 @@ layout: post
 title: "Your own blog - Part two"
 description: "Design, build and deploy your own blog. Part two."
 tags: [development]
-imageURL: blog_part2.jpg
+imageURL: blog_part2.png
 published: true
 ---
 
@@ -149,7 +149,7 @@ This command will remove the hidden `git` folder, giving you a clean slate. The 
 
 You'll need to all all the project files, so after following the Github instructions, you'll need to do this also:
 
-    git add .
+    git add --all
     git commit -am "Adding all the files"
     git push origin master
 
