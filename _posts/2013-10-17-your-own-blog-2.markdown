@@ -18,7 +18,7 @@ In [part one](/blog/your-own-blog-1/), we covered the set up of your local devel
 - [Comments](#comments)
 - [Icons](#icons)
 - [404 Page](#404_page)
-- [Social media](#social_media)
+- [Social media and sharing](#social_media_and_sharing)
 - [Going live](#going_live)
 - [Ongoing workflow](#ongoing_workflow)
 
@@ -107,7 +107,7 @@ The contents of your `404.html` file could look like this:
 
 This basic page will let people know what happened. Many choose to do [something more fun](http://blog.shopireland.ie/404) with their 404 pages, and it's often a chance to be a little more silly than you might get to be on the more public pages.
 
-## Social media &amp; sharing (setting up twitter, facebook, etc)
+## Social media and sharing
 
 Depending on your site's goals, you may want to plug in some social sharing and links to social profiles. This is something that depends on how you want your site to be perceived, and it's up to you how you approach this. On [Hop.ie](http://hop.ie), for example, I'm content to have a link to my Twitter profile at the bottom of the page. This is because it's my personal blog and I don't see a need to promote it like a commercial venture. 
 
