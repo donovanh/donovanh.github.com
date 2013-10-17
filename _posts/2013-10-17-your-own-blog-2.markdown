@@ -18,7 +18,7 @@ In [part one](/blog/your-own-blog-1/), we covered the set up of your local devel
 - [Comments](#comments)
 - [Icons](#icons)
 - [404 Page](#404_page)
-- [Social media &amp; sharing](#social_media_&amp;_sharing)
+- [Social media](#social_media)
 - [Going live](#going_live)
 - [Ongoing workflow](#ongoing_workflow)
 
@@ -59,6 +59,8 @@ This consists of a navigation element that works out whether there's a previous 
     {% raw  %}{% endfor %}{% endraw %}
 
 Within this loop you can access any of the posts settings using the `post.value` syntax where `value` is the a variable in the frontmatter at the top of the post's file. Find more [information on Jekyll's frontmatter](http://jekyllrb.com/docs/variables/).
+
+## Comments
 
 ## Icons
 
