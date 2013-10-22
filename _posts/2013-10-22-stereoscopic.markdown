@@ -23,7 +23,7 @@ The downside to this is that the film can only be monochrome, as the colours are
 
 ### Side-by-side stereoscopy
 
-A second approach to presenting 3D is to make use of an ability some of have to cross our eyes. The idea is to present two scenes side by side, each presented from a slightly different angle. If the viewer can cross their eyes, the two images combine to create a 3D effect.
+A second approach to presenting 3D is to make use of an ability some of us have to cross our eyes. The idea is to present two scenes side by side, each presented from a slightly different angle. If the viewer can cross their eyes, the two images combine to create a 3D effect.
 
 ![How two images combine to form a 3D version](/images/posts/stereoscopic/example.png)
 
@@ -33,7 +33,7 @@ To give it a go, try looking at the following image from about two feet away fro
 
 ![The finished stereoscopic 3D scene with just CSS](/images/posts/stereoscopic/stereoscopic-hop.ie.png)
 
-Let's see if we can create this effect using nothing but some HTML and CSS.
+This double-image technique is most notably used in the new [Oculus Rift headset](http://www.oculusvr.com/). While I don't have one to test this against, I believe it's possible to display HTML pages within the headset, so some form of this technique might be useful there.
 
 ## Warning
 
