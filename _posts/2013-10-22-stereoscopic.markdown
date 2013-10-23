@@ -219,13 +219,13 @@ Note: Some of these larger scenes can be more difficult to see as they require y
 
 ![Portal CSS with the stereoscopic treatment](/images/posts/stereoscopic/portal.png)
 
-See the [animated version here](http://hop.ie/stereoscopic/portal.html). You can also [read how the Portal example was made](/blog/portal).
+See the [animated version here](http://hop.ie/stereoscopic/portal.html). You can also [read how the it was made](/blog/portal).
 
 ### Zelda Intro Screen
 
 ![Zelda intro screen with the stereoscopic treatment](/images/posts/stereoscopic/zelda.png)
 
-See the [animated version here](http://hop.ie/stereoscopic/zelda.html). You can also [read how the Zelda example was made](/blog/zelda).
+See the [animated version here](http://hop.ie/stereoscopic/zelda.html). You can also [read how the it was made](/blog/zelda).
 
 ## Your turn
 
