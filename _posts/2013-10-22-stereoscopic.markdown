@@ -44,17 +44,17 @@ Just a heads up, but if you are going to spend a lot of time staring at the scre
 To get started we'll create a simple 3D scene using some HTML.
 
     <div class="stage">
-      <div class="cube">
-        <figure class="back">S</figure>
-        <figure class="top"></figure>
-        <figure class="bottom"></figure>
-        <figure class="left">3D!</figure>
-        <figure class="right">S</figure>
-        <figure class="front">C</figure>
-      </div>
+      <figure class="cube">
+        <span class="back">S</span>
+        <span class="top"></span>
+        <span class="bottom"></span>
+        <span class="left">3D!</span>
+        <span class="right">S</span>
+        <span class="front">C</span>
+      </figure>
     </div>
 
-We have a containing `div` here that will act as a stage for the cube to sit on, and within it the cube's `div`. The cube itself is made up of 6 parts. I've chosen to use the HTML5 `figure` element here as it seems reasonably appropriate, but you could use `span` or whatever tickles your fancy.
+We have a containing stage `div` here that will act as a stage for the cube to sit on, and within it the cube figure itself. The cube is made up of 6 parts.
 
 The "stage" div is needed so that the browser can establish some important 3D-related settings, such as the depth of the scene and the angle we're looking into the scene at. These things we set with the CSS.
 
@@ -68,11 +68,11 @@ The "stage" div is needed so that the browser can establish some important 3D-re
       perspective: 1600px;
     }
 
-This CSS sets up the stage with some proportions and sets a `perspective` value. Perspective is strangely named as it actually describes the depth of the scene, with smaller values producting more extreme-looking results. In this case, 1600 pixels looks pretty good, but you can try different values in your own scene to see how it feels.
+This CSS sets up the stage with some proportions and sets a `perspective` value. Perspective describes the depth of the scene, with smaller values producting more extreme-looking results. In this case, 1600 pixels looks pretty good, but you can try different values in your own scene to see how it feels.
 
 ## Building the cube
 
-The cube itself is made up of six `figure` elements. Using the CSS3 `transform` property, we can manipulate these figures in the 3D space and position them where we like. First though we need to tell the browser that our intention is to move things around in 3D. Some CSS achieves this.
+The cube itself is made up of six elements. Using the CSS3 `transform` property, we can manipulate these spans in the 3D space and position them where we like. First though we need to tell the browser that our intention is to move things around in 3D. Some CSS achieves this.
 
     .cube {
       -moz-transform-style: preserve-3d;
@@ -88,11 +88,11 @@ The cube itself is made up of six `figure` elements. Using the CSS3 `transform` 
       left: 140px;
     }
 
-The main parts to note here are the `transform-style` and `transform-origin` properties. These tell the browser that this and any child elements will be capable of transforming within the context of the "stage" `div`, as well as describing the point around which any rotation, scaling or skewing can happen.
+The main parts to note here are the `transform-style` and `transform-origin` properties. These tell the browser that this and any child elements will be capable of transforming within the context of the "stage" `figure`, as well as describing the point around which any rotation, scaling or skewing can happen.
 
 Next up we need to specify the dimensions of the cube faces, and then magic them into place using the `transform` property.
 
-    figure {
+    .cube span {
       display: block;
       width: 200px;
       height: 200px;
@@ -103,7 +103,6 @@ Next up we need to specify the dimensions of the cube faces, and then magic them
       color: white;
       opacity: 0.5;
     }
-
     .back {
       transform: rotateY(180deg) translateZ(100px);
       background-color: #f00;
@@ -132,7 +131,7 @@ Next up we need to specify the dimensions of the cube faces, and then magic them
 
 To make things more readable, I've removed the various "-webkit" and "-moz" prefixes from the `tranform` properties here. You may wish to include them and they can be found in the [source code](https://github.com/donovanh/stereoscopic).
 
-This CSS describes the general rules for the figures, that they be 200 pixels wide for example, and have white text. The rules that follow rotate and position each of the various faces using rotate and translate. Each face is given a background colour also.
+This CSS describes the general rules for the spans, that they be 200 pixels wide for example, and have white text. The rules that follow rotate and position each of the various faces using rotate and translate. Each face is given a background colour also.
 
 ## Making it stereoscopic
 
@@ -141,27 +140,27 @@ Now that we have a scene with a 3D object, we can double it up and make it stere
     <div class="container">
       <div class="left">
         <div class="stage">
-          <div class="cube">
-            <figure class="back">S</figure>
-            <figure class="top"></figure>
-            <figure class="bottom"></figure>
-            <figure class="left">3D!</figure>
-            <figure class="right">S</figure>
-            <figure class="front">C</figure>
-          </div>
+          <figure class="cube">
+            <span class="back">S</span>
+            <span class="top"></span>
+            <span class="bottom"></span>
+            <span class="left">3D!</span>
+            <span class="right">S</span>
+            <span class="front">C</span>
+          </figure>
         </div>
       </div>
 
       <div class="right">
         <div class="stage">
-          <div class="cube">
-            <figure class="back">S</figure>
-            <figure class="top"></figure>
-            <figure class="bottom"></figure>
-            <figure class="left">3D!</figure>
-            <figure class="right">S</figure>
-            <figure class="front">C</figure>
-          </div>
+          <figure class="cube">
+            <span class="back">S</span>
+            <span class="top"></span>
+            <span class="bottom"></span>
+            <span class="left">3D!</span>
+            <span class="right">S</span>
+            <span class="front">C</span>
+          </figure>
         </div>
       </div>
     </div>
