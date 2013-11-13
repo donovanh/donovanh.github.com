@@ -11,6 +11,14 @@ I will always remember the moment I got to use the Apple Mac Plus. In this post 
 
 Note: The following is the original article that eventually became [Creating 3D assets with CSS](http://www.adobe.com/inspire/2013/11/3d-css.html) over at Adobe Inspire.
 
+## Retro style
+
+Let's build (virtually) a computer. Not just any old computer, but a computer that was, for many of us, an introduction into the world of Apple. The Macintosh Plus, codename Mr. T, was first introduced in 1986 and packed a whopping 1MB of RAM and an 8 MHz processor. Aside from all that raw power, it was a seriously cute design, which made the computer more fun to use. 
+
+![Credit: Vectronic's Apple World](/images/posts/macplus/mac.jpg)
+
+In this project I will build a 3D model of the Macintosh Plus and display it in a three dimensional setting. Using CSS Keyframe animation we'll make it move on screen to show off the 3D effect better.
+
 ## Why use CSS?
 
 With Cascading Style Sheets are the standard way to style web page content. Everything from fonts, colors, positioning and background images is handled by CSS, and it is an essential tool for making modern web pages. It's not just for two-dimensional content. With the use of 3D transforms and positioning, you can use CSS to add depth too.
@@ -28,14 +36,6 @@ You can also follow along the various stages by looking up the `examples` folder
 ## On Prefixes
 
 I have omitted any CSS prefixes from the code examples to make the code easier to read. When working on this yourself make sure to include prefixes for the other browsers, such as the `webkit`, `moz`, `ms`, and `o`.
-
-## Retro style
-
-Let's build (virtually) a computer. Not just any old computer, but a computer that was, for many of us, an introduction into the world of Apple. The Macintosh Plus, codename Mr. T, was first introduced in 1986 and packed a whopping 1MB of RAM and an 8 MHz processor. Aside from all that raw power, it was a seriously cute design, which made the computer more fun to use. 
-
-![Credit: Vectronic's Apple World](/images/posts/macplus/mac.jpg)
-
-In this project I will build a 3D model of the Macintosh Plus and display it in a three dimensional setting. Using CSS Keyframe animation we'll make it move on screen to show off the 3D effect better.
 
 ## Setting the stage
 
