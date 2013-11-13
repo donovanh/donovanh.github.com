@@ -47,7 +47,7 @@ This is a simple div with the class stage, and it acts as a container for our 3D
 
 To establish it as a 3D container, we set some CSS properties, `perspective` and `perspective-origin`. The perspective property is similar to a scene's vanishing point. The smaller the value, the shorter the vanishing point and more extreme the effect. This image shows how changing the value changes the shape on a scene:
 
-![Different perspectives: 500px vs 2500px - examples/01-Perspective/index.html](/images/posts/macplus/01-Perspective.png)
+![Different perspectives: 500px vs 2500px - examples/01-Perspective/index.html](/images/posts/macplus/01-perspective.png)
 
 ### Try it yourself
 
