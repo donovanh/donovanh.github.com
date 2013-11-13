@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "Mac Plus CSS"
+title: "CSS Mac Plus"
 description: "Recreating the classic Mac Plus computer using only CSS and HTML."
 tags: [css, 3d]
 imageURL: macplus.png
-published: false
+published: true
 ---
 
-Growing up there are some icons, whether they are people, places or even products that stand out in my memory. One of my favourite computing moments was when I first got to use a Mac Plus. In this post I will try to pay tribute to this lovely computer by creating it in CSS.
+I will always remember the moment I got to use the Apple Mac Plus. In this post I will try to pay tribute to this lovely computer by creating it in CSS.
+
+Note: The following is the original article that eventually became [Creating 3D assets with CSS](http://www.adobe.com/inspire/2013/11/3d-css.html) over at Adobe Inspire.
 
 ## Why use CSS?
 
@@ -371,7 +373,7 @@ A few things are combined into one line here. It references the animation by nam
 
 Applying this animation to the "positioning" div results in something like this:
 
-[TODO MEDIA: Either an animated GIF of the animated scene or embedded HTML]
+<div class="codepen" data-height="680" data-type="result" data-href="HGqjp" data-user="donovanh" data-safe="true"> </div>
 
 ## What we learned
 
@@ -389,8 +391,8 @@ While the example might not seem like something you'd use in the average web sit
 
 For example, CSS transforms can be used to add depth to page transitions, image carousels, logos and buttons, to name a few. CSS animations can be used to add more interesting movement and finesse to your transitions, and CSS gradients can add depth to pages without a need to use images.
 
-I hope you find this article helpful. I can be reached on Twitter as [@donovanh](http://twitter.com/donovanh).
+Do follow me or follow-up on Twitter. I'm [@donovanh](http://twitter.com/donovanh).
 
-
+<script src="http://codepen.io/assets/embed/ei.js"> </script>
 
 
