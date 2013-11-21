@@ -1,3 +1,4 @@
+url: http://hop.ie
 permalink: /blog/:title
 pygments: true
 paginate: 8 # the number of post per page
