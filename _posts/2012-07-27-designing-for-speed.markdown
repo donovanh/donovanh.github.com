@@ -58,7 +58,7 @@ Yahoo's [YSlow][8] is another great tool to help identify the weak points in you
 
 If you need assistance setting up image sprites, [Sprite Pad][9] is an interesting tool. Alternately, [SpriteCow][10] seems pretty cool.
 
- [1]: http://shopireland.ie
+ [1]: http://www.shopireland.ie
  [2]: http://www.useit.com/alertbox/9703a.html
  [3]: http://www.useit.com/alertbox/response-times.html
  [4]: http://www.engadget.com/2012/07/19/smartphone-internet-china/
