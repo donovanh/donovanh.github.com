@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Photos icon in CSS"
+description: "Using CSS transforms, opacity and pseudo-elements to create the iOS 7 Photos icon."
+tags: [css, 3d]
+imageURL: photos.png
+published: false
+---
+
+
