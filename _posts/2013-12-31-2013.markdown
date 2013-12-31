@@ -42,7 +42,7 @@ Hop.ie has been linked to by [Jim Dalrymple](http://www.loopinsight.com/2013/11/
 
 I hope 2014 is as good a year. I expect it to. I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms (including this [Photos](http://hop.ie/photos/) logo) and some canvas stuff. If you'd like to hear when these posts go live, [follow me on Twitter](http://twitter.com/donovanh). 
 
-Thank you for the support this past year, I hope it has been good to you too. I hope 2014 is a wonderful year for you and yours.
+Thank you for the support. I hope 2014 is a wonderful year for you and yours.
 
 ## Links
 
