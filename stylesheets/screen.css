@@ -400,8 +400,7 @@ td {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p, h2, h3 {
     orphans: 3;
     widows: 3;
@@ -484,7 +483,7 @@ td {
 
 /* Generic.Inserted */
 .go {
-  color: gray;
+  color: grey;
 }
 
 /* Generic.Output */
@@ -701,12 +700,8 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-* html {
-  font-size: 125%;
-}
-
 html {
-  font-size: 20px;
+  font-size: 125%;
   line-height: 1.8em;
 }
 
@@ -774,7 +769,7 @@ pre .tex .formula {
   font-style: italic;
 }
 pre .diff .header, pre .chunk {
-  color: gray;
+  color: grey;
   font-weight: bold;
 }
 pre .diff .change {
@@ -821,9 +816,9 @@ a {
   color: #fe0088;
   text-decoration: none;
   font-weight: bold;
-  -webkit-transition: color 0.2s ease-out;
   -moz-transition: color 0.2s ease-out;
   -o-transition: color 0.2s ease-out;
+  -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
 }
 a:visited, a:active {
@@ -831,9 +826,9 @@ a:visited, a:active {
 }
 a:hover {
   color: #ff1c7c;
-  -webkit-transition: color 0.1s ease-out;
   -moz-transition: color 0.1s ease-out;
   -o-transition: color 0.1s ease-out;
+  -webkit-transition: color 0.1s ease-out;
   transition: color 0.1s ease-out;
 }
 
@@ -848,10 +843,8 @@ input {
   background-color: white;
   font-size: 0.8em;
   line-height: 2.25em;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 4px 14px;
   display: inline-block;
@@ -860,10 +853,8 @@ input {
 
 img.bordered {
   border: 2px solid white;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -965,15 +956,11 @@ section.content, section.footer-content {
   width: 100%;
   padding: 1em 0 0;
   position: relative;
-  -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
-  -ms-perspective: 1000px;
-  -o-perspective: 1000px;
+  -webkit-perspective: 1000px;
   perspective: 1000px;
-  -webkit-perspective-origin: 50% 200px;
   -moz-perspective-origin: 50% 200px;
-  -ms-perspective-origin: 50% 200px;
-  -o-perspective-origin: 50% 200px;
+  -webkit-perspective-origin: 50% 200px;
   perspective-origin: 50% 200px;
 }
 .home article a {
@@ -983,13 +970,13 @@ section.content, section.footer-content {
   color: #ff1c7c;
 }
 .home article a:hover img {
-  -webkit-transform: rotateY(0);
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);
   -o-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
   transform: rotateY(0);
-  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   -moz-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 .home article h1 {
@@ -1004,26 +991,22 @@ section.content, section.footer-content {
   height: 150px;
   margin: 1em auto -1em auto;
   border: 1px solid white;
-  -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  -ms-border-radius: 150px;
-  -o-border-radius: 150px;
+  -webkit-border-radius: 150px;
   border-radius: 150px;
-  -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   overflow: hidden;
   position: relative;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: rotateY(28deg);
   -moz-transform: rotateY(28deg);
   -ms-transform: rotateY(28deg);
   -o-transform: rotateY(28deg);
+  -webkit-transform: rotateY(28deg);
   transform: rotateY(28deg);
 }
 .home article img:after {
@@ -1060,10 +1043,8 @@ code {
   line-height: 2.25em;
   line-height: 1.75em;
   letter-spacing: -1px;
-  -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
   border-radius: 15px;
   padding: 0 8px;
   display: inline-block;
@@ -1131,17 +1112,17 @@ nav.pagination .previous {
 }
 .bouncer-container a:hover .bouncer {
   background-color: #ff1c7c;
-  -webkit-transition: background-color 0.1s ease-out;
   -moz-transition: background-color 0.1s ease-out;
   -o-transition: background-color 0.1s ease-out;
+  -webkit-transition: background-color 0.1s ease-out;
   transition: background-color 0.1s ease-out;
   cursor: pointer;
 }
 .bouncer-container a:hover .ear1, .bouncer-container a:hover .ear2 {
   background-color: #ff1c7c;
-  -webkit-transition: background-color 0.1s ease-out;
   -moz-transition: background-color 0.1s ease-out;
   -o-transition: background-color 0.1s ease-out;
+  -webkit-transition: background-color 0.1s ease-out;
   transition: background-color 0.1s ease-out;
 }
 .bouncer-container .mask {
@@ -1159,12 +1140,12 @@ nav.pagination .previous {
   width: 50px;
   height: 60px;
   background-color: #1c3243;
-  -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
-  -webkit-border-radius: 25px 30px;
   -moz-border-radius: 25px / 30px;
+  -webkit-border-radius: 25px 30px;
   border-radius: 25px / 30px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -1180,30 +1161,30 @@ nav.pagination .previous {
   width: 8px;
   height: 28px;
   background-color: #1c3243;
-  -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
-  -webkit-border-radius: 50% 50%;
   -moz-border-radius: 50% / 50%;
+  -webkit-border-radius: 50% 50%;
   border-radius: 50% / 50%;
 }
 .bouncer-container .ear1 {
   top: -12px;
   left: 10px;
-  -webkit-transform: rotate(-15deg);
   -moz-transform: rotate(-15deg);
   -ms-transform: rotate(-15deg);
   -o-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
 .bouncer-container .ear2 {
   top: -12px;
   right: 10px;
-  -webkit-transform: rotate(15deg);
   -moz-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   -o-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 .bouncer-container .eye1, .bouncer-container .eye2 {
@@ -1212,8 +1193,8 @@ nav.pagination .previous {
   background-color: #fafafe;
   width: 5px;
   height: 6px;
-  -webkit-border-radius: 50% 50%;
   -moz-border-radius: 50% / 50%;
+  -webkit-border-radius: 50% 50%;
   border-radius: 50% / 50%;
 }
 .bouncer-container .eye1 {
@@ -1262,6 +1243,7 @@ html.no-js .bouncer-container a:hover {
   0% {
     height: 40px;
     -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1270,6 +1252,7 @@ html.no-js .bouncer-container a:hover {
     top: 0;
     height: 60px;
     -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1280,6 +1263,7 @@ html.no-js .bouncer-container a:hover {
     opacity: 1;
     height: 40px;
     -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1290,13 +1274,14 @@ html.no-js .bouncer-container a:hover {
     opacity: 1;
     height: 60px;
     -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 }
-
 @-webkit-keyframes move-bouncer {
   0% {
     height: 40px;
+    -moz-border-radius: 25px / 20px;
     -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
@@ -1305,6 +1290,7 @@ html.no-js .bouncer-container a:hover {
   15% {
     top: 0;
     height: 60px;
+    -moz-border-radius: 25px / 30px;
     -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
@@ -1315,6 +1301,7 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
+    -moz-border-radius: 25px / 20px;
     -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
@@ -1325,14 +1312,16 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
+    -moz-border-radius: 25px / 30px;
     -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 }
-
 @-o-keyframes move-bouncer {
   0% {
     height: 40px;
+    -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1340,6 +1329,8 @@ html.no-js .bouncer-container a:hover {
   15% {
     top: 0;
     height: 60px;
+    -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1349,6 +1340,8 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
+    -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1358,13 +1351,16 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
+    -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 }
-
 @-ms-keyframes move-bouncer {
   0% {
     height: 40px;
+    -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1372,6 +1368,8 @@ html.no-js .bouncer-container a:hover {
   15% {
     top: 0;
     height: 60px;
+    -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1381,6 +1379,8 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
+    -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1390,15 +1390,16 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
+    -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 }
-
 @keyframes move-bouncer {
   0% {
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1406,8 +1407,8 @@ html.no-js .bouncer-container a:hover {
   15% {
     top: 0;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1417,8 +1418,8 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -webkit-border-radius: 25px 20px;
     -moz-border-radius: 25px / 20px;
+    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1428,18 +1429,15 @@ html.no-js .bouncer-container a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -webkit-border-radius: 25px 30px;
     -moz-border-radius: 25px / 30px;
+    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 }
-
 pre > .editable-styles {
   border: 1px solid white;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -1590,10 +1588,10 @@ pre > .editable-styles {
 }
 @media only screen and (max-width: 400px) {
   .bouncer-container {
-    -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
     -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
     transform: scale(0.8);
     top: 5px;
     left: -30px;

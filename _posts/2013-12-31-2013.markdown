@@ -1,0 +1,64 @@
+---
+layout: post
+title: "2013"
+description: "A summary of some of the things I wrote about in 2013, and my hopes for the new year."
+tags: [non-tech]
+imageURL: 2013.png
+published: true
+newstylesheet: 2013
+---
+
+At this time of year, as we are all busy updating our footer copyright dates, it's an opportunity to look back over the past year and think about what we hope to achieve in the next.
+
+## 3D transforms, talks, and static sites
+
+This year has been a big one for writing and publishing blog posts. I have found that writing about what I learn is a great way to put things into practise and make sure the lessons stick. It's also a great way to get feedback and ideas from others doing the same.
+
+I started the year a bit late with a post in March about static website development, [The Holy Grail](/blog/holy-grail/). Using Middleman to set up and host a website on Github Pages (and Amazon S3) was an interesting diversion from the usual Wordpress and PHP based sites I'd been building before.
+
+While working on new websites, I started experimenting with 3D in CSS. I tested this by creating a [3D iPhone with CSS](/blog/rotating-phone/). Using some `contenteditable` CSS, I demonstrated how to build a 3D box and apply some images as textures to create the 3D phone.
+
+This got me thinking about other ways CSS could be used to create interesting 3D effects, and I blogged about some of these experiments. [Zelda - A Link to the CSS](/blog/zelda/) was all about 3D triangles and bordered text.
+
+[Portal CSS](/blog/portal/) was an attempt to recreate a classic video game scene and made use of the way borders in CSS meet to give depth to an isometric 3D scene. I also made a [CSS Mac Plus](/blog/macplus/). The Mac Plus was originally going to be an article for [Adobe Inspire](http://www.adobe.com/inspire.html), but an [amended version](http://www.adobe.com/inspire/2013/11/3d-css.html) ended up making the publication instead.
+
+I was also lucky enough to be asked to write for .net magazine. In issue 244 I write about [3D CSS in the Real World](http://hop.ie/cube/). 
+
+In some 2D CSS posts, I created the [iOS 7 logo](/blog/seven/) using CSS (a combination of font-face and linear gradients) and also used gradients to make great looking [CSS Balls](/blog/balls/).
+
+I then tried some eye-crossing experiments in [Stereoscopic CSS](/blog/stereoscopic/), in which the CSS perspective-origin property was used to create more real-looking 3D scenes.
+
+I gave some talks earlier in the year, on topics such as [AngularJS](/talks/angular-intro/), [CSS Animation](/talks/css-animation/), and I'd also been looking into Node.js (thanks to some great [Node.js meetups](http://www.nodejsdublin.com/)). I managed to record the [Node.js Intro](/blog/node-intro/).
+
+Towards the end of the year, I wrote about making a blog using Jekyll ([Part 1](/blog/your-own-blog-1/), [Part 2](/blog/your-own-blog-2/)) (another static website generator).
+
+## Response
+
+It has been a busy year, and I've learned a huge amount. What surprised me more than anything else has been the response to the blog posts. I've had great support from some lovely people, including Zoran at [CSS Weekly](http://css-weekly.com/), Peter at [HTML5 Weekly](http://html5weekly.com/), Mary Lou at [Codrops](http://tympanus.net/codrops/) and loads of people on Twitter.
+
+I've had my blog linked by [Jim Dalrymple](http://www.loopinsight.com/2013/11/13/css-mac-plus/), mentioned by [Zeldman](https://twitter.com/zeldman/status/400759828295217152) and many other wonderful people.
+
+## 2014
+
+I hope 2014 is as good a year. It's off to a great start. While I can't comment on details yet, I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms and some canvas stuff. If you'd like to hear when these posts go live, [follow me on Twitter](http://twitter.com/donovanh).
+
+Thank you for the support this year, it is much appreciated.
+
+## Links
+
+### General web development
+
+- [The Holy Grail](/blog/holy-grail/) (March 11)
+- [Intro to Node.js](/blog/node-intro/) (May 16)
+- Your Own Blog [Part 1](/blog/your-own-blog-1/), [Part 2](/blog/your-own-blog-2/) (October)
+
+### CSS &amp; 3D transforms
+
+- [Make a 3D iPhone with CSS](/blog/rotating-phone/) (March 15)
+- [Zelda - A Link to the CSS](/blog/zelda/) (April 20)
+- [Portal CSS](/blog/portal/) (March 15)
+- [7](/blog/seven/) (June 11)
+- [CSS Balls](/blog/balls/) (July 05)
+- [Stereoscopic CSS](/blog/stereoscopic/) (October 22)
+- [Creating 3D Assets with CSS](http://www.adobe.com/inspire/2013/11/3d-css.html) (November 05)
+- [CSS Mac Plus](/blog/macplus/) (November 13)

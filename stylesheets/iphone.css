@@ -400,8 +400,7 @@ td {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p, h2, h3 {
     orphans: 3;
     widows: 3;
@@ -484,7 +483,7 @@ td {
 
 /* Generic.Inserted */
 .go {
-  color: gray;
+  color: grey;
 }
 
 /* Generic.Output */
@@ -701,12 +700,8 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-* html {
-  font-size: 125%;
-}
-
 html {
-  font-size: 20px;
+  font-size: 125%;
   line-height: 1.8em;
 }
 
@@ -717,41 +712,35 @@ html {
   margin: 100px auto;
   width: 251px;
   height: 537px;
-  -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
-  -ms-perspective: 1000px;
-  -o-perspective: 1000px;
+  -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-animation: elevate-phone 2.5s ease-in-out infinite alternate;
   -moz-animation: elevate-phone 2.5s ease-in-out infinite alternate;
   -o-animation: elevate-phone 2.5s ease-in-out infinite alternate;
   -ms-animation: elevate-phone 2.5s ease-in-out infinite alternate;
   animation: elevate-phone 2.5s ease-in-out infinite alternate;
-  -webkit-perspective: 800px;
   -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
+  -webkit-perspective: 800px;
   perspective: 800px;
   transform: translate(0);
 }
 .phone-container * {
   position: absolute;
-  -webkit-transition: all 1500ms;
   -moz-transition: all 1500ms;
   -o-transition: all 1500ms;
+  -webkit-transition: all 1500ms;
   transition: all 1500ms;
 }
 .phone-container .phone {
   left: 125px;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: rotateY(-80deg);
   -moz-transform: rotateY(-80deg);
   -ms-transform: rotateY(-80deg);
   -o-transform: rotateY(-80deg);
+  -webkit-transform: rotateY(-80deg);
   transform: rotateY(-80deg);
   -webkit-animation: rotate-phone 5s linear infinite;
   -moz-animation: rotate-phone 5s linear infinite;
@@ -763,40 +752,36 @@ html {
   width: 251px;
   height: 537px;
   background: url(/images/phone_parts/front.png) no-repeat;
-  -webkit-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
   -moz-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
   -ms-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
   -o-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
+  -webkit-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
   transform: translateX(-125px) rotateY(0deg) translateZ(14px);
 }
 .phone-container .back {
   width: 251px;
   height: 537px;
   background: url(/images/phone_parts/back.png) no-repeat;
-  -webkit-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
   -moz-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
   -ms-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
   -o-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
+  -webkit-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
   transform: translateX(-125px) rotateY(180deg) translateZ(13px);
 }
 .phone-container .left {
   width: 31px;
   height: 537px;
   background: url(/images/phone_parts/left_side.png) no-repeat;
-  -webkit-transform: translateX(-138px) rotateY(-90deg);
   -moz-transform: translateX(-138px) rotateY(-90deg);
   -ms-transform: translateX(-138px) rotateY(-90deg);
   -o-transform: translateX(-138px) rotateY(-90deg);
+  -webkit-transform: translateX(-138px) rotateY(-90deg);
   transform: translateX(-138px) rotateY(-90deg);
-  -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
   border-radius: 20px;
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .phone-container .left-top {
@@ -804,35 +789,33 @@ html {
   width: 29px;
   height: 30px;
   top: 4px;
-  -webkit-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
   -moz-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
   -ms-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
   -o-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  -webkit-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
   transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
 }
 .phone-container .left-bottom {
   background: black;
   width: 29px;
   height: 25px;
-  -webkit-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
   -moz-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
   -ms-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
   -o-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  -webkit-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
   transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
 }
 .phone-container .right {
   width: 31px;
   height: 537px;
   background: url(/images/phone_parts/right_side.png) no-repeat;
-  -webkit-transform: translateX(105px) rotateY(90deg);
   -moz-transform: translateX(105px) rotateY(90deg);
   -ms-transform: translateX(105px) rotateY(90deg);
   -o-transform: translateX(105px) rotateY(90deg);
+  -webkit-transform: translateX(105px) rotateY(90deg);
   transform: translateX(105px) rotateY(90deg);
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .phone-container .right-top {
@@ -840,32 +823,32 @@ html {
   width: 29px;
   height: 29px;
   top: 4px;
-  -webkit-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
   -moz-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
   -ms-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
   -o-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  -webkit-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
   transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
 }
 .phone-container .right-bottom {
   background: black;
   width: 29px;
   height: 25px;
-  -webkit-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
   -moz-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
   -ms-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
   -o-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  -webkit-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
   transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
 }
 .phone-container .shadow {
   width: 250px;
   height: 20px;
-  -webkit-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
   -moz-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
   -ms-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
   -o-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
+  -webkit-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
   transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
-  -webkit-box-shadow: 0 60px 60px black;
   -moz-box-shadow: 0 60px 60px black;
+  -webkit-box-shadow: 0 60px 60px black;
   box-shadow: 0 60px 60px black;
   -webkit-animation: lower-shadow 2.5s ease-in-out infinite alternate;
   -moz-animation: lower-shadow 2.5s ease-in-out infinite alternate;
@@ -877,69 +860,68 @@ html {
 @-moz-keyframes rotate-phone {
   0% {
     -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
     -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
-
 @-webkit-keyframes rotate-phone {
   0% {
+    -moz-transform: rotateY(0);
     -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
+    -moz-transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
-
 @-o-keyframes rotate-phone {
   0% {
-    -o-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -o-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
-
 @-ms-keyframes rotate-phone {
   0% {
-    -ms-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
-
 @keyframes rotate-phone {
   0% {
-    -webkit-transform: rotateY(0);
     -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -webkit-transform: rotateY(360deg);
     -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
-
 @-moz-keyframes elevate-phone {
   0% {
     bottom: 0;
@@ -949,7 +931,6 @@ html {
     bottom: 40px;
   }
 }
-
 @-webkit-keyframes elevate-phone {
   0% {
     bottom: 0;
@@ -959,7 +940,6 @@ html {
     bottom: 40px;
   }
 }
-
 @-o-keyframes elevate-phone {
   0% {
     bottom: 0;
@@ -969,7 +949,6 @@ html {
     bottom: 40px;
   }
 }
-
 @-ms-keyframes elevate-phone {
   0% {
     bottom: 0;
@@ -979,7 +958,6 @@ html {
     bottom: 40px;
   }
 }
-
 @keyframes elevate-phone {
   0% {
     bottom: 0;
@@ -989,7 +967,6 @@ html {
     bottom: 40px;
   }
 }
-
 @-moz-keyframes lower-shadow {
   0% {
     margin-top: 0;
@@ -999,7 +976,6 @@ html {
     margin-top: 40px;
   }
 }
-
 @-webkit-keyframes lower-shadow {
   0% {
     margin-top: 0;
@@ -1009,7 +985,6 @@ html {
     margin-top: 40px;
   }
 }
-
 @-o-keyframes lower-shadow {
   0% {
     margin-top: 0;
@@ -1019,7 +994,6 @@ html {
     margin-top: 40px;
   }
 }
-
 @-ms-keyframes lower-shadow {
   0% {
     margin-top: 0;
@@ -1029,7 +1003,6 @@ html {
     margin-top: 40px;
   }
 }
-
 @keyframes lower-shadow {
   0% {
     margin-top: 0;
