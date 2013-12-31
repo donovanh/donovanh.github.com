@@ -32,17 +32,17 @@ I gave some talks earlier in the year, on topics such as [AngularJS](/talks/angu
 
 Towards the end of the year, I wrote about making a blog using Jekyll ([Part 1](/blog/your-own-blog-1/), [Part 2](/blog/your-own-blog-2/)) (another static website generator).
 
-## Response
+## People are so nice
 
-It has been a busy year, and I've learned a huge amount. What surprised me more than anything else has been the response to the blog posts. I've had great support from some lovely people, including Zoran at [CSS Weekly](http://css-weekly.com/), Peter at [HTML5 Weekly](http://html5weekly.com/), Mary Lou at [Codrops](http://tympanus.net/codrops/) and loads of people on Twitter.
+It has been busy, and I've learned a lot. What surprised me more than anything else has been the response. I've had great support from some lovely people, including Zoran at [CSS Weekly](http://css-weekly.com/), Peter at [HTML5 Weekly](http://html5weekly.com/), Mary Lou at [Codrops](http://tympanus.net/codrops/) and loads of people on Twitter.
 
-I've had my blog linked by [Jim Dalrymple](http://www.loopinsight.com/2013/11/13/css-mac-plus/), mentioned by [Zeldman](https://twitter.com/zeldman/status/400759828295217152) and many other wonderful people.
+Hop.ie has been linked to by [Jim Dalrymple](http://www.loopinsight.com/2013/11/13/css-mac-plus/), mentioned by [Zeldman](https://twitter.com/zeldman/status/400759828295217152), had articles translated into Russian and French, and linked from countless other blogs.
 
 ## 2014
 
-I hope 2014 is as good a year. It's off to a great start. While I can't comment on details yet, I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms and some canvas stuff. If you'd like to hear when these posts go live, [follow me on Twitter](http://twitter.com/donovanh).
+I hope 2014 is as good a year. I expect it to. I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms (including this [Photos](http://hop.ie/photos/) logo) and some canvas stuff. If you'd like to hear when these posts go live, [follow me on Twitter](http://twitter.com/donovanh). 
 
-Thank you for the support this year, it is much appreciated.
+Thank you for the support this past year, I hope it has been good to you too. I hope 2014 is a wonderful year for you and yours.
 
 ## Links
 
