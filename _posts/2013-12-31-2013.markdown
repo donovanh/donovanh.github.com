@@ -40,7 +40,7 @@ Hop.ie has been linked to by [Jim Dalrymple](http://www.loopinsight.com/2013/11/
 
 ## 2014
 
-I hope 2014 is as good a year. I expect it to. I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms (including this [Photos](http://hop.ie/photos/) logo) and some canvas stuff.
+I hope 2014 is as good. I expect it to. I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms (including this [Photos](http://hop.ie/photos/) logo) and some canvas stuff.
 
 In the next year I'd like to continue learning more about front-end development. Creating animated SVGs, looking into JavaScript frameworks such as Ember.js, and hopefully making more of the amazing Node.js are all on my list.
 
