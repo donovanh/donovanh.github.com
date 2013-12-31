@@ -50,7 +50,7 @@ To hear when new posts go live, [follow me on Twitter](http://twitter.com/donova
 
 ## In case you missed any...
 
-### General web stuff
+### Web dev
 
 - [The Holy Grail](/blog/holy-grail/) (March 11)
 - [Intro to Node.js](/blog/node-intro/) (May 16)
