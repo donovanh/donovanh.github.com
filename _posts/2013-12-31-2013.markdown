@@ -8,7 +8,7 @@ published: true
 newstylesheet: 2013
 ---
 
-At this time of year, as we are all busy updating our footer copyright dates, it's an opportunity to look back over the past year and think about what we hope to achieve in the next.
+As we are all busy updating our footer copyright dates, I take a look back over the past year and think about what I hope to achieve in the 2014.
 
 ## 3D transforms, talks, and static sites
 
@@ -40,9 +40,13 @@ Hop.ie has been linked to by [Jim Dalrymple](http://www.loopinsight.com/2013/11/
 
 ## 2014
 
-I hope 2014 is as good a year. I expect it to. I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms (including this [Photos](http://hop.ie/photos/) logo) and some canvas stuff. If you'd like to hear when these posts go live, [follow me on Twitter](http://twitter.com/donovanh). 
+I hope 2014 is as good a year. I expect it to. I'm helping build an interesting website for an event later in the year, and have some blogs to write about CSS transforms (including this [Photos](http://hop.ie/photos/) logo) and some canvas stuff.
+
+In the next year I'd like to continue learning more about front-end development. Creating animated SVGs, looking into JavaScript frameworks such as Ember.js, and hopefully making more of the amazing Node.js are all on my list.
 
 Thank you for the support. I hope 2014 is a wonderful year for you and yours.
+
+To hear when new posts go live, [follow me on Twitter](http://twitter.com/donovanh). 
 
 ## Links
 
