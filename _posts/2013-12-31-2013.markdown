@@ -28,7 +28,7 @@ In some 2D CSS posts, I created the [iOS 7 logo](/blog/seven/) using CSS (a comb
 
 I then tried some eye-crossing experiments in [Stereoscopic CSS](/blog/stereoscopic/), in which the CSS perspective-origin property was used to create more real-looking 3D scenes.
 
-I gave some talks earlier in the year, on topics such as [AngularJS](/talks/angular-intro/), [CSS Animation](/talks/css-animation/), and I'd also been looking into Node.js (thanks to some great [Node.js meetups](http://www.nodejsdublin.com/)). I managed to record the [Node.js Intro](/blog/node-intro/).
+I gave some talks earlier in the year, on topics such as [AngularJS](/talks/angular-intro/), [CSS Animation](/talks/css-animation/), and I'd also been looking into Node.js (thanks to some great [Node.js meetups](http://www.nodejsdublin.com/)). I managed to record a talk in which I [introduce Node.js](/blog/node-intro/).
 
 Towards the end of the year, I wrote about making a blog using Jekyll ([Part 1](/blog/your-own-blog-1/), [Part 2](/blog/your-own-blog-2/)) (another static website generator).
 
