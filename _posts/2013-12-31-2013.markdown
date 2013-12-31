@@ -48,9 +48,9 @@ Thank you for the support. I hope 2014 is a wonderful year for you and yours.
 
 To hear when new posts go live, [follow me on Twitter](http://twitter.com/donovanh). 
 
-## Links
+## In case you missed any...
 
-### General web development
+### General web stuff
 
 - [The Holy Grail](/blog/holy-grail/) (March 11)
 - [Intro to Node.js](/blog/node-intro/) (May 16)
