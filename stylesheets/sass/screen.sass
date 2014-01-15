@@ -128,6 +128,30 @@ article
   img
     max-width: 100%
 
+  .email-signup
+    border: 4px solid $bouncer-color
+    background-color: #fff
+    border-radius: 5px
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4)
+    padding: 2em
+    opacity: 0
+    +transform-origin(50% 100%)
+    +perspective(900px)
+    +transform-style(preserve3d)
+
+    &.activate
+      +animation(show-email-signup 0.75s forwards)
+
+    input
+      border-color: $bouncer-color
+
+    input[type="submit"]
+      background-color: $bouncer-color
+      color: #fff
+
+    h2
+      margin-top: 0
+
 section.content, section.footer-content
   width: 100%
   float: left
@@ -378,6 +402,14 @@ html.no-js .bouncer-container
     height: 60px
     @include border-radius(25px, 30px)
 
++keyframes(show-email-signup)
+  0%
+    +transform(rotateX(-62deg) translateZ(6em))
+    opacity: 0
+  100%
+    +transform(rotateX(0))
+    opacity: 1
+
 pre > .editable-styles 
   border: 1px solid #fff
   @include border-radius(5px)
@@ -389,9 +421,6 @@ pre > .editable-styles
   background: #fff
   font-size: 14px
   padding-left: 10px
-
-.apple-container
-  display: none
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
   .apple-container

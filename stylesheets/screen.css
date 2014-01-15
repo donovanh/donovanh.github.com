@@ -936,6 +936,42 @@ article header .date {
 article img {
   max-width: 100%;
 }
+article .email-signup {
+  border: 4px solid #1c3243;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  opacity: 0;
+  -moz-transform-origin: 50% 100% 50%;
+  -ms-transform-origin: 50% 100% 50%;
+  -o-transform-origin: 50% 100% 50%;
+  -webkit-transform-origin: 50% 100% 50%;
+  transform-origin: 50% 100% 50%;
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+  -moz-transform-style: preserve3d;
+  -webkit-transform-style: preserve3d;
+  transform-style: preserve3d;
+}
+article .email-signup.activate {
+  -webkit-animation: show-email-signup 0.75s forwards;
+  -moz-animation: show-email-signup 0.75s forwards;
+  -o-animation: show-email-signup 0.75s forwards;
+  -ms-animation: show-email-signup 0.75s forwards;
+  animation: show-email-signup 0.75s forwards;
+}
+article .email-signup input {
+  border-color: #1c3243;
+}
+article .email-signup input[type="submit"] {
+  background-color: #1c3243;
+  color: white;
+}
+article .email-signup h2 {
+  margin-top: 0;
+}
 
 section.content, section.footer-content {
   width: 100%;
@@ -1434,6 +1470,101 @@ html.no-js .bouncer-container a:hover {
     border-radius: 25px / 30px;
   }
 }
+@-moz-keyframes show-email-signup {
+  0% {
+    -moz-transform: rotateX(-62deg) translateZ(6em);
+    -ms-transform: rotateX(-62deg) translateZ(6em);
+    -o-transform: rotateX(-62deg) translateZ(6em);
+    -webkit-transform: rotateX(-62deg) translateZ(6em);
+    transform: rotateX(-62deg) translateZ(6em);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show-email-signup {
+  0% {
+    -moz-transform: rotateX(-62deg) translateZ(6em);
+    -ms-transform: rotateX(-62deg) translateZ(6em);
+    -o-transform: rotateX(-62deg) translateZ(6em);
+    -webkit-transform: rotateX(-62deg) translateZ(6em);
+    transform: rotateX(-62deg) translateZ(6em);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@-o-keyframes show-email-signup {
+  0% {
+    -moz-transform: rotateX(-62deg) translateZ(6em);
+    -ms-transform: rotateX(-62deg) translateZ(6em);
+    -o-transform: rotateX(-62deg) translateZ(6em);
+    -webkit-transform: rotateX(-62deg) translateZ(6em);
+    transform: rotateX(-62deg) translateZ(6em);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@-ms-keyframes show-email-signup {
+  0% {
+    -moz-transform: rotateX(-62deg) translateZ(6em);
+    -ms-transform: rotateX(-62deg) translateZ(6em);
+    -o-transform: rotateX(-62deg) translateZ(6em);
+    -webkit-transform: rotateX(-62deg) translateZ(6em);
+    transform: rotateX(-62deg) translateZ(6em);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes show-email-signup {
+  0% {
+    -moz-transform: rotateX(-62deg) translateZ(6em);
+    -ms-transform: rotateX(-62deg) translateZ(6em);
+    -o-transform: rotateX(-62deg) translateZ(6em);
+    -webkit-transform: rotateX(-62deg) translateZ(6em);
+    transform: rotateX(-62deg) translateZ(6em);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
 pre > .editable-styles {
   border: 1px solid white;
   -moz-border-radius: 5px;
@@ -1448,10 +1579,6 @@ pre > .editable-styles {
   background: white;
   font-size: 14px;
   padding-left: 10px;
-}
-
-.apple-container {
-  display: none;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
