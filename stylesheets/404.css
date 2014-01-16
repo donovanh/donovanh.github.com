@@ -1,4 +1,5 @@
 /* @import compass/reset */
+
 /* HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
@@ -8,14 +9,28 @@
  * Detailed information about this CSS: h5bp.com/css
  *
  * ==|== normalize ========================================================== */
+
 /* =============================================================================
  * HTML5 display definitions
  * ========================================================================== */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
   display: block;
 }
 
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -24,10 +39,19 @@ audio, canvas, video {
 /* =============================================================================
  * Base
  * ========================================================================== */
+
 /* Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
  * Customize the background color to match your design. */
-::-moz-selection, ::selection {
+
+::-moz-selection,
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::-moz-selection,
+::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
@@ -35,19 +59,24 @@ audio, canvas, video {
 a:focus {
   outline: thin dotted;
 }
-a:hover, a:active {
+
+a:hover,
+a:active {
   outline: 0;
 }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+
 /* =============================================================================
  * Typography
  * ========================================================================== */
+
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
@@ -82,13 +111,18 @@ mark {
 }
 
 /* Redeclare monospace font family: h5bp.com/j */
-pre, code, kbd, samp {
+
+pre,
+code,
+kbd,
+samp {
   font-family: monospace, serif;
   _font-family: "courier new", monospace;
   font-size: 1em;
 }
 
 /* Improve readability of pre-formatted text */
+
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -98,7 +132,9 @@ pre {
 q {
   quotes: none;
 }
-q:before, q:after {
+
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -108,6 +144,7 @@ small {
 }
 
 /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+
 sub {
   font-size: 75%;
   line-height: 0;
@@ -130,7 +167,9 @@ sub {
 /* =============================================================================
  * Lists
  * ========================================================================== */
-ul, ol {
+
+ul,
+ol {
   margin: 1em 0;
   padding: 0 0 0 40px;
 }
@@ -139,7 +178,8 @@ dd {
   margin: 0 0 0 40px;
 }
 
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -149,8 +189,10 @@ nav ul, nav ol {
 /* =============================================================================
  * Embedded content
  * ========================================================================== */
+
 /* 1. Improve image quality when scaled in IE7: h5bp.com/d
  * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440 */
+
 img {
   border: 0;
   vertical-align: middle;
@@ -158,6 +200,7 @@ img {
 }
 
 /* Correct overflow not hidden in IE9 */
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -165,13 +208,16 @@ svg:not(:root) {
 /* =============================================================================
  * Figures
  * ========================================================================== */
-figure, form {
+
+figure,
+form {
   margin: 0;
 }
 
 /* =============================================================================
  * Forms
  * ========================================================================== */
+
 fieldset {
   border: 0;
   margin: 0;
@@ -179,12 +225,14 @@ fieldset {
 }
 
 /* Indicate that 'label' will shift focus to the associated form element */
+
 label {
   cursor: pointer;
 }
 
 /* 1. Correct color not inheriting in IE6/7/8/9
  * 2. Correct alignment displayed oddly in IE6/7 */
+
 legend {
   border: 0;
   padding: 0;
@@ -195,7 +243,11 @@ legend {
 /* 1. Correct font-size not inheriting in all browsers
  * 2. Remove margins in FF3/4 S5 Chrome
  * 3. Define consistent vertical alignment display in all browsers */
-button, input, select, textarea {
+
+button,
+input,
+select,
+textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
@@ -203,26 +255,32 @@ button, input, select, textarea {
 }
 
 /* 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet) */
-button, input {
+
+button,
+input {
   line-height: normal;
 }
 
 /* 1. Display hand cursor for clickable form elements
  * 2. Allow styling of clickable form elements in iOS
  * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6) */
+
 button {
   cursor: pointer;
   -webkit-appearance: button;
   *overflow: visible;
 }
 
-input[type="button"], input[type="reset"], input[type="submit"] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
   *overflow: visible;
 }
 
 /* Re-set default cursor for disabled elements */
+
 button[disabled] {
   cursor: default;
 }
@@ -230,31 +288,40 @@ button[disabled] {
 input[disabled] {
   cursor: default;
 }
-input[type="checkbox"], input[type="radio"] {
+
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   *width: 13px;
   *height: 13px;
 }
+
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
 /* Consistent box sizing and appearance */
+
 /* Remove inner padding and border in FF3/4: h5bp.com/l */
-button::-moz-focus-inner, input::-moz-focus-inner {
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
 /* 1. Remove default vertical scrollbar in IE6/7/8/9
  * 2. Allow only vertical resizing */
+
 textarea {
   overflow: auto;
   vertical-align: top;
@@ -264,6 +331,7 @@ textarea {
 /* =============================================================================
  * Tables
  * ========================================================================== */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -276,18 +344,23 @@ td {
 /* ==|== primary styles =====================================================
  * Author:
  * ========================================================================== */
+
 /* ==|== media queries ======================================================
  * EXAMPLE Media Query for Responsive Design.
  * This example overrides the primary ('mobile first') styles
  * Modify as content requires.
  * ========================================================================== */
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
+
 /* ==|== non-semantic helper classes ========================================
  * Please define your styles before this section.
  * ========================================================================== */
+
 /* Image replacement */
+
 .ir {
   border: 0;
   font: 0/0 a;
@@ -297,12 +370,14 @@ td {
 }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
+
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -313,7 +388,9 @@ td {
   position: absolute;
   width: 1px;
 }
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -324,19 +401,24 @@ td {
 
 /* Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p */
+
 /* Hide visually and from screenreaders, but maintain layout */
+
 .invisible {
   visibility: hidden;
 }
 
 /* Contain floats: h5bp.com/q */
+
 .clearfix {
   *zoom: 1;
 }
+
 .clearfix:before {
   content: "";
   display: table;
 }
+
 .clearfix:after {
   content: "";
   display: table;
@@ -347,6 +429,7 @@ td {
  * Print styles.
  * Inlined to avoid required HTTP connection: h5bp.com/r
  * ========================================================================== */
+
 @media print {
   * {
     background: transparent !important;
@@ -359,9 +442,11 @@ td {
   a {
     text-decoration: underline;
   }
+
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
@@ -371,15 +456,18 @@ td {
   }
 
   /* Don't show links for images, or javascript/internal links */
+
   .ir a:after {
     content: "";
   }
 
-  a[href^="javascript:"]:after, a[href^="#"]:after {
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
 
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid;
   }
@@ -398,20 +486,27 @@ td {
     max-width: 100% !important;
   }
 
-  @page {
+@page {
     margin: 0.5cm;
-  }
-  p, h2, h3 {
+}
+
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
+
 /* Mixins to extend what Compass provides */
+
 /* Pygments */
+
 .hll {
   background-color: #ffffcc;
 }
@@ -422,301 +517,375 @@ td {
 }
 
 /* Comment */
+
 .err {
   border: 1px solid red;
 }
 
 /* Error */
+
 .k {
   color: green;
   font-weight: bold;
 }
 
 /* Keyword */
+
 .o {
   color: #666666;
 }
 
 /* Operator */
+
 .cm {
   color: #408080;
   font-style: italic;
 }
 
 /* Comment.Multiline */
+
 .cp {
   color: #bc7a00;
 }
 
 /* Comment.Preproc */
-.c1, .cs {
+
+.c1,
+.cs {
   color: #408080;
   font-style: italic;
 }
 
 /* Comment.Single */
+
 /* Comment.Special */
+
 .gd {
   color: #a00000;
 }
 
 /* Generic.Deleted */
+
 .ge {
   font-style: italic;
 }
 
 /* Generic.Emph */
+
 .gr {
   color: red;
 }
 
 /* Generic.Error */
+
 .gh {
   color: navy;
   font-weight: bold;
 }
 
 /* Generic.Heading */
+
 .gi {
   color: #00a000;
 }
 
 /* Generic.Inserted */
+
 .go {
   color: grey;
 }
 
 /* Generic.Output */
+
 .gp {
   color: navy;
   font-weight: bold;
 }
 
 /* Generic.Prompt */
+
 .gs {
   font-weight: bold;
 }
 
 /* Generic.Strong */
+
 .gu {
   color: purple;
   font-weight: bold;
 }
 
 /* Generic.Subheading */
+
 .gt {
   color: #0040d0;
 }
 
 /* Generic.Traceback */
-.kc, .kd, .kn {
+
+.kc,
+.kd,
+.kn {
   color: green;
   font-weight: bold;
 }
 
 /* Keyword.Constant */
+
 /* Keyword.Declaration */
+
 /* Keyword.Namespace */
+
 .kp {
   color: green;
 }
 
 /* Keyword.Pseudo */
+
 .kr {
   color: green;
   font-weight: bold;
 }
 
 /* Keyword.Reserved */
+
 .kt {
   color: #b00040;
 }
 
 /* Keyword.Type */
+
 .m {
   color: #666666;
 }
 
 /* Literal.Number */
+
 .s {
   color: #ba2121;
 }
 
 /* Literal.String */
+
 .na {
   color: #7d9029;
 }
 
 /* Name.Attribute */
+
 .nb {
   color: green;
 }
 
 /* Name.Builtin */
+
 .nc {
   color: blue;
   font-weight: bold;
 }
 
 /* Name.Class */
+
 .no {
   color: #880000;
 }
 
 /* Name.Constant */
+
 .nd {
   color: #aa22ff;
 }
 
 /* Name.Decorator */
+
 .ni {
   color: #999999;
   font-weight: bold;
 }
 
 /* Name.Entity */
+
 .ne {
   color: #d2413a;
   font-weight: bold;
 }
 
 /* Name.Exception */
+
 .nf {
   color: blue;
 }
 
 /* Name.Function */
+
 .nl {
   color: #a0a000;
 }
 
 /* Name.Label */
+
 .nn {
   color: blue;
   font-weight: bold;
 }
 
 /* Name.Namespace */
+
 .nt {
   color: green;
   font-weight: bold;
 }
 
 /* Name.Tag */
+
 .nv {
   color: #19177c;
 }
 
 /* Name.Variable */
+
 .ow {
   color: #aa22ff;
   font-weight: bold;
 }
 
 /* Operator.Word */
+
 .w {
   color: #bbbbbb;
 }
 
 /* Text.Whitespace */
-.mf, .mh, .mi, .mo {
+
+.mf,
+.mh,
+.mi,
+.mo {
   color: #666666;
 }
 
 /* Literal.Number.Float */
+
 /* Literal.Number.Hex */
+
 /* Literal.Number.Integer */
+
 /* Literal.Number.Oct */
-.sb, .sc {
+
+.sb,
+.sc {
   color: #ba2121;
 }
 
 /* Literal.String.Backtick */
+
 /* Literal.String.Char */
+
 .sd {
   color: #ba2121;
   font-style: italic;
 }
 
 /* Literal.String.Doc */
+
 .s2 {
   color: #ba2121;
 }
 
 /* Literal.String.Double */
+
 .se {
   color: #bb6622;
   font-weight: bold;
 }
 
 /* Literal.String.Escape */
+
 .sh {
   color: #ba2121;
 }
 
 /* Literal.String.Heredoc */
+
 .si {
   color: #bb6688;
   font-weight: bold;
 }
 
 /* Literal.String.Interpol */
+
 .sx {
   color: green;
 }
 
 /* Literal.String.Other */
+
 .sr {
   color: #bb6688;
 }
 
 /* Literal.String.Regex */
+
 .s1 {
   color: #ba2121;
 }
 
 /* Literal.String.Single */
+
 .ss {
   color: #19177c;
 }
 
 /* Literal.String.Symbol */
+
 .bp {
   color: green;
 }
 
 /* Name.Builtin.Pseudo */
-.vc, .vg, .vi {
+
+.vc,
+.vg,
+.vi {
   color: #19177c;
 }
 
 /* Name.Variable.Class */
+
 /* Name.Variable.Global */
+
 /* Name.Variable.Instance */
+
 .il {
   color: #666666;
 }
 
 /* Literal.Number.Integer.Long */
+
 /* Rhythm defaults */
+
 /* Hit me with the rhythm stick */
+
 html {
   font-size: 125%;
   line-height: 1.8em;
 }
 
 /* Colours */
+
 /* Shadow defaults */
+
 /* Extra bouncer animation */
+
 .move-bouncer-404 {
   -webkit-animation: move-bouncer-404 5s forwards;
-  -moz-animation: move-bouncer-404 5s forwards;
-  -o-animation: move-bouncer-404 5s forwards;
   -ms-animation: move-bouncer-404 5s forwards;
   animation: move-bouncer-404 5s forwards;
 }
 
-.bounce1, .bounce2, .bounce3 {
+.bounce1,
+.bounce2,
+.bounce3 {
   display: none;
 }
 
@@ -726,8 +895,6 @@ html {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   -webkit-animation: floatup 1s;
-  -moz-animation: floatup 1s;
-  -o-animation: floatup 1s;
   -ms-animation: floatup 1s;
   animation: floatup 1s;
 }
@@ -738,8 +905,6 @@ html {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   -webkit-animation: bobbing 3s infinite;
-  -moz-animation: bobbing 3s infinite;
-  -o-animation: bobbing 3s infinite;
   -ms-animation: bobbing 3s infinite;
   animation: bobbing 3s infinite;
 }
@@ -752,44 +917,24 @@ html {
   height: 80px;
 }
 
-@-moz-keyframes floatup {
-  100% {
-    top: 300px;
-  }
-}
 @-webkit-keyframes floatup {
   100% {
     top: 300px;
   }
 }
-@-o-keyframes floatup {
-  100% {
-    top: 300px;
-  }
-}
+
 @-ms-keyframes floatup {
   100% {
     top: 300px;
   }
 }
+
 @keyframes floatup {
   100% {
     top: 300px;
   }
 }
-@-moz-keyframes bobbing {
-  10% {
-    top: 300px;
-  }
 
-  60% {
-    top: 320px;
-  }
-
-  98% {
-    top: 300px;
-  }
-}
 @-webkit-keyframes bobbing {
   10% {
     top: 300px;
@@ -803,19 +948,7 @@ html {
     top: 300px;
   }
 }
-@-o-keyframes bobbing {
-  10% {
-    top: 300px;
-  }
 
-  60% {
-    top: 320px;
-  }
-
-  98% {
-    top: 300px;
-  }
-}
 @-ms-keyframes bobbing {
   10% {
     top: 300px;
@@ -829,6 +962,7 @@ html {
     top: 300px;
   }
 }
+
 @keyframes bobbing {
   10% {
     top: 300px;
@@ -842,141 +976,10 @@ html {
     top: 300px;
   }
 }
-@-moz-keyframes move-bouncer-404 {
-  0% {
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-    top: 42px;
-  }
 
-  5% {
-    top: 0;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  10%, 11% {
-    top: 42px;
-    left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  15% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  21%, 22% {
-    top: 42px;
-    left: 91px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  25% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  31%, 32% {
-    top: 42px;
-    left: 161px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  35% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  41%, 42% {
-    top: 42px;
-    left: 231px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  45% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  51%, 52% {
-    top: 42px;
-    left: 301px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  55%, 74% {
-    top: 0;
-    left: 381px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  80%,100% {
-    left: 381px;
-    top: 350px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes move-bouncer-404 {
   0% {
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -984,8 +987,6 @@ html {
   5% {
     top: 0;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -995,8 +996,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1005,8 +1004,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1016,8 +1013,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1026,8 +1021,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1037,8 +1030,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1047,8 +1038,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1058,8 +1047,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1068,8 +1055,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1079,8 +1064,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1090,153 +1073,20 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
-  80%,100% {
+  80%, 100% {
     left: 381px;
     top: 350px;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
 }
-@-o-keyframes move-bouncer-404 {
-  0% {
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-    top: 42px;
-  }
 
-  5% {
-    top: 0;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  10%, 11% {
-    top: 42px;
-    left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  15% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  21%, 22% {
-    top: 42px;
-    left: 91px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  25% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  31%, 32% {
-    top: 42px;
-    left: 161px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  35% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  41%, 42% {
-    top: 42px;
-    left: 231px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  45% {
-    top: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  51%, 52% {
-    top: 42px;
-    left: 301px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
-    border-radius: 25px / 20px;
-  }
-
-  55%, 74% {
-    top: 0;
-    left: 381px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
-    border-radius: 25px / 30px;
-  }
-
-  80%,100% {
-    left: 381px;
-    top: 350px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-  }
-}
 @-ms-keyframes move-bouncer-404 {
   0% {
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1244,8 +1094,6 @@ html {
   5% {
     top: 0;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1255,8 +1103,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1265,8 +1111,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1276,8 +1120,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1286,8 +1128,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1297,8 +1137,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1307,8 +1145,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1318,8 +1154,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1328,8 +1162,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1339,8 +1171,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1350,23 +1180,20 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
-  80%,100% {
+  80%, 100% {
     left: 381px;
     top: 350px;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
 }
+
 @keyframes move-bouncer-404 {
   0% {
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
     top: 42px;
   }
@@ -1374,8 +1201,6 @@ html {
   5% {
     top: 0;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1385,8 +1210,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1395,8 +1218,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1406,8 +1227,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1416,8 +1235,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1427,8 +1244,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1437,8 +1252,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1448,8 +1261,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1458,8 +1269,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
@@ -1469,8 +1278,6 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 40px;
-    -moz-border-radius: 25px / 20px;
-    -webkit-border-radius: 25px 20px;
     border-radius: 25px / 20px;
   }
 
@@ -1480,12 +1287,10 @@ html {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     height: 60px;
-    -moz-border-radius: 25px / 30px;
-    -webkit-border-radius: 25px 30px;
     border-radius: 25px / 30px;
   }
 
-  80%,100% {
+  80%, 100% {
     left: 381px;
     top: 350px;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
