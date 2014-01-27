@@ -877,6 +877,16 @@ img.left {
   margin: 10px 20px 10px 0;
 }
 
+.email-signup {
+  text-align: center;
+}
+.email-signup img {
+  margin-bottom: 1em;
+}
+.email-signup input[type=email] {
+  margin-bottom: 0.5em;
+}
+
 /* Page structure */
 .page-container {
   background: #fafafe;
