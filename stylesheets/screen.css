@@ -818,6 +818,7 @@ h1, h2, h3 {
 }
 .welcome h2 {
   font-size: 1.5em;
+  padding-top: 1em;
 }
 
 /* Links */
