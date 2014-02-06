@@ -33,6 +33,8 @@ If you haven't seen Brett Victor's amazing talk, [Inventing on Principle](https:
 
 Being closer to the end result makes experimentation easier, and allows us to more easily express ourselves.
 
+	"So much of creation is discovery, and you can't discover anything if you can't see what you're doing" - Brett Victor
+
 ## So why does Macaw matter?
 
 By placing itself neatly between the hand coding of a text editor, and the visual design of a tool like Photoshop, Macaw is a bridge for that gap. Being able to slide a value and see an immediate change in the visual layout brings us closer to what we are creating.
