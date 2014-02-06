@@ -7,8 +7,6 @@ imageURL: macaw.jpg
 published: true
 ---
 
-	"So much of creation is discovery, and you can't discover anything if you can't see what you're doing" - Brett Victor
-
 Late last year the web was abuzz with talk about a new web design tool called [Macaw](http://macaw.co). With the promise to help us "stop writing code" and instead "start drawing it", it was announced with a [very impressive video](http://macaw.co/peek/) that had many of us salivating.
 
 What I found interesting was the difference between my reaction, as a front-end-ish design/developer, and some of my colleagues. Rather than share my enthusiasm, quite a few reacted with indifference or even disdain to the notion that a tool could be a better choice than hand coding. "But I like code", was one response.
@@ -34,6 +32,8 @@ On the other hand, front-end coding is quite separate from where the results of 
 If you haven't seen Brett Victor's amazing talk, [Inventing on Principle](https://vimeo.com/36579366) I would strongly recommend setting aside an hour to take it in. In his talk, Brett shows by example the value of removing this "gap" between the code we write and the visual end result. By creating tools and ways to bridge the gap, we get closer to the end result.
 
 Being closer to the end result makes experimentation easier, and allows us to more easily express ourselves.
+
+	"So much of creation is discovery, and you can't discover anything if you can't see what you're doing" - Brett Victor
 
 ## So why does Macaw matter?
 
