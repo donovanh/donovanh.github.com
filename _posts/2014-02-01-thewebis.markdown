@@ -1,0 +1,53 @@
+---
+layout: post
+title: "TheWeb.is: Step-by-step"
+description: "A summary of some of the things I wrote about in 2013, and my hopes for the new year."
+tags: [learnsome, development, css]
+imageURL: thewebis.png
+published: false
+---
+
+Topics to cover
+
+Animating with CSS
+Creating 3D objects with HTML and CSS
+Embedding fonts and images backgrounds
+Managing your CSS with SASS
+Automating your build process with Grunt.js
+
+Intro
+
+Anyone who made it along to last year's [HandHeldConf](http://handheldconf.com) will know that Craig Lockwood puts together an amazing conference. While this year won't have a Handheld, it will instead be getting something much bigger. This October Craig will be hosting quite an amazing event called [The Web Is](http://theweb.is).
+
+Featuring two days of talks, and a day of hand-on tutorials, this one is sounding like it's going to be quite amazing. I have been helping out with the website for this year's event, and in the spirit of the web I'd like to share some of the process and techniques that I've used to build the website.
+
+TODO: Put a callout here explaining how this tutorial is going to be part of a more detailed free screencast. Sign up at Learnsome.co to get the screencast when it's ready.
+
+## Teaser site
+
+The brief:
+
+Decisions, why, cool ideas, one request, sure why not!
+
+## The design process
+
+Not a straight line. Show a bit about the flower idea and why it wasn't right.
+
+## Retro yet modern, nerdy yet pretty
+
+The chosen design, how it fit the goals, and a summary of the techniques that went into it
+
+## Making the 3D object in CSS
+
+See the full article about the [3D Mac Plus in CSS](http://hop.ie/blog/macplus/) for full details. Here's a quite overview of what transforms are, how they were used to create the object. Then talk about how it was animated (keyframes introducing the Mac, JavaScript for starting and typing the text)
+
+## Inline fonts and images
+
+Rationale as to why you'd want to embed them in the first place, when not to, then step by step of how to do so
+
+## SASS &amp; Autoprefixer
+
+
+
+## Building the project with Grunt.js
+

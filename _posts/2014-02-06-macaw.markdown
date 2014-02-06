@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Why Macaw Matters"
+description: "Coding is not the point."
+tags: [css, front-end]
+imageURL: macaw.jpg
+published: true
+---
+
+Late last year the web was abuzz with talk about a new web design tool called [Macaw](http://macaw.co). With the promise to help us "stop writing code" and instead "start drawing it", it was announced with a [very impressive video](http://macaw.co/peek/) that had many of us salivating.
+
+What I found interesting was the difference between my reaction, as a front-end-ish design/developer, and some of my colleagues. Rather than share my enthusiasm, quite a few reacted with indifference or even disdain to the notion that a tool could be a better choice than hand coding. "But I like code", was one response.
+
+While I enjoy using code to create things, this response surprised me.
+
+## What Macaw is
+
+In case you didn't catch the Kickstarter and pre-release promotion, Macaw is a visual editor that presents a Photoshop-like interface for creating web pages. Visual sliders, colour pickers are artfully arranged around the edge and the main body of the application is the workspace that encourages you to drag, resize and arrange your site visually.
+
+It's not the first program to try to do this. One of the biggest was [Dreamweaver](http://www.adobe.com/ie/products/dreamweaver.html). A tool, now owned and still being developed by Adobe. One of the main selling points of Macaw over Dreamweaver is the method by which it allows you to create semantic, carefully crafted HTML. Dreamweaver differs in that it hides the HTML, creating machine-generated, non-semantic code.
+
+This difference places Macaw somewhere between being a visual design tool and a plain text code editor. Using it promises to bypass the process of hand coding a website from scratch, while retaining just enough control over the end code to ensure its quality.
+
+## "But I like code"
+
+Nothing wrong with that. Using code to create is great. However I would consider the act of coding the server-side stuff in an application quite different to the coding in the front-end. When coding server-side functions, we're working very closely with the data and the logic. Every line we write is very much part of what we're trying to achieve. 
+
+On the other hand, front-end coding is quite separate from where the results of our work ends up. While we're typing away in a text editor, the results of all this coding can only be seen in the browser. We skip back and forth between the two, typing values, checking the browser, again and again.
+
+## A better way
+
+If you haven't seen Brett Victor's amazing talk, [Inventing on Principle](https://vimeo.com/36579366) I would strongly recommend setting aside an hour to take it in. In his talk, Brett shows by example the value of removing this "gap" between the code we write and the visual end result. By creating tools and ways to bridge the gap, we get closer to the end result.
+
+Being closer to the end result makes experimentation easier, and allows us to more easily express ourselves.
+
+## So why does Macaw matter?
+
+By placing itself neatly between the hand coding of a text editor, and the visual design of a tool like Photoshop, Macaw is a bridge for that gap. Being able to slide a value and see an immediate change in the visual layout brings us closer to what we are creating.
+
+This is why I am so excited to see where it goes, and I hope it continues to evolve into the elegant, helpful tool it promises to be.
+
+
+
