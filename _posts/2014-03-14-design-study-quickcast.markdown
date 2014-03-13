@@ -13,7 +13,7 @@ A product I have been trying, and liking, recently is [Quickcast](http://quickca
 
 Quickcast is an OSX application that allows the creation of short screencasts. It aims to make the creation and sharing of short screencasts easy, and presents a simple interface that helps ensure this goal is met.
 
-Being an early version of the product, there's always going to be some danger of [experience rot](http://www.uie.com/articles/experience_rot/) as it matures, but for now it's design seems well focused on simple goals.
+Being an early version of the product, there's always going to be some danger of [experience rot](http://www.uie.com/articles/experience_rot/) as it matures, but for now it's design seems well focused on a small set of goals.
 
 ## User goals
 
