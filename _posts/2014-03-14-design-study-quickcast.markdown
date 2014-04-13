@@ -74,10 +74,6 @@ A user experience is not just limited to the app itself. A well-designed website
 
 The result of these interactions is a light, well designed app that makes it easy for users to create and share screencasts.
 
-## Awards
-
-If you like Quickcast, be sure to [vote for them](https://thenetawards.com/vote/side-project/quick-cast/) in the Net awards.
-
 ## Alternatives
 
 ### More complex

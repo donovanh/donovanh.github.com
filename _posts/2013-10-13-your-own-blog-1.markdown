@@ -90,9 +90,9 @@ With a content container in place, the nest step is to set up the blog post temp
 
 At the top of this `post.html` file you'll find some text:
 
-    \---
+    ---
     layout: default
-    \---
+    ---
 
 This part of the file is used by Jekyll, and is called [frontmatter](http://jekyllrb.com/docs/variables/). It's where you can set any values to be used in the templates. In this case, it's defining the "layout" to be "default". This tells Jekyll to process the file using the `default.html` layout file. If you have other layout files, changing the name here will direct Jekyll to use that file.
 
@@ -110,13 +110,13 @@ This post is consider to have been published on 27th August, 2013, and the URL i
 
 With this set up, you can add in some more information by setting some YAML frontmatter at the top of your blog post:
 
-    \---
+    ---
     layout: post
     title: "Your blog post title"
     description: "A description of your post"
     tags: [multiple,tags]
     published: true
-    \---
+    ---
 
 This tells Jekyll to use the `post.html` layout template and sets some useful meta-data for your blog post. With that in place you can begin writing your post.
 
@@ -130,11 +130,11 @@ You can create standalone pages for your site by creating HTML files. If you inc
 
 This file is the home page for the blog, so contains a loop of all the site's posts. It could be any HTML content we wish. Note the frontmatter at the top:
 
-    \---
+    ---
     layout: default
     title: Shop Ireland News
     bodyTag: home
-    \---
+    ---
 
 This tells Jekyll to use the default.html file for layout, and show the title as [Shop Ireland News](http://blog.shopireland.ie).
 

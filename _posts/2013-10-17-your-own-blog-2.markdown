@@ -98,10 +98,10 @@ To begin, create a `404.html` file in the root of your blog project. Jekyll will
 
 The contents of your `404.html` file could look like this:
 
-    \---
+    ---
     layout: default
     title: Page not found
-    \---
+    ---
     <article>
       <header id="404">
         <h1>Page missing</h1>
