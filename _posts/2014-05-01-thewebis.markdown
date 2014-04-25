@@ -17,9 +17,9 @@ Automating your build process with Grunt.js
 
 Intro
 
-Anyone who made it along to last year's [HandHeldConf](http://handheldconf.com) will know that Craig Lockwood puts together an amazing conference. While this year won't have a Handheld, it will instead be getting something much bigger. This October Craig will be hosting quite an amazing event called [The Web Is](http://theweb.is).
+Anyone who made it along to last year's [HandHeldConf](http://handheldconf.com) will know that Craig Lockwood puts together a great conference. While this year won't have a Handheld, it will instead be getting something much bigger. This October Craig will be hosting quite an amazing event called [The Web Is](http://theweb.is).
 
-Featuring two days of talks, and a day of hand-on tutorials, this one is sounding like it's going to be quite amazing. I have been helping out with the website for this year's event, and in the spirit of the web I'd like to share some of the process and techniques that I've used to build the website.
+Featuring two days of talks, and a day of hand-on tutorials, this one is sounding like it's going to be a big deal. I have been helping out with the website for this year's event, and in the spirit of the web I'd like to share some of the process and techniques that I've used to build the website.
 
 TODO: Put a callout here explaining how this tutorial is going to be part of a more detailed free screencast. Sign up at Learnsome.co to get the screencast when it's ready.
 
