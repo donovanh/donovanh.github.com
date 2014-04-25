@@ -156,6 +156,8 @@ Once the initial shots folder has been created, and a set of pages added to the 
 
 However you may find if you're creating many screenshots that it adds some weight to your repository.
 
+If not using it as a visual history, it still presents a useful way to quickly scan through a set of pages when working on the front-end and check that nothing has changed unexpectedly.
+
 ### Not automated
 
 This sort of testing is not automatic, offering a way to more easily manually check layouts. Other unit or functional test tools are better suited to continuous integration testing. Still, this makes the process of checking a range of pages for changes much easier.
