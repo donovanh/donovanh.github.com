@@ -37,7 +37,7 @@ function showBouncer() {
 
 if ($('.email-signup').length > 0) {
     $(window).scroll(function() {
-       if(($(window).scrollTop() + $(window).height() >= $(document).height() - 260) && !$('.email-signup').hasClass('activate')) {
+       if(($(window).scrollTop() + $(window).height() >= $(document).height() - 360) && !$('.email-signup').hasClass('activate')) {
            $('.email-signup').addClass('activate');
        }
     });
