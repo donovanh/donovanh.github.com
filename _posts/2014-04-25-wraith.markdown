@@ -7,7 +7,7 @@ imageURL: wraith.png
 published: true
 ---
 
-We have many tools manage and test how our front-end code works, but not so many to test how it looks. I've been looking for tools that make it easier to catch visual changes when working on CSS. One such tool is Wraith.
+We have many tools manage and test how our front-end code works, but not so many to test how it looks. I've been looking for tools that make it easier to catch visual changes when working on CSS. One such tool is [Wraith](http://bbc-news.github.io/wraith/).
 
 ## Testing responsive designs
 
