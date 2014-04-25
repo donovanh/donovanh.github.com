@@ -154,13 +154,13 @@ Running `wraith capture config` again will re-generate the images and overwrite 
 
 Once the initial shots folder has been created, and a set of pages added to the config, you will have a set of images documenting any visual changes to your pages. One approach might be to check these into your version control system. This would give you a visual history of all layout changes, tied to specific commits.
 
-However you may find if you're creating many screenshots that it adds some weight to your repository.
+This may not be very practical though, as you may find if you're creating many screenshots that it adds a lot of weight to your repository. Testing a few pages on this blog quickly resulted in 9MB of screenshots being pushed with each test.
 
-If not using it as a visual history, it still presents a useful way to quickly scan through a set of pages when working on the front-end and check that nothing has changed unexpectedly.
+At it's most basic, the tool presents a useful way to quickly scan through a set of pages when working on the front-end and check that nothing has changed unexpectedly.
 
-### Not automated
+### No passing or failing
 
-This sort of testing is not automatic, offering a way to more easily manually check layouts. Other unit or functional test tools are better suited to continuous integration testing. Still, this makes the process of checking a range of pages for changes much easier.
+This testing does not result in a green or red pass/fail result. Instead it offers a way to more easily manually check layouts. Other unit or functional test tools are better suited to continuous integration testing.
 
 It's also worth noting that the web drivers supported only include Webkit and Gecko. This means testing in other browsers, such as Internet Explorer, is not covered by this tool.
 
