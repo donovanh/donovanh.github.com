@@ -25,7 +25,7 @@ If you like to watch tutorials, one of the best introductions to the topic is pr
 
 ### Follow along
 
-As we progress through setting up and using Canvas, you'll find each of the examples [as a set online](https://github.com/donovanh/particles/tree/master/examples), and I'll link to a live example of each as we go.
+As we progress through setting up and using Canvas, you'll find each of the examples [as a set online](https://github.com/donovanh/particles/tree/master/examples), and I'll link to a live example of each as we go. You'll also find all the files [on Github](https://github.com/donovanh/particles) for you to download.
 
 ## A blank canvas
 
