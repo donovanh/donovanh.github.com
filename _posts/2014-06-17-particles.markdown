@@ -167,7 +167,7 @@ You can press **Rerun** to see the animation again. The example can be found at 
 
 With a little more logic we can have the particle bounce along rather than drop straight off the screen. Rather than simply adjust the Y velocity, we can test if the particle has reached a certain height and flip the direction of the particle. 
 
-    if (posY &gt; canvas.height * 0.75) {
+    if (posY > canvas.height * 0.75) {
       vy *= -0.6;
       vx *= 0.75;
       posY = canvas.height * 0.75;
@@ -249,7 +249,7 @@ To draw the on the screen we can extend the `Particle` function by adding a `dra
       this.life++;
 
       // If Particle is old, remove it
-      if (this.life &gt;= settings.maxLife) {
+      if (this.life >= settings.maxLife) {
         delete particles[this.id];
       }
 
@@ -306,7 +306,7 @@ Let’s add a few lines to the `draw` method to check for these walls:
         this.x = settings.leftWall + (settings.particleSize);
       }
 
-      if (this.x + (settings.particleSize) &gt;= settings.rightWall) {
+      if (this.x + (settings.particleSize) >= settings.rightWall) {
         this.vx *= -1;
         this.x = settings.rightWall - settings.particleSize;
       }
