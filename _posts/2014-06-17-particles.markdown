@@ -15,7 +15,7 @@ In this article I will explore some ways you can make use of canvas to create pa
 
 HTML5 contains many tags and tools that allow you to create and animate amazing interactive content. This article will focus on the `canvas` element, and how you can use it to create animated scenes with JavaScript.
 
-Introduced in 1994 by Apple, the `canvas` tag was initially designed to be used in the webkit-based Safari browser. However after it was adopted by Firefox and Opera it became a web standard and can now be used confidently across all major browsers.
+Introduced in 2004 by Apple, the `canvas` tag was initially designed to be used in the webkit-based Safari browser. However after it was adopted by Firefox and Opera it became a web standard and can now be used confidently across all major browsers.
 
 Canvas is frequently used as a basis for HTML-based games as it allows for a self-contained area of a web page, within which you can draw and animate shapes, respond to user input and add interactivity to your page.
 
