@@ -25,6 +25,22 @@
     <meta name="google-site-verification" content="4b2gG2_kr5STLh0RhE34iPvU59o591CoG9N6iYOazvw" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
     <script src="/javascripts/modernizr.js"></script>
+
+    {% if page.layout == 'post' %}
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:site" content="Hop.ie" />
+      <meta property="twitter:title" content="{% page.title %}" />
+      <meta property="twitter:description" content="{% page.description %}" />
+      <meta property="twitter:image" content="http://hop.ie/images/home/{% page.imageURL %}" />
+      <meta property="twitter:url" content="{% site.url %}{% page.url %}" />
+    {% else %}
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:site" content="Hop.ie" />
+      <meta property="twitter:title" content="{% page.title %}" />
+      <meta property="twitter:description" content="Front-end web development articles at hop.ie" />
+      <meta property="twitter:url" content="{% site.url %}{% page.url %}" />
+    {% endif %}
+
 </head>
 <body class="{% if page.bodyTag %}{{page.bodyTag}}{% else %}internal{% endif %}">
   <div class="page-container">
