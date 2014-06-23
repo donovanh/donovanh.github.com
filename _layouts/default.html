@@ -26,9 +26,9 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
     <script src="/javascripts/modernizr.js"></script>
 
-    {% if page.layout == 'post' %}
+    {% if page.imageURL %}
       <meta property="twitter:card" content="summary" />
-      <meta property="twitter:site" content="Hop.ie" />
+      <meta property="twitter:site" content="@donovanh" />
       <meta property="twitter:title" content="{{page.title}}" />
       <meta property="twitter:description" content="{{page.description}}" />
       <meta property="twitter:image" content="http://hop.ie/images/home/{{page.imageURL}}" />
