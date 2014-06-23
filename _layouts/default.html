@@ -27,20 +27,20 @@
     <script src="/javascripts/modernizr.js"></script>
 
     {% if page.imageURL %}
-      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:card" content="photo" />
       <meta property="twitter:site" content="@donovanh" />
       <meta property="twitter:creator" content="@donovanh" />
-      <meta property="twitter:title" content="{{page.title}}" />
-      <meta property="twitter:description" content="{{page.description}}" />
-      <meta property="twitter:image" content="http://hop.ie/images/home/{{page.imageURL}}" />
-      <meta property="twitter:url" content="{{site.url}}{{page.url}}" />
+      <meta property="og:title" content="{{page.title}}" />
+      <meta property="og:description" content="{{page.description}}" />
+      <meta property="og:image" content="http://hop.ie/images/home/{{page.imageURL}}" />
+      <meta property="og:url" content="{{site.url}}{{page.url}}" />
     {% else %}
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:site" content="@donovanh" />
       <meta property="twitter:creator" content="@donovanh" />
-      <meta property="twitter:title" content="{{page.title}}" />
-      <meta property="twitter:description" content="Front-end web development articles at hop.ie" />
-      <meta property="twitter:url" content="{{site.url}}{{page.url}}" />
+      <meta property="og:title" content="{{page.title}}" />
+      <meta property="og:description" content="Front-end web development articles at hop.ie" />
+      <meta property="og:url" content="{{site.url}}{{page.url}}" />
     {% endif %}
 
 </head>
