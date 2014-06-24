@@ -98,12 +98,6 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-
-    if ($('.ad-container').length > 0) {
-      $.getScript('http://adn.fusionads.net/api/1.0/ad.js?zoneid=251&rand=' + Math.floor(Math.random()*9999999), function() {
-        $('.ad-container').fadeIn();
-      });
-    }
   </script>
 </body>
 </html>

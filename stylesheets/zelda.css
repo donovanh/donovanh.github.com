@@ -401,7 +401,8 @@ td {
 
   @page {
     margin: 0.5cm;
-  }
+}
+
   p, h2, h3 {
     orphans: 3;
     widows: 3;
@@ -484,7 +485,7 @@ td {
 
 /* Generic.Inserted */
 .go {
-  color: grey;
+  color: gray;
 }
 
 /* Generic.Output */
@@ -701,8 +702,12 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-html {
+* html {
   font-size: 125%;
+}
+
+html {
+  font-size: 20px;
   line-height: 1.8em;
 }
 
@@ -714,14 +719,20 @@ html {
   height: 200px;
   background-color: #666666;
   border: 1px solid black;
-  -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   border-radius: 15px;
-  -moz-perspective: 800px;
   -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
   perspective: 800px;
-  -moz-perspective-origin: 120% -200px;
   -webkit-perspective-origin: 120% -200px;
+  -moz-perspective-origin: 120% -200px;
+  -ms-perspective-origin: 120% -200px;
+  -o-perspective-origin: 120% -200px;
   perspective-origin: 120% -200px;
 }
 .stage .triangle {
@@ -730,15 +741,19 @@ html {
   left: 75px;
   width: 150px;
   height: 150px;
-  -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .stage .triangle figure {
   display: block;
   position: absolute;
-  -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .stage.example1 figure.front {
@@ -747,10 +762,10 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
+  -webkit-transform: translateY(20px);
   -moz-transform: translateY(20px);
   -ms-transform: translateY(20px);
   -o-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
   transform: translateY(20px);
 }
 .stage.example2 figure.front {
@@ -759,10 +774,10 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
+  -webkit-transform: translateZ(80px);
   -moz-transform: translateZ(80px);
   -ms-transform: translateZ(80px);
   -o-transform: translateZ(80px);
-  -webkit-transform: translateZ(80px);
   transform: translateZ(80px);
 }
 .stage.example2 figure.back {
@@ -771,10 +786,10 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffd200;
+  -webkit-transform: translateZ(-80px);
   -moz-transform: translateZ(-80px);
   -ms-transform: translateZ(-80px);
   -o-transform: translateZ(-80px);
-  -webkit-transform: translateZ(-80px);
   transform: translateZ(-80px);
 }
 .stage.example3 .triangle, .stage.example4 .triangle {
@@ -791,10 +806,10 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
+  -webkit-transform: translateZ(20px);
   -moz-transform: translateZ(20px);
   -ms-transform: translateZ(20px);
   -o-transform: translateZ(20px);
-  -webkit-transform: translateZ(20px);
   transform: translateZ(20px);
 }
 .stage.example3 figure.back, .stage.example4 figure.back {
@@ -803,10 +818,10 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
+  -webkit-transform: translateZ(-20px) rotateY(180deg);
   -moz-transform: translateZ(-20px) rotateY(180deg);
   -ms-transform: translateZ(-20px) rotateY(180deg);
   -o-transform: translateZ(-20px) rotateY(180deg);
-  -webkit-transform: translateZ(-20px) rotateY(180deg);
   transform: translateZ(-20px) rotateY(180deg);
 }
 .stage.example3 figure.side1, .stage.example4 figure.side1 {
@@ -816,10 +831,10 @@ html {
   height: 168px;
   width: 40px;
   background-color: #ffd200;
+  -webkit-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   -moz-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   -ms-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   -o-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
-  -webkit-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
 }
 .stage.example3 figure.side2, .stage.example4 figure.side2 {
@@ -829,10 +844,10 @@ html {
   height: 168px;
   width: 40px;
   background-color: #ffd200;
+  -webkit-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   -moz-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   -ms-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   -o-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
-  -webkit-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
 }
 .stage.example3 figure.side3, .stage.example4 figure.side3 {
@@ -840,22 +855,24 @@ html {
   background-color: #ffd200;
   width: 150px;
   height: 40px;
+  -webkit-transform: translateY(130px) rotateX(-90deg);
   -moz-transform: translateY(130px) rotateX(-90deg);
   -ms-transform: translateY(130px) rotateX(-90deg);
   -o-transform: translateY(130px) rotateX(-90deg);
-  -webkit-transform: translateY(130px) rotateX(-90deg);
   transform: translateY(130px) rotateX(-90deg);
 }
 .stage.example4 {
-  -moz-perspective-origin: 120% -200px;
   -webkit-perspective-origin: 120% -200px;
+  -moz-perspective-origin: 120% -200px;
+  -ms-perspective-origin: 120% -200px;
+  -o-perspective-origin: 120% -200px;
   perspective-origin: 120% -200px;
 }
 .stage.example4 .scaler {
+  -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -ms-transform: scale(0.8);
   -o-transform: scale(0.8);
-  -webkit-transform: scale(0.8);
   transform: scale(0.8);
   position: absolute;
   top: -20px;
@@ -904,85 +921,65 @@ html {
 @-moz-keyframes rotate {
   0% {
     -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
     -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
+
 @-webkit-keyframes rotate {
   0% {
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
     -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
+
 @-o-keyframes rotate {
   0% {
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
     -o-transform: rotateY(0);
-    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
+
 @-ms-keyframes rotate {
   0% {
-    -moz-transform: rotateY(0);
     -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
-    -moz-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
+
 @keyframes rotate {
   0% {
+    -webkit-transform: rotateY(0);
     -moz-transform: rotateY(0);
     -ms-transform: rotateY(0);
     -o-transform: rotateY(0);
-    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
   100% {
+    -webkit-transform: rotateY(360deg);
     -moz-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }

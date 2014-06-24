@@ -400,7 +400,8 @@ td {
 
   @page {
     margin: 0.5cm;
-  }
+}
+
   p, h2, h3 {
     orphans: 3;
     widows: 3;
@@ -483,7 +484,7 @@ td {
 
 /* Generic.Inserted */
 .go {
-  color: grey;
+  color: gray;
 }
 
 /* Generic.Output */
@@ -700,8 +701,12 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-html {
+* html {
   font-size: 125%;
+}
+
+html {
+  font-size: 20px;
   line-height: 1.8em;
 }
 
@@ -709,27 +714,29 @@ html {
 /* Shadow defaults */
 /* Override for a stripey theme */
 .bouncer {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(68%, #1c3243), color-stop(68%, #fafafe), color-stop(76%, #fafafe), color-stop(76%, #1c3243), color-stop(80%, #1c3243), color-stop(80%, #fafafe), color-stop(88%, #fafafe), color-stop(88%, #1c3243));
+  background-image: -webkit-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-image: -moz-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-image: -o-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
-  background-image: -webkit-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-image: linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-repeat: no-repeat;
 }
 
 .bouncer-container a:hover .bouncer {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(68%, #ff1c7c), color-stop(68%, #fafafe), color-stop(76%, #fafafe), color-stop(76%, #ff1c7c), color-stop(80%, #ff1c7c), color-stop(80%, #fafafe), color-stop(88%, #fafafe), color-stop(88%, #ff1c7c));
+  background-image: -webkit-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
   background-image: -moz-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
   background-image: -o-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
-  background-image: -webkit-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
   background-image: linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
+  -webkit-transition: backround-image 0.2s ease-out;
   -moz-transition: backround-image 0.2s ease-out;
   -o-transition: backround-image 0.2s ease-out;
-  -webkit-transition: backround-image 0.2s ease-out;
   transition: backround-image 0.2s ease-out;
 }
 .bouncer-container a:hover .ear1, .bouncer-container a:hover .ear2 {
   background-color: #ff1c7c;
+  -webkit-transition: backround-image 0.2s ease-out;
   -moz-transition: backround-image 0.2s ease-out;
   -o-transition: backround-image 0.2s ease-out;
-  -webkit-transition: backround-image 0.2s ease-out;
   transition: backround-image 0.2s ease-out;
 }
