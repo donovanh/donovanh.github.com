@@ -21,6 +21,8 @@ Instead of this I'll try a second approach, making use of CSS gradients to add s
 
 All the examples mentioned can be found via [my Codepen account](http://codepen.io/donovanh), or by selecting the "Edit on Codepen" links in each example below.
 
+In the code examples, I've left out any browser prefixes. I'd recommend using a tool like [Autoprefixer](http://css-tricks.com/autoprefixer/), or add in prefixes as needed.
+
 ## Basic shape
 
 Before adding details, we'll create the initial circle shape. Begin with the HTML:
@@ -59,9 +61,7 @@ We can do this using the following CSS:
       height: 300px;
       width: 300px;
       margin: 0;
-      background: -webkit-radial-gradient(100px 100px, circle, #5cabff, #000);
-      background: -moz-radial-gradient(100px 100px, circle, #5cabff, #000);
-      background: radial-gradient(100px 100px, circle, #5cabff, #000);
+      background: radial-gradient(circle at 100px 100px, #5cabff, #000);
     }
 
 You should get something like this:
@@ -70,7 +70,9 @@ You should get something like this:
 
 ### Radial gradients
 
-The `radial-gradient` property takes a few arguments. The first is the center position for the start of the gradient. Then, the type of shape (circle, or ellipse) is specified. Lastly a series of colours is specified. You can specify more than two colours, but it is then necessary to include a distance with each one so that the gradient knows when to blend each colour into the next.
+The `radial-gradient` property takes a few arguments. The first is the center position for the start of the gradient. This follows the form `*shape* at *position*`. In this case case, it's a circle with it's center position 100 pixels in from the left and 100 pixels from the top.
+
+Next a series of colours is specified. You can specify more than two colours, but it is then necessary to include a distance with each one so that the gradient knows when to blend each colour into the next.
 
 In this example just two colours are specified. This lets the browser assumes the first is 0% and the latter is 100%, and it draws the gradient between these to colours. If we wanted other steps in the gradient, we could specify distances in pixels or percentages, as you'll see later.
 
@@ -95,19 +97,19 @@ Apply some styles to the stage and position a shadow to set the scene.
       height: 300px;
       display: inline-block;
       margin: 20px;
-      -webkit-perspective: 1200px;
-      -webkit-perspective-origin: 50% 50%;
+      perspective: 1200px;
+      perspective-origin: 50% 50%;
     }
     .ball .shadow {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: -webkit-radial-gradient(50% 50%, circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-      -webkit-transform: rotateX(90deg) translateZ(-150px);
+      background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+      transform: rotateX(90deg) translateZ(-150px);
       z-index: -1;
     }
 
-Note that I'm only including the `-webkit` perspective in the CSS. The Codepen examples contain fully prefixed CSS. In the above I set up the `stage` div to have `perspective` of 1,200 pixels. The perspective property is like the vanishing point in a 3D scene.
+Note that I'm not showing prefixes in this examples CSS. The Codepen examples contain fully prefixed CSS. In the above I set up the `stage` div to have `perspective` of 1,200 pixels. The perspective property is like the vanishing point in a 3D scene.
 
 The ball's shadow is then placed by giving it a radial gradient, but then positioning it using a `transform`. Transforms in CSS let you rotate, scale, move or skew things in a 3D space. The shadow is rotated 90 degrees on the X axis, and then is pulled down 150 pixels to the base of the ball.
 
@@ -128,8 +130,7 @@ Very rarely in the real world would you find objects lit from just one angle. Su
       margin: 0;
       border-radius: 50%;
       position: relative;
-      background: -webkit-radial-gradient(50% 120%, circle cover, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-      );
+      background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
     }
     .ball:before {
       content: "";
@@ -139,12 +140,12 @@ Very rarely in the real world would you find objects lit from just one angle. Su
       width: 90%;
       height: 90%;
       border-radius: 50%;
-      background: -webkit-radial-gradient(50% 0px, circle, #ffffff, rgba(255, 255, 255, 0) 58%);
-      -webkit-filter: blur(5px);
+      background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+      filter: blur(5px);
       z-index: 2;
     }
 
-As usual I've only incuded the `-webkit` version for reference. Here we have two slightly more complex gradients.
+Here we have two slightly more complex gradients.
 
 The first gradient is a subtle under-lighting effect and it applied to the `ball` element. The center of the gradient is positioned half-way across and at 120% of the ball's height. This places the center off the ball's surface. I did this so that the sharp ending colour wasn't visible, resulting in a smoother gradient.
 
@@ -152,7 +153,7 @@ The second gradient is a highlight, placed at the top. It's set to be 90% of the
 
 I've used the `before` pseudo-element rather than create a new element to contain the shading.
 
-Since this highlight gradient has a sharp edge, I've made of the webkit-only `blur` effect to soften the highlight. Unfortunately this is currently only a webkit feature (Chrome and Safari) but it may be more useful in future across other browsers.
+Since this highlight gradient has a sharp edge, I've made use of the `blur` effect to soften the highlight. Unfortunately this is currently only a webkit feature (Chrome and Safari) but it may be more useful in future across other browsers.
 
 Both gradients combine to create a much nicer effect:
 
@@ -171,19 +172,19 @@ To achieve this we'll make use of a soft under light as before, but adjust the t
       margin: 0;
       border-radius: 50%;
       position: relative;
-      background: -webkit-radial-gradient(50% 120%, circle cover, #323232, #0a0a0a 80%, #000000 100%);
+      background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #000000 100%);
     }
     .ball:before {
       content: "";
       position: absolute;
-      background: -webkit-radial-gradient(50% 120%, circle cover, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+      background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
       border-radius: 50%;
       bottom: 2.5%;
       left: 5%;
       opacity: 0.6;
       height: 100%;
       width: 90%;
-      -webkit-filter: blur(5px);
+      filter: blur(5px);
       z-index: 2;
     }
     .ball:after {
@@ -194,9 +195,9 @@ To achieve this we'll make use of a soft under light as before, but adjust the t
       top: 5%;
       left: 10%;
       border-radius: 50%;
-      background: -webkit-radial-gradient(50% 50%, circle cover, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
-      -webkit-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
-      -webkit-filter: blur(10px);
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+      transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+      filter: blur(10px);
     }
 
 Here we have the initial colour being applied as a subtle gradient on the ball itself. The `before` pseudo-element contains a lighter highlight, which again starts at the bottom of the ball and creates the effect of reflected light from the surface.
@@ -226,7 +227,7 @@ We'll need an extra element to contain the 8, as well as some styles to place it
       margin: 30%;
       background: white;
       border-radius: 50%;
-      -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+      transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
       position: absolute;
     }
     .ball .eight:before {
@@ -272,10 +273,10 @@ The bulk of the CSS is similar to the 8-ball, with the exception of the iris and
       height: 40%;
       margin: 30%;
       border-radius: 50%;
-      background: -webkit-radial-gradient(50% 50%, circle cover, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
-      -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+      background: radial-gradient(circle at 50% 50%, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
+      transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
       position: absolute;
-      -webkit-animation: move-eye-skew 5s ease-out infinite;
+      animation: move-eye-skew 5s ease-out infinite;
     }
     .iris:before {
       content: "";
@@ -312,21 +313,21 @@ Without the animation yet created, we have a very static eyeball.
 
 Lets create some keyframes to describe how the eyeball should move.
 
-    @-webkit-keyframes move-eye-skew {
+    @keyframes move-eye-skew {
       0% {
-        -webkit-transform: none;
+        transform: none;
       }
       20% {
-        -webkit-transform: translateX(-68px) translateY(30px) skewX(15deg) skewY(-10deg) scale(0.95);
+        transform: translateX(-68px) translateY(30px) skewX(15deg) skewY(-10deg) scale(0.95);
       }
       25%, 44% {
-        -webkit-transform: none;
+        transform: none;
       }
       50%, 60% {
-        -webkit-transform: translateX(68px) translateY(-40px) skewX(5deg) skewY(2deg) scaleX(0.95);
+        transform: translateX(68px) translateY(-40px) skewX(5deg) skewY(2deg) scaleX(0.95);
       }
       66%, 100% {
-        -webkit-transform: none;
+        transform: none;
       }
     }
 
@@ -334,7 +335,7 @@ Animation keyframes in CSS are can seem tricky at first. What you're doing is de
 
 This continues across each of the keyframes, and the entire animation in this case takes 5 seconds, as specified earlier.
 
-The `-webkit` prefixed version is included here, but you might want to create moz, ms and non-prefixed versions also. 
+Don't forget to create moz, ms, o and non-prefixed versions of keyframe animations as some browsers need the prefixes. 
 
 <div class="codepen" data-height="400" data-type="result" data-href="iBolr" data-user="donovanh" data-safe="true"> </div>
 
@@ -346,24 +347,24 @@ Creating the bubble look is similar to before, using more transparency in the ma
 
 The animation makes use of the `scale` transform to make the entire bubble wobble.
 
-    @-webkit-keyframes bubble-anim {
+    @keyframes bubble-anim {
       0% {
-        -webkit-transform: scale(1);
+        transform: scale(1);
       }
       20% {
-        -webkit-transform: scaleY(0.95) scaleX(1.05);
+        transform: scaleY(0.95) scaleX(1.05);
       }
       48% {
-        -webkit-transform: scaleY(1.1) scaleX(0.9);
+        transform: scaleY(1.1) scaleX(0.9);
       }
       68% {
-        -webkit-transform: scaleY(0.98) scaleX(1.02);
+        transform: scaleY(0.98) scaleX(1.02);
       }
       80% {
-        -webkit-transform: scaleY(1.02) scaleX(0.98);
+        transform: scaleY(1.02) scaleX(0.98);
       }
       97%, 100% {
-        -webkit-transform: scale(1);
+        transform: scale(1);
       }
     }
 
