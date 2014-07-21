@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "TheWeb.is: Step-by-step"
-description: "A summary of some of the things I wrote about in 2013, and my hopes for the new year."
-tags: [learnsome, development, css]
+title: "TheWeb.is: Designing a teaser site"
+description: "When making TheWeb.is teaser site, we tried some fun, nerdy web tricks."
+tags: [theweb.is, conference, development, css]
 imageURL: thewebis.png
 published: false
 ---

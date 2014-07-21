@@ -26,6 +26,19 @@
       margin-top: -26px
       @include adjust-font-size-to(14px)
 
+  .welcome
+    width: 560px
+    margin: 3em auto
+    +transform(none)
+
+    .image
+      width: 100px
+      height: 100px
+
+    .content
+      width: 460px
+      left: 100px
+
   .thirty-percent, .seventy-percent
     width: 90%
     margin: 0 auto
@@ -34,6 +47,24 @@
   .bouncer-container
     top: 16px
     left: -20px
+
+@media only screen and (max-width: 575px)
+  .welcome
+    width: 100%
+    height: auto
+    margin: 3em auto 0
+    text-align: left
+
+    .content
+      position: relative
+      +transform(none)
+      +animation(none)
+      opacity: 1 !important
+      width: 100%
+      left: 0
+
+    .image
+      display: none
 
 @media only screen and (max-width: 400px)
   .bouncer-container
