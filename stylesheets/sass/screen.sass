@@ -144,6 +144,72 @@ img.left
   input[type=email]
     margin-bottom: .5em
 
+.notification
+  padding: 0.5em 1em !important
+  font-size: 0.75em
+  text-align: center
+  background-color: $font-color 
+  color: $footer-font-color
+  border-radius: 0.25em
+  margin: 0.5em 0 !important
+  +perspective(800px)
+  +transform-style(preserve-3d)
+  overflow: hidden
+
+  span
+    display: block
+    width: 100%
+    +animation(pop-in 1s cubic-bezier(.81,-0.5,.1,1.31) forwards)
+
++keyframes(pop-in)
+  0%
+    +transform(translateZ(0) translateY(2em))
+  100%
+    +transform(translateZ(2em))
+
+.centered
+  text-align: center
+
+.button
+  display: inline-block
+  padding: 0.5em 1em
+  background-color: $link-color
+  color: #fff
+  border: 0px solid transparent
+  border-radius: 0.5em
+  border-bottom-width: 0.25em
+  border-bottom-color: darken($link-color, 10%)
+  +transition(background 0.2s ease-out)
+
+  &:hover
+    color: #fff !important
+    background-color: darken($link-color, 5%)
+    +transition(background 0.2s ease-out)
+
+  &:active
+    color: #fff !important
+    margin-top: 0.25em
+    border-bottom-width: 0
+
+.testimonial
+  blockquote
+    background-color: #fff
+    border: 1px solid #eee
+    padding: 0.5em 1em
+    margin: 1.5em 3em
+    border-radius: 0.5em
+
+  p:first-child
+    margin: 0
+    padding: 0 !important
+
+  .attr
+    opacity: 0.75
+    font-size: 0.8em
+    margin: 0
+
+
+
 /* Page structure
 
 .page-container
@@ -291,6 +357,14 @@ section.content, section.footer-content
         width: 100%
         height: 100%
         background: rgba(0,0,0,0.5)
+
+/* Hire me styles
+.project
+  margin: 1.5em 0
+  background: #fff
+  border: 1px solid #eee
+  border-radius: 0.5em
+  padding: 1em 1em
 
 @media only screen and (min-width: 500px)
 

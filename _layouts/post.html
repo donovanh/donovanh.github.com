@@ -7,12 +7,14 @@ layout: default
   <header class="post">
     <h1 id="responsive_headline">{{ page.title }}</h1>
     <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+    {% include hire-notification.html %}
   </header>
 
   <section class="entry">
     {{ content }}
+    {% include hire-notification.html %}
     <!-- Begin MailChimp Signup Form -->
-    <div class="email-signup">
+    <!-- <div class="email-signup">
       <form action="http://hop.us7.list-manage.com/subscribe/post?u=07ab661c8a6f6b3ec4c98c791&amp;id=7daf5f7db7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <img src="http://learnsome.co/images/bulb.svg">
         <h2>If you enjoyed this...</h2>
@@ -22,7 +24,7 @@ layout: default
         <div style="position: absolute; left: -5000px;"><input type="text" name="b_07ab661c8a6f6b3ec4c98c791_7daf5f7db7" value=""></div>
         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
       </form>
-    </div>
+    </div> -->
 
     <!--End mc_embed_signup-->
     <div class="ad-container">

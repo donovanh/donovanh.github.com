@@ -1,9 +1,6 @@
 // On load, show the bouncer
 if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius') && !$('html').hasClass('no-js')) {
-    if ($('header#404').length > 0) 
-        show404Bouncer();
-    else
-        showBouncer();
+    showBouncer();
 } else {
     $('html').addClass('no-js');
 }
@@ -35,12 +32,12 @@ function showBouncer() {
     $('.bouncer-container').find('.mask').addClass('move-mask');
 }
 
-if ($('.email-signup').length > 0) {
-    $(window).scroll(function() {
-       if(($(window).scrollTop() + $(window).height() >= $(document).height() - 360) && !$('.email-signup').hasClass('activate')) {
-           $('.email-signup').addClass('activate');
-       }
-    });
-}
+// if ($('.email-signup').length > 0) {
+//     $(window).scroll(function() {
+//        if(($(window).scrollTop() + $(window).height() >= $(document).height() - 360) && !$('.email-signup').hasClass('activate')) {
+//            $('.email-signup').addClass('activate');
+//        }
+//     });
+// }
 
 

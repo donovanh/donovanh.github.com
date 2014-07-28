@@ -11,7 +11,7 @@ bodyTag: home
     </section>
     <section class="content">
       <h2>Hi, I'm <a href="/about/">Donovan Hutchinson</a>, a Dublin based front-end designer / developer.</h2>
-      <p>This is where I blog about CSS, JavaScript and other front-end development topics. If you need of an experienced front-end designer and site builder, I'm <a href="mailto:hireme@hop.ie">available for hire</a>.</p>
+      <p>This is where I blog about CSS, JavaScript and other front-end development topics. If you need of an experienced front-end designer and site builder, I'm <a href="/hire/">available for hire</a>.</p>
     </section>
   </section>
 {% endif %}
@@ -48,3 +48,5 @@ bodyTag: home
     <a href="/page{{paginator.next_page}}" class="next ">&raquo;</a>
   {% endif %}
 </nav>
+
+<section style="max-width: 680px; margin: 3em auto 0">{% include hire-notification.html %}</section>
