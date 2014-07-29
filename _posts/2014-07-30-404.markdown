@@ -4,7 +4,7 @@ title: "A better 404"
 description: "Amusing 404 pages are a waste of everyones time. Let's get real."
 tags: [development, javascript]
 imageURL: 404.png
-published: true
+published: false
 ---
 
 There's been a lot of sharing of funny 404 pages recently. Carefully crafted memes, funny gifs, even the odd interactive game. But if this doesn't help your visitors, what's the point?
