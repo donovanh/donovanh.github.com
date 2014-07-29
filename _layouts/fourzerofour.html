@@ -64,6 +64,11 @@
   <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
   <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
   <script src="/javascripts/main.js"></script>
+  
+  <!--
+    HERE'S THAT CUSTOM 404 CODE!
+    READ ALL ABOUT IT: http://hop.ie/blog/404
+  -->
   <script>
     $(document).ready(function() {
       var anchor = $('<a>', {href: window.location})[0];
@@ -79,8 +84,6 @@
           showRedirect(response.items[0].link);
         }
       });
-      console.log(phrase);
-      showRedirect('http://hop.ie/blog/404');
     }
     function showRedirect(link) {
       $('.searching').delay(500).fadeIn(400);
@@ -90,6 +93,9 @@
       $('.searching').fadeOut(400);
     }
   </script>
+  <!-- THAT IS ALL :) -->
+
+
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-3481417-23']);
