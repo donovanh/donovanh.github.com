@@ -45,7 +45,11 @@
 	</footer>
 
   <section class="searching">
-    <h2>Searching...</h2>
+    <h2>
+      Hey, is this what you meant?
+      <br><span id="alt"></span><br>
+      <a href="javascript: hideOverlay()" class="nope">No thanks</a>
+    </h2>
   </section>
 
   <script id="bouncer-template" type="text/html">
@@ -61,36 +65,30 @@
   <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
   <script src="/javascripts/main.js"></script>
   <script>
-  $(document).ready(function() {
-    // Get the search phrase by taking apart the url
-    var a = $('<a>', {href: window.location})[0];
-    var phrase = a.pathname.split('/').join('+').split(' ').join('+').split('%20').join('+');
-    showOverlay();
-    tryGoogleSearch(phrase);
-  });
-  function tryGoogleSearch(phrase) {
-    var engineID = '008316387327485507723:jia2k-cmxom';
-    var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
-    var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
-    $.getJSON(url, '', function(response) {
-      if (response.items !== undefined && response.items.length) {
-        // Check if there's a response, and if so, redirect
-        redirectTo(response.items[0].link);
-      } else {
-        // Instead, show the 404 page with an option to search this site
-        hideOverlay();
-      }
+    $(document).ready(function() {
+      // Get the search phrase by taking apart the url
+      var a = $('<a>', {href: window.location})[0];
+      var phrase = a.pathname.split('/').join('+').split(' ').join('+').split('%20').join('+');
+      tryGoogleSearch(phrase);
     });
-  }
-  function showOverlay() {
-    $('.searching').delay(500).fadeIn(400);
-  }
-  function hideOverlay() {
-    $('.searching').fadeOut(400);
-  }
-  function redirectTo(link) {
-    $('.searching h2').html('Hey, is this what you meant? <br><a href="'+link+'">'+link+'</a><br><a href="javascript: hideOverlay()" class="nope">No thanks</a>');
-  }
+    function tryGoogleSearch(phrase) {
+      var engineID = '008316387327485507723:jia2k-cmxom';
+      var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
+      var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
+      $.getJSON(url, '', function(response) {
+        if (response.items !== undefined && response.items.length) {
+          // Check if there's a response, and if so, redirect
+          showRedirect(response.items[0].link);
+        }
+      });
+    }
+    function showRedirect(link) {
+      $('.searching').delay(500).fadeIn(400);
+      $('.searching h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+    }
+    function hideOverlay() {
+      $('.searching').fadeOut(400);
+    }
   </script>
   <script type="text/javascript">
 
