@@ -4,8 +4,16 @@
   right: 0;
   bottom: 0;
   left: 0;
-  line-height: 20em;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+  display: none;
+}
+.searching h2 {
+  padding-top: 4em;
+  line-height: 1.5em;
+}
+.searching .nope {
+  color: #aaaaaa;
+  font-size: 0.75em;
 }

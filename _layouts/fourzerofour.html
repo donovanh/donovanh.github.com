@@ -64,18 +64,17 @@
     // Get the search phrase by taking apart the url
     var a = $('<a>', {href: window.location})[0];
     var phrase = a.pathname.split('/').join('+').split(' ').join('+').split('%20').join('+');
-    console.log();
-    tryGoogleResults(phrase);
+    showOverlay();
+    tryGoogleSearch(phrase);
   });
-  function tryGoogleResults(phrase) {
+  function tryGoogleSearch(phrase) {
     var engineID = '008316387327485507723:jia2k-cmxom';
     var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
     var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
     $.getJSON(url, '', function(response) {
       if (response.items !== undefined && response.items.length) {
         // Check if there's a response, and if so, redirect
-        window.location.href = response.items[0].link;
-        exit;
+        redirectTo(response.items[0].link);
       } else {
         // Instead, show the 404 page with an option to search this site
         hideOverlay();
@@ -83,10 +82,13 @@
     });
   }
   function showOverlay() {
-    $('.searching').delay(500).fadeIn(200);
+    $('.searching').delay(500).fadeIn(400);
   }
   function hideOverlay() {
-    $('.searching').delay(500).fadeOut(200);
+    $('.searching').fadeOut(400);
+  }
+  function redirectTo(link) {
+    $('.searching h2').html('Hey, is this what you meant? <br><a href="'+link+'">'+link+'</a><br><a href="javascript: hideOverlay()" class="nope">No thanks</a>');
   }
   </script>
   <script type="text/javascript">
