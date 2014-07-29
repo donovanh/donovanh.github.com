@@ -47,7 +47,7 @@
   <section class="searching">
     <h2>
       Hey, is this what you meant?
-      <br><span id="alt"></span><br>
+      <span id="alt"></span>
       <a href="javascript: hideOverlay()" class="nope">No thanks</a>
     </h2>
   </section>
@@ -66,8 +66,8 @@
   <script src="/javascripts/main.js"></script>
   <script>
     $(document).ready(function() {
-      var a = $('<a>', {href: window.location})[0];
-      var phrase = a.pathname.split('/').join('+').split(' ').join('+').split('%20').join('+');
+      var anchor = $('<a>', {href: window.location})[0];
+      var phrase = anchor.pathname.split('/')[1].replace(/\/|%20| /g, '+');
       tryGoogleSearch(phrase);
     });
     function tryGoogleSearch(phrase) {
@@ -79,6 +79,8 @@
           showRedirect(response.items[0].link);
         }
       });
+      console.log(phrase);
+      showRedirect('http://hop.ie/blog/404');
     }
     function showRedirect(link) {
       $('.searching').delay(500).fadeIn(400);

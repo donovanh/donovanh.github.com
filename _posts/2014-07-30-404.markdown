@@ -1,0 +1,202 @@
+---
+layout: post
+title: "A better 404"
+description: "Amusing 404 pages are a waste of everyones time. Let's get real."
+tags: [development, javascript]
+imageURL: 404.png
+published: true
+---
+
+There's been a lot of sharing of funny 404 pages recently. Carefully crafted memes, funny gifs, even the odd interactive game. But if this doesn't help your visitors, what's the point?
+
+There could be many reasons why your visitor has found themselves on your 404 page. Mistyped links, a bad link from somewhere else, or a page might have been taken down or moved elsewhere. While you can always try to fix moved pages with redirects, you can't control for people's mistakes.
+
+## Helping the visitor
+
+People are landing on your site looking for the content, and usually via a link. They would have clicked that link expecting one thing, so why show them a hand-drawn panda? Instead, your 404 page should try to get them to where they need to be.
+
+This isn't a new problem so there are lots of ideas. Showing a search form or linking to the home page are reasonable enough, but they are a passive response that doesn't actively try to solve the visitor's problem. A more direct approach might be to take a guess where they should be, and suggest it as a recommendation.
+
+## Suggesting the right page
+
+One way to suggest the right page is to search for it and present the result. Luckily, we don't need to go out and write a search engine to do this (though if you have one handy, good for you). Instead, we can use Google's [Custom Search API](https://developers.google.com/custom-search/).
+
+Google's Custom Search API is a tool for searching within a specific website. When set up, it'll allow us to get what it considers the best match from within our own site. It does need a search phrase though. So to give Google something to search with, we'll use the path of the URL we're currently on.
+
+### Caveat: Limits abound
+
+Just before jumping into the how-to part, it's worth noting that this API has **a limit of 100 calls per day**. You might want to go light on the testing while working on it. I managed to burn through the 100 calls in less than an hour, and had to wire part of this together without seeing the result till the next day. Still, it should be useful for most small sites. Larger sites might want to look to other search options.
+
+## Set up
+
+### Search engine ID
+
+There are a few steps we need to go through before we can fly through those 100 API requests. First, [register your site-specific search engine](https://www.google.com/cse/manage/all).
+
+* Select "Add"
+* Input your site URL (yoursite.com) in "Sites to search"
+* Hit "Create"
+
+You now need to find your **"Search engine ID"**. Click "Edit" on the search engine created, then the "Search engine ID" button. Take note of that code!
+
+### Developer API access
+
+Next, go to the [developers console](https://console.developers.google.com/project), and under APIs, activate the **"Custom Search API"** by pressing the "Off" button to switch it on. Then, select "Credentials", "Create New Key" and choose the **"Browser Key"** option. Take note of the API key!
+
+## JavaScript
+
+Armed with both a **Search engine ID** and an **API key**, you can now hit the API. The following code requires [jQuery](http://jquery.com/), as it does some Ajax JSON stuff that I'd rather lean on the framework to ensure works across browsers.
+
+To begin, here's a function that tries a Google search (don't forget to replace the keys in the code):
+
+    function tryGoogleSearch(phrase) {
+      var engineID = 'YOUR_ENGINE_ID';  // Replace this key
+      var apiKey = 'YOUR_API_KEY';  // And this one too
+      var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
+      $.getJSON(url, '', function(response) {
+        if (response.items !== undefined && response.items.length) {
+          console.log(response.items[0].link);
+        }
+      });
+    }
+
+This function takes a phrase, and sends off the phrase along with your keys as a request to Google's API. The response is then checked and will log to the console the first link it finds. It can be called like so:
+
+    tryGoogleSearch('cat');
+
+Assuming your site contains pages about cats (and whose doesn't?) you should see something logged in your console.
+
+### Getting the search phrase
+
+Next we'll write some code to get the path from the URL of the page. This path will become the search phrase. To do this, we'll make use of a jQuery trick in which we create a new anchor, apply a URL to it, and then let jQuery parse the path for us:
+    
+    $(document).ready(function() {
+      var anchor = $('<a>', {href: window.location})[0];
+      var phrase = anchor.pathname.split('/')[1].replace(/\/|%20| /g, '+');
+      tryGoogleSearch(phrase);
+    });
+
+This code does two things to get the search phrase. First, it creates an anchor, and applies the current window location to the anchor as a link target. jQuery helpfully lets us access the `pathname` as `anchor.pathname`. Since Google expects a searchphrase to contain "+" characters instead of spaces, we then do some regex magic to replace any slashes or spaces with the plus character.
+
+### Replacing in JavaScript
+
+A handy thing to know is how to do a global regular expression replace in JavaScript. This one is a set of matches, separated by pipes:
+
+    /\/|%20| /g
+
+The first and last forward slashes `/` are there to contain the expression. Within it, the backslash is escaped `\/` so that it counts as a thing to match. Then the pipe `|` acts like an "or". The `%20` represents an encoded space, and the actual space character represents... a space. In all, this matches 3 possible things and replaces then with a plus.
+
+Lastly the `g` signifies that every instance matched be replaced.
+
+### Showing the redirect
+
+In my first version of this, I had the page automatically redirect. That was fun, but jarring for the visitor. The page would load, flicker, and suddenly jump elsewhere. Not ideal.
+
+Instead, a more considered approach is to present the option as an overlay, and a link the visitor can click. This helps our visitor understand what has happened, and see a clear way to proceed. They can also choose not to if the option doesn't suit them.
+
+To do this, start by adding a modal to the HTML near the bottom of your page:
+
+    <section class="searching">
+      <h2>
+        Hey, is this what you meant?
+        <span id="alt"></span>
+        <a href="javascript: hideOverlay()" class="nope">No thanks</a>
+      </h2>
+    </section>
+
+This HTML has some text but is missing the URL. Instead, there's a "span" in the middle there. We'll replace that "span" content using JavaScript. Also, there's a handy "No thanks" option, which will need a "hideOverlay" function.
+
+First though we'll style this as a dark background, with light text on top. Here's the CSS:
+
+    .searching {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: none;
+    }
+    .searching span {
+      display: block;
+      font-size: 1.75em;
+      line-height: 2em;
+    }
+    .searching h2 {
+      padding-top: 4em;
+      line-height: 1.5em;
+    }
+    .searching .nope {
+      color: #aaaaaa;
+      font-size: 0.75em;
+    }
+
+Then some functions needed to show this modal and put in the URL:
+
+    function showRedirect(link) {
+      $('.searching h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+      $('.searching').delay(500).fadeIn(400);
+    }
+    function hideOverlay() {
+      $('.searching').fadeOut(400);
+    }
+
+Two functions here, one takes a link, places it in the modal and then shows the modal. The second function hides the modal. Simples! Except, one more thing, we need to adjust that "tryGoogleSearch()" function from earlier to use this. Place the function call within the response like so:
+
+    function tryGoogleSearch(phrase) {
+      var engineID = 'YOUR_ENGINE_ID';
+      var apiKey = 'YOUR_API_KEY';
+      var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
+      $.getJSON(url, '', function(response) {
+        if (response.items !== undefined && response.items.length) {
+          showRedirect(response.items[0].link);
+        }
+      });
+    }
+
+Again, remember to replace the keys above. To save jumping around, here's the full code in one place:
+
+    <script>
+      $(document).ready(function() {
+        var anchor = $('<a>', {href: window.location})[0];
+        var phrase = anchor.pathname.split('/')[1].replace(/\/|%20| /g, '+');
+        tryGoogleSearch(phrase);
+      });
+      function tryGoogleSearch(phrase) {
+        var engineID = 'YOUR_ENGINE_ID';
+        var apiKey = 'YOUR_API_KEY';
+        var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
+        $.getJSON(url, '', function(response) {
+          if (response.items !== undefined && response.items.length) {
+            showRedirect(response.items[0].link);
+          }
+        });
+      }
+      function showRedirect(link) {
+        $('.searching').delay(500).fadeIn(400);
+        $('.searching h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+      }
+      function hideOverlay() {
+        $('.searching').fadeOut(400);
+      }
+    </script>
+    <section class="searching">
+      <h2>
+        Hey, is this what you meant?
+        <span id="alt"></span>
+        <a href="javascript: hideOverlay()" class="nope">No thanks</a>
+      </h2>
+    </section>
+
+## Live demo
+
+I have this code in action on [my 404 page](http://hop.ie/that better 404 page article). If it doesn't seem to work, it's probably that pesky API limit. View the source though and you'll see it's there.
+
+## Questions and sharing
+
+I hope you enjoyed this article, and if you want to share it please make sure to double check the URL is correct. Or don't. I'm sure it'll be fine.
+
+I'm [@donovanh](http://twitter.com/donovanh). Do you get in touch with any thoughts or questions!
+

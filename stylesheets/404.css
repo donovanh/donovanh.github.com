@@ -9,6 +9,11 @@
   color: white;
   display: none;
 }
+.searching span {
+  display: block;
+  font-size: 1.75em;
+  line-height: 2em;
+}
 .searching h2 {
   padding-top: 4em;
   line-height: 1.5em;
