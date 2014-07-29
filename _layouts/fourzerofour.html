@@ -63,7 +63,8 @@
   $(document).ready(function() {
     // Get the search phrase by taking apart the url
     var a = $('<a>', {href: window.location})[0];
-    var phrase = a.pathname.split('/').join('+');
+    var phrase = a.pathname.split('/').join('+').split(' ').join('+').split('%20').join('+');
+    console.log();
     tryGoogleResults(phrase);
   });
   function tryGoogleResults(phrase) {
@@ -71,8 +72,6 @@
     var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
     var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
     $.getJSON(url, '', function(response) {
-
-      window.response = response;
       if (response.items !== undefined && response.items.length) {
         // Check if there's a response, and if so, redirect
         window.location.href = response.items[0].link;
@@ -82,6 +81,9 @@
         hideOverlay();
       }
     });
+  }
+  function showOverlay() {
+    $('.searching').delay(500).fadeIn(200);
   }
   function hideOverlay() {
     $('.searching').delay(500).fadeOut(200);

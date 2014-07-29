@@ -25,3 +25,7 @@ First set up a custom search engine: https://www.google.com/cse/manage/all
 Select "Add", input a url in "Sites to search", optionally a name, hit Create.
 Select "Edit" on the search engine created, then "Search engine ID" to see the ID. (008316387327485507723:jia2k-cmxom)
 Then set up a new project on the Google developers console: https://console.developers.google.com/project
+Under APIs, select the Custom Search API by clicking the "Off" option on the right.
+Select "Credentials", then "Create New Key" and choose the "Browser Key" option.
+Your API key will be needed soon: AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA
+
