@@ -86,7 +86,7 @@ This is a loaded question and probably a good time to unpack the 3 issues at sta
 
 ## Socially, do you attend meet ups or conferences to network? 
 
-I used to run the Ruby user group in Cork just so I could meet some like-minded people although it was really small. I stopped running in earlier this year when I stopped freelancing but I make sure to attend some of the local events (CorkDev, BuiltInCork). I wish Cork had a more vibrant tech scene like Dublin though, and having a wider group of people to mingle with. I do 1 or 2 conferences a year in Ireland / UK / Europe but I’d like to be able to justify 3 or 4 in the future
+I used to run the Ruby user group in Cork just so I could meet some like-minded people although it was really small. I stopped running it earlier this year when I stopped freelancing but I make sure to attend some of the local events (CorkDev, BuiltInCork). I wish Cork had a more vibrant tech scene like Dublin though, and having a wider group of people to mingle with. I do 1 or 2 conferences a year in Ireland / UK / Europe but I’d like to be able to justify 3 or 4 in the future
 
 ## What would you recommend people do if they are thinking of moving from full-time employment to contracting or remote working? 
 
