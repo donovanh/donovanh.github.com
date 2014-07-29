@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% if page.title %} {{ page.title }} - {% endif %} hop.ie</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Thoughts from Donovan's brain{% endif %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Donovan Hutchinson">
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+    {% if page.newstylesheet %}
+    <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css">
+    {% endif %}
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel="stylesheet" type="text/css">
+    <link rel="canonical" href="{{ page.url | canonical }}">
+    <meta name="google-site-verification" content="4b2gG2_kr5STLh0RhE34iPvU59o591CoG9N6iYOazvw" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+    <script src="/javascripts/modernizr.js"></script>
+
+</head>
+<body class="internal">
+  <div class="page-container">
+  	<header class="top">
+  		<h1 class="bouncer-container"><a href="/">hop.ie</a></h1>
+  	</header>
+  	<div class="page clearfix">
+    	<section class="content">
+    		{{ content }}
+    	</section>
+    </div>
+  </div>
+  
+	<footer class="clearfix">
+	  <section class="footer-content">
+	    <p>Hi, I'm <a href="/about">Donovan Hutchinson</a>. This is where I write about web development.</p>
+      <p>You can follow me at <a href="http://twitter.com/donovanh">@donovanh</a> or by <a href="/feed.xml">RSS</a>.</p>
+      <p>&copy; and written by Donovan Hutchinson</p>
+		</section>
+	</footer>
+
+  <section class="searching">
+    <h2>Searching...</h2>
+  </section>
+
+  <script id="bouncer-template" type="text/html">
+	  <span class="bouncer">
+	    <span class="ear1"></span>
+	    <span class="ear2"></span>
+	    <span class="eye1"></span>
+	    <span class="eye2"></span>
+	    <span class="mouth"></span>
+	  </span>
+  </script>
+  <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script>
+  $(document).ready(function() {
+    // Get the search phrase by taking apart the url
+    var a = $('<a>', {href: window.location})[0];
+    var phrase = a.pathname.split('/').join('+');
+    tryGoogleResults(phrase);
+  });
+  function tryGoogleResults(phrase) {
+    var engineID = '008316387327485507723:jia2k-cmxom';
+    var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
+    var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
+    $.getJSON(url, '', function(response) {
+
+      window.response = response;
+      if (response.items !== undefined && response.items.length) {
+        // Check if there's a response, and if so, redirect
+        window.location.href = response.items[0].link;
+        exit;
+      } else {
+        // Instead, show the 404 page with an option to search this site
+        hideOverlay();
+      }
+    });
+  }
+  function hideOverlay() {
+    $('.searching').delay(500).fadeOut(200);
+  }
+  </script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3481417-23']);
+    _gaq.push(['_setDomainName', 'hop.ie']);
+    _gaq.push(['_setSiteSpeedSampleRate', 10]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>

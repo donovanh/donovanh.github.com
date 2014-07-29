@@ -19,3 +19,9 @@ Ideal solution: Service that indexes and searches, and comes up with a "best gue
 
 Actual solutions: Some techniques that could work for static sites, etc.
 
+Using Google Search 
+
+First set up a custom search engine: https://www.google.com/cse/manage/all
+Select "Add", input a url in "Sites to search", optionally a name, hit Create.
+Select "Edit" on the search engine created, then "Search engine ID" to see the ID. (008316387327485507723:jia2k-cmxom)
+Then set up a new project on the Google developers console: https://console.developers.google.com/project
