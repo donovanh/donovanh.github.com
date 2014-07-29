@@ -1,0 +1,21 @@
+---
+layout: post
+title: "The Invisible 404"
+description: "Amusing 404 pages are a waste of everyones time. Let's get real."
+tags: [development, javascript]
+imageURL: .gif
+published: false
+---
+
+The best error page is no error page, so let's apply that to our 404 pages.
+
+Intro: 404 wankery is great and all but when a user arrives at a page and we don't have a page ready, it doesn't actually *help* them to show a funny animated gif. Rather than spend so much time wondering how to make something amusing and viral, we should be making our 404 pages as invisible as possible.
+
+Labelling them 404... why
+
+Providing links to possible alteratives... a decent last resort
+
+Ideal solution: Service that indexes and searches, and comes up with a "best guess" and redirects the user there (with a message?)
+
+Actual solutions: Some techniques that could work for static sites, etc.
+

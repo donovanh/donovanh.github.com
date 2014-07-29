@@ -1,0 +1,108 @@
+.transform-3d {
+  perspective: 800px;
+  transform-type: preserve3d;
+}
+
+.js-active {
+  .animated {
+    &.slideup {
+      animation: slideup 0.25s ease-out forwards;
+    }
+    &.slidedown {
+      animation: slidedown 0.25s ease-out forwards;
+    }
+    &.fadein {
+      animation: fade-in 0.25s ease-out forwards;
+    }
+    &.pop {
+      animation: pop 0.5s cubic-bezier(0.000, 0.965, 0.440, 0.960) forwards;
+    }
+  }
+}
+
+.js-inactive {
+  .animated {
+    animation: fade-out 0.1s ease-out forwards;
+  }
+}
+
+.disabled {
+  .animated {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+// Put these into mixins to be called as needed, for efficiency
+// Or else comment them out as needed
+
+// "FadeIn"
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+// "SlideUp"
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// "SlideDown"
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// "Pop"
+
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateZ(-60px) scaleY(0.9)
+  }
+  40% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+    transform: translateZ(40px) scaleY(1.05)
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0) 
+  }
+}
