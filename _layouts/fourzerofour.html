@@ -23,6 +23,12 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
     <script src="/javascripts/modernizr.js"></script>
 
+    <!-- This polyfill is only for browsers that don't support <dialog> out of the box -->
+    <script src="https://cdn.rawgit.com/GoogleChrome/dialog-polyfill/master/dialog-polyfill.js"></script>
+
+    {% if page.newstylesheet %}
+      <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css">
+    {% endif %}
 </head>
 <body class="internal">
   <div class="page-container">
@@ -71,6 +77,7 @@
       } else {
         tryGoogleSearch(phrase);
       }
+
     });
     function tryGoogleSearch(phrase) {
       var engineID = '008316387327485507723:jia2k-cmxom';
@@ -83,13 +90,18 @@
       });
     }
     function showRedirect(link) {
-      var dialog = document.querySelector('dialog');
+      var dialog = setUpDialog();
       $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
       dialog.showModal();
     }
     function hideDialog() {
-      var dialog = document.querySelector('dialog');
+      var dialog = setUpDialog();
       dialog.close();
+    }
+    function setUpDialog() {
+      var dialog = document.querySelector('dialog');
+      dialogPolyfill.registerDialog(dialog);
+      return dialog;
     }
   </script>
   <!-- THAT IS ALL :) -->

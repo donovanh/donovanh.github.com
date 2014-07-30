@@ -24,12 +24,25 @@
 }
 
 dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   color: white;
   background: none;
+  border: none;
   width: 100%;
   text-align: center;
-  top: 0;
-  border: none;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  display: none;
+}
+dialog[open] {
+  display: block;
+}
+dialog[open] + .backdrop {
+  display: block;
 }
 dialog span {
   display: block;
@@ -44,7 +57,8 @@ dialog .nope {
   color: #aaaaaa;
   font-size: 0.75em;
 }
-dialog::backdrop {
+dialog + .backdrop {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;

@@ -23,12 +23,26 @@
     font-size: 0.75em
 
 dialog
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
   color: #fff
   background: none
+  border: none
   width: 100%
   text-align: center
-  top: 0
-  border: none
+
+  height: -moz-fit-content
+  height: -webkit-fit-content
+  height: fit-content
+  display: none
+
+  &[open]
+    display: block
+
+    & + .backdrop
+      display: block
 
   span
     display: block
@@ -43,10 +57,12 @@ dialog
     color: #aaa
     font-size: 0.75em
   
-  &::backdrop
+  & + .backdrop
+    display: none
     position: fixed
     top: 0
     left: 0
     right: 0
     bottom: 0
     background-color: rgba(0, 0, 0, 0.8)
+
