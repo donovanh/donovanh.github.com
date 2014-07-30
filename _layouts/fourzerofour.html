@@ -64,8 +64,7 @@
   <script src="/javascripts/main.js"></script>
   
   <!--
-    HERE'S THAT CUSTOM 404 CODE!
-    READ ALL ABOUT IT: http://hop.ie/blog/404
+    HERE'S THAT CUSTOM 404 CODE
   -->
   <script>
     $(document).ready(function() {
@@ -95,17 +94,15 @@
       dialog.showModal();
     }
     function hideDialog() {
-      var dialog = setUpDialog();
       dialog.close();
     }
     function setUpDialog() {
-      var dialog = document.querySelector('dialog');
+      dialog = document.querySelector('dialog');
       dialogPolyfill.registerDialog(dialog);
       return dialog;
     }
   </script>
-  <!-- THAT IS ALL :) -->
-
+  <!-- fin :) -->
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
