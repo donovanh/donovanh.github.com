@@ -76,7 +76,6 @@
       } else {
         tryGoogleSearch(phrase);
       }
-
     });
     function tryGoogleSearch(phrase) {
       var engineID = '008316387327485507723:jia2k-cmxom';
@@ -89,7 +88,7 @@
       });
     }
     function showRedirect(link) {
-      var dialog = setUpDialog();
+      dialog = setUpDialog();
       $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
       dialog.showModal();
     }
@@ -97,7 +96,7 @@
       dialog.close();
     }
     function setUpDialog() {
-      dialog = document.querySelector('dialog');
+      var dialog = document.querySelector('dialog');
       dialogPolyfill.registerDialog(dialog);
       return dialog;
     }
