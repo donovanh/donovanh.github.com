@@ -91,7 +91,7 @@
           var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
           $.getJSON(url, '', function(response) {
             if (response.items !== undefined && response.items.length) {
-              showRedirect(response.items[0].link);
+              customSearch.showDialog(response.items[0].link);
             }
           });
         };
