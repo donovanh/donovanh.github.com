@@ -22,12 +22,12 @@ dialog[open] + .backdrop {
 dialog span {
   display: block;
 }
-dialog span#alt {
-  font-size: 1.75em;
-  line-height: 2em;
+dialog span.alt {
+  font-size: 3em;
+  line-height: 2.5em;
 }
 dialog h2 {
-  padding-top: 2.75em;
+  padding-top: 4em;
   line-height: 1.5em;
 }
 dialog .nope {
@@ -43,4 +43,23 @@ dialog + .backdrop {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.previous-posts li {
+  list-style: none;
+}
+.previous-posts li a {
+  position: relative;
+  height: 32px;
+}
+
+section.image {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  border: 1px solid #aaaaaa;
+  border-radius: 50%;
 }

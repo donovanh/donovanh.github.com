@@ -12,8 +12,13 @@ newstylesheet: "404"
   <section class="entry">
     <p>Sorry, I couldn't find the page you were looking for. Maybe try browsing the archive:</p>
     <ul class="previous-posts">
-      {% for post in site.posts %}
-        <li><a href="{{ post.url }}/">{{ post.title }}</a></li>
+      {% for post in site.posts limit:10 %}
+        <li>
+          <a href="{{ post.url }}/" title="{{ post.description }}">
+            <section class="image" style="background-image:url(/images/home/{{post.imageURL}});"></section>
+            {{ post.title }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </section>
