@@ -67,9 +67,35 @@
     HERE'S THAT CUSTOM 404 CODE
   -->
   <script>
+    var customSearch = {};
+    (function() {
+      var dialog = document.querySelector('dialog');
+      dialogPolyfill.registerDialog(dialog);
+      this.trySearch = function(phrase) {
+        var queryParams = {
+          engineID: '008316387327485507723:jia2k-cmxom',
+          apiKey: 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA',
+          q: escape(phrase),
+          callback: 'foo'
+        }
+        var url = 'https://www.googleapis.com/customsearch/v1?' + $.param(queryParams);
+        $.getJSON(url, '', function(response) {
+          if (response.items && response.items.length) {
+            customSearch.showDialog(response.items[0].link);
+          }
+        });
+      };
+      this.showDialog = function (link) {
+        $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+        dialog.showModal();
+      }
+      this.hideDialog = function () {
+        dialog.close();
+      }
+    }).apply(customSearch); 
     $(document).ready(function() {
-      var anchor = $('<a>', {href: window.location})[0];
-      var phrase = anchor.pathname.replace('blog', '').replace(/\/|%20| /g, ' ').trim().replace(/ /g, '+');
+      var path = window.location.pathname;
+      var phrase = path.replace(/blog|\/|%20| /g, ' ').trim().replace(/ /g, '+');
       // This part is hardcoded to take pressure of the API
       if (phrase.indexOf('mac') > -1) {
         customSearch.showDialog('http://hop.ie/blog/macplus');
@@ -80,30 +106,6 @@
         customSearch.hideDialog();
       });
     });
-    var customSearch = {};
-    (function() {
-        var dialog = document.querySelector('dialog');
-        dialogPolyfill.registerDialog(dialog);
-     
-        this.trySearch = function(phrase) {
-          var engineID = '008316387327485507723:jia2k-cmxom';
-          var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
-          var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
-          $.getJSON(url, '', function(response) {
-            if (response.items !== undefined && response.items.length) {
-              customSearch.showDialog(response.items[0].link);
-            }
-          });
-        };
-        this.showDialog = function (link) {
-          $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
-          dialog.showModal();
-        }
-        this.hideDialog = function () {
-          dialog.close();
-        }
-    }).apply(customSearch); 
-
   </script>
   <!-- fin :) -->
 

@@ -21,11 +21,13 @@ dialog[open] + .backdrop {
 }
 dialog span {
   display: block;
+}
+dialog span#alt {
   font-size: 1.75em;
   line-height: 2em;
 }
 dialog h2 {
-  padding-top: 4em;
+  padding-top: 2.75em;
   line-height: 1.5em;
 }
 dialog .nope {
