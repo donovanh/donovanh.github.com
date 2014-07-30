@@ -47,6 +47,7 @@ dialog + .backdrop {
 
 .previous-posts li {
   list-style: none;
+  padding: 10px 0 10px 10px;
 }
 .previous-posts li a {
   position: relative;
@@ -55,7 +56,7 @@ dialog + .backdrop {
 
 section.image {
   position: absolute;
-  left: -44px;
+  left: -48px;
   top: -4px;
   width: 36px;
   height: 36px;
