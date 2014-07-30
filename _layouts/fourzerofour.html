@@ -69,7 +69,7 @@
   <script>
     $(document).ready(function() {
       var anchor = $('<a>', {href: window.location})[0];
-      var phrase = anchor.pathname.split('/')[1].replace(/\/|%20| /g, '+');
+      var phrase = anchor.pathname.replace('blog', '').replace(/\/|%20| /g, ' ').trim().replace(/ /g, '+');
       // This part is hardcoded to take pressure of the API
       if (phrase.indexOf('mac') > -1) {
         showRedirect('http://hop.ie/blog/macplus');
