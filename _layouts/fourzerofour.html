@@ -72,34 +72,38 @@
       var phrase = anchor.pathname.replace('blog', '').replace(/\/|%20| /g, ' ').trim().replace(/ /g, '+');
       // This part is hardcoded to take pressure of the API
       if (phrase.indexOf('mac') > -1) {
-        showRedirect('http://hop.ie/blog/macplus');
+        customSearch.showDialog('http://hop.ie/blog/macplus');
       } else {
-        tryGoogleSearch(phrase);
+        customSearch.trySearch(phrase);
       }
-    });
-    function tryGoogleSearch(phrase) {
-      var engineID = '008316387327485507723:jia2k-cmxom';
-      var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
-      var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
-      $.getJSON(url, '', function(response) {
-        if (response.items !== undefined && response.items.length) {
-          showRedirect(response.items[0].link);
-        }
+      $('#close').click(function() {
+        customSearch.hideDialog();
       });
-    }
-    function showRedirect(link) {
-      dialog = setUpDialog();
-      $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
-      dialog.showModal();
-    }
-    function hideDialog() {
-      dialog.close();
-    }
-    function setUpDialog() {
-      var dialog = document.querySelector('dialog');
-      dialogPolyfill.registerDialog(dialog);
-      return dialog;
-    }
+    });
+    var customSearch = {};
+    (function() {
+        var dialog = document.querySelector('dialog');
+        dialogPolyfill.registerDialog(dialog);
+     
+        this.trySearch = function(phrase) {
+          var engineID = '008316387327485507723:jia2k-cmxom';
+          var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
+          var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
+          $.getJSON(url, '', function(response) {
+            if (response.items !== undefined && response.items.length) {
+              showRedirect(response.items[0].link);
+            }
+          });
+        };
+        this.showDialog = function (link) {
+          $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+          dialog.showModal();
+        }
+        this.hideDialog = function () {
+          dialog.close();
+        }
+    }).apply(customSearch); 
+
   </script>
   <!-- fin :) -->
 
