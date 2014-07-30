@@ -44,14 +44,6 @@
 		</section>
 	</footer>
 
-  <section class="searching">
-    <h2>
-      Hey, is this what you meant?
-      <span id="alt"></span>
-      <a href="javascript: hideOverlay()" class="nope">No thanks</a>
-    </h2>
-  </section>
-
   <script id="bouncer-template" type="text/html">
 	  <span class="bouncer">
 	    <span class="ear1"></span>
@@ -73,7 +65,12 @@
     $(document).ready(function() {
       var anchor = $('<a>', {href: window.location})[0];
       var phrase = anchor.pathname.split('/')[1].replace(/\/|%20| /g, '+');
-      tryGoogleSearch(phrase);
+      // This part is hardcoded to take pressure of the API
+      if (phrase.indexOf('mac') > -1) {
+        showRedirect('http://hop.ie/blog/macplus');
+      } else {
+        tryGoogleSearch(phrase);
+      }
     });
     function tryGoogleSearch(phrase) {
       var engineID = '008316387327485507723:jia2k-cmxom';
@@ -86,11 +83,13 @@
       });
     }
     function showRedirect(link) {
-      $('.searching').delay(500).fadeIn(400);
-      $('.searching h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+      var dialog = document.querySelector('dialog');
+      $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
+      dialog.showModal();
     }
-    function hideOverlay() {
-      $('.searching').fadeOut(400);
+    function hideDialog() {
+      var dialog = document.querySelector('dialog');
+      dialog.close();
     }
   </script>
   <!-- THAT IS ALL :) -->

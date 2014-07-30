@@ -1,5 +1,5 @@
 .searching {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -21,4 +21,34 @@
 .searching .nope {
   color: #aaaaaa;
   font-size: 0.75em;
+}
+
+dialog {
+  color: white;
+  background: none;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  border: none;
+}
+dialog span {
+  display: block;
+  font-size: 1.75em;
+  line-height: 2em;
+}
+dialog h2 {
+  padding-top: 4em;
+  line-height: 1.5em;
+}
+dialog .nope {
+  color: #aaaaaa;
+  font-size: 0.75em;
+}
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
