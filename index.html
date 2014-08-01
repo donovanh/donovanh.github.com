@@ -17,20 +17,33 @@ bodyTag: home
 {% endif %}
 
 {% for post in paginator.posts %}
-	
+  
     <article>
 
-    	<header>
-        <a href="{{ post.url }}/">
-          {% if post.imageURL %} 
-            <img src="/images/home/{{post.imageURL}}" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
-          {% else %}
-            <img src="/images/home/default.png" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
-          {% endif %}
-      	  <h1>{{ post.title }}</h1>
-        </a>
-    	  <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
-    	</header>
+      <header>
+        {% if post.target %}
+           <a href="{{ post.target }}">
+            {% if post.imageURL %} 
+              <img src="/images/home/{{post.imageURL}}" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
+            {% else %}
+              <img src="/images/home/default.png" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
+            {% endif %}
+            <h1>{{ post.title }}</h1>
+          </a>
+          <p class="date">{{ post.date | date: "%B %d, %Y" }} - for <strong>{{ post.targetName }}</strong></p>
+        {% else %}
+          <a href="{{ post.url }}/">
+            {% if post.imageURL %} 
+              <img src="/images/home/{{post.imageURL}}" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
+            {% else %}
+              <img src="/images/home/default.png" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
+            {% endif %}
+            <h1>{{ post.title }}</h1>
+          </a>
+          <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+        {% endif %}
+        
+      </header>
     </article>
 
 {% endfor %}
