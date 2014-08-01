@@ -72,13 +72,9 @@
       var dialog = document.querySelector('dialog');
       dialogPolyfill.registerDialog(dialog);
       this.trySearch = function(phrase) {
-        var queryParams = {
-          cx: '008316387327485507723:jia2k-cmxom',
-          key: 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA',
-          q: escape(phrase),
-          callback: 'foo'
-        }
-        var url = 'https://www.googleapis.com/customsearch/v1?' + $.param(queryParams);
+        var engineID = '008316387327485507723:jia2k-cmxom';
+        var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
+        var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
         $.getJSON(url, '', function(response) {
           if (response.items && response.items.length) {
             customSearch.showDialog(response.items[0].link);
