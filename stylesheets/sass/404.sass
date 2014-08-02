@@ -1,4 +1,5 @@
 dialog
+  display: none
   position: absolute
   left: 0
   right: 0
@@ -6,24 +7,25 @@ dialog
   color: #fff
   background: none
   border: none
-  width: 100%
   text-align: center
-
-  height: -moz-fit-content
-  height: -webkit-fit-content
-  height: fit-content
-  display: none
 
   &[open]
     display: block
 
-    & + .backdrop
-      display: block
+    &:before
+      content: ""
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: rgba(0,0,0,0.8)
+      z-index: -1
 
   span
     display: block
 
-  span#alt
+  span.suggestion
     font-size: 1.75em
     line-height: 2.5em
 
@@ -32,7 +34,6 @@ dialog
     line-height: 1.5em
 
   a
-    color: #fff
     background: rgba(200,200,255, 0.9)
     padding: 0.25em
     border-radius: 0.25em
@@ -41,15 +42,6 @@ dialog
     color: #aaa
     font-size: 0.75em
     cursor: pointer
-  
-  & + .backdrop
-    display: none
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background-color: rgba(0, 0, 0, 0.8)
 
 .previous-posts li
   list-style: none

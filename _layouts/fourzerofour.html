@@ -23,9 +23,6 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
     <script src="/javascripts/modernizr.js"></script>
 
-    <!-- This polyfill is only for browsers that don't support <dialog> out of the box -->
-    <script src="https://cdn.rawgit.com/GoogleChrome/dialog-polyfill/master/dialog-polyfill.js"></script>
-
     {% if page.newstylesheet %}
       <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css">
     {% endif %}
@@ -64,46 +61,72 @@
   <script src="/javascripts/main.js"></script>
   
   <!--
-    HERE'S THAT CUSTOM 404 CODE
+    Custom search 404 code
   -->
+  <!-- This polyfill is only for browsers that don't support <dialog> out of the box -->
+  <script src="https://cdn.rawgit.com/GoogleChrome/dialog-polyfill/master/dialog-polyfill.js"></script>
   <script>
-    var customSearch = {};
-    (function() {
+    function customSearchContructor() {
+      // Some private variables for this object
+      var context = this; // Keeping the parent context available so that we can call local methods
       var dialog = document.querySelector('dialog');
+
+      // Apply the polyfill (requires the external JS polyfill referenced earlier)
       dialogPolyfill.registerDialog(dialog);
+
+      // Your keys
+      var engineID = '008316387327485507723:jia2k-cmxom';
+      var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
+
       this.trySearch = function(phrase) {
-        var engineID = '008316387327485507723:jia2k-cmxom';
-        var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
-        var url = "https://www.googleapis.com/customsearch/v1?key="+ apiKey + "&num=10&cx=" + engineID + "&q=" + escape(phrase) + "&callback=?";
-        $.getJSON(url, '', function(response) {
+        var queryParams = {
+          cx:       engineID,
+          key:      apiKey,
+          num:      10,
+          q:        phrase,
+          alt:      'JSON'
+        }
+        var API_URL = 'https://www.googleapis.com/customsearch/v1?';
+        // Send the request to the custom search api
+        $.getJSON(API_URL, queryParams, function(response) {
           if (response.items && response.items.length) {
-            customSearch.showDialog(response.items[0].link);
+            context.showDialog(response.items[0].link);
           }
         });
       };
-      this.showDialog = function (link) {
-        $('dialog h2 span#alt').html('<a href="'+link+'">'+link+'</a>');
-        dialog.showModal();
-      }
+      this.showDialog = function (url) {
+        var suggestedLink = $('<a></a>');
+        // Verify that the suggested URL is from this domain
+        var hostname = new RegExp(location.host);
+        if (hostname.test(url)) {
+          suggestedLink.attr('href', url);
+          suggestedLink.text(url);
+          $('dialog .suggestion').html(suggestedLink);
+          dialog.showModal();
+        }
+      };
       this.hideDialog = function () {
         dialog.close();
-      }
-    }).apply(customSearch); 
+      };
+    }
+
     $(document).ready(function() {
+      var customSearch = new customSearchContructor();
       var path = window.location.pathname;
-      var phrase = path.replace(/blog|\/|%20| /g, ' ').trim().replace(/ /g, '+');
-      // This part is hardcoded to take pressure of the API
-      if (phrase.indexOf('mac') > -1) {
-        customSearch.showDialog('http://hop.ie/blog/macplus');
-      } else {
-        customSearch.trySearch(phrase);
-      }
-      $('#close').click(function() {
+      var phrase = decodeURIComponent(path.replace(/\/+/g, ' ').trim());
+      customSearch.trySearch(phrase);
+      $('dialog .nope').click(function() {
         customSearch.hideDialog();
       });
     });
+
+    // if (phrase.indexOf('mac') > -1) {
+    //     customSearch.showDialog('http://hop.ie/blog/macplus');
+    //   } else {
+    //     customSearch.trySearch(phrase);
+    //   }
   </script>
-  <!-- fin :) -->
+  <!-- end of the custom search code  -->
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
