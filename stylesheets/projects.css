@@ -1,0 +1,46 @@
+.project {
+  position: relative;
+  margin: 1.5em 0;
+  margin-left: 200px;
+  margin-right: -200px;
+}
+.project .description {
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.image a {
+  position: absolute;
+  left: -650px;
+  top: 52px;
+  width: 700px;
+  height: 700px;
+  z-index: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  border: 10px solid white;
+}
+.image a img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+.image a img.noshadow {
+  box-shadow: none;
+}
+.image .away {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+  transform: translate(-20px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
