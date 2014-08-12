@@ -13,14 +13,14 @@ In [part one](/blog/your-own-blog-1/), we covered the set up of your local devel
 
 ## Table of Contents
 
-- [Progress so far](#progress_so_far)
+- [Progress so far](#progress-so-far)
 - [Pagination](#pagination)
 - [Comments](#comments)
 - [Icons](#icons)
-- [404 Page](#404_page)
-- [Social media and sharing](#social_media_and_sharing)
-- [Going live](#going_live)
-- [Ongoing workflow](#ongoing_workflow)
+- [404 Page](#404-page)
+- [Social media and sharing](#social-media-and-sharing)
+- [Going live](#going-live)
+- [Ongoing workflow](#ongoing-workflow)
 
 ## Progress so far
 

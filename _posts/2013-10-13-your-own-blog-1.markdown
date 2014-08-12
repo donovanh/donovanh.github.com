@@ -20,14 +20,14 @@ It will be acting as a case study, and you can [download the blog's source code]
 ## Table of Contents
 
 - [Planning](#planning)
-- [Choosing a platform](#choosing_a_platform)
-- [Introducing Jekyll](#introducing_jekyll)
-- [Setting up your development environment](#setting_up_your_development_environment)
-- [Creating layouts](#creating_layouts)
-- [Creating a blog post](#creating_a_blog_post)
-- [Creating standalone pages](#creating_standalone_pages)
-- [CSS using SASS](#css_using_sass)
-- [Building on a framework](#building_on_a_framework)
+- [Choosing a platform](#choosing-a-platform)
+- [Introducing Jekyll](#introducing-jekyll)
+- [Setting up your development environment](#setting-up-your-development-environment)
+- [Creating layouts](#creating-layouts)
+- [Creating a blog post](#creating-a-blog-post)
+- [Creating standalone pages](#creating-standalone-pages)
+- [CSS using SASS](#css-using-sass)
+- [Building on a framework](#building-on-a-framework)
 
 ## Planning
 
