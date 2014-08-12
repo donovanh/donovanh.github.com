@@ -1514,24 +1514,6 @@ section.content, section.footer-content {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Hire me styles */
-.project {
-  margin: 1.5em 0;
-  background: white;
-  border: 1px solid #eeeeee;
-  border-radius: 0.5em;
-  padding: 1em 1em;
-}
-.project .wide {
-  max-width: 150%;
-  margin: 1em -25%;
-  border: 1px solid #eeeeee;
-  border-radius: 0.5em;
-  -webkit-box-shadow: 0 4px 24px rgba(100, 100, 100, 0.2);
-  -moz-box-shadow: 0 4px 24px rgba(100, 100, 100, 0.2);
-  box-shadow: 0 4px 24px rgba(100, 100, 100, 0.2);
-}
-
 @media only screen and (min-width: 500px) {
   .home article {
     margin-top: 1em;
