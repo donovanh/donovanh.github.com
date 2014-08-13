@@ -97,7 +97,7 @@
         this.showDialog = function (url) {
           var suggestedLink = $('<a></a>');
           // Verify that the suggested URL is from this domain
-          var hostname = new RegExp(location.host);
+          var hostname = new RegExp(location.hostname);
           if (hostname.test(url)) {
             suggestedLink.attr('href', url);
             suggestedLink.text(url);
