@@ -1,10 +1,6 @@
 // On load, show the bouncer
 $(window).ready(function() {
-    if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius') && !$('html').hasClass('no-js')) {
-        showBouncer();
-    } else {
-        $('html').addClass('no-js');
-    }
+    checkAndShowBouncer();
 
     if ($('.video-wrapper').length) {
         // Listen for page size and write video size appropriately
@@ -16,7 +12,27 @@ $(window).ready(function() {
         setInterval(function() { rotateProjectImages(); }, 10000);
     }
 
+    var $body    = $('html, body'), // Define jQuery collection 
+    content  = $('#main').smoothState({
+        onStart : {
+          duration: 400,
+          render: function () {
+            content.toggleAnimationClass('is-exiting');
+          }
+        },
+        callback : function(url, $container, $content) {
+            checkAndShowBouncer();
+        } 
+    }).data('smoothState');
 });
+
+function checkAndShowBouncer() {
+    if ($('html').hasClass('csstransitions') && $('html').hasClass('borderradius') && !$('html').hasClass('no-js')) {
+        showBouncer();
+    } else {
+        $('html').addClass('no-js');
+    }
+}
 
 function resizeVideoTo80Percent() {
     if ($(window).width() < 720) {

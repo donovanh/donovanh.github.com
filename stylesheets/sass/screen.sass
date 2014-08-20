@@ -11,7 +11,7 @@ html
   
 body
   margin: 0
-  background: $font-color 
+  background: $background-color
 
 /* Headings
 
@@ -42,8 +42,8 @@ h1, h2, h3
     border-radius: 50%
     overflow: hidden
     +animation(fly-in forwards 0.5s cubic-bezier(.68,-0.71,.14,1.57))
-    -webkit-animation-delay: 1s
-    animation-delay: 1s
+    -webkit-animation-delay: 0.25s
+    animation-delay: 0.25s
 
     &:after
       content: ""
@@ -61,8 +61,8 @@ h1, h2, h3
     right: 0
     left: 100px
     +animation(fly-in forwards 0.5s cubic-bezier(1,-0.08,.61,1.28))
-    -webkit-animation-delay: 1.1s
-    animation-delay: 1.1s
+    -webkit-animation-delay: .3s
+    animation-delay: 0.3s
     
 .csstransforms3d .welcome
   .image, .content
@@ -208,15 +208,13 @@ img.left
     font-size: 0.8em
     margin: 0
 
-
-
 /* Page structure
 
 .page-container
-  background: $background-color
+  min-height: 1400px
   padding-bottom: 1em
 
-.page, footer
+.page
   max-width: 720px
   padding: 0 16px
   margin: 0 auto
@@ -527,7 +525,7 @@ html.no-js .bouncer-container
 .move-bouncer
   @include animation(move-bouncer 2s forwards)
 
-@include keyframes(move-bouncer)
++keyframes(move-bouncer)
   0%
     height: 40px
     @include border-radius(25px, 20px)
@@ -556,6 +554,32 @@ html.no-js .bouncer-container
   100%
     +transform(rotateX(0))
     opacity: 1
+
+.scene_element--animated
+  +animation(fadeInRight 0.4s ease-in forwards)
+
+.is-exiting
+  .scene_element--animated
+    +animation(fadeOutRight 0.4s ease-in forwards)
+
++keyframes(fadeInRight) 
+  0%
+    opacity: 0
+    transform: translate3d(40px, 0, 0)
+
+  100%
+    opacity: 1
+    transform: none
+
+
++keyframes(fadeOutRight) 
+  0%
+    opacity: 1
+    transform: none
+
+  100%
+    opacity: 0
+    transform: translate3d(40px, 0, 0)
 
 pre > .editable-styles 
   border: 1px solid #fff
