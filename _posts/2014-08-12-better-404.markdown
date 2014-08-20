@@ -1,0 +1,13 @@
+---
+layout: post
+title: "A Better 404"
+description: "Using a custom search engine to present alternatives to lost visitors."
+tags: [css, development, dialog, 404]
+imageURL: 404.png
+target: "http://www.smashingmagazine.com/2014/08/12/a-better-404-page/"
+targetName: "Smashing Magazine"
+published: true
+---
+
+
+
