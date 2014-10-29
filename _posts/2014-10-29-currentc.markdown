@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Dark patterns in retail"
+description: "Walmart's attack on credit cards, and their decision to cut Apple Pay out."
+tags: [news, apple]
+imageURL: cards.jpg
+published: true
+---
+
+We've all seen the tricks companies use online to get us to do things against our better judgement. "Subscribe to mailing list" checkboxes pre-checked, insurance opt-out hidden in a list of countries, modal windows that appear when you try to leave the page. But what sort of dark nastiness do retailers try to pull on us in the physical world?
+
+This week saw uproar online when several large US pharmacy and retailers deactivated their NFC terminals, stopping all contactless payments. This meant anyone wanting to use Apple Pay or Google Wallet were out of luck.
+
+## MCX and CurrentC
+
+In 2012 [a group of companies](http://www.mcx.com/), lef by Walmart, got together to put together a system that would enable them to charge people directly, and avoid paying credit card processing fees on each transaction.
+
+The result of this groups efforts is a product called [CurrentC](http://currentc.com/).
+
+## Dead on arrival - but that doesn't matter
+
+The CurrentC product is a terribly designed product from a user experience point of view. Adding extra complexity to the checkout and relying on the use of a dedicated app is not helpful to customers. Storing bank account information, social security numbers and more in centralised locations known for leaking data is dangerous.
+
+It doesn't look like this product is aiming to be as easy to use or secure as Apple Pay. Instead it is a tool aimed at [collecting as much data about customers](http://www.imore.com/depth-look-currentc-and-personal-data-they-want-collect) are possible.
+
+Having said that, the goal here may not even be to get customer information, but instead leverage this product as a negotiation tool to push for cheaper credit card processing fees.
+
+In either case, the tragic side effect of this is that a large number of retailers are engaging in the act of cutting off their nose to spite their face. By disabling NFC payments, they are offering customers less choice and holding back more secure and pleasant ways to pay.
+
+## Dark patterns
+
+This act of shutting off a service so that another, competing, service can be introduced sounds like one of these dark patterns we see online. By creating a pain for customers, it looks like the retailers are planning to wheel out their own solutions as a way to end this artificially-induced limitation.
+
+## Your experiences
+
+I'd be interested to hear of your experiences in retail and how people are being manipulated through other dark patterns. Drop me a line on [Twitter](http://twitter.com/donovanh) or by [email](mailto:d@hop.ie) and I'll include your thoughts here.
+
