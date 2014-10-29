@@ -13,7 +13,7 @@ This week saw uproar online when several large US pharmacy and retailers deactiv
 
 ## MCX and CurrentC
 
-In 2012 [a group of companies](http://www.mcx.com/), lef by Walmart, got together to put together a system that would enable them to charge people directly, and avoid paying credit card processing fees on each transaction.
+In 2012 [a group of companies](http://www.mcx.com/), led by Walmart, got together to put together a system that would enable them to charge people directly and avoid paying credit card processing fees on each transaction.
 
 The result of this groups efforts is a product called [CurrentC](http://currentc.com/).
 
