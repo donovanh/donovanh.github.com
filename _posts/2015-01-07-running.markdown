@@ -1,0 +1,77 @@
+---
+layout: post
+title: "On Running"
+description: "Why I run, and the equipment I find most helpful."
+tags: [running, non-computer]
+imageURL: city.jpg
+published: true
+---
+
+In March, 2014 I began running outside. Until that point I'd been occasionally running two kilometres or so at a gym, but never thought to go for a proper run.
+
+I hadn't run properly outside since school. I did try about 5 years ago. I joined a running club, went to the first meet, and managed to tag along for about 200 yards before veering off to a side road and walking home.
+
+Last week I ran 21.6km in just over two hours. I'm happy with that, but it's not really the main reason I run. I run for lots of reasons, fitness, the challenge, but also to clear my head and take time away from computers.
+
+In 2015 I have set the goal of running the Dublin marathon. This takes place in late October.
+
+## Realising it's possible
+
+In the past year, the biggest thing that's helped me get from barely 10 minutes of slow jogging to over 2 hours, is the realisation that it's possible. The first time I realised this was after signing up to take part in the 5k run at [Úll](http://2014.ull.ie). The evening after signing up, I mapped out a 5k run online and went to see how it felt to run it.
+
+About 30 minutes or so later I got home, barely able to catch a breath, with sweat flying everywhere. I'd run 5k. Nearly fainted in the process, but it was possible.
+
+Each time I started getting comfortable with a distance, I'd wonder if it was possible to do another couple of kilometres more. It wasn't always easy but it was possible.
+
+## Injury
+
+I can't stress enough the importance of form. I've never taken any professional lessons, which meant I made some mistakes that caused shin and knee pains. It wasn't too much of a problem around the 5k level, but once I started running 10k several times per week, I found that it was getting harder and harder rather than easier.
+
+My problem was that I was taking long, loping strides. When I'd start the run I'd be quite fast and running reasonably well (with my feet landing under my hips, around the mid-foot point). This fast start would lead to my getting tired after a while, then I'd kind of limply run along, landing on the back of the foot and out of alignment.
+
+It took me a while, and a lot of knee pain, to realise that I was better off taking small steps. Reading up on the subject, I found that it was generally recommended to aim for 180 steps per minute.
+
+When I tried aiming for this rate, or cadence, I found that while my overall running time was slower, the pain vanished and I could run for longer without stopping to walk.
+
+## Gym training
+
+An aspect I hadn't considered was the need to train at a gym. Especially when getting the legs used to running, it's helpful to work on muscle strength. While I've not been to the gym for a few months, I did find focusing on leg exercises at the start helped get rid of some of the pains.
+
+## Enjoying it
+
+There's lots of talk of pain but it would be impossible for me to run regularly if I didn't enjoy it. Aside from the feeling of accomplishment that comes from beating a record (or simply finishing a long run without any pain), I find running clears my head. It's a bit of time where it's just me, some music, and the road.
+
+It's important to get away from interruptions. I'm terrible at maintaining focus, always checking what's happening on Twitter or Slack. When I run I put the phone into silent mode, put on a podcast or some music and keep it in my pocket.
+
+### Temptations of technology
+
+Having said that, it could be useful to know my current pace and step cadence. Having that information available at a glance might help me keep up with my target running speed, but there are other ways of getting this information than having a screen. I'm already listening to music, so that's a vector.
+
+The [Moov](http://welcome.moov.cc/) portable fitness coach is a device that I'm currently trying out. It's a disk you strap onto your ankle that tracks movement including steps per minute, step weight, and other factors. It then reports this information back in the form of recommendations such as "Speed up, your pace is currently lower than the target pace" or "Try stepping more lightly".
+
+So far I'm not entirely convinced by this. As far as interruptions go it's quite intense having a voice prompting you every few seconds and it interrupts my flow. I might use this tool to monitor my progress on occasion but as the moment I suspect my need for quiet time will be more important.
+
+## Essential equipment
+
+Your milage may vary but here's what I have found essential:
+
+* Decent, light running shoes
+* Shorts
+* Summer: short sleeve polyester running top
+* Winter: I have an Underarmour long-sleeve top works well as a base layer
+* Winter: I am also big fan of this [inov-8 Windshell](http://www.inov-8.com/New/Global/Product-View-Clothing-OffRoad-Outer-Race-Elite-70.asp?L=26)
+* iPhone with Runkeeper, Overcast, Spotify, and earphones
+* Facecloth
+
+I had a hard time adjusting from the summer to winter at first until discovering the Windshell. It's very light, but stops the wind from getting through and stays comfortable even for a long run.
+
+Lastly, don't forget lubricant. Not a lot of places seem to mention this, but when you're running, things rub against other things. [This one](http://www.amazon.com/Mueller-Lube-Stick-Runners-2-25-Ounce/dp/B000TS8MHG) works well. Apply liberally.
+
+Also, as [noted here](https://medium.com/having-it-some/the-awful-truth-about-jogging-66b45bb2f2ca), it's always good to plan for a decent visit to the rest room before going for a run. So much more relaxing.
+
+## What about you?
+
+Do you run? Feel free to look me up on Runkeeper. I'm Donovan Hutchinson. If you've had running experiences you'd like to share or questions, do [drop me an email](mailto:d@hop.ie) or say hi [on Twitter](https://twitter.com/donovanh).
+
+
+
