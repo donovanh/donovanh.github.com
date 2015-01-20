@@ -17,13 +17,13 @@ bodyTag: home
 {% endif %}
 
 {% for post in paginator.posts %}
-  
+
     <article>
 
       <header>
         {% if post.target %}
            <a href="{{ post.target }}">
-            {% if post.imageURL %} 
+            {% if post.imageURL %}
               <img src="/images/home/{{post.imageURL}}" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
             {% else %}
               <img src="/images/home/default.png" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
@@ -33,7 +33,7 @@ bodyTag: home
           <p class="date">{{ post.date | date: "%B %d, %Y" }} - for <strong>{{ post.targetName }}</strong></p>
         {% else %}
           <a href="{{ post.url }}/">
-            {% if post.imageURL %} 
+            {% if post.imageURL %}
               <img src="/images/home/{{post.imageURL}}" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
             {% else %}
               <img src="/images/home/default.png" alt="{{ post.description }}" class="{{ post.cornerStyle }}">
@@ -42,7 +42,7 @@ bodyTag: home
           </a>
           <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
         {% endif %}
-        
+
       </header>
     </article>
 
@@ -61,5 +61,3 @@ bodyTag: home
     <a href="/page{{paginator.next_page}}" class="next ">&raquo;</a>
   {% endif %}
 </nav>
-
-<section style="max-width: 680px; margin: 3em auto 0">{% include hire-notification.html %}</section>
