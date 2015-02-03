@@ -1326,11 +1326,14 @@ header.top.top {
   background: #335;
   color: #fff;
   padding: 2em 0;
-  margin: 2em 0 4em;
+  margin: 5em 0 2em;
 }
 .portfolio .project.webis {
   background: #a8e3f0;
   color: #2c3437;
+}
+.portfolio .project.webis .logo {
+  border-radius: 50%;
 }
 .portfolio .project.converser {
   background: #222;
@@ -1349,9 +1352,9 @@ header.top.top {
 .portfolio .logo {
   background: #fafafe;
   border: 0.25em solid #fafafe;
-  border-radius: 0 0 1em 1em;
-  padding: 0.25em;
-  margin: -3em auto 0;
+  border-radius: 0 0 0.5em 0.5em;
+  padding: 0.5em;
+  margin: -5em auto 0 -2em;
 }
 .portfolio .page {
   max-width: 100%;
