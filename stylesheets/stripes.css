@@ -63,20 +63,20 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
 
 ins {
-  background: #ffff99;
-  color: black;
+  background: #ff9;
+  color: #000;
   text-decoration: none;
 }
 
 mark {
-  background: yellow;
-  color: black;
+  background: #ff0;
+  color: #000;
   font-style: italic;
   font-weight: bold;
 }
@@ -350,7 +350,7 @@ td {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -380,7 +380,7 @@ td {
   }
 
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -400,8 +400,7 @@ td {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p, h2, h3 {
     orphans: 3;
     widows: 3;
@@ -424,12 +423,12 @@ td {
 
 /* Comment */
 .err {
-  border: 1px solid red;
+  border: 1px solid #FF0000;
 }
 
 /* Error */
 .k {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
@@ -446,7 +445,7 @@ td {
 
 /* Comment.Multiline */
 .cp {
-  color: #bc7a00;
+  color: #BC7A00;
 }
 
 /* Comment.Preproc */
@@ -458,7 +457,7 @@ td {
 /* Comment.Single */
 /* Comment.Special */
 .gd {
-  color: #a00000;
+  color: #A00000;
 }
 
 /* Generic.Deleted */
@@ -468,28 +467,28 @@ td {
 
 /* Generic.Emph */
 .gr {
-  color: red;
+  color: #FF0000;
 }
 
 /* Generic.Error */
 .gh {
-  color: navy;
+  color: #000080;
   font-weight: bold;
 }
 
 /* Generic.Heading */
 .gi {
-  color: #00a000;
+  color: #00A000;
 }
 
 /* Generic.Inserted */
 .go {
-  color: gray;
+  color: #808080;
 }
 
 /* Generic.Output */
 .gp {
-  color: navy;
+  color: #000080;
   font-weight: bold;
 }
 
@@ -500,18 +499,18 @@ td {
 
 /* Generic.Strong */
 .gu {
-  color: purple;
+  color: #800080;
   font-weight: bold;
 }
 
 /* Generic.Subheading */
 .gt {
-  color: #0040d0;
+  color: #0040D0;
 }
 
 /* Generic.Traceback */
 .kc, .kd, .kn {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
@@ -519,18 +518,18 @@ td {
 /* Keyword.Declaration */
 /* Keyword.Namespace */
 .kp {
-  color: green;
+  color: #008000;
 }
 
 /* Keyword.Pseudo */
 .kr {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
 /* Keyword.Reserved */
 .kt {
-  color: #b00040;
+  color: #B00040;
 }
 
 /* Keyword.Type */
@@ -540,22 +539,22 @@ td {
 
 /* Literal.Number */
 .s {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String */
 .na {
-  color: #7d9029;
+  color: #7D9029;
 }
 
 /* Name.Attribute */
 .nb {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin */
 .nc {
-  color: blue;
+  color: #0000FF;
   font-weight: bold;
 }
 
@@ -566,7 +565,7 @@ td {
 
 /* Name.Constant */
 .nd {
-  color: #aa22ff;
+  color: #AA22FF;
 }
 
 /* Name.Decorator */
@@ -577,40 +576,40 @@ td {
 
 /* Name.Entity */
 .ne {
-  color: #d2413a;
+  color: #D2413A;
   font-weight: bold;
 }
 
 /* Name.Exception */
 .nf {
-  color: blue;
+  color: #0000FF;
 }
 
 /* Name.Function */
 .nl {
-  color: #a0a000;
+  color: #A0A000;
 }
 
 /* Name.Label */
 .nn {
-  color: blue;
+  color: #0000FF;
   font-weight: bold;
 }
 
 /* Name.Namespace */
 .nt {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
 /* Name.Tag */
 .nv {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable */
 .ow {
-  color: #aa22ff;
+  color: #AA22FF;
   font-weight: bold;
 }
 
@@ -629,66 +628,66 @@ td {
 /* Literal.Number.Integer */
 /* Literal.Number.Oct */
 .sb, .sc {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Backtick */
 /* Literal.String.Char */
 .sd {
-  color: #ba2121;
+  color: #BA2121;
   font-style: italic;
 }
 
 /* Literal.String.Doc */
 .s2 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Double */
 .se {
-  color: #bb6622;
+  color: #BB6622;
   font-weight: bold;
 }
 
 /* Literal.String.Escape */
 .sh {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Heredoc */
 .si {
-  color: #bb6688;
+  color: #BB6688;
   font-weight: bold;
 }
 
 /* Literal.String.Interpol */
 .sx {
-  color: green;
+  color: #008000;
 }
 
 /* Literal.String.Other */
 .sr {
-  color: #bb6688;
+  color: #BB6688;
 }
 
 /* Literal.String.Regex */
 .s1 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Single */
 .ss {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Literal.String.Symbol */
 .bp {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin.Pseudo */
 .vc, .vg, .vi {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Class */
@@ -701,12 +700,8 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-* html {
-  font-size: 125%;
-}
-
 html {
-  font-size: 20px;
+  font-size: 125%;
   line-height: 1.8em;
 }
 
@@ -714,29 +709,31 @@ html {
 /* Shadow defaults */
 /* Override for a stripey theme */
 .bouncer {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI2OCUiIHN0b3AtY29sb3I9IiMxYzMyNDMiLz48c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iI2ZhZmFmZSIvPjxzdG9wIG9mZnNldD0iNzYlIiBzdG9wLWNvbG9yPSIjZmFmYWZlIi8+PHN0b3Agb2Zmc2V0PSI3NiUiIHN0b3AtY29sb3I9IiMxYzMyNDMiLz48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzFjMzI0MyIvPjxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjZmFmYWZlIi8+PHN0b3Agb2Zmc2V0PSI4OCUiIHN0b3AtY29sb3I9IiNmYWZhZmUiLz48c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iIzFjMzI0MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(68%, #1c3243), color-stop(68%, #fafafe), color-stop(76%, #fafafe), color-stop(76%, #1c3243), color-stop(80%, #1c3243), color-stop(80%, #fafafe), color-stop(88%, #fafafe), color-stop(88%, #1c3243));
-  background-image: -webkit-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-image: -moz-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
-  background-image: -o-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
+  background-image: -webkit-linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-image: linear-gradient(#1c3243 68%, #fafafe 68%, #fafafe 76%, #1c3243 76%, #1c3243 80%, #fafafe 80%, #fafafe 88%, #1c3243 88%);
   background-repeat: no-repeat;
 }
 
 .bouncer-container a:hover .bouncer {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI2OCUiIHN0b3AtY29sb3I9IiNmZjFjN2MiLz48c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iI2ZhZmFmZSIvPjxzdG9wIG9mZnNldD0iNzYlIiBzdG9wLWNvbG9yPSIjZmFmYWZlIi8+PHN0b3Agb2Zmc2V0PSI3NiUiIHN0b3AtY29sb3I9IiNmZjFjN2MiLz48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2ZmMWM3YyIvPjxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjZmFmYWZlIi8+PHN0b3Agb2Zmc2V0PSI4OCUiIHN0b3AtY29sb3I9IiNmYWZhZmUiLz48c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iI2ZmMWM3YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(68%, #ff1c7c), color-stop(68%, #fafafe), color-stop(76%, #fafafe), color-stop(76%, #ff1c7c), color-stop(80%, #ff1c7c), color-stop(80%, #fafafe), color-stop(88%, #fafafe), color-stop(88%, #ff1c7c));
-  background-image: -webkit-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
   background-image: -moz-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
-  background-image: -o-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
+  background-image: -webkit-linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
   background-image: linear-gradient(#ff1c7c 68%, #fafafe 68%, #fafafe 76%, #ff1c7c 76%, #ff1c7c 80%, #fafafe 80%, #fafafe 88%, #ff1c7c 88%);
-  -webkit-transition: backround-image 0.2s ease-out;
   -moz-transition: backround-image 0.2s ease-out;
   -o-transition: backround-image 0.2s ease-out;
+  -webkit-transition: backround-image 0.2s ease-out;
   transition: backround-image 0.2s ease-out;
 }
 .bouncer-container a:hover .ear1, .bouncer-container a:hover .ear2 {
   background-color: #ff1c7c;
-  -webkit-transition: backround-image 0.2s ease-out;
   -moz-transition: backround-image 0.2s ease-out;
   -o-transition: backround-image 0.2s ease-out;
+  -webkit-transition: backround-image 0.2s ease-out;
   transition: backround-image 0.2s ease-out;
 }

@@ -64,20 +64,20 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
 
 ins {
-  background: #ffff99;
-  color: black;
+  background: #ff9;
+  color: #000;
   text-decoration: none;
 }
 
 mark {
-  background: yellow;
-  color: black;
+  background: #ff0;
+  color: #000;
   font-style: italic;
   font-weight: bold;
 }
@@ -351,7 +351,7 @@ td {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -381,7 +381,7 @@ td {
   }
 
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -401,8 +401,7 @@ td {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p, h2, h3 {
     orphans: 3;
     widows: 3;
@@ -425,12 +424,12 @@ td {
 
 /* Comment */
 .err {
-  border: 1px solid red;
+  border: 1px solid #FF0000;
 }
 
 /* Error */
 .k {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
@@ -447,7 +446,7 @@ td {
 
 /* Comment.Multiline */
 .cp {
-  color: #bc7a00;
+  color: #BC7A00;
 }
 
 /* Comment.Preproc */
@@ -459,7 +458,7 @@ td {
 /* Comment.Single */
 /* Comment.Special */
 .gd {
-  color: #a00000;
+  color: #A00000;
 }
 
 /* Generic.Deleted */
@@ -469,28 +468,28 @@ td {
 
 /* Generic.Emph */
 .gr {
-  color: red;
+  color: #FF0000;
 }
 
 /* Generic.Error */
 .gh {
-  color: navy;
+  color: #000080;
   font-weight: bold;
 }
 
 /* Generic.Heading */
 .gi {
-  color: #00a000;
+  color: #00A000;
 }
 
 /* Generic.Inserted */
 .go {
-  color: gray;
+  color: #808080;
 }
 
 /* Generic.Output */
 .gp {
-  color: navy;
+  color: #000080;
   font-weight: bold;
 }
 
@@ -501,18 +500,18 @@ td {
 
 /* Generic.Strong */
 .gu {
-  color: purple;
+  color: #800080;
   font-weight: bold;
 }
 
 /* Generic.Subheading */
 .gt {
-  color: #0040d0;
+  color: #0040D0;
 }
 
 /* Generic.Traceback */
 .kc, .kd, .kn {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
@@ -520,18 +519,18 @@ td {
 /* Keyword.Declaration */
 /* Keyword.Namespace */
 .kp {
-  color: green;
+  color: #008000;
 }
 
 /* Keyword.Pseudo */
 .kr {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
 /* Keyword.Reserved */
 .kt {
-  color: #b00040;
+  color: #B00040;
 }
 
 /* Keyword.Type */
@@ -541,22 +540,22 @@ td {
 
 /* Literal.Number */
 .s {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String */
 .na {
-  color: #7d9029;
+  color: #7D9029;
 }
 
 /* Name.Attribute */
 .nb {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin */
 .nc {
-  color: blue;
+  color: #0000FF;
   font-weight: bold;
 }
 
@@ -567,7 +566,7 @@ td {
 
 /* Name.Constant */
 .nd {
-  color: #aa22ff;
+  color: #AA22FF;
 }
 
 /* Name.Decorator */
@@ -578,40 +577,40 @@ td {
 
 /* Name.Entity */
 .ne {
-  color: #d2413a;
+  color: #D2413A;
   font-weight: bold;
 }
 
 /* Name.Exception */
 .nf {
-  color: blue;
+  color: #0000FF;
 }
 
 /* Name.Function */
 .nl {
-  color: #a0a000;
+  color: #A0A000;
 }
 
 /* Name.Label */
 .nn {
-  color: blue;
+  color: #0000FF;
   font-weight: bold;
 }
 
 /* Name.Namespace */
 .nt {
-  color: green;
+  color: #008000;
   font-weight: bold;
 }
 
 /* Name.Tag */
 .nv {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable */
 .ow {
-  color: #aa22ff;
+  color: #AA22FF;
   font-weight: bold;
 }
 
@@ -630,66 +629,66 @@ td {
 /* Literal.Number.Integer */
 /* Literal.Number.Oct */
 .sb, .sc {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Backtick */
 /* Literal.String.Char */
 .sd {
-  color: #ba2121;
+  color: #BA2121;
   font-style: italic;
 }
 
 /* Literal.String.Doc */
 .s2 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Double */
 .se {
-  color: #bb6622;
+  color: #BB6622;
   font-weight: bold;
 }
 
 /* Literal.String.Escape */
 .sh {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Heredoc */
 .si {
-  color: #bb6688;
+  color: #BB6688;
   font-weight: bold;
 }
 
 /* Literal.String.Interpol */
 .sx {
-  color: green;
+  color: #008000;
 }
 
 /* Literal.String.Other */
 .sr {
-  color: #bb6688;
+  color: #BB6688;
 }
 
 /* Literal.String.Regex */
 .s1 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Single */
 .ss {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Literal.String.Symbol */
 .bp {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin.Pseudo */
 .vc, .vg, .vi {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Class */
@@ -702,12 +701,8 @@ td {
 /* Literal.Number.Integer.Long */
 /* Rhythm defaults */
 /* Hit me with the rhythm stick */
-* html {
-  font-size: 125%;
-}
-
 html {
-  font-size: 20px;
+  font-size: 125%;
   line-height: 1.8em;
 }
 
@@ -717,22 +712,16 @@ html {
   position: relative;
   width: 90%;
   height: 200px;
-  background-color: #666666;
-  border: 1px solid black;
-  -webkit-border-radius: 15px;
+  background-color: #666;
+  border: 1px solid #000;
   -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
   border-radius: 15px;
-  -webkit-perspective: 800px;
   -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
+  -webkit-perspective: 800px;
   perspective: 800px;
-  -webkit-perspective-origin: 120% -200px;
   -moz-perspective-origin: 120% -200px;
-  -ms-perspective-origin: 120% -200px;
-  -o-perspective-origin: 120% -200px;
+  -webkit-perspective-origin: 120% -200px;
   perspective-origin: 120% -200px;
 }
 .stage .triangle {
@@ -741,19 +730,15 @@ html {
   left: 75px;
   width: 150px;
   height: 150px;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .stage .triangle figure {
   display: block;
   position: absolute;
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .stage.example1 figure.front {
@@ -762,10 +747,9 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
-  -webkit-transform: translateY(20px);
   -moz-transform: translateY(20px);
   -ms-transform: translateY(20px);
-  -o-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
   transform: translateY(20px);
 }
 .stage.example2 figure.front {
@@ -774,10 +758,9 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
-  -webkit-transform: translateZ(80px);
   -moz-transform: translateZ(80px);
   -ms-transform: translateZ(80px);
-  -o-transform: translateZ(80px);
+  -webkit-transform: translateZ(80px);
   transform: translateZ(80px);
 }
 .stage.example2 figure.back {
@@ -786,10 +769,9 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffd200;
-  -webkit-transform: translateZ(-80px);
   -moz-transform: translateZ(-80px);
   -ms-transform: translateZ(-80px);
-  -o-transform: translateZ(-80px);
+  -webkit-transform: translateZ(-80px);
   transform: translateZ(-80px);
 }
 .stage.example3 .triangle, .stage.example4 .triangle {
@@ -806,10 +788,9 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
-  -webkit-transform: translateZ(20px);
   -moz-transform: translateZ(20px);
   -ms-transform: translateZ(20px);
-  -o-transform: translateZ(20px);
+  -webkit-transform: translateZ(20px);
   transform: translateZ(20px);
 }
 .stage.example3 figure.back, .stage.example4 figure.back {
@@ -818,10 +799,9 @@ html {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 150px solid #ffe403;
-  -webkit-transform: translateZ(-20px) rotateY(180deg);
   -moz-transform: translateZ(-20px) rotateY(180deg);
   -ms-transform: translateZ(-20px) rotateY(180deg);
-  -o-transform: translateZ(-20px) rotateY(180deg);
+  -webkit-transform: translateZ(-20px) rotateY(180deg);
   transform: translateZ(-20px) rotateY(180deg);
 }
 .stage.example3 figure.side1, .stage.example4 figure.side1 {
@@ -831,10 +811,9 @@ html {
   height: 168px;
   width: 40px;
   background-color: #ffd200;
-  -webkit-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   -moz-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   -ms-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
-  -o-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
+  -webkit-transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
   transform: translateY(-9px) translateX(18px) rotateY(-90deg) rotateX(26.5deg);
 }
 .stage.example3 figure.side2, .stage.example4 figure.side2 {
@@ -844,10 +823,9 @@ html {
   height: 168px;
   width: 40px;
   background-color: #ffd200;
-  -webkit-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   -moz-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   -ms-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
-  -o-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
+  -webkit-transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
   transform: translateY(-9px) translateX(92px) rotateY(90deg) rotateX(26.5deg);
 }
 .stage.example3 figure.side3, .stage.example4 figure.side3 {
@@ -855,24 +833,20 @@ html {
   background-color: #ffd200;
   width: 150px;
   height: 40px;
-  -webkit-transform: translateY(130px) rotateX(-90deg);
   -moz-transform: translateY(130px) rotateX(-90deg);
   -ms-transform: translateY(130px) rotateX(-90deg);
-  -o-transform: translateY(130px) rotateX(-90deg);
+  -webkit-transform: translateY(130px) rotateX(-90deg);
   transform: translateY(130px) rotateX(-90deg);
 }
 .stage.example4 {
-  -webkit-perspective-origin: 120% -200px;
   -moz-perspective-origin: 120% -200px;
-  -ms-perspective-origin: 120% -200px;
-  -o-perspective-origin: 120% -200px;
+  -webkit-perspective-origin: 120% -200px;
   perspective-origin: 120% -200px;
 }
 .stage.example4 .scaler {
-  -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
   transform: scale(0.8);
   position: absolute;
   top: -20px;
@@ -921,65 +895,70 @@ html {
 @-moz-keyframes rotate {
   0% {
     -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
-
   100% {
     -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
-
 @-webkit-keyframes rotate {
   0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@-o-keyframes rotate {
-  0% {
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -o-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@-ms-keyframes rotate {
-  0% {
-    -ms-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  100% {
-    -ms-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotateY(0);
     -moz-transform: rotateY(0);
     -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
-
   100% {
-    -webkit-transform: rotateY(360deg);
     -moz-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-o-keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-ms-keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
 }
