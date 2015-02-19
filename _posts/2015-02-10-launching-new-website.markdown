@@ -7,7 +7,7 @@ imageURL: rocks.png
 published: true
 ---
 
-There's a lot that goes into creating and launching a new website. In this post I'll discuss the steps involved in planning, building and launching [CSSAnimation.rocks](http://cssanimation.rocks).
+There's a lot that goes into creating and launching a new website. In this post I'll discuss the steps involved in planning, building and launching [CSSAnimation.rocks](https://cssanimation.rocks).
 
 ## Initial idea
 
@@ -21,7 +21,7 @@ After taking some advice from the wonderful Paul Boag, I'd decided to create a w
 
 Some people can start working on a project without a name. I'm not so great at that. I also tend to get unhealthily excited about choosing domain names. The effort required to resist registering all the names is unbearable.
 
-I settled on the domain [cssanimation.rocks](http://cssanimation.rocks). It's a simple, straightforward name that is obvious, and the "rocks" domain name is fun. CSS animation absolutely does rock.
+I settled on the domain [cssanimation.rocks](https://cssanimation.rocks). It's a simple, straightforward name that is obvious, and the "rocks" domain name is fun. CSS animation absolutely does rock.
 
 ## Creating the story
 
@@ -91,9 +91,9 @@ With the site in place the next step is to create content. It's easy to spend a 
 
 Before starting to write, I created a spreadsheet for potential topics, along with other content I might want to create at some stage. This list gives me a decent set of ideas should I be stuck, and acts as a record of topics covered.
 
-From this I picked the first topic, [Twitter's "fave" animation](http://cssanimation.rocks/twitter-fave/). A couple of hours creating the demo and code, then another few hours writing up the description of the process involved, and I had my first post.
+From this I picked the first topic, [Twitter's "fave" animation](https://cssanimation.rocks/twitter-fave/). A couple of hours creating the demo and code, then another few hours writing up the description of the process involved, and I had my first post.
 
-Before publishing I was starting the second post, [Animating pseudo-elements](http://cssanimation.rocks/pseudo-elements/). As I write this, I have two more posts in the pipeline almost ready to publish. This gives me time to polish them and update them for a while before they go live.
+Before publishing I was starting the second post, [Animating pseudo-elements](https://cssanimation.rocks/pseudo-elements/). As I write this, I have two more posts in the pipeline almost ready to publish. This gives me time to polish them and update them for a while before they go live.
 
 ## Publishing and spreading the word
 
@@ -115,14 +115,14 @@ This was a great start. Better than I'd hoped, and it brought with it quite a fe
 
 While it's very exciting to get a bunch of visitors, it's better to maintain momentum. Something I found when blogging here over the years was that the visitors can drop off very quickly. Spending months making a single blog post is great and produces interesting results, but a more consistent result comes from frequent, smaller posts.
 
-I'm aiming to pose on the [CSS Animation Rocks](http://cssanimation.rocks) site at least twice per month. I feel a weekly update would be good but until I can set aside more time, a little less often will do.
+I'm aiming to pose on the [CSS Animation Rocks](https://cssanimation.rocks) site at least twice per month. I feel a weekly update would be good but until I can set aside more time, a little less often will do.
 
 ## Future plans
 
-I'd like to also build out the site as a reference for [CSS animation properties](http://cssanimation.rocks) and how to use them. This will be quite a lot of work so I may put this back a while until the book is further along.
+I'd like to also build out the site as a reference for [CSS animation properties](https://cssanimation.rocks) and how to use them. This will be quite a lot of work so I may put this back a while until the book is further along.
 
 Beyond this, I'd like to keep on enjoying making content more than anything else. I have no doubt there will be more ideas, and I'll keep open to them as they come along.
 
 ## Get in touch
 
-If you find this or [CSS Animation](http://cssanimation.rocks) useful, please consider giving it a mention on Twitter, [or following along](https://twitter.com/cssanimation). For any thoughts, tips, questions (or typos), you can also [email me](mailto:d@hop.ie).
+If you find this or [CSS Animation](https://cssanimation.rocks) useful, please consider giving it a mention on Twitter, [or following along](https://twitter.com/cssanimation). For any thoughts, tips, questions (or typos), you can also [email me](mailto:d@hop.ie).
