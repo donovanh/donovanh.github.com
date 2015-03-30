@@ -115,7 +115,7 @@ This was a great start. Better than I'd hoped, and it brought with it quite a fe
 
 While it's very exciting to get a bunch of visitors, it's better to maintain momentum. Something I found when blogging here over the years was that the visitors can drop off very quickly. Spending months making a single blog post is great and produces interesting results, but a more consistent result comes from frequent, smaller posts.
 
-I'm aiming to pose on the [CSS Animation Rocks](https://cssanimation.rocks) site at least twice per month. I feel a weekly update would be good but until I can set aside more time, a little less often will do.
+I'm aiming to post on the [CSS Animation Rocks](https://cssanimation.rocks) site at least twice per month. I feel a weekly update would be good but until I can set aside more time, a little less often will do.
 
 ## Future plans
 
