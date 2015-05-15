@@ -7,7 +7,7 @@ imageURL: 101.png
 published: true
 ---
 
-This year I decided to get serious about creating something of value. I [created a new website](/launching-new-website/) all about [CSS animation](https://cssanimation.rocks). I then created and launched a [paid email course](https://cssanimation.rocks/courses/animation-101/). Here are some things I learned along the way.
+This year I decided to get serious about creating something of value. I [created a new website](/blog/launching-new-website/) all about [CSS animation](https://cssanimation.rocks). I then created and launched a [paid email course](https://cssanimation.rocks/courses/animation-101/). Here are some things I learned along the way.
 
 ## What sort of product
 
