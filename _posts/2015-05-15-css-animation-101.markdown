@@ -23,7 +23,7 @@ However after a couple of weeks I realised I'd bitten off too big a project, esp
 
 Starting with too big an idea was not going to work for me. I need to start with small steps. I'm used to doing that when designing and building websites, but writing educational content was new to me so I needed to make more of an effort to start small.
 
-Having decided against writing a book, I brainstormed some other approaches and remembered an interesting course called Write Up! by the wonderful [Relly Annett-Baker](https://twitter.com/rellyab). It was a simple idea, you pay £25, and get an email each day for a month encouraging and coaxing you to write. This seemed like an interesting approach for learning about CSS animation. People could sign up, get an email each day that would gradually introduce the subjects, and end the month with a better understanding. So [I tried that](https://cssanimation.rocks/courses/animation-101/).
+Having decided against writing a book, I brainstormed some other approaches and remembered an interesting course called Write Up! by the wonderful [Relly Annett-Baker](https://twitter.com/rellyab). It was a simple idea, you pay £25, and get an email each day for a month that guides and encourages you to write. This seemed like an interesting approach for learning about CSS animation. People could sign up, get an email each day that would gradually introduce the subjects, and end the month with a better understanding. So [I tried that](https://cssanimation.rocks/courses/animation-101/).
 
 ## Choosing a topic
 
