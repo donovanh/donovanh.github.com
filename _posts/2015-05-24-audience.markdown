@@ -1,0 +1,89 @@
+---
+layout: post
+title: "Building an audience"
+description: "Building up an audience, one follow and subscribe at a time"
+tags: [css animation, business]
+imageURL: follower.jpg
+published: true
+---
+
+I get a notification on my phone when someone follows [@cssanimation](https://twitter.com/cssanimation). Every so often my phone will light up and show me that someone has pressed that "Follow" button, and it warms my heart a little. I do a little dance and think of what I need to do to make the [CSS Animation](https://cssanimation.rocks) site better.
+
+I also get a daily update from Mailchimp telling me how many subscribes and unsubscribes each day. On a busy day it might be as many as fifty new signups, but often it's five or so. Which is fine, I'm always happy if it's up and two the right. One day recently I had more unsubscribes than subscribes. I feel pretty bad when this happens.
+
+It's a rollercoaster I tell you. Here's what I'm doing to try to make sure the dances outweigh the downs.
+
+## Building an audience
+
+I'm not going to pretend I'm some genius at conceiving an approach and planning this all through, I've just gone with what felt right, tried things and repeated what seems to work. I have no doubt I've missed opportunities along the way but it's an interesting journey. What's right for you might be different, so try things. Let me know if it works!
+
+There are three steps to building an audience. Everybody loves things if they can be done in three steps.
+
+1. Set up places to follow you
+2. Create value
+3. Get traffic
+
+## 1. Set up places
+
+First, set up a mailing list. This may seem an obvious thing to do, but I didn't set up an email list until late last year. Until then I'd been relying on Twitter. Email is a whole other level, it is more direct, people are more likely to read an email than a tweet, and you can write a lot more. Definitely set up an email address and throw a signup form onto the footer of your site, or on a "subscribe" landing page.
+
+There could be some merit in offering something in exchange for signing up. I've heard it helps, but it's not something I've done yet. I'll have to get back to you on that one. But do make sure there's some way for people to sign up.
+
+### Twitter, Facebook, Pinterest, Instragram...
+
+Get your usernames reserved on any appropriate services as soon as you can. For me, Twitter's a big one, with Facebook, and Dribbble being popular places for people to see my content. You may have more photo-related content, in which Instagram or Pinterest might be good. Add some links to your social accounts on your site so that people can find them.
+
+### RSS
+
+I add [an XML feed](https://cssanimation.rocks/feed.xml) to each site I create. I suspect this is less popular than it used to be but it's usually not to complex to set up.
+
+## 2. Create value
+
+This part is where you engage your enthusiasm and ideas, and create something. Maybe you love to sketch or illustrate, or arrange flowers, or review truck stops. Either way, put pen to paper, flower to vase, or pedal to the metal and get creating. Personally I enjoy making things with CSS and writing about how it works. There's usually something I learn along the way, which makes it more fun to share while the learning is fresh.
+
+If you're stuck for ideas, start with something you half-know but would like to know more. You don't have to be an expert, and in fact you might have a more accessible style of writing if you're learning it while you create. People can follow along.
+
+Main thing is, create something. Put it out there and know you'll improve.
+
+## 3. Get traffic
+
+It's nice creating things but for most of us want the validation of having people see it. Maybe we have a business plan, or want to set ourselves apart and be more competitive in the job market.
+
+There are plenty of expensive ways to get your content seen. You could buy a newspaper or sports team if you have a few billion going spare. Or you could place a Google or Twitter ad if you like. Personally I've not had much luck from Google ads or buying newspapers, and what I've found works is free but takes a little longer and involves more communication. With people.
+
+### Newsletters
+
+It's likely that whatever niche you're in, whether it's [writing Sass](http://www.sassnews.com/) or [creating Knitting patterns](http://www.knittingdaily.com/), there's a newletter or two. When you create something, reach out to a newsletter and let them know. The kind people running the newsletters love original, quality content, so don't be afraid to ask what they'd like to see if you're looking for ideas.
+
+I often contact a few newsletters that I subscribe to, such as [CSS Weekly](http://css-weekly.com/) to let them know when a new article goes live. There's no guarantee it'll make it but when it does, it's a great way to reach a relevant audience.
+
+### Link sites
+
+Second to newsletters are the sites that link to blogs and news. The biggest of these is [Reddit](http://reddit.com). Reddit is a community of smaller "sub-Reddits", so it could be worth finding one that fits your niche and submitting your link there. Other sites that I would look to include [Designer News](https://news.layervault.com/), [Sidebar](http://sidebar.io) and [Web Designer News](http://www.webdesignernews.com/). If your thing is knitting, you'd probably want to find different sites though.
+
+### Publications
+
+Online publications are also a decent way to get yourself in front of an audience. Most will be prepared to pay a modest fee for your time also. I've written for some publications and while I'd certainly recommend looking into it, I wouldn't do it at the expense of creating content for your own site. A blog post on your site is yours forever, and you can update it, republish it or whatever when you like. When your content goes to another publication it's gone.
+
+There are definitely advantages and disadvantages.
+
+### Republishing
+
+Similar to having content published in an magazine or online resource is republishing your own content. A popular option is to republish on a site such as [Medium](http://medium.com). Again this increases the chances of your work finding a wider audience. I've had limited success with this but it could be the technical nature of my content. This is definitely worth trying.
+
+## Stickers
+
+One weird trick&trade; I've found is giving away stickers. I recently had some printed up for [CSS Animation Rocks](https://cssanimation.rocks) and they've been really popular. So far I've been giving them away on Twitter, and it seems to be a very popular way to spread the word. People loves the stickers. If you're getting some printed, I'd use [Stickermule](https://www.stickermule.com/unlock?ref_id=9628460701). They are great quality and a solid service. (Note: the [affiliate link](https://www.stickermule.com/unlock?ref_id=9628460701) gets you $10 off, and me also, so share the love!)
+
+## Try and try again
+
+I hesitate to use the phrase "fail fast", because I don't think any of this counts as failing. But do try. Looking back at some of my earlier posts, I cringe a little and want to change things, but that just means I've improved.
+
+So have a go. And do [let me know](https://twitter.com/donovanh) when you have something in place. Maybe you'll start seeing those "follow" notifications and do a dance of your own.
+
+## Get in touch
+
+Have you built or are thinking about building a product? Want to talk about how it could be done? I'm happy to bounce ideas around and help where I can. Send me [an email](mailto:d@hop.ie) or hit me up on [Twitter](https://twitter.com/donovanh) and let's chat.
+
+If you find this or [CSS Animation](https://cssanimation.rocks) useful, please consider giving it a mention on Twitter, [or following along](https://twitter.com/cssanimation). It's going to be interesting.
+
