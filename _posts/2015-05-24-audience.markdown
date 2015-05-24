@@ -7,9 +7,9 @@ imageURL: follower.jpg
 published: true
 ---
 
-I get a notification on my phone when someone follows [@cssanimation](https://twitter.com/cssanimation). Every so often my phone will light up and show me that someone has pressed that "Follow" button, and it warms my heart a little. I do a little dance and think of what I need to do to make the [CSS Animation](https://cssanimation.rocks) site better.
+I get a notification on my phone when someone follows [@cssanimation](https://twitter.com/cssanimation). Every so often my phone will light up and show me that someone has pressed that "Follow" button, and it warms my heart. I do a little dance and think of what I need to do to make the [CSS Animation](https://cssanimation.rocks) site better.
 
-I also get a daily update from Mailchimp telling me how many subscribes and unsubscribes each day. On a busy day it might be as many as fifty new signups, but often it's five or so. Which is fine, I'm always happy if it's up and two the right. One day recently I had more unsubscribes than subscribes. I feel pretty bad when this happens.
+I also get a daily update from Mailchimp telling me how many subscribes and unsubscribes each day. On a busy day it might be as many as fifty new signups, but often it's five or so. Which is fine, I'm always happy if it's up and to the right. One day recently I had more unsubscribes than subscribes. I feel pretty bad when this happens.
 
 It's a rollercoaster I tell you. Here's what I'm doing to try to make sure the dances outweigh the downs.
 
