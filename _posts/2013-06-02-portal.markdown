@@ -2,12 +2,12 @@
 layout: redirect
 title: Portal CSS
 description: Learn how to set up a 3D scene in CSS, and add animation.
-tags: 
+tags:
   - 3D
   - CSS
 imageURL: portal.png
-target: http://learnsome.co/blog/portal/
-targetName: Learnsome.co
+target: https://cssanimation.rocks/portal/
+targetName: CSSAnimation.rocks
 published: true
 ---
 
