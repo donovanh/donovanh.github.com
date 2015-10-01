@@ -16,7 +16,7 @@ Next hangout is Thursday, 1st October. [RSVP here](https://nvite.com/CodePenDubl
 
 ## Social media
 
-Keep up to date with the latest meetup venue and times by [following on Twitter](https://twittr.com/frontenddublin). You can also follow the hashtag [#CodePenDublin](https://twitter.com/hashtag/codependublin).
+Keep up to date with the latest meetup venue and times by [following on Twitter](https://twitter.com/frontenddublin). You can also follow the hashtag [#CodePenDublin](https://twitter.com/hashtag/codependublin).
 
 ## Code of Conduct
 
@@ -24,7 +24,7 @@ Be cool.
 
 By cool, we mean pleasant, accommodating and friendly. The CodePen meetup is an informal event but it's important act like polite grown-ups and do our best to make this event welcoming and inclusive.
 
-By taking part we expect you to agree with the following code of conduct. We will enforce this code throughout the event. Any questions please do ask, either through Twitter, [email](mailto:d@hop.ie) or in person.
+By taking part we expect you to agree with the following code of conduct. We will enforce this code throughout the event. Any questions please do ask, either through [Twitter](https://twitter.com/frontenddublin), [phone](tel:+353863012280), [email](mailto:d@hop.ie) or in person.
 
 ### The Quick Version
 
