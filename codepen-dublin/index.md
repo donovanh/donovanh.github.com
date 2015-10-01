@@ -6,7 +6,7 @@ bodyTag: internal
 
 <div style="text-align: center">
 
-<img src="/images/codepen.jpg" alt="CodePen Dublin">
+<img src="/images/codepen.png" alt="CodePen Dublin" width="192" height="192">
 <h2>CodePen Dublin Meetup</h2>
 <p><em>A friendly get together for designers and front-end developers. Come join us, hang out, and talk some web shop!</em></p>
 
