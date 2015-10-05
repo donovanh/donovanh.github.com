@@ -12,7 +12,7 @@ bodyTag: internal
 
 </div>
 
-Next hangout is Thursday, 1st October. [RSVP here](https://nvite.com/CodePenDublin/f788) to take part! Should be fun.
+Our next meetup is Thursday, 5th November. [RSVP here](https://nvite.com/CodePenDublin/a014) to take part! Will be fun.
 
 ## Social media
 
@@ -22,7 +22,7 @@ Keep up to date with the latest meetup venue and times by [following on Twitter]
 
 Be cool. 
 
-By cool, we mean pleasant, accommodating and friendly. The CodePen meetup is an informal event but it's important act like polite grown-ups and do our best to make this event welcoming and inclusive.
+By this we mean pleasant, accommodating and friendly. The CodePen meetup is an informal event but it's important act like polite grown-ups and do our best to make this event welcoming and inclusive.
 
 By taking part we expect you to agree with the following code of conduct. We will enforce this code throughout the event. Any questions please do ask, either through [Twitter](https://twitter.com/frontenddublin), [phone](tel:+353863012280), [email](mailto:d@hop.ie) or in person.
 
