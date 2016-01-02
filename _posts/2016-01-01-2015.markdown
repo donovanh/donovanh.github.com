@@ -56,6 +56,7 @@ Articles on [CSS Animation](https://cssanimation.rocks):
   <li><a href="https://cssanimation.rocks/spheres/">Spheres</a></li>
   <li><a href="https://cssanimation.rocks/stereoscopic/">Stereoscopic CSS</a></li>
   <li><a href="https://cssanimation.rocks/starwars/">Star Wars</a></li>
+  <li><a href="https://cssanimation.rocks/why-animate/">Why Animate</a></li>
 </ul>
 
 International CSS Animation homepages:
@@ -82,7 +83,6 @@ Elsewhere:
   <li><a href="http://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937">Tuts+: Inspiring CSS Animations on CodePen</a></li>
   <li><a href="https://www.youtube.com/watch?v=VYsJrPwI66M">Defuse Dublin: Animating your Brand (Talk)</a></li>
   <li><a href="/blog/dan-oneill/">Hop.ie: Dan O'Neill (Interview)</a></li>
-  <li><a href="http://learnsome.co/blog/why-animate/">Learnsome: Why Animate</a></li>
   <li><a href="/blog/launching-new-website/">Hop.ie: Launching a new website</a></li>
   <li><a href="/blog/css-animation-101/">Hop.ie: From Blog to Product</a></li>
   <li><a href="/blog/audience/">Hop.ie: Building an audience</a></li>
