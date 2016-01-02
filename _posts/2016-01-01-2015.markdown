@@ -30,9 +30,9 @@ I also started a meetup, [CodePen Dublin](http://hop.ie/codepen-dublin/). We met
 
 A problem I often face is trying to do everything at once. I'd like to try to continue to improve my focus this year, and put my energy into a small number of projects. Practicing mindfulness is something I've been trying recently and I think it'll help.
 
-I learned a lot in producing [the CSS Animation course](https://cssanimation.rocks/courses/animation-101/), and I'm keen to make another course of two this year and do it even better.
+I learned a lot in producing [the CSS Animation course](https://cssanimation.rocks/courses/animation-101/), and I'm keen to make another course or two this year and do it even better.
 
-I think this year will be a huge one for UX, front-end performance (including offline design principles and making single page apps faster), and it'll be great seeing browsers continue to improve their support of service workers and other awesome tools.
+This year will be a huge one for UX, front-end performance (including offline design principles and making single page apps faster), and it'll be great seeing browsers continue to improve their support of service workers and other awesome tools.
 
 A good 2016 for me will be one in which I continue to learn, give back to the community, and find a balance between family time and working time that works for both.
 
@@ -58,7 +58,7 @@ Articles on [CSS Animation](https://cssanimation.rocks):
   <li><a href="https://cssanimation.rocks/starwars/">Star Wars</a></li>
 </ul>
 
-Internation CSS Animation homepages:
+International CSS Animation homepages:
 
 <ul>
   <li><a href="https://cssanimation.rocks/ar/">العربية (Arabic)</a></li>
