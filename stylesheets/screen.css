@@ -1643,7 +1643,6 @@ nav.pagination .previous {
 .bouncer-container .bouncer-end-position {
   top: 0;
   left: 41px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .bouncer-container .ear1, .bouncer-container .ear2 {
@@ -1744,7 +1743,6 @@ html.no-js .bouncer-container a:hover {
   30%, 33% {
     top: 42px;
     left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 40px;
     -moz-border-radius: 25px / 20px;
@@ -1754,7 +1752,6 @@ html.no-js .bouncer-container a:hover {
   45%, 100% {
     top: 0;
     left: 41px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 60px;
     -moz-border-radius: 25px / 30px;
@@ -1780,7 +1777,6 @@ html.no-js .bouncer-container a:hover {
   30%, 33% {
     top: 42px;
     left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 40px;
     -moz-border-radius: 25px / 20px;
@@ -1790,7 +1786,6 @@ html.no-js .bouncer-container a:hover {
   45%, 100% {
     top: 0;
     left: 41px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 60px;
     -moz-border-radius: 25px / 30px;
@@ -1816,7 +1811,6 @@ html.no-js .bouncer-container a:hover {
   30%, 33% {
     top: 42px;
     left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 40px;
     -moz-border-radius: 25px / 20px;
@@ -1826,7 +1820,6 @@ html.no-js .bouncer-container a:hover {
   45%, 100% {
     top: 0;
     left: 41px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 60px;
     -moz-border-radius: 25px / 30px;
@@ -1852,7 +1845,6 @@ html.no-js .bouncer-container a:hover {
   30%, 33% {
     top: 42px;
     left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 40px;
     -moz-border-radius: 25px / 20px;
@@ -1862,7 +1854,6 @@ html.no-js .bouncer-container a:hover {
   45%, 100% {
     top: 0;
     left: 41px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 60px;
     -moz-border-radius: 25px / 30px;
@@ -1888,7 +1879,6 @@ html.no-js .bouncer-container a:hover {
   30%, 33% {
     top: 42px;
     left: 21px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 40px;
     -moz-border-radius: 25px / 20px;
@@ -1898,7 +1888,6 @@ html.no-js .bouncer-container a:hover {
   45%, 100% {
     top: 0;
     left: 41px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     height: 60px;
     -moz-border-radius: 25px / 30px;

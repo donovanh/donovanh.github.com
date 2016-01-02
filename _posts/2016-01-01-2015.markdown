@@ -1,0 +1,90 @@
+---
+layout: post
+title: "2015"
+description: "A summary of 2015, and my hopes for the new year."
+tags: [non-tech]
+imageURL: 2015.png
+published: true
+newstylesheet: 2013
+---
+
+It's easy to forget how much we get done over the course of a year. Sometimes it's good to take note of what we have achieved, and think about next year.
+
+2015 was busy. I learned a lot and published more than ever. Here are some highlights.
+
+## CSSAnimation.rocks
+
+In January I registered the domain [cssanimation.rocks](https://cssanimation.rocks), with the intention of writing a book. While that didn't happen, I did manage to create a 4-week email course and write 15 in-depth CSS tutorials. The site has been well received, with over 500,000 views and more than 700 people taking part in the course.
+
+Along the way I also worked with [Native](https://getnative.me) to get the site translated into other languages. Thanks to over a dozen kind volunteers, articles have now been translated [into 10 languages](https://cssanimation.rocks/translations).
+
+## Writing and speaking
+
+Outside of the CSS tutorials, I managed to write two [articles for Tuts+](http://webdesign.tutsplus.com/tutorials/adding-appeal-to-your-animations-on-the-web--cms-23649), and the opening article [for 24 Ways](https://24ways.org/2015/animating-your-brand/). I've also finished an article that should, fingers crossed, feature in Net Magazine in a couple of months.
+
+I was lucky enough also to be asked to speak at [Defuse Dublin](http://www.defuse.ixd.ie). It was possibly the most nerve-wracking 5-minute talk I've ever done but well worth doing. It's [on Youtube here](https://www.youtube.com/watch?v=VYsJrPwI66M). I also got to take part in a [Boagworld podcast](https://boagworld.com/season/12/episode/1206/).
+
+I also started a meetup, [CodePen Dublin](http://hop.ie/codepen-dublin/). We met 3 times and had some great chats about front-end development and working in Dublin.
+
+## Next Year
+
+A problem I often face is trying to do everything at once. I'd like to try to continue to improve my focus this year, and put my energy into a small number of projects. Practicing mindfulness is something I've been trying recently and I think it'll help.
+
+I learned a lot in producing [the CSS Animation course](https://cssanimation.rocks/courses/animation-101/), and I'm keen to make another course of two this year and do it even better.
+
+I think this year will be a huge one for UX, front-end performance (including offline design principles and making single page apps faster), and it'll be great seeing browsers continue to improve their support of service workers and other awesome tools.
+
+A good 2016 for me will be one in which I continue to learn, give back to the community, and find a balance between family time and working time that works for both.
+
+## Links
+
+Articles on [CSS Animation](https://cssanimation.rocks):
+
+<ul>
+  <li><a href="https://cssanimation.rocks/twitter-fave/">Twitter's "fave" animation</a></li>
+  <li><a href="https://cssanimation.rocks/pseudo-elements/">Animating pseudo-elements</a></li>
+  <li><a href="https://cssanimation.rocks/list-items/">Animating List Items</a></li>
+  <li><a href="https://cssanimation.rocks/baymax/">Baymax in CSS</a></li>
+  <li><a href="https://cssanimation.rocks/clocks/">Clocks</a></li>
+  <li><a href="https://cssanimation.rocks/transition-vs-animation/">Transitions vs Animations</a></li>
+  <li><a href="https://cssanimation.rocks/watch/">Apple Watch Dials</a></li>
+  <li><a href="https://cssanimation.rocks/principles/">Animation Principles for the Web</a></li>
+  <li><a href="https://cssanimation.rocks/macplus/">Mac Plus CSS</a></li>
+  <li><a href="https://cssanimation.rocks/wwdc15/">WWDC 2015</a></li>
+  <li><a href="https://cssanimation.rocks/buffer/">Buffer's loading animation</a></li>
+  <li><a href="https://cssanimation.rocks/portal/">Portal CSS</a></li>
+  <li><a href="https://cssanimation.rocks/spheres/">Spheres</a></li>
+  <li><a href="https://cssanimation.rocks/stereoscopic/">Stereoscopic CSS</a></li>
+  <li><a href="https://cssanimation.rocks/starwars/">Star Wars</a></li>
+</ul>
+
+Internation CSS Animation homepages:
+
+<ul>
+  <li><a href="https://cssanimation.rocks/ar/">العربية (Arabic)</a></li>
+  <li><a href="https://cssanimation.rocks/cn/">中国 (Chinese)</a></li>
+  <li><a href="https://cssanimation.rocks/da/">Danske (Danish)</a></li>
+  <li><a href="https://cssanimation.rocks/de/">Deutsch (German)</a></li>
+  <li><a href="https://cssanimation.rocks/fr/">Français (French)</a></li>
+  <li><a href="https://cssanimation.rocks/jp/">日本語 (Japanese)</a></li>
+  <li><a href="https://cssanimation.rocks/nl/">Nederlands (Dutch)</a></li>
+  <li><a href="https://cssanimation.rocks/pt/">Português (Portuguese)</a></li>
+  <li><a href="https://cssanimation.rocks/pl/">Polski (Polish)</a></li>
+  <li><a href="https://cssanimation.rocks/tr/">Türkçe (Turkish)</a></li>
+</ul>
+
+Elsewhere:
+
+<ul>
+  <li><a href="https://boagworld.com/season/12/episode/1206/">Boagworld podcast: How to market and promote your digital business</a></li>
+  <li><a href="https://24ways.org/2015/animating-your-brand/">24 Ways: Animating your Brand</a></li>
+  <li><a href="http://webdesign.tutsplus.com/tutorials/adding-appeal-to-your-animations-on-the-web--cms-23649">Tuts+: Adding appeal</a></li>
+  <li><a href="http://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937">Tuts+: Inspiring CSS Animations on CodePen</a></li>
+  <li><a href="https://www.youtube.com/watch?v=VYsJrPwI66M">Defuse Dublin: Animating your Brand (Talk)</a></li>
+  <li><a href="/blog/dan-oneill/">Hop.ie: Dan O'Neill (Interview)</a></li>
+  <li><a href="http://learnsome.co/blog/why-animate/">Learnsome: Why Animate</a></li>
+  <li><a href="/blog/launching-new-website/">Hop.ie: Launching a new website</a></li>
+  <li><a href="/blog/css-animation-101/">Hop.ie: From Blog to Product</a></li>
+  <li><a href="/blog/audience/">Hop.ie: Building an audience</a></li>
+</ul>
+

@@ -4,7 +4,7 @@ dialog {
   left: 0;
   right: 0;
   top: 0;
-  color: white;
+  color: #fff;
   background: none;
   border: none;
   text-align: center;
@@ -39,7 +39,7 @@ dialog a {
   border-radius: 0.25em;
 }
 dialog .nope {
-  color: #aaaaaa;
+  color: #aaa;
   font-size: 0.75em;
   cursor: pointer;
 }
@@ -60,6 +60,6 @@ section.image {
   width: 36px;
   height: 36px;
   background-size: cover;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #aaa;
   border-radius: 50%;
 }
