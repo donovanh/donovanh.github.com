@@ -14,7 +14,7 @@ It's easy to forget how much we get done over the course of a year. Sometimes it
 
 ## CSSAnimation.rocks
 
-In January I registered the domain [cssanimation.rocks](https://cssanimation.rocks), with the intention of writing a book. While that didn't happen, I did manage to create a 4-week email course and write 15 in-depth CSS tutorials. The site has been well received, with over 500,000 views and more than 700 people taking part in the course.
+In January I registered the domain [cssanimation.rocks](https://cssanimation.rocks), with the intention of writing a book. While that didn't happen, I did manage to create a 4-week email course and write 15 in-depth CSS tutorials. The site has been well received, with over 500,000 views and more than 850 people taking part in the course.
 
 Along the way I also worked with [Native](https://getnative.me) to get the site translated into other languages. Thanks to over a dozen kind volunteers, articles have now been translated [into 10 languages](https://cssanimation.rocks/translations).
 

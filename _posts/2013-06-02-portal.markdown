@@ -8,7 +8,6 @@ tags:
 imageURL: portal.png
 target: https://cssanimation.rocks/portal/
 targetName: CSSAnimation.rocks
-published: true
 ---
 
 

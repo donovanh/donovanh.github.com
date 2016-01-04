@@ -5,7 +5,6 @@ description: "See how the pieces of an iPhone-style box come together in 3D usin
 tags: [css]
 newstylesheet: "iphone"
 imageURL: phone.png
-published: true
 ---
 
 When front-end developers tire of positioning, fonts, floats and divs, they make fun stuff. Stuff that probably only works in Chrome or similar. This is one of those times. Here's a CSS-animated 3D phone:
@@ -167,7 +166,7 @@ Rather than explain setting up each of the pieces, here's a chance to see each p
 }
 .phone-container.ex .left-bottom {
   -webkit-transform: none;
-  /* opacity: 0.7; 
+  /* opacity: 0.7;
   -webkit-transform:  translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg); */
 }
 .phone-container.ex .right {

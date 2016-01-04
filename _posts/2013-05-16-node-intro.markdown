@@ -4,7 +4,6 @@ title: "Intro to Node.js"
 description: "An overview of Node.js along with a real-world example."
 tags: [talks]
 imageURL: node-intro.jpg
-published: true
 ---
 
 <div class="video-wrapper">
