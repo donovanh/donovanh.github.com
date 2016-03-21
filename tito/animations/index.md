@@ -73,7 +73,7 @@ Animation: Spinner style 2
 
 <img src="/images/tito/animations/08.gif" />
 
-A full-page overlay is used to transition away from the edit mode, to present a check-list confirmation page (maybe this would be better presented as a modal to allow users to return to editing tickets?)
+A full-page overlay is used to transition away from the edit mode, to present a check-list confirmation page.
 
 ### Page: Event live
 
@@ -87,7 +87,7 @@ A full-page overlay is used to transition between the transition view and the "e
 
 The tick icon when adding an event could be an opportunity to combine an animated icon, which could then double as a loader by letting the UI load while it plays.
 
-A second confirmation animation might be useful once events are made live. Microcopy might be helpful at this point also (similar to Mailchimp's high five text perhaps).
+A second confirmation animation might be useful once events are made live.
 
 It might be worth establishing a more consistent set of microanimations first, making sure that the movement between views is both on-brand and consistent, then look to add more flourishes once the baseline set of animations have been completed.
 
