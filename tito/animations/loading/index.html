@@ -20,42 +20,44 @@
   <h1>Tito Loaders</h1>
   <p>Type: Line-drawing</p>
   <ul>
-    <li><a href="./v1.html">Version 1 (background-fill)</a></li>
-    <li><a href="./v2.html">Version 2 (little faster)</a></li>
-    <li><a href="./v3.html">Version 3 (looping, no bg)</a></li>
-    <li><a href="./v3a.html">Version 3a (v3, Tito colour scheme)</a></li>
-    <li><a href="./v3b.html">Version 3b (v3, adjusted timing)</a></li>
-    <li><a href="./v7.html">Version 7 (faster)</a></li>
-    <li><a href="./v8.html">Version 8 (with moar logo)</a></li>
-    <li><a href="./v9.html">Version 9 (thinner lines)</a></li>
-    <li><a href="./v10.html">Version 10 (logo stays visible)</a></li>
-    <li><a href="./v11.html">Version 11 (Counter)</a></li>
-    <li><a href="./v12.html">Version 12 (Counter that doesn't fade in)</a></li>
-    <li><a href="./v13.html">Version 13 (v12 with a show loader button)</a></li>
-    <li><a href="./v14.html">Version 14 (v13 with adjusted timing)</a></li>
-    <li><a href="./v15.html">Version 15 (no line drawing)</a></li>
-    <li><a href="./v16.html">Version 16 (simple fade in)</a></li>
-    <li><a href="./v17.html">Version 17 (tiny version)</a></li>
-    <li><a href="./v18.html">Version 18 (lines only)</a></li>
-    <li><a href="./v19.html">Version 19 (larger)</a></li>
-    <li><a href="./v20.html">Version 20 (smaller)</a></li>
-    <li><a href="./v21.html">Version 21 (Using plugin)</a></li>
-    <li><a href="./v22.html">Version 22 (Tito word only - Using plugin)</a></li>
-    <li><a href="./v23.html">Sliders (fast cubic-bezier)</a></li>
+    <li><a href="./v1.html">1 (background-fill)</a></li>
+    <li><a href="./v2.html">2 (little faster)</a></li>
+    <li><a href="./v3.html">3 (looping, no bg)</a></li>
+    <li><a href="./v3a.html">3a (v3, Tito colour scheme)</a></li>
+    <li><a href="./v3b.html">3b (v3, adjusted timing)</a></li>
+    <li><a href="./v7.html">7 (faster)</a></li>
+    <li><a href="./v8.html">8 (with moar logo)</a></li>
+    <li><a href="./v9.html">9 (thinner lines)</a></li>
+    <li><a href="./v10.html">10 (logo stays visible)</a></li>
+    <li><a href="./v11.html">11 (Counter)</a></li>
+    <li><a href="./v12.html">12 (Counter that doesn't fade in)</a></li>
+    <li><a href="./v13.html">13 (v12 with a show loader button)</a></li>
+    <li><a href="./v14.html">14 (v13 with adjusted timing)</a></li>
+    <li><a href="./v15.html">15 (no line drawing)</a></li>
+    <li><a href="./v16.html">16 (simple fade in)</a></li>
+    <li><a href="./v17.html">17 (tiny </a></li>
+    <li><a href="./v18.html">18 (lines only)</a></li>
+    <li><a href="./v19.html">19 (larger)</a></li>
+    <li><a href="./v20.html">20 (smaller)</a></li>
+    <li><a href="./v21.html">21 (Using plugin)</a></li>
+    <li><a href="./v22.html">22 (Tito word only - Using plugin)</a></li>
+    <li><a href="./v23.html">23 Sliders (fast cubic-bezier)</a></li>
 
-    <li><a href="./v24.html">Sliders (ease-in-out)</a></li>
-    <li><a href="./v25.html">Sliders (Using plugin)</a></li>
+    <li><a href="./v24.html">24 Sliders (ease-in-out)</a></li>
+    <li><a href="./v25.html">25 Sliders (Using plugin)</a></li>
   </ul>
   <h2>Instructions</h2>
   <p>The entire plugin is packaged into one file, including SVG and CSS. Versions:</p>
   <ul>
     <li>Ticket machine line drawing: <a href="./javascripts/titoLoader.js">titoLoader.js</a></li>
     <li>Tito word line drawing: <a href="./javascripts/titoLoader_word.js">titoLoader_word.js</a></li>
+    <li>Animated sliders: <a href="./javascripts/titoLoader_sliders.js">titoLoader_sliders.js</a></li>
   </ul>
   <p>Then reference the JS file (<em>after</em> jQuery):</p>
   <pre><code>
     &#x3C;script src=&#x22;javascripts/titoLoader.js&#x22;&#x3E;&#x3C;/script&#x3E;
   </code></pre>
+  <p><em>Note: Replace titoLoader.js with the filename if using the word or slider version</em></p>
   <p>You can then apply the loader to the entire page by calling:</p>
   <pre><code>
     titoLoader.show();
