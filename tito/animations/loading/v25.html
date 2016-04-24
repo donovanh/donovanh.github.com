@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>Plugin test</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .buttons {
+        left: 50%;
+        position: absolute;
+        top: 2em;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+      button {
+        padding: 1em 2em;
+        display: block;
+        margin: 0.25em auto;
+      }
+      .block {
+        float:left;
+        height: 100vh;
+        position: relative;
+        width: 50%;
+      }
+      .block.one {
+        background: #fe91a6;
+      }
+      .block.two {
+        background: #9ae4f8;
+      }
+      .box {
+        background: #111;
+        border: 2px solid #fff;
+        height: 20em;
+        left: 50%;
+        position: absolute;
+        top: 18em;
+        transform: translateX(-50%);
+        width: 25em;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="./javascripts/titoLoader_sliders.js"></script>
+  </head>
+<body>
+  <div class="buttons">
+    <button class="js-show-loader" data-target="#lhs">Show Loader on left side</button>
+    <button class="js-show-loader" data-target="body">Show Loader on entire page</button>
+    <button class="js-show-loader" data-target="#rhs">Show Loader on right side</button>
+    <button class="js-show-loader" data-target="#box">Show Loader in box</button>
+  </div>
+  <div class="block one" id="lhs"></div>
+  <div class="block two" id="rhs"></div>
+  <div class="box" id="box"></div>
+<script>
+  $('.js-show-loader').click(function() {
+    var target = $(this).data('target');
+    titoLoader.show(target);
+    setTimeout(function() {
+      titoLoader.hide(target);
+    }, 4000);
+  });
+</script>
+</body>
+</html>
+
+<script>
+/* Source CSS */
+/*
+.tito-loader {
+        opacity: 0;
+        -webkit-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+      }
+      .tito-loader.show {
+        opacity: 1;
+      }
+      .tito-loader-background {
+        background: #ECEFF4;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .tito-machine .numbermask {
+        fill: #ECEFF4;
+      }
+      .tito-machine {
+        opacity: 1;
+        width: 200px;
+        height: 190px;
+        -webkit-transition: opacity 0.5s ease-out;
+        transition: opacity 0.5s ease-out;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+      }
+      .tito-machine .to-show {
+        fill: rgba(0,0,0,0);
+        stroke: #5489B8;
+        stroke-width: 0;
+        -webkit-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+      }
+      .tito-machine .to-show.show-lines {
+        stroke-width: 0.3;
+        -webkit-animation: show-machine-lines 1.6s cubic-bezier(.51,0,.33,1) forwards;
+                animation: show-machine-lines 1.6s cubic-bezier(.51,0,.33,1) forwards;
+      }
+      .tito-machine .to-show.show-lines.no-stroke {
+        stroke-width: 0;
+      }
+      .tito-machine .animated-numbers {
+        -webkit-animation: increment-numbers 1s infinite linear;
+                animation: increment-numbers 1s infinite linear;
+        fill: none;
+        stroke: #5489B8;
+        stroke-width: 0.3;
+      }
+      .tito-machine .animated-numbers.set1 {
+        -webkit-animation: increment-numbers-stepped 10s infinite cubic-bezier(.59,-0.31,.34,1.34);
+                animation: increment-numbers-stepped 10s infinite cubic-bezier(.59,-0.31,.34,1.34);
+      }
+      @-webkit-keyframes fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @-webkit-keyframes show-machine-lines {
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes show-machine-lines {
+        100% { stroke-dashoffset: 0; }
+      }
+      @-webkit-keyframes increment-numbers {
+        0% { -webkit-transform: translateY(21.78px); transform: translateY(21.78px); }
+        100% { -webkit-transform: translateY(-88px); transform: translateY(-88px); }
+      }
+      @keyframes increment-numbers {
+        0% { -webkit-transform: translateY(21.78px); transform: translateY(21.78px); }
+        100% { -webkit-transform: translateY(-88px); transform: translateY(-88px); }
+      }
+      @-webkit-keyframes increment-numbers-stepped {
+        0%, 4% { -webkit-transform: translateY(21.78px); transform: translateY(21.78px); }
+        10%, 14% { -webkit-transform: translateY(10.8px); transform: translateY(10.8px); }
+        20%, 24% { -webkit-transform: translateY(-0.178px); transform: translateY(-0.178px); }
+        30%, 34% { -webkit-transform: translateY(-11.156px); transform: translateY(-11.156px); }
+        40%, 44% { -webkit-transform: translateY(-22.134px); transform: translateY(-22.134px); }
+        50%, 54% { -webkit-transform: translateY(-33.132px); transform: translateY(-33.132px); }
+        60%, 64% { -webkit-transform: translateY(-44.11px); transform: translateY(-44.11px); }
+        70%, 74% { -webkit-transform: translateY(-55.088px); transform: translateY(-55.088px); }
+        80%, 84% { -webkit-transform: translateY(-66.066px); transform: translateY(-66.066px); }
+        90%, 94% { -webkit-transform: translateY(-77.044px); transform: translateY(-77.044px); }
+        100% { -webkit-transform: translateY(-88px); transform: translateY(-88px); }
+      }
+      @keyframes increment-numbers-stepped {
+        0%, 4% { -webkit-transform: translateY(21.78px); transform: translateY(21.78px); }
+        10%, 14% { -webkit-transform: translateY(10.8px); transform: translateY(10.8px); }
+        20%, 24% { -webkit-transform: translateY(-0.178px); transform: translateY(-0.178px); }
+        30%, 34% { -webkit-transform: translateY(-11.156px); transform: translateY(-11.156px); }
+        40%, 44% { -webkit-transform: translateY(-22.134px); transform: translateY(-22.134px); }
+        50%, 54% { -webkit-transform: translateY(-33.132px); transform: translateY(-33.132px); }
+        60%, 64% { -webkit-transform: translateY(-44.11px); transform: translateY(-44.11px); }
+        70%, 74% { -webkit-transform: translateY(-55.088px); transform: translateY(-55.088px); }
+        80%, 84% { -webkit-transform: translateY(-66.066px); transform: translateY(-66.066px); }
+        90%, 94% { -webkit-transform: translateY(-77.044px); transform: translateY(-77.044px); }
+        100% { -webkit-transform: translateY(-88px); transform: translateY(-88px); }
+      }
+*/
+</script>

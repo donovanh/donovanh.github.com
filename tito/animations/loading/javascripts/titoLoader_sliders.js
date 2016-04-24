@@ -1,0 +1,57 @@
+$(function() {
+  var loaderCSS = '.tito-loader{opacity:0;-webkit-transition:opacity .4s ease-out;transition:opacity .4s ease-out}.tito-loader.show{opacity:1}.tito-loader-background{background:#ECEFF4;position:absolute;top:0;right:0;bottom:0;left:0}.tito-machine .numbermask{fill:#ECEFF4}.tito-machine{opacity:1;width:200px;height:190px;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.tito-machine .slider-circle{-webkit-animation:downUp 1s ease-in-out infinite;animation:downUp 1s ease-in-out infinite}.tito-machine #slider1 .slider-circle{-webkit-animation-delay:0;animation-delay:0}.tito-machine #slider2 .slider-circle{-webkit-animation-delay:.2s;animation-delay:.2s}.tito-machine #slider3 .slider-circle{-webkit-animation-delay:.4s;animation-delay:.4s}.tito-machine #slider4 .slider-circle{-webkit-animation-delay:.6s;animation-delay:.6s}.tito-machine .to-show{fill:rgba(0,0,0,0);stroke:#5489B8;stroke-width:0}.to-show.tito-machine-filled.show-lines{fill:#ECEFF4!important}.tito-machine .to-show.show-lines{-webkit-transition:all .4s linear;transition:all .4s linear;stroke-width:.3;-webkit-animation:show-machine-lines 1.6s cubic-bezier(.51,0,.33,1) forwards;animation:show-machine-lines 1.6s cubic-bezier(.51,0,.33,1) forwards}.tito-machine .to-show.show-lines.no-stroke{stroke-width:0}@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes show-machine-lines{100%{stroke-dashoffset:0}}@keyframes show-machine-lines{100%{stroke-dashoffset:0}}@-webkit-keyframes downUp{0%{-webkit-transform:none;transform:none}50%{-webkit-transform:translateY(12.5px);transform:translateY(12.5px)}100%{-webkit-transform:none;transform:none}}@keyframes downUp{0%{-webkit-transform:none;transform:none}50%{-webkit-transform:translateY(12.5px);transform:translateY(12.5px)}100%{-webkit-transform:none;transform:none}}';  var head = document.head || document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+  if (style.styleSheet){
+    style.styleSheet.cssText = loaderCSS;
+  } else {
+    style.appendChild(document.createTextNode(loaderCSS));
+  }
+  head.appendChild(style);
+var loaderHTML = '<div class="tito-loader" id="tito-loader"> <div class="tito-loader-background"></div><div class="tito-machine"> <svg width="100%" height="100%" viewBox="0 0 77 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="front"> <g id="crank" transform="translate(59.000000, 0.000000)"> <path class="to-show" d="M3.2,6.2 C3.8,10.4 5.1,21.1 5.7,39.5 L10,39.5 C10,39.5 9.5,29.3 6.8,6.6 L3.2,6.2 L3.2,6.2 Z" id="crank-arm"></path> <g id="handle"> <path class="to-show" d="M11.4,1 L1.6,2 C0.8,2 0.2,2.6 0.2,3.4 C0.2,4.2 0.8,4.8 1.6,4.8 L11.4,5.8 L11.4,1 L11.4,1 Z" id="Shape"></path> <path class="to-show" d="M14,0.7 L13.7,0.7 L12.7,0.8 L12.7,5.8 L13.7,5.9 L14,5.9 L14,0.7 L14,0.7 Z" id="Shape"></path> <path class="to-show" d="M15.3,0.8 L15.3,5.9 C16.5,5.6 17.3,4.6 17.3,3.4 C17.4,2.1 16.5,1 15.3,0.8 L15.3,0.8 Z" id="Shape"></path> </g> <path class="to-show" d="M1.2,24.3 L3.4,24.3 C3.4,24.3 4.5,37 4.4,40.8 L2.8,40.8 C2.8,40.8 2.1,30 1.2,24.3 L1.2,24.3 Z" id="crank-connector"></path> </g> <g id="body" transform="translate(0.000000, 5.000000)"> <path class="to-show" d="M56.8,5.8 L42.2,0.6 L19.3,0.6 L4.6,5.8 C4.6,5.8 -0.5,34.1 0.8,50.9 C1.3,51 1.9,51.1 2.4,51.1 C3.2,53.1 8.2,60.5 10.2,62.6 C12.5,64.9 49.3,64.7 51.4,62.6 C53.3,60.7 58.4,53 59.3,51.1 C59.7,51 60.2,51 60.6,50.9 C61.9,33.4 56.8,5.8 56.8,5.8 L56.8,5.8 Z" id="front-body"></path> <path class="to-show" d="M51.5,44.3 C51.5,44.7 51.2,45 50.8,45 L33.1,45 C32.7,45 32.4,44.7 32.4,44.3 L32.4,31.1 C32.4,30.7 32.7,30.4 33.1,30.4 L50.8,30.4 C51.1,30.4 51.5,30.7 51.5,31.1 L51.5,44.3 L51.5,44.3 Z" id="numbers-box" ></path> <path class="to-show" d="M29.3,16.9 L29.3,15.3 L30.2,15.3 L30.2,12.6 L32,12.6 L32,15.3 L33.4,15.3 L33.4,16.9 L32,16.9 L32,20.4 C32,21.2 33.3,21.1 33.3,21.1 L33.3,22.7 C30.2,22.8 30.2,21.2 30.2,21.1 L30.2,20.4 L30.2,16.9 L29.3,16.9 L29.3,16.9 Z" id="small-t"></path> <path class="to-show" d="M34.2,19 C34.2,16.8 36,15.1 38.1,15.1 C40.2,15.1 42,16.9 42,19 C42,21.2 40.2,22.9 38.1,22.9 C36,22.9 34.2,21.2 34.2,19 L34.2,19 Z" id="o"></path> <path class="to-show" d="M21,22.7 L21,14.4 L18.7,14.4 L18.7,12.5 L25.5,12.5 L25.5,14.4 L23.2,14.4 L23.2,22.7 L21,22.7 L21,22.7 Z" id="T"></path> <path class="to-show" d="M26.4,22.7 L26.4,15.3 L28.3,15.3 L28.3,22.7 L26.4,22.7 L26.4,22.7 Z" id="i"></path> <path class="to-show" d="M26.4,14.3 L26.4,12.5 L28.3,12.5 L28.3,14.3 L26.4,14.3 L26.4,14.3 Z" id="i-dot"></path> <path class="to-show" d="M38.3,16.8 C37.1,16.8 36.1,17.8 36.1,19 C36.1,20.2 37.1,21.2 38.2,21.2 C38.7,21.2 39.2,20.9 39.2,20.2 C39.2,19.5 38.6,19.3 38.3,19.3 C38,19.3 37.8,19.5 37.8,19.5 L37.8,18 C38.1,17.8 38.2,17.8 38.6,17.8 C39,17.8 40.3,18 40.5,19.4 L40.5,19.1 C40.5,17.8 39.5,16.8 38.3,16.8 L38.3,16.8 Z" id="tito-curl"></path> <g id="sliders" transform="translate(6.000000, 27.000000)" fill="#FFFFFF"> <g id="slider4" transform="translate(16.000000, 0.000000)"> <path class="to-show" d="M1.5,1.6 C1.5,1.2 1.8,0.9 2.2,0.9 C2.6,0.9 2.9,1.2 2.9,1.6 L2.9,17.8 C2.9,18.2 2.6,18.5 2.2,18.5 C1.8,18.5 1.5,18.2 1.5,17.8 L1.5,1.6 Z"></path> <g class="slider-circle"><path class="tito-machine-filled to-show" d="M2.22000122,5 C3.04842835,5 3.72000122,4.32842712 3.72000122,3.5 C3.72000122,2.67157288 3.04842835,2 2.22000122,2 C1.3915741,2 0.720001221,2.67157288 0.720001221,3.5 C0.720001221,4.32842712 1.3915741,5 2.22000122,5 Z" id="oval4"></path></g> </g> <g id="slider3" transform="translate(11.000000, 0.000000)"> <path class="to-show" d="M1.2,1.6 C1.2,1.2 1.5,0.9 1.9,0.9 C2.3,0.9 2.6,1.2 2.6,1.6 L2.6,17.8 C2.6,18.2 2.3,18.5 1.9,18.5 C1.5,18.5 1.2,18.2 1.2,17.8 L1.2,1.6 Z"></path> <g class="slider-circle"><path class="tito-machine-filled to-show" d="M1.91999817,5 C2.74842529,5 3.41999817,4.32842712 3.41999817,3.5 C3.41999817,2.67157288 2.74842529,2 1.91999817,2 C1.09157104,2 0.419998169,2.67157288 0.419998169,3.5 C0.419998169,4.32842712 1.09157104,5 1.91999817,5 Z" id="oval3"></path></g></g><g id="slider2" transform="translate(5.000000, 0.000000)"> <path class="to-show" d="M1.5,1.6 C1.5,1.2 1.8,0.9 2.2,0.9 C2.6,0.9 2.9,1.2 2.9,1.6 L2.9,17.8 C2.9,18.2 2.6,18.5 2.2,18.5 C1.8,18.5 1.5,18.2 1.5,17.8 L1.5,1.6 Z"></path><g class="slider-circle"><path class="tito-machine-filled to-show" d="M2.21999931,5 C3.04842644,5 3.71999931,4.32842712 3.71999931,3.5 C3.71999931,2.67157288 3.04842644,2 2.21999931,2 C1.39157219,2 0.719999313,2.67157288 0.719999313,3.5 C0.719999313,4.32842712 1.39157219,5 2.21999931,5 Z" id="oval2"></path></g></g><g id="slider1"><path class="to-show" d="M1.6,18.5 C1.2,18.5 0.9,18.2 0.9,17.8 L0.9,1.6 C0.9,1.2 1.2,0.9 1.6,0.9 C2,0.9 2.3,1.2 2.3,1.6 L2.3,17.8 C2.3,18.2 2,18.5 1.6,18.5 Z"></path><g class="slider-circle"><path class="tito-machine-filled to-show" d="M1.62000084,5 C2.44842796,5 3.12000084,4.32842712 3.12000084,3.5 C3.12000084,2.67157288 2.44842796,2 1.62000084,2 C0.791573715,2 0.120000839,2.67157288 0.120000839,3.5 C0.120000839,4.32842712 0.791573715,5 1.62000084,5 Z" id="oval1"></path></g></g> </g> <path class="to-show" d="M48.5,61.1 L13.3,61.1 L9.5,53.6 L52.3,53.6 L48.5,61.1 L48.5,61.1 Z" id="bottom-wedge"></path> <path class="to-show" d="M47,56.2 C46.4,56.2 45.9,56.7 45.9,57.3 C45.9,57.9 46.4,58.4 47,58.4 C47.6,58.4 48.1,57.9 48.1,57.3 C48.1,56.7 47.6,56.2 47,56.2 L47,56.2 Z" id="wedge-dot"></path> <path class="to-show" d="M18.0349121,56.6229248 L44.2018161,56.6229248 L44.2018161,58.1362794 L18.0435604,58.1362794 L18.0349121,56.6229248 Z" id="wedge-rectangle"></path> <path class="to-show" d="M21,3.1 L40.5,3.1 L43.3,4.4 L18.2,4.4 L21,3.1 L21,3.1 Z" id="top-wedge"></path> <g id="number-0" transform="translate(33.000000, 31.000000)"> <path class="to-show" d="M4.4,4.4 C3.8,4.4 3.4,5.2 3.4,6.7 C3.4,8.3 3.8,9 4.4,9 L4.4,9 C5,9 5.4,8.2 5.4,6.7 C5.4,5.2 5.1,4.4 4.4,4.4 L4.4,4.4 Z" id="Shape"></path> <path class="to-show" d="M7.6,0.5 L1.2,0.5 C0.7,0.5 0.4,0.9 0.4,1.3 L0.4,12.2 C0.4,12.7 0.8,13 1.2,13 L7.6,13 C8.1,13 8.4,12.6 8.4,12.2 L8.4,1.3 C8.5,0.9 8.1,0.5 7.6,0.5 L7.6,0.5 Z M4.4,10.3 L4.4,10.3 C2.6,10.3 1.8,8.7 1.8,6.8 C1.8,4.8 2.6,3.2 4.4,3.2 C6.2,3.2 6.9,4.8 6.9,6.7 C7,8.8 6.2,10.3 4.4,10.3 L4.4,10.3 Z" id="Shape"></path> </g> <path class="to-show" d="M49.6,31.5 L43.3,31.5 C42.8,31.5 42.5,31.9 42.5,32.3 L42.5,43.2 C42.5,43.7 42.9,44 43.3,44 L49.6,44 C50.1,44 50.4,43.6 50.4,43.2 L50.4,32.3 C50.4,31.9 50,31.5 49.6,31.5 L49.6,31.5 Z M48.8,41.2 L44,41.2 L44,40.2 L44.9,39.4 C46.4,38.1 47.1,37.3 47.1,36.5 C47.1,36 46.8,35.5 46,35.5 C45.4,35.5 44.9,35.8 44.6,36 L44.2,34.9 C44.7,34.5 45.5,34.2 46.4,34.2 C47.9,34.2 48.8,35.1 48.8,36.3 C48.8,37.4 48,38.3 47,39.2 L46.4,39.7 L46.4,39.7 L48.9,39.7 L48.8,41.2 L48.8,41.2 L48.8,41.2 Z" id="number-2"></path> </g> </g> </svg> </div></div>';
+var functions = {
+    showLoader: function(target) {
+      functions.addHTMLtoSelector(target);
+      functions.setLinesOffset(target);
+      setTimeout(function() {
+        $(target + " #tito-loader").addClass("show");
+        $(target + " .to-show").addClass('show-lines');
+        $(target + " .animated-numbers").removeClass("hide");
+      }, 150);
+    },
+    hideLoader: function(target) {
+      $(target + " #tito-loader").removeClass("show");
+      setTimeout(function() {
+        functions.removeHTMLfromPage(target);
+      }, 800);
+    },
+    addHTMLtoSelector: function(target) {
+      $(target).append(loaderHTML);
+    },
+    removeHTMLfromPage: function(target) {
+      $(target + " #tito-loader").remove();
+    },
+    setLinesOffset: function(target) {
+      $(target + " .to-show").each(function(index, path) {
+        if (path.getTotalLength) {
+          var length = path.getTotalLength();
+          $(path).css(
+            {
+              strokeDasharray: length + ", " + length,
+              strokeDashoffset: length
+            }
+          );
+        }
+      });
+    }
+  };
+  window.titoLoader = {
+    show: function(target) {
+      if (!target) target  = 'body';
+      functions.showLoader(target);
+    },
+    hide: function(target) {
+      if (!target) target  = 'body';
+      functions.hideLoader(target);
+    }
+  };
+}());
