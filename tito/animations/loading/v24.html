@@ -11,7 +11,7 @@
       }
 
       .tito-loader {
-        opacity: 0;
+        opacity: 1;
         transition: opacity 0.4s ease-out;
       }
       .tito-loader.show {
@@ -133,7 +133,7 @@ $(function() {
     functions.showLoader();
     setTimeout(function() {
       functions.hideLoader();
-    }, 4000);
+    }, 20000);
   });
 
 })
