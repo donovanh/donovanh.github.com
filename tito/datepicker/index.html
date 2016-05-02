@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Tito date pickers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/daterangepicker.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./javascripts/daterangepicker.js"></script>
+    <style>
+      body {
+        background: #ECEFF4;
+        margin: 2em;
+        font-family: myriad-pro, Helvetica Neue, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      h1,h2,p,label {
+        color: #5f727f;
+        font-weight: 400;
+      }
+    </style>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <h1>Tito Date Picker</h1>
+    </div>
+    <div class="row">
+      <div class="original">
+        <h2>Current</h2>
+        <div class="col-xs-3 wide">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="release_start_at">Go live at</label>
+            <input class="string optional form-control" id="release_start_at" name="release[start_at]" placeholder="Starting date" type="text" value="">
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="form-group string optional release_end_at"><label class="string optional control-label" for="release_end_at">End at</label><input class="string optional form-control" id="release_end_at" name="release[end_at]" placeholder="Always and forever" type="text"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutter">
+      <div class="titoDatePicker">
+        <h2>Bootstrap Daterangepicker (single field)</h2>
+        <div class="col-xs-4 wide">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="release_start_at">Date and time</label>
+            <input class="string optional form-control" id="dateTime" name="release[datetimes]" placeholder="Date and time" type="text" value="">
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="form-group">
+            <label class="string optional control-label" for="release_start_at">Timezone</label>
+            <select class="form-control" style=>
+              <option value="">UTC</option>
+            </select>
+          </div>
+        </div>
+        <script>
+          $('#dateTime').daterangepicker({
+            locale: {
+              format: 'MMMM D, YYYY HH:mm'
+            },
+            startDate: new Date(),
+            timePicker: true,
+            timePickerIncrement: 30
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
