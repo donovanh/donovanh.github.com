@@ -117,6 +117,9 @@
 .daterangepicker td:hover:after {
   background: #C4DAEC;
 }
+.daterangepicker td.start-date.end-date:after {
+  background: #fff !important;
+}
 .daterangepicker td.start-date:after {
   left: 50%;
   right: -1px;
