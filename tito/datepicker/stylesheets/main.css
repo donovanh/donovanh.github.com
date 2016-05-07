@@ -221,7 +221,7 @@
   border-radius: 50% 0 0 50%;
 }
 .daterangepicker td.in-range:last-child:after,
-.daterangepicker td.in-range + td:hover:after {
+.daterangepicker td.in-range + td:not(.in-range):hover:after {
   right: 2px !important;
   border-radius: 0 50% 50% 0 !important;
 }
