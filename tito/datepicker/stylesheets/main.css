@@ -217,12 +217,13 @@
   background: #C4DAEC;
 }
 .daterangepicker td.in-range:first-child:after {
-  left: 2px !important;
+  left: 6px !important;
   border-radius: 50% 0 0 50%;
 }
-.daterangepicker td.in-range:last-child:after {
+.daterangepicker td.in-range:last-child:after,
+.daterangepicker td.in-range + td:hover:after {
   right: 2px !important;
-  border-radius: 0 50% 50% 0;
+  border-radius: 0 50% 50% 0 !important;
 }
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
