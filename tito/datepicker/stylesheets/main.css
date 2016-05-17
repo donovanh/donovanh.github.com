@@ -2,6 +2,7 @@
   font-family: "myriad-pro";
   src: url("../fonts/MyriadPro-Regular.otf");
 }
+
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
@@ -19,16 +20,39 @@
   margin-top: 6px;
   font-size: 12px;
   border-radius: 2px;
+  /*target Internet Explorer 9 and Internet Explorer 10:*/
 }
+
 .daterangepicker.taller .calendar {
   height: 500px;
 }
+
+.daterangepicker.range .calendar {
+  opacity: 0;
+  z-index: -1;
+}
+
+.daterangepicker.range .inline-timezone {
+  display: none;
+}
+
+.daterangepicker.range.show-calendar .calendar {
+  opacity: 1;
+  z-index: 1;
+}
+
+.daterangepicker .cancelBtn {
+  display: none;
+}
+
 .daterangepicker .prev i {
   background: url(../images/leftarrow_off@2x.png) center no-repeat;
 }
+
 .daterangepicker .next i {
   background: url(../images/rightarrow_off@2x.png) center no-repeat;
 }
+
 .daterangepicker .prev i,
 .daterangepicker .next i {
   font-family: none !important;
@@ -40,71 +64,85 @@
   padding: 0 !important;
   transition: background-color 0.2s ease-out;
 }
+
 .daterangepicker .prev:hover i,
 .daterangepicker .next:hover i {
   background-color: #639DCD;
 }
+
 .daterangepicker .prev:hover i {
   background-image: url(../images/leftarrow_on@2x.png);
 }
+
 .daterangepicker .next:hover i {
   background-image: url(../images/rightarrow_on@2x.png);
 }
+
 .daterangepicker .btn-success {
   color: #fff;
   background-color: #639dcc;
   border-color: #5091c6;
 }
-.daterangepicker .daterangepicker_input input, .daterangepicker_input i {
+
+.daterangepicker .daterangepicker_input input, .daterangepicker .daterangepicker_input i {
   display: none;
 }
+
 .daterangepicker .calendar {
   height: 430px;
   width: 330px;
   position: relative;
 }
+
 .daterangepicker .daterangepicker_input {
   position: absolute;
-  top: 360px;
+  top: 330px;
   left: -10px;
   right: 0;
   border-top: 1px solid #eee;
 }
-.inline-timezone {
+
+.daterangepicker .inline-timezone {
   position: absolute;
-  top: 440px;
+  top: 400px;
   left: 0;
   right: 0;
   border-top: 1px solid #eee;
 }
-.inline-timezone label {
+
+.daterangepicker .inline-timezone label {
   font-size: 10px;
   padding: 10px 0 0 10px;
 }
-.inline-timezone select {
-  background: url(../images/chevron@2x.png) 99% / 10px no-repeat #fff !important;
+
+.daterangepicker .inline-timezone select {
+  background: url(../images/chevron@2x.png) 99%/10px no-repeat #fff !important;
   font-size: 14px;
   margin: 0 10px;
   width: calc(100% - 20px);
 }
+
 .daterangepicker .calendar.right {
   right: -6px;
 }
+
 .daterangepicker .calendar-table {
   position: absolute;
   margin: 0 auto;
-  top: 42px;
+  top: 0;
   background: none;
   border: none;
 }
+
 .daterangepicker .calendar-time {
   text-align: left;
   margin: 0;
-  padding-top: 28px;
+  padding-top: 18px;
   padding-left: 15px;
   color: #626F77;
   position: relative;
 }
+
 .daterangepicker .calendar-time:before {
   content: "TIME";
   position: absolute;
@@ -112,7 +150,8 @@
   left: 15px;
   font-size: 10px;
 }
-.daterangepicker .calendar-time select, .inline-timezone select {
+
+.daterangepicker .calendar-time select, .daterangepicker .inline-timezone select {
   border: 1px solid #eee;
   background: transparent;
   height: 32px;
@@ -121,42 +160,49 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(../images/chevron@2x.png) 90% / 10px no-repeat #fff;
+  background: url(../images/chevron@2x.png) 90%/10px no-repeat #fff;
 }
-/*target Internet Explorer 9 and Internet Explorer 10:*/
+
 @media screen and (min-width: 0\0) {
-  select {
+  .daterangepicker select {
     background: none;
     padding: 5px;
   }
 }
 
-.daterangepicker .ranges {
+.daterangepicker .applyBtn {
   position: absolute;
   right: 10px;
+  bottom: 10px;
 }
+
 .daterangepicker th, .daterangepicker td {
   color: #626F77;
   font-weight: normal;
 }
+
 .daterangepicker td {
   position: relative;
   line-height: 27px;
 }
+
 .daterangepicker td.today {
   color: #626F77;
 }
+
 .daterangepicker td:before {
   left: 2px;
   width: 30px;
   height: 30px;
   z-index: -1;
 }
+
 .daterangepicker td:after {
   top: 1px;
   height: 30px;
   z-index: -2;
 }
+
 .daterangepicker td:before,
 .daterangepicker td:after {
   content: "";
@@ -164,80 +210,97 @@
   top: 1px;
   transition: opacity 0.2s ease-out;
 }
+
 .daterangepicker td.today:before,
 .daterangepicker td.start-date:before,
 .daterangepicker td.end-date:before {
   border: 1px solid #639DCD;
   border-radius: 50%;
 }
+
 .daterangepicker td.start-date,
 .daterangepicker td.end-date {
   color: #fff !important;
 }
+
 .daterangepicker td.start-date:before,
 .daterangepicker td.end-date:before {
   background-color: #639DCD;
 }
+
 .daterangepicker th.available:hover,
 .daterangepicker td.available:hover {
   background: none;
   color: #fff;
 }
+
 .daterangepicker td.available:hover:after {
   background: #C5DBEB;
   left: 0;
   right: 0;
   border-radius: 50%;
 }
+
 .daterangepicker td.start-date.end-date:hover:after,
 .daterangepicker td.start-date.end-date:after {
   background: #fff !important;
 }
+
 .daterangepicker td.start-date:hover:after,
 .daterangepicker td.start-date:after {
   left: 50%;
   right: -1px;
   background: #C4DAEC;
 }
+
 .daterangepicker td.end-date:after,
 .daterangepicker td.end-date:hover:after {
   right: 50%;
   left: -1px;
   background: #C4DAEC;
 }
+
 .daterangepicker td.today:after,
 .daterangepicker td.in-range {
   background: none;
 }
+
 .daterangepicker td.off {
   opacity: 0.4;
 }
+
 .daterangepicker td.in-range:after {
   left: 0px !important;
   right: -1px !important;
   background: #C4DAEC;
 }
+
 .daterangepicker td.in-range:first-child:after {
   left: 6px !important;
   border-radius: 50% 0 0 50%;
 }
+
 .daterangepicker td.in-range:last-child:after,
 .daterangepicker td.in-range + td:not(.in-range):hover:after {
   right: 2px !important;
   border-radius: 0 50% 50% 0 !important;
 }
+
 .daterangepicker td.in-range:hover:after {
   border-radius: 0 !important;
 }
+
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
   background: none;
 }
+
 .daterangepicker .calendar th,
 .daterangepicker .calendar td {
   width: 38px;
   height: 30px;
 }
+
 .daterangepicker .table-condensed tr:first-child th {
   padding-bottom: 1em;
 }
