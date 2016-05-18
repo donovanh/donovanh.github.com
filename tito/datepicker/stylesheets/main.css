@@ -349,8 +349,9 @@
   border-radius: 0;
 }
 
-.daterangepicker td.in-range:first-child:after {
-  border-radius: 50% 0 0 50%;
+.daterangepicker td.in-range:first-child:after,
+.daterangepicker td.in-range:first-child:hover:after {
+  border-radius: 50% 0 0 50% !important;
 }
 
 .daterangepicker td.start-date:not(.in-range):after,
@@ -358,8 +359,9 @@
   background: none;
 }
 
-.daterangepicker td.start-date + td:after {
+.daterangepicker td.start-date + td.in-range:after {
   left: -15px !important;
+  width: 60px;
 }
 
 .daterangepicker td.in-range + td.active:after {

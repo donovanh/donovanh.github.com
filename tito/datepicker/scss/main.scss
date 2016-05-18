@@ -300,15 +300,17 @@
     transform: translateX(0);
     border-radius: 0;
   }
-  td.in-range:first-child:after {
-    border-radius: 50% 0 0 50%;
+  td.in-range:first-child:after,
+  td.in-range:first-child:hover:after {
+    border-radius: 50% 0 0 50% !important;
   }
   td.start-date:not(.in-range):after,
   td.start-date:not(.in-range):hover:after {
     background: none;
   }
-  td.start-date + td:after {
+  td.start-date + td.in-range:after {
     left: -15px !important;
+    width: 60px;
   }
   td.in-range + td.active:after {
     background: #C4DAEC !important;
