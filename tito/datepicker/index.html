@@ -191,7 +191,7 @@
         <h2>Single date selector (range-based)</h2>
         <div class="col-xs-3">
           <div class="form-group string optional release_start_at">
-            <label class="string optional control-label" for="release_start_at">Date and time</label>
+            <label class="string optional control-label" for="release_start_at">Start selling tickets...</label>
             <input class="string optional form-control" id="dateTime3" name="release[datetimes]" placeholder="Date and time" type="text" value="">
           </div>
         </div>
@@ -209,12 +209,12 @@
               format: 'MMMM D, YYYY',
               applyLabel: 'Done'
             },
+            alwaysShowCalendars: false,
             startDate: moment().subtract(1, 'month').format('MMMM D, YYYY'),
             endDate:  moment().subtract(1, 'month').format('MMMM D, YYYY'),
             timePicker: true,
             timePickerIncrement: 15,
             singleDatePicker: true,
-            autoApply: true,
             ranges: {
                '6 months before': [moment().subtract(6, 'months'), moment().subtract(6, 'months')],
                '3 months before': [moment().subtract(3, 'months'), moment().subtract(3, 'months')],
@@ -225,6 +225,53 @@
           });
 
           $('.daterangepicker:nth-child(4)')
+            .addClass('taller')
+            .addClass('range')
+            .addClass('single')
+            .append($('#timezone').html());
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="titoDatePicker">
+        <h2>Range-based (always show calendar)</h2>
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="release_start_at">Start selling tickets...</label>
+            <input class="string optional form-control" id="dateTime4" name="release[datetimes]" placeholder="Date and time" type="text" value="">
+          </div>
+        </div>
+        <div class="col-xs-2" id="timezone" style="display: none">
+          <div class="inline-timezone">
+            <label class="string optional control-label" for="release_start_at">TIMEZONE</label>
+            <select class="form-control" style=>
+              <option selected timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+            </select>
+          </div>
+        </div>
+        <script>
+          $('#dateTime4').daterangepicker({
+            locale: {
+              format: 'MMMM D, YYYY',
+              applyLabel: 'Done'
+            },
+            alwaysShowCalendars: true,
+            startDate: moment().subtract(1, 'month').format('MMMM D, YYYY'),
+            endDate:  moment().subtract(1, 'month').format('MMMM D, YYYY'),
+            timePicker: true,
+            timePickerIncrement: 15,
+            singleDatePicker: true,
+            ranges: {
+               '6 months before': [moment().subtract(6, 'months'), moment().subtract(6, 'months')],
+               '3 months before': [moment().subtract(3, 'months'), moment().subtract(3, 'months')],
+               '1 month before': [moment().subtract(1, 'months'), moment().subtract(1, 'months')],
+               '2 weeks before': [moment().subtract(2, 'weeks'), moment().subtract(2, 'weeks')],
+               '1 week before': [moment().subtract(1, 'week'), moment().subtract(1, 'week')]
+            }
+          });
+
+          $('.daterangepicker:nth-child(5)')
             .addClass('taller')
             .addClass('range')
             .addClass('single')
