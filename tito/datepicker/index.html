@@ -141,7 +141,8 @@
         <script>
           $('#dateTime').daterangepicker({
             locale: {
-              format: 'MMMM D, YYYY HH:mm'
+              format: 'MMMM D, YYYY HH:mm',
+              applyLabel: 'Done'
             },
             startDate: new Date(),
             timePicker: true,
@@ -170,7 +171,8 @@
         <script>
           $('#dateTime2').daterangepicker({
             locale: {
-              format: 'MMMM D, YYYY HH:mm'
+              format: 'MMMM D, YYYY HH:mm',
+              applyLabel: 'Done'
             },
             autoApply: true,
             autoUpdateInput: true,
@@ -204,7 +206,8 @@
         <script>
           $('#dateTime3').daterangepicker({
             locale: {
-              format: 'MMMM D, YYYY'
+              format: 'MMMM D, YYYY',
+              applyLabel: 'Done'
             },
             startDate: moment().subtract(1, 'month').format('MMMM D, YYYY'),
             endDate:  moment().subtract(1, 'month').format('MMMM D, YYYY'),

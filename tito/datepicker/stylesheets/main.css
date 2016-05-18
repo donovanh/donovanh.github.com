@@ -74,8 +74,14 @@
   display: none !important;
 }
 
+.daterangepicker .applyBtn, .daterangepicker .cancelBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
 .daterangepicker .cancelBtn {
-  display: none;
+  right: 70px;
 }
 
 .daterangepicker .prev i {
@@ -90,6 +96,7 @@
 .daterangepicker .next i {
   font-family: none !important;
   text-indent: -9999px;
+  border: 1px solid #A8AFB6;
   border-radius: 50%;
   background-size: 17px 11px;
   width: 32px !important;
@@ -100,6 +107,7 @@
 
 .daterangepicker .prev:hover i,
 .daterangepicker .next:hover i {
+  border-color: #639DCD;
   background-color: #639DCD;
 }
 
@@ -198,12 +206,6 @@
     background: none;
     padding: 5px;
   }
-}
-
-.daterangepicker .applyBtn {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
 }
 
 .daterangepicker th, .daterangepicker td {

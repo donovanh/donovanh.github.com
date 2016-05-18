@@ -67,8 +67,14 @@
     }
   }
 
+  .applyBtn, .cancelBtn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
   .cancelBtn {
-    display: none;
+    right: 70px;
   }
 
   .prev i {
@@ -81,6 +87,7 @@
   .next i {
     font-family: none !important;
     text-indent: -9999px;
+    border: 1px solid #639DCD;
     border-radius: 50%;
     background-size: 17px 11px;
     width: 32px !important;
@@ -90,6 +97,7 @@
   }
   .prev:hover i,
   .next:hover i {
+    border-color: #639DCD;
     background-color: #639DCD;
   }
   .prev:hover i {
@@ -176,11 +184,6 @@
     }
   }
 
-  .applyBtn {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
   th, td {
     color: #626F77;
     font-weight: normal;
