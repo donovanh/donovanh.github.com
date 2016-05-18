@@ -41,7 +41,7 @@
   height: 254px;
 }
 
-.daterangepicker.range .applyBtn {
+.daterangepicker.range .range_inputs {
   display: none !important;
 }
 
@@ -63,7 +63,7 @@
   display: block !important;
 }
 
-.daterangepicker.range.show-calendar .applyBtn {
+.daterangepicker.range.show-calendar .range_inputs {
   display: block !important;
 }
 

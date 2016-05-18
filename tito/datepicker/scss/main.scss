@@ -32,7 +32,7 @@
   &.range {
     min-width: 134px;
     height: 254px;
-    .applyBtn {
+    .range_inputs {
       display: none !important;
     }
     .calendar {
@@ -48,7 +48,7 @@
       .calendar {
         display: block !important;
       }
-      .applyBtn {
+      .range_inputs {
         display: block !important;
       }
       .inline-timezone {
