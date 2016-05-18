@@ -25,19 +25,45 @@
   }
 
   &.range {
+    min-width: 134px;
+    height: 254px;
+    .applyBtn {
+      display: none !important;
+    }
     .calendar {
-      opacity: 0;
-      z-index: -1;
+      height: 460px;
+      display: none !important;
     }
     .inline-timezone {
       display: none;
     }
-
     &.show-calendar {
+      height: 520px;
+      width: 420px;
       .calendar {
-        opacity: 1;
-        z-index: 1;
+        display: block !important;
       }
+      .applyBtn {
+        display: block !important;
+      }
+      .inline-timezone {
+        display: block !important;
+      }
+    }
+  }
+
+  .ranges {
+    ul {
+      width: 180px;
+    }
+    li {
+      padding: 0.5em 1em;
+    }
+  }
+
+  &.single {
+    .calendar.right {
+      display: none !important;
     }
   }
 
@@ -87,16 +113,15 @@
   }
   .daterangepicker_input {
     position: absolute;
-    top: 330px;
-    left: -10px;
-    right: 0;
+    top: 320px;
+    width: 100%;
     border-top: 1px solid #eee;
   }
   .inline-timezone {
     position: absolute;
-    top: 400px;
     left: 0;
     right: 0;
+    bottom: 60px;
     border-top: 1px solid #eee;
   }
   .inline-timezone label {
@@ -113,16 +138,14 @@
     right: -6px;
   }
   .calendar-table {
-    position: absolute;
-    margin: 0 auto;
-    top: 0;
     background: none;
     border: none;
   }
   .calendar-time {
     text-align: left;
     margin: 0;
-    padding-top: 18px;
+    margin-left: -10px;
+    padding-top: 24px;
     padding-left: 15px;
     color: #626F77;
     position: relative;
@@ -208,8 +231,10 @@
   }
   td.available:hover:after {
     background: #C5DBEB;
-    left: 0;
     right: 0;
+    left: 50%;
+    width: 30px;
+    transform: translateX(-50%);
     border-radius: 50%;
   }
   td.start-date.end-date:hover:after,
@@ -240,17 +265,35 @@
     right: -1px !important;
     background: #C4DAEC;
   }
+  td.in-range:hover:after {
+    border-radius: 0 !important;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 102%;
+  }
+  td.end-date:after,
+  td.end-date:hover:after {
+    right: 50% !important;
+    width: 15px !important;
+    transform: translateX(0);
+    border-radius: 0;
+  }
+  td.start-date:after,
+  td.start-date:hover:after {
+    left: 50% !important;
+    width: 18px !important;
+    transform: translateX(0);
+    border-radius: 0;
+  }
   td.in-range:first-child:after {
-    left: 6px !important;
     border-radius: 50% 0 0 50%;
   }
   td.in-range:last-child:after,
   td.in-range + td:not(.in-range):hover:after {
-    right: 2px !important;
+    left: 0;
+    transform: none;
     border-radius: 0 50% 50% 0 !important;
-  }
-  td.in-range:hover:after {
-    border-radius: 0 !important;
   }
   td.active,
   td.active:hover {

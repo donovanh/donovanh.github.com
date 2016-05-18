@@ -206,7 +206,8 @@
             locale: {
               format: 'MMMM D, YYYY'
             },
-            startDate: new Date(),
+            startDate: moment().subtract(1, 'month').format('MMMM D, YYYY'),
+            endDate:  moment().subtract(1, 'month').format('MMMM D, YYYY'),
             timePicker: true,
             timePickerIncrement: 15,
             singleDatePicker: true,
@@ -223,8 +224,8 @@
           $('.daterangepicker:nth-child(4)')
             .addClass('taller')
             .addClass('range')
+            .addClass('single')
             .append($('#timezone').html());
-          $('.daterangepicker:nth-child(4)')
         </script>
       </div>
     </div>
