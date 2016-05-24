@@ -279,6 +279,102 @@
         </script>
       </div>
     </div>
+
+    <div class="row">
+      <h1>Site examples</h1>
+      <h3>Tickets / Ticket / Edit</h3>
+      <div class="titoDatePicker">
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="release_start_at">Go live at</label>
+            <input class="string optional form-control ticket-dates" name="release[datetimes]" placeholder="20 Apr 2016, 12:00am IST" type="text" value="">
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="release_end_at">End at</label>
+            <input class="string optional form-control ticket-dates" name="release[datetimes]" placeholder="Always and forever" type="text" value="">
+          </div>
+        </div>
+
+        <script>
+          $('.ticket-dates').daterangepicker({
+            locale: {
+              format: 'MMMM D, YYYY HH:mm',
+              applyLabel: 'Done'
+            },
+            autoApply: true,
+            autoUpdateInput: true,
+            startDate: new Date(),
+            singleDatePicker: true,
+            timePicker: true,
+            timePickerIncrement: 15
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Event dates (individual dates)</h3>
+      <div class="titoDatePicker">
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="event_start_date">Event Start Date</label>
+            <input class="string optional form-control ticket-dates" name="release[datetimes]" placeholder="20 Apr 2016, 12:00am IST" type="text" value="">
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="event_end_date">Event End Date</label>
+            <input class="string optional form-control ticket-dates" name="release[datetimes]" placeholder="Always and forever" type="text" value="">
+          </div>
+        </div>
+
+        <script>
+          $('.ticket-dates').daterangepicker({
+            locale: {
+              format: 'MMMM D, YYYY',
+              applyLabel: 'Done'
+            },
+            autoApply: true,
+            autoUpdateInput: true,
+            startDate: new Date(),
+            singleDatePicker: true,
+            timePicker: true,
+            timePickerIncrement: 15
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Event dates (unified, range)</h3>
+      <div class="titoDatePicker">
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="event_start_date">Event dates</label>
+            <input class="string optional form-control ticket-dates" name="release[datetimes]" placeholder="20 Apr 2016, 12:00am IST" type="text" value="">
+          </div>
+        </div>
+
+        <script>
+          $('.ticket-dates').daterangepicker({
+            locale: {
+              format: 'MMMM D, YYYY',
+              applyLabel: 'Done'
+            },
+            autoApply: true,
+            autoUpdateInput: true,
+            startDate: new Date(),
+            timePicker: true,
+            timePickerIncrement: 15
+          });
+        </script>
+      </div>
+    </div>
+
+
+
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
