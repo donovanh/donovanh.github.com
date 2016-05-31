@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./stylesheets/main.css">
   </head>
   <body>
+  <div id="event-date-container" class="no-time"></div>
   <div class="container">
     <div class="row">
       <h1>Tito Date Picker</h1>
@@ -346,6 +347,41 @@
         </script>
       </div>
     </div>
+    <div class="row">
+       <h3>Event dates (no time input)</h3>
+      <div class="titoDatePicker">
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="event_start_date">Event Start Date</label>
+            <input class="string optional form-control ticket-dates-3" name="release[datetimes]" placeholder="20 Apr 2016, 12:00am IST" type="text" value="">
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="form-group string optional release_start_at">
+            <label class="string optional control-label" for="event_end_date">Event End Date</label>
+            <input class="string optional form-control ticket-dates-3" name="release[datetimes]" placeholder="Always and forever" type="text" value="">
+          </div>
+        </div>
+        <script>
+          $('.ticket-dates-3').daterangepicker({
+            locale: {
+              format: 'MMMM D, YYYY',
+              applyLabel: 'Done'
+            },
+            //parentEl: "#event-date-container",
+            autoApply: true,
+            autoUpdateInput: true,
+            startDate: new Date(),
+            singleDatePicker: true
+          });
+          $('.ticket-dates-3').on('show.daterangepicker', function(ev, picker) {
+            console.log('Yo', $(picker.container));
+            $(picker.container).addClass('no-time');
+          });
+        </script>
+      </div>
+    </div>
+
 
     <div class="row">
       <h3>Event dates (unified, range)</h3>
@@ -353,12 +389,12 @@
         <div class="col-xs-3">
           <div class="form-group string optional release_start_at">
             <label class="string optional control-label" for="event_start_date">Event dates</label>
-            <input class="string optional form-control ticket-dates-3" name="release[datetimes]" placeholder="20 Apr 2016, 12:00am IST" type="text" value="">
+            <input class="string optional form-control ticket-dates-4" name="release[datetimes]" placeholder="20 Apr 2016, 12:00am IST" type="text" value="">
           </div>
         </div>
 
         <script>
-          $('.ticket-dates-3').daterangepicker({
+          $('.ticket-dates-4').daterangepicker({
             locale: {
               format: 'MMMM D, YYYY',
               applyLabel: 'Done'

@@ -23,6 +23,10 @@
   }
 }
 
+.no-time {
+  box-sizing: content-box !important;
+}
+
 /* Overrides for the date picker */
 .daterangepicker {
   box-shadow: none;
@@ -34,6 +38,14 @@
 
 .daterangepicker.taller .calendar {
   height: 500px;
+}
+
+.daterangepicker.no-time {
+  height: 380px;
+}
+
+.daterangepicker.no-time .ranges {
+  display: block !important;
 }
 
 .daterangepicker.range {

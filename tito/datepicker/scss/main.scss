@@ -17,7 +17,9 @@
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
+.no-time {
+  box-sizing: content-box !important;
+}
 /* Overrides for the date picker */
 .daterangepicker {
   box-shadow: none;
@@ -27,6 +29,14 @@
 
   &.taller .calendar {
     height: 500px;
+  }
+
+  &.no-time {
+    height: 380px;
+
+    .ranges {
+      display: block !important;
+    }
   }
 
   &.range {
