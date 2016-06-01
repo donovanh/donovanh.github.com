@@ -12,7 +12,7 @@ bodyTag: internal
 
 </div>
 
-Our next meetup is Thursday, 5th November. [RSVP here](https://nvite.com/CodePenDublin/a014) to take part! Will be fun.
+Our next meetup is Thursday, 2nd June. [RSVP here](https://ti.to/donovan/codepen-meetup-june) to take part! Will be fun.
 
 ## Social media
 
