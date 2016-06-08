@@ -27,9 +27,26 @@ Delving into JavaScript is also a difficult but rewarding task. The language has
 
 My career grew around the introduction of CSS, and I'm particularly fond of using it to create animations and dynamic layouts that work across devices of all shapes and sizes, from phones, laptops, monitors and even TVs.
 
-### More about me
+### 10 Things I can deliver
 
-You can [find out more about me here](/about/) and even [get in touch](mailto:d@hop.ie) for a chat. I look forward to helping you.
+>  Things that aren’t the thing.  ings like timeliness, con dence, respect, a story, etc.
+
+Web projects are complicated and uncertain. I deliver:
+
+* Help deciding what matters - to your customers and your bottom line
+* Insight into how people use your product and think about it
+* A solid approach to building out the technology and technical approach
+* Troubleshooting and fixing bugs
+* Confidence in the performance of your product
+* The respect of your customers
+* A product that meets your goals by helping your customers
+* The security of knowing your site is solidly built
+* The ability to weave technical knowledge, story telling and visual impact into a product
+* A quick response that ensures your ship your product on time
+
+### I'd love to hear from you
+
+What's on your mind? Go ahead and [get in touch with me](mailto:d@hop.ie) for a chat, or just to say hi. It means a lot to me and I promise to read and respond. I look forward to receiving your message.
 
 
 
