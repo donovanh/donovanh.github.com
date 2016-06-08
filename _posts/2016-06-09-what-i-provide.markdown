@@ -33,16 +33,16 @@ My career grew around the introduction of CSS, and I'm particularly fond of usin
 
 Web projects are complicated and uncertain. I deliver:
 
+* An interested and open mind to work with you to solve the problems you face
 * Help deciding what matters - to your customers and your bottom line
-* Insight into how people use your product and think about it
-* A solid approach to building out the technology and technical approach
-* Troubleshooting and fixing bugs
+* Experience and insight in building awesome online websites and apps
+* Ideas and thoughts on how to really understand your customers
 * Confidence in the performance of your product
-* The respect of your customers
 * A product that meets your goals by helping your customers
-* The security of knowing your site is solidly built
-* The ability to weave technical knowledge, story telling and visual impact into a product
-* A quick response that ensures your ship your product on time
+* A product that commands respect by being professionally built and delivered
+* The confidence to know you can ship your product on time
+* The security of knowing your site meets modern standards
+* Technical knowledge, story telling and visual impact
 
 ### I'd love to hear from you
 
