@@ -15,7 +15,7 @@ In this post I'll answer questions around what I provide.
 
 I bring two decades of web design and development experience, an inquisitive mind and an understanding of how the various pieces of the web puzzle fit together. My main focus is on front-end development. This means using HTML, CSS and JavaScript to create fast-loading, good looking web pages and apps.
 
-I also consider the user experience, having worked in design, and bring a perspective that takes into account the gotchas and issues that might cause trouble for users. I also care deeply for creating fluid, pleasant interfaces that move and animate when necessary, resulting in a considered, high quality result.
+I also consider the user experience, having worked in design. It's important to take into account the gotchas and issues that might cause trouble for users. I also care deeply for creating fluid, pleasant interfaces that move and animate when necessary, resulting in a considered, high quality result.
 
 ### Leave out the easy, repetitive, generic stuff ... What you are doing that’s difficult?
 
@@ -28,8 +28,6 @@ Delving into JavaScript is also a difficult but rewarding task. The language has
 My career grew around the introduction of CSS, and I'm particularly fond of using it to create animations and dynamic layouts that work across devices of all shapes and sizes, from phones, laptops, monitors and even TVs.
 
 ### 10 Things I can deliver
-
->  Things that aren’t the thing.  ings like timeliness, con dence, respect, a story, etc.
 
 Web projects are complicated and uncertain. I deliver:
 
