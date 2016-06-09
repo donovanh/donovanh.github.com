@@ -7,7 +7,7 @@ imageURL: what.jpg
 published: true
 ---
 
-This is the second exercise in Seth Godin's Freelance course, follow on from the [Who Am I?](/blog/who-am-i/).
+This is the second exercise in Seth Godin's Freelance course, follow on from [Who Am I?](/blog/who-am-i/)
 
 In this post I'll answer questions around what I provide.
 
