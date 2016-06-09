@@ -42,9 +42,6 @@ Web projects are complicated and uncertain. I deliver:
 * The security of knowing your site meets modern standards
 * Technical knowledge, story telling and visual impact
 
-### I'd love to hear from you
-
-What's on your mind? Go ahead and [get in touch with me](mailto:d@hop.ie) for a chat, or just to say hi. It means a lot to me and I promise to read and respond. I look forward to receiving your message.
 
 
 
