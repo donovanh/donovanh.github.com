@@ -1,30 +1,38 @@
-function buildWeightChart(sourceData, targetContainer) {
+function buildWeightChart(sourceData, targetContainer, colourRange) {
   var totalScore = sourceData.reduce(function(prev, person) {
     return prev + person.score;
   }, 0);
   // Generate the colours for the backgrounds
-  var colours = generateColours(sourceData.length);
+  var colours = generateColours(sourceData.length, colourRange);
   $(sourceData).each(function(index, person) {
     var segmentDiv = generateSegment(person.score, totalScore, colours[index]);
-    var segmentHTML = '<span class="weightChart-score">' + person.score + '</span>';
-    segmentHTML += '<img class="weightChart-image" src="' + person.image + '" alt="' + person.name + '">';
-    segmentDiv.append(segmentHTML);
+    var delay = .2 + (.1 * (index));
+    var scoreSpan = '<span class="weightChart-score" style="'+insertDelay(delay)+'">' + person.score + '</span>';
+    $(scoreSpan).css('animation-delay', delay + 's');
+    var image = '<img class="weightChart-image" style="'+insertDelay(delay)+'" src="' + person.image + '" alt="' + person.name + '">';
+    $(image).css('animation-delay', delay + 's');
+    segmentDiv.append(scoreSpan + image);
     $(targetContainer).append(segmentDiv);
   });
+}
+function insertDelay(delay) {
+  return '-webkit-animation-delay: ' + delay + 's; animation-delay: ' + delay + 's';
 }
 function generateSegment(score, total, colour) {
   var segmentDiv = $('<div></div>');
   var width = (score / total) * 100;
   segmentDiv.addClass('weightChart-segment');
-  segmentDiv.css('width', width + '%');
-  segmentDiv.css('background-color', colour );
+  segmentDiv.css({
+    'background-color': colour,
+    width: width + '%'
+  });
   return segmentDiv;
 }
-function generateColours(number) {
+function generateColours(number, colourRange) {
   // The beginning of your gradient
-  var start = convertToRGB('#46C1A3');
+  var start = convertToRGB(colourRange[0]);
   // The end of your gradient
-  var end   = convertToRGB('#378ECA');
+  var end   = convertToRGB(colourRange[1]);
   //Alpha blending amount
   var alpha = 0.0;
   var colours = [];
