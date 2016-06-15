@@ -1,0 +1,39 @@
+.pageContainer {
+  box-sizing: border-box;
+  margin: 4em auto;
+  max-width: 1080px;
+  padding: 2em;
+  width: 100%;
+}
+
+/* Styles for the weightcharts */
+
+.weightChart {
+  width: 100%;
+}
+
+.weightChart-segment {
+  background: #888;
+  display: inline-block;
+  height: 60px;
+  position: relative;
+}
+
+.weightChart-score {
+  color: #fff;
+  font-size: 22px;
+  left: 4px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 2px;
+}
+
+.weightChart-image {
+  border-radius: 50%;
+  bottom: -20px;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  width: 50px;
+}

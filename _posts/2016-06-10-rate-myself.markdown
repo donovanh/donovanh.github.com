@@ -55,3 +55,4 @@ I'm always investing in developing my knowledge. I have several side projects on
 
 But I plan to put more time into Reputation and Expertise. The first by sharing more through the likes of the CSS Animation project, taking part in meetups and events, and being a helpful member of this community. The second by applying myself as intently as I can to my work. I learn something new in every job or project.
 
+**So&hellip;** did that seem realistic? I hope it was. Get in touch if you disagree (or agree)!

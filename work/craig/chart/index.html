@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Weight chart</title>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+  </head>
+  <body>
+    <div class="pageContainer">
+      <div id="weightChart" class="weightChart"></div>
+    </div>
+    <script src="./javascripts/jquery-3.0.0.min.js"></script>
+    <script src="./javascripts/weightChart.js"></script>
+    <script>
+      $(function() {
+        var sourceData = [
+          {
+            name: 'Person 1',
+            image: './images/face-1.jpg',
+            score: 29
+          },
+          {
+            name: 'Person 2',
+            image: './images/face-2.jpg',
+            score: 21
+          },
+          {
+            name: 'Person 3',
+            image: './images/face-3.jpg',
+            score: 18
+          },
+          {
+            name: 'Person 4',
+            image: './images/face-4.jpg',
+            score: 6
+          },
+          {
+            name: 'Person 5',
+            image: './images/face-5.jpg',
+            score: 7
+          }
+        ];
+
+        buildWeightChart(sourceData, '#weightChart');
+      });
+    </script>
+  </body>
+</html>
