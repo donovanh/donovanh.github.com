@@ -6,6 +6,8 @@
   <body>
     <div class="pageContainer">
       <div id="weightChart" class="weightChart"></div>
+      <br><br><br><br>
+      <div id="weightChart2" class="weightChart"></div>
     </div>
     <script src="./javascripts/jquery-3.0.0.min.js"></script>
     <script src="./javascripts/weightChart.js"></script>
@@ -71,6 +73,7 @@
         ];
         // buildWeightChart(source, target, colourArray, descending/ascending)
         buildWeightChart(sourceData, '#weightChart', colourRange, 'descending');
+        buildWeightChart(sourceData, '#weightChart2', colourRange, 'ascending');
       });
     </script>
   </body>
