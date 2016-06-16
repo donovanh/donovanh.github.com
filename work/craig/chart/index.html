@@ -36,15 +36,41 @@
             name: 'Person 5',
             image: './images/face-5.jpg',
             score: 7
+          },
+          {
+            name: 'Person 3',
+            image: './images/face-3.jpg',
+            score: 5
+          },
+          {
+            name: 'Person 4',
+            image: './images/face-4.jpg',
+            score: 4
+          },
+          {
+            name: 'Person 5',
+            image: './images/face-5.jpg',
+            score: 3
+          },
+          {
+            name: 'Person 3',
+            image: './images/face-3.jpg',
+            score: 3
+          },
+          {
+            name: 'Person 5',
+            image: './images/face-5.jpg',
+            score: 1
           }
+
         ];
 
         var colourRange = [
           '#1fe5b5',  // light blue
-          '#2297e5'   // aquamaring
+          '#2297e5'   // aquamarine
         ];
-
-        buildWeightChart(sourceData, '#weightChart', colourRange);
+        // buildWeightChart(source, target, colourArray, descending/ascending)
+        buildWeightChart(sourceData, '#weightChart', colourRange, 'descending');
       });
     </script>
   </body>

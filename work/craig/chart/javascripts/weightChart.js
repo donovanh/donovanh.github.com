@@ -1,11 +1,18 @@
-function buildWeightChart(sourceData, targetContainer, colourRange) {
+function buildWeightChart(sourceData, targetContainer, colourRange, sort) {
+  if (sort === 'ascending') {
+    sourceData = sortSourceData(sourceData);
+  } else if (sort === 'descending') {
+    sourceData = sortSourceData(sourceData).reverse();
+  }
   var totalScore = sourceData.reduce(function(prev, person) {
     return prev + person.score;
   }, 0);
   // Generate the colours for the backgrounds
   var colours = generateColours(sourceData.length, colourRange);
+  var totalWidth = 0; // Track how wide the bar gets
   $(sourceData).each(function(index, person) {
     var segmentDiv = generateSegment(person.score, totalScore, colours[index]);
+    totalWidth += parseFloat($(segmentDiv).data('width'));
     var delay = .2 + (.1 * (index));
     var scoreSpan = '<span class="weightChart-score" style="'+insertDelay(delay)+'">' + person.score + '</span>';
     $(scoreSpan).css('animation-delay', delay + 's');
@@ -14,6 +21,20 @@ function buildWeightChart(sourceData, targetContainer, colourRange) {
     segmentDiv.append(scoreSpan + image);
     $(targetContainer).append(segmentDiv);
   });
+  if (totalWidth > 100) {
+    // It's too wide - remove the overage from the larger items
+    var overagePerItem = -(99.9 - totalWidth) / sourceData.length;
+    $(targetContainer).find('.weightChart-segment').each(function(index, segment) {
+      var segmentWidth = $(segment).attr('data-width');
+      $(segment).css('width', segmentWidth - overagePerItem + '%');
+    });
+  }
+}
+function sortSourceData(sourceData) {
+  return sourceData.sort(function(obj1, obj2) {
+    // Ascending: first age less than the previous
+    return obj1.score - obj2.score;
+  });
 }
 function insertDelay(delay) {
   return '-webkit-animation-delay: ' + delay + 's; animation-delay: ' + delay + 's';
@@ -21,11 +42,13 @@ function insertDelay(delay) {
 function generateSegment(score, total, colour) {
   var segmentDiv = $('<div></div>');
   var width = (score / total) * 100;
+  if (width < 8) width = 8;
   segmentDiv.addClass('weightChart-segment');
   segmentDiv.css({
     'background-color': colour,
     width: width + '%'
   });
+  segmentDiv.attr('data-width', width);
   return segmentDiv;
 }
 function generateColours(number, colourRange) {
