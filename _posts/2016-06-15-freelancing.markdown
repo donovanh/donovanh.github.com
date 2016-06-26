@@ -21,6 +21,10 @@ Don't want to run around like these chickens: http://i.imgur.com/73LmJuZ.gifv
 
 (Picking a niche - being good at it - people knowing what they're getting)
 
+* Getting started
+
+On overthinking http://i.imgur.com/lkKUg90.gifv
+
 * My product - just what do I deliver
 
 * Availability - how available am I

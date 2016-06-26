@@ -14,9 +14,9 @@ function buildWeightChart(sourceData, targetContainer, colourRange, sort) {
     var segmentDiv = generateSegment(person.score, totalScore, colours[index]);
     totalWidth += parseFloat($(segmentDiv).data('width'));
     var delay = .2 + (.1 * (index));
-    var scoreSpan = '<span class="weightChart-score" style="'+insertDelay(delay)+'">' + person.score + '</span>';
+    var scoreSpan = '<span class="weightChart-score">' + person.score + '</span>';
     $(scoreSpan).css('animation-delay', delay + 's');
-    var image = '<img class="weightChart-image" style="'+insertDelay(delay)+'" src="' + person.image + '" alt="' + person.name + '">';
+    var image = '<img class="weightChart-image" src="' + person.image + '" alt="' + person.name + '">';
     $(image).css('animation-delay', delay + 's');
     segmentDiv.append(scoreSpan + image);
     $(targetContainer).append(segmentDiv);
