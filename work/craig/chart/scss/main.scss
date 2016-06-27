@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1080px;
-  padding: 2em;
+  padding: 2em 0 8em;
   width: 100%;
 }
 
@@ -164,25 +164,175 @@ h2 {
 
 .animation3 {
   .weightChart-segment {
+    animation: race-in3 .5s cubic-bezier(.72,.01,.32,1.35) forwards;
+    transform-origin: 50% -30px;
+    animation-delay: .6s;
+    &:nth-child(1) { animation-delay: .1s}
+    &:nth-child(2) { animation-delay: .15s}
+    &:nth-child(3) { animation-delay: .2s}
+    &:nth-child(4) { animation-delay: .25s}
+    &:nth-child(5) { animation-delay: .3s}
+    &:nth-child(6) { animation-delay: .35s}
+    &:nth-child(7) { animation-delay: .4s}
+    &:nth-child(8) { animation-delay: .45s}
+    &:nth-child(9) { animation-delay: .5s}
+    &:nth-child(10) { animation-delay: .55s}
 
+    .weightChart-image { animation-delay: 1.5s}
+    &:nth-child(1) .weightChart-image  { animation-delay: .6s}
+    &:nth-child(2) .weightChart-image  { animation-delay: .7s}
+    &:nth-child(3) .weightChart-image  { animation-delay: .8s}
+    &:nth-child(4) .weightChart-image  { animation-delay: .9s}
+    &:nth-child(5) .weightChart-image  { animation-delay: 1s}
+    &:nth-child(6) .weightChart-image  { animation-delay: 1.1s}
+    &:nth-child(7) .weightChart-image  { animation-delay: 1.2s}
+    &:nth-child(8) .weightChart-image  { animation-delay: 1.3s}
+    &:nth-child(9) .weightChart-image  { animation-delay: 1.4s}
+    &:nth-child(10) .weightChart-image  { animation-delay: 1.5s}
+
+    .weightChart-score { animation-delay: 1.9s}
+    &:nth-child(1) .weightChart-score  { animation-delay: .8s}
+    &:nth-child(2) .weightChart-score  { animation-delay: .9s}
+    &:nth-child(3) .weightChart-score  { animation-delay: 1s}
+    &:nth-child(4) .weightChart-score  { animation-delay: 1.1s}
+    &:nth-child(5) .weightChart-score  { animation-delay: 1.2s}
+    &:nth-child(6) .weightChart-score  { animation-delay: 1.3s}
+    &:nth-child(7) .weightChart-score  { animation-delay: 1.4s}
+    &:nth-child(8) .weightChart-score  { animation-delay: 1.5s}
+    &:nth-child(9) .weightChart-score  { animation-delay: 1.6s}
+    &:nth-child(10) .weightChart-score  { animation-delay: 1.7s}
   }
   .weightChart-score {
-
+    animation: fade-in-up3 .4s .4s ease-out forwards;
   }
   .weightChart-image {
+    animation: pop-in3 .6s .2s cubic-bezier(.72,.01,.32,1.35) forwards;
+  }
+}
 
+@keyframes race-in3 {
+  0% {
+    opacity: 0;
+    transform: translateX(130px);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in-up3 {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pop-in3 {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 
 .animation4 {
   .weightChart-segment {
+    animation: show-segment4 .7s cubic-bezier(.72,.01,.32,1.35) forwards;
+    transform-origin: 50% 100%;
+    animation-delay: .6s;
+    &:nth-child(1) { animation-delay: .1s}
+    &:nth-child(2) { animation-delay: .15s}
+    &:nth-child(3) { animation-delay: .2s}
+    &:nth-child(4) { animation-delay: .25s}
+    &:nth-child(5) { animation-delay: .3s}
+    &:nth-child(6) { animation-delay: .35s}
+    &:nth-child(7) { animation-delay: .4s}
+    &:nth-child(8) { animation-delay: .45s}
+    &:nth-child(9) { animation-delay: .5s}
+    &:nth-child(10) { animation-delay: .55s}
 
+    .weightChart-image { animation-delay: 1.5s}
+    &:nth-child(1) .weightChart-image  { animation-delay: .2s}
+    &:nth-child(2) .weightChart-image  { animation-delay: .25s}
+    &:nth-child(3) .weightChart-image  { animation-delay: .3s}
+    &:nth-child(4) .weightChart-image  { animation-delay: .35s}
+    &:nth-child(5) .weightChart-image  { animation-delay: .4s}
+    &:nth-child(6) .weightChart-image  { animation-delay: .45s}
+    &:nth-child(7) .weightChart-image  { animation-delay: .5s}
+    &:nth-child(8) .weightChart-image  { animation-delay: .55s}
+    &:nth-child(9) .weightChart-image  { animation-delay: .6s}
+    &:nth-child(10) .weightChart-image  { animation-delay: .65s}
+
+    .weightChart-score { animation-delay: 1.9s}
+    &:nth-child(1) .weightChart-score  { animation-delay: .2s}
+    &:nth-child(2) .weightChart-score  { animation-delay: .25s}
+    &:nth-child(3) .weightChart-score  { animation-delay: .3s}
+    &:nth-child(4) .weightChart-score  { animation-delay: .35s}
+    &:nth-child(5) .weightChart-score  { animation-delay: .4s}
+    &:nth-child(6) .weightChart-score  { animation-delay: .45s}
+    &:nth-child(7) .weightChart-score  { animation-delay: .5s}
+    &:nth-child(8) .weightChart-score  { animation-delay: .55s}
+    &:nth-child(9) .weightChart-score  { animation-delay: .6s}
+    &:nth-child(10) .weightChart-score  { animation-delay: .65s}
   }
   .weightChart-score {
-
+    animation: fade-in-up3 .4s .4s ease-out forwards;
   }
   .weightChart-image {
+    animation: pop-in3 .6s .2s cubic-bezier(.72,.01,.32,1.35) forwards;
+  }
+}
 
+@keyframes show-segment4 {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in-up3 {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pop-in3 {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 
