@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting healthy #1: Diet
+title: Getting healthy: Diet
 description: "Looking after my physical health, strength and weight."
 tags: [non-tech, health]
 imageURL: food.png
