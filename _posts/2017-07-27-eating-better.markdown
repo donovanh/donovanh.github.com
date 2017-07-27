@@ -62,6 +62,12 @@ Most evenings I try to avoid grazing too much (drink water!) but I'd often have 
 
 Basically each day I try to make sure I'm getting enough nutrient-rich carbs (veg), slow burning carbs (oats) and about 30% of my food being protein. Having targets like this means I tend to shop better and see less need to buy snacks and processed food as it doesn't have what I need.
 
+### Make it sustainable!
+
+One thing I've tried to avoid is feeling like I'm depriving myself. I love baking, whether it's crumbles, cookies, brownies or cakes, and I eat "unhealthy" foods when I want to. Having said that, I always track them on myFitnessPal. If I find I've gone over my target one day, I'll make a point of staying under it for a few days to make up the difference. Or I might eat light during the day knowing I'm going out for a special meal that night.
+
+What I don't do is cheat days. I might do "cheat" meals where I just eat 2,000 calories of carbs, but if I did that all day it would be too much. It's more important to eat well most of the time and enjoy what you like, rather than torture yourself in a diet. That just leads fo giving up. Make changes with the aim of them becoming your new normal.
+
 ## Building muscle
 
 The second part to getting healthy has been to work out a decent training plan. This has evolved a lot since last year when I joined a gym, and I'm now in a very different place to where I started, but in the next post I'll go into more detail about how this has progressed and what I hope to achieve.
