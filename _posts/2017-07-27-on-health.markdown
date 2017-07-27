@@ -3,7 +3,7 @@ layout: post
 title: Getting healthy #1: Diet
 description: "Looking after my physical health, strength and weight."
 tags: [non-tech, health]
-imageURL: rate.jpg
+imageURL: food.png
 published: true
 ---
 
