@@ -77,7 +77,7 @@ In the end I managed to get my time down to 5 minutes, 30 seconds. Not quite hit
 
 ## Visible changes
 
-People have been asking if there have been any visible changes. I'm please to report that yes, I definitely see some improvement to my shoulders, chest and the backs of my upper arms.
+People have been asking if there have been any visible changes. I'm pleased to report that yes, I definitely see some improvement to my shoulders, chest and the backs of my upper arms.
 
 ![Shoulder and chest improvement](/images/posts/exercise/chest.jpg)
 
