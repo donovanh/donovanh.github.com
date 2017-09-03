@@ -3,21 +3,21 @@ layout: post
 title: 100 Pushups per day
 description: "Getting good at the pushups."
 tags: [non-tech, health]
-imageURL: pushup.png
-published: false
+imageURL: chest.jpg
+published: true
 ---
 
 I recently blogged a little about [my approach to eating better](http://hop.ie/eating-better/), and mentioned that it's one half of my current goal of getting in shape. The second half is all about exercise and I'll be sharing more on that soon. This post is all about a challenge I gave myself last month, to try to do 100 pushups every day for the month of August.
 
 ## Why?
 
-This year I've been learning about bodyweight exercise, specifically Callisthenics and how it's possible to get fit without relying on gyms or equipment (beyond maybe a pull-up bar). As part of this I've been following a workout routine from the book [Convict Conditioning](), which is all about making the most of the kinds of exercises you can do with little equipment or even space.
+This year I've been learning about bodyweight exercise, specifically Callisthenics and how it's possible to get fit without relying on gyms or equipment (beyond maybe a pull-up bar). As part of this I've been following a workout routine from the book [Convict Conditioning](http://convictconditioningworkout.com), which is all about making the most of the kinds of exercises you can do with little equipment or even space.
 
 A big part of this routine is push-ups. There are so many variations of push-ups, and ways they can help build a strong upper body and core, that they're a very interesting exercise and one that can be progressed quite far (all the way to the famous one-hand push-up).
 
 I found though that I wasn't very good at them. I could hit about 10 diamond pushups or maybe put in about 20 normal shoulder-width push-ups in one set, but they were hard work and I wanted to be better at them.
 
-As well as this, my pectoral muscles aren't the most receptive to pushups, so I wanted to see if I could improve the effectiveness of the exercise. 
+As well as this, my pectoral muscles aren't the most receptive to pushups, so I wanted to see if I could improve the effectiveness of the exercise and you know, actually get some kind of muscle definition there. 
 
 The idea of setting as challenge like this isn't new. It's fairly popular and many people have found it at the very least an interesting challenge to improve ensurance and push-up technique.
 
@@ -55,8 +55,7 @@ I made a point of putting in longer warm-ups, with lots of waving arms around in
 
 In the end I think it was a muscle pain rather than tendons, as it felt like a dull ache just above my elbow where the tricep connects.
 
-Having completed the month I still feel a little weaker in that arm but it's not sore at all any more.
-
+Having completed the month I still feel a little weaker in that arm. I do need to look into balancing things out as I move forward.
 
 ## Hitting goal #1
 
@@ -66,7 +65,7 @@ I wasn't satisfied with that though. A criticism of this sort of challenge is ho
 
 To keep the challenge moving along I moved the target to 5 minutes. This way I'd need to reduce my rest times further as well as get more reps into each set. Goal #2 was then to try to get 100 push-ups done in 5 minutes.
 
-## Optional: Hitting 5 minutes
+## Stretch goal: Hitting 5 minutes
 
 I honestly didn't expect to hit the second goal, but it was a helpful target that kept me progressing. Pushing through 20 in each of the first 2 minutes brought it down to 8 minutes. Then I progressed to doing 40 push-ups in the first minute, saving even more time.
 
@@ -74,9 +73,23 @@ I found I could cut some time from the resting by staying in the plank position 
 
 It wasn't an easy progression but I did find each day the time got less, even when I felt like I wasn't putting in any extra effort each day. My body responded to the goal and helped me get closer each day.
 
-## Challenge done
+In the end I managed to get my time down to 5 minutes, 30 seconds. Not quite hitting the target but I'm pleased with that. I don't really see the need to chase this goal though, I'd like to focus on strength and technique over speed for now.
 
-[Image: Chart of the progress]
+## Visible changes
+
+People have been asking if there have been any visible changes. I'm please to report that yes, I definitely see some improvement to my shoulders, chest and the backs of my upper arms.
+
+![Shoulder and chest improvement](/images/posts/exercise/chest.jpg)
+
+This photo shows quite well some of the areas that improved. Having better triceps makes the arms look thicker, and there's better definition of the muscles around the shoulders and chest.
+
+I wouldn't really rely on a challenge like this for muscle growth though. It's generally better to have a longer plan with recovery days and progressively making the exercises tougher to encourage your muscles to keep up.
+
+Still, it's neat to see some progress within just one month.
+
+## Staying motivated
+
+![Day by day breakdown](/images/posts/exercise/pushup-challenge-log.png)
 
 Along the way I did a few things to stay motivated. One was setting up a WhatsApp group with a couple of sporty friends to keep them informed on my progress, ask questions and get feedback on the sore elbow. Another thing was making the time to tweet and update Facebook regularly with progress. Having other people know what I was doing helped me feel like I was accountable and it was easier to keep up the routine.
 
@@ -87,6 +100,8 @@ Having a daily routine helped me also. I'd be up well before the rest of the fam
 In the end I'm delighted with the progress this challenge has brought. I'm looking and feeling stronger than before I started, and I'm looking forward to progressing my push-ups to the next level.
 
 A big goal was to be ready to start doing more advanced push-ups. Since it's so important to be always progressing, my plan going forward is to keep doing push-ups in some form regularly, but progress them with harder variations rather than chasing repetitions.
+
+In the meantime I'm taking a few days off to let my shoulders recover before taking on anything new.
 
 
 I hope you find this helpful! If you have any questions, or are feeling inspired to take on a fitness challenge, hit me up [on twitter](https://twitter.com/donovanh). I'd love to hear from you.
