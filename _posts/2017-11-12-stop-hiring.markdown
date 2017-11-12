@@ -7,7 +7,7 @@ imageURL: forever.jpg
 published: true
 ---
 
-Summary: Employing people is like marriage - don't do it lightly or things can go very wrong.
+Summary: Employing people is like marriage - rush in and things can go very wrong.
 
 This post is for employers looking for great people to solve their problems. It contains opinions. If you disagree, rant at me [on twitter](https://twitter.com/donovanh) - I'd love to hear your perspective.
 
