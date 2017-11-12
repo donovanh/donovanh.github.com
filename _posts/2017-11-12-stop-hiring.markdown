@@ -49,4 +49,4 @@ This is why I'm writing this. If you're running a company, selling your services
 
 ## Over to you
 
-Ready to throw off the shackles of a monogomanous life and enjoy the benefits of working with a freelancer? If so, <a href="/hire/">let's see how I can help you</a>.
+Ready to throw off the shackles of a monogomanous life and enjoy the benefits of working with a freelancer? If so, <a href="/hire/">call me, maybe</a>.
