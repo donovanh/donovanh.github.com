@@ -21,7 +21,7 @@ I've been through this many times myself, both as an applicant and interviewer a
 
 ## Horses and carriages
 
-When we approach hiring people like this, I like to think of it in terms of dating and marriage. As a single person I would go on dates. Sometimes they'd go well and we'd get on great, we'd maybe even set up another date and get to know each other better. But nobody ever proposed marriage after one date. That would be madness.
+When we approach hiring people like this, I like to think of it in terms of dating and marriage. As a single person I went on dates. Sometimes they'd go well and we'd get on great, we'd maybe even set up another date and get to know each other better. But nobody ever proposed marriage after one date. That is madness.
 
 Instead we date, maybe even move in together to see how we get on. Then if everything is right, only then, maybe, is the subject of marriage brought up.
 
@@ -29,7 +29,7 @@ In terms of hiring people, we jump stright from the first date to offers of marr
 
 ## Starting with a lie
 
-When we do this we set ourselves up for problems. Few people woudld say "I'd love to be your employee forever and ever" and really mean it. Yet when we're hiring people we look for this. It's like starting a relationship with a lie. Sure, maybe things might work out but is that really a healthy way for a relationship to begin?
+When we do this we set ourselves up for problems. Few people say "I'd love to be your employee forever and ever" and really mean it. Yet when we're hiring people we look for this. It's like starting a relationship with a lie. Sure, maybe things might work out but is that really a healthy way for a relationship to begin?
 
 ## A better approach
 
@@ -37,7 +37,7 @@ Marriage isn't for everyone and when we rush into it, it can be an expensive, pa
 
 Yet many companies seem to think hiring permanent employees is the only option. It really isn't. Look at the problems we're trying to solve. Do you really need someone to work with you permanently to solve them? Can these problems be talked by bringing in an expert, as a contractor or freelancer? 
 
-Maybe you do need a permanent person to help you grow and take on big challenges. Well, marriage is a fine option when you need that sort of commitment. But how about starting with a contract first to see how it goes? It would give more options than trying to lock people down to a permanent commitment without knowing you'll even get along.
+Maybe you do need a permanent person to help you grow and take on big challenges. Well, marriage is a fine option when you need that sort of commitment. But how about starting with a contract first to see how it goes? It gives more options than trying to lock people down to a permanent commitment without knowing you'll even get along.
 
 ## It's all about solving problems
 
