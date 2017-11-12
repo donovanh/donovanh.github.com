@@ -11,9 +11,9 @@ Summary: Employing people is like marriage - rush in and things can go very wron
 
 This post is for employers looking for great people to solve their problems. It contains opinions. If you disagree, rant at me [on twitter](https://twitter.com/donovanh) - I'd love to hear your perspective.
 
-## Hey this is crazy
+## Hey I've just met you
 
-*"And I've just met you, but here's our HR department, let's work together permanently"*
+*"And this is crazy, but here's our HR department, let's work together permanently"*
 
 How often does this happen. You put out a call for talented people to help you build your business - maybe you need to improve sales or build an app or website, and then get started interviewing people. When you find someone you like, you extend them an offer and hope they accept. 
 
