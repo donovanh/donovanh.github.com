@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stop Hiring People
-description: "Employing people is like marriage - don't do it lightly or things can go very wrong."
+description: "Employing people is like marriage - rush in and things can go very wrong."
 tags: [wordpress, web development]
 imageURL: forever.jpg
 published: true
