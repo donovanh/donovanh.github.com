@@ -25,7 +25,7 @@ When we approach hiring people like this, I like to think of it in terms of dati
 
 Instead we date, maybe even move in together to see how we get on. Then if everything is right, only then, maybe, is the subject of marriage brought up.
 
-In terms of hiring people, we jump stright from the first date to offers of marriage.
+In terms of hiring people, we jump from the first date to offers of marriage.
 
 ## Starting with a lie
 
