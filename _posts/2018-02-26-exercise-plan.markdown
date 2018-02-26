@@ -102,8 +102,4 @@ If you're approaching making a workout plan like this yourself, always keep in m
 
 How are your new years resolutions working out? Got any goals for the year? Mention me up [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
 
-## Photo credit
-
-Many thanks to [Emma Frances Logan](https://unsplash.com/photos/PVIbUkN_wCQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash for the photo used in this post.
-
 
