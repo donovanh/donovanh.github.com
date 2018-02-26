@@ -67,7 +67,7 @@ Progression: I'm aiming to work toward one-legged (pistol) squats. Will be a whi
 
 Pull ups are a difficult exercise at the best of times, but with weighing 90kg and being over 6"3 tall, I've always struggled with them. It took many months of slowly practising each week to get to the point where I could do 5 good pull ups with a full range of motion. 
 
-I started with half-pull ups and by jumping up and trying to bring myself down slowly. This is the only movement that requires any equipment, and I use a door-mounted pull up bar. I'm really keen to improve these as they have a massive impact to my back and upper half of my body so I've been putting the pull up bar on my home office door and doing sets through the day.
+I started with half-pull ups and by jumping up and trying to bring myself down slowly (negatives). This is the only movement that requires any equipment, and I use a door-mounted pull up bar. I'm really keen to improve these as they have a massive impact to my back and upper half of my body so I've been putting the pull up bar on my home office door and doing sets through the day.
 
 If you're looking to improve in this area, check out [this video first](https://www.youtube.com/watch?v=eGo4IYlbE5g).
 
