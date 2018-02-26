@@ -33,7 +33,7 @@ I started off a little enthusiastic, doing two sets each day but I quickly start
 
 As you can see, I started out quite well but regressed in a few areas in the first few days. Some of these have been improving, such as pushups, bridges and my most hated move, leg raises.
 
-THe best thing about this workout is that it targets all parts of the body. It has push exercises, pull as well as balance.
+This workout targets all parts of the body. It has push exercises, pull as well as balance.
 
 Here's where I'm at with each and what I hope to progress to.
 
