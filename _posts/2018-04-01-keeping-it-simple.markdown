@@ -7,7 +7,7 @@ imageURL: workout-march-2018.jpg
 published: true
 ---
 
-Choosing a workout routine is a daunting process. They all seem complicated or difficult to stick to. Some plans set out in detail dozens of exercises, sets and weekly routines. Other plans make you sweat hard and give it all you have multiple times per week. Neither of these work for me. Here's what I did instead. 
+Choosing a workout routine is a daunting process. They all seem complicated or difficult to stick to. Some plans set out in detail dozens of exercises, sets and weekly routines. Other plans make you sweat hard and give it all you have multiple times per week. Neither of these work for me.
 
 Last month I started a new workout plan that included 6 exercises every day, with the goal being that if I could keep it simple, and stick to it, it would be a success. I had a few requirements:
 
