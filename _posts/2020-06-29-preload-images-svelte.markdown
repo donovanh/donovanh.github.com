@@ -21,6 +21,17 @@ During performance testing, the biggest issue was the home page loading many ima
 
 If you'd like to save some time you can download the [final code for this demo from Github](https://github.com/donovanh/svelte-image-loading) and read along for an explanation of how it works.
 
+## What we will build
+
+Here's the result we will be aiming for today.
+
+<p class="codepen" data-height="300" data-theme-id="12592" data-default-tab="js,result" data-user="donovanh" data-slug-hash="abdLERL" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Lazy Loading Images in Svelte">
+  <span>See the Pen <a href="https://codepen.io/donovanh/pen/abdLERL">
+  Lazy Loading Images in Svelte</a> by Donovan Hutchinson (<a href="https://codepen.io/donovanh">@donovanh</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Starting app
 
 You might have an app in place where you'd like to apply these ideas, but if not you can start a new Svelte project and work on it locally. Start by initiating a new Svelte project and running it locally:

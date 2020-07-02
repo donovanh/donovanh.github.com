@@ -247,8 +247,6 @@ Before we run our Sapper app we need to build it. While working in a `dev` envir
 npm run build
 ```
 
-We will also need to run `npm install` at this point 
-
 This should output a lot of lines of content as it builds all the scoped JavaScript fragments of your app. We can then run the app using PM2.
 
 While we can set up PM2 for most Node apps with a simple `pm2 start app.js --name App`, we need to use our `npm start` command. We can do it like so:
@@ -391,8 +389,6 @@ curl http://localhost:80
 If all is well, let's move on to setting up our public URL and HTTPS.
 
 ## Adding a domain name
-
-Covers: Setting up with CloudFlare for the HTTPS, a record with IP, cname www to url
 
 With an app running on port 80 and an IP address, it's time to give this app a home in the form of a URL.
 
