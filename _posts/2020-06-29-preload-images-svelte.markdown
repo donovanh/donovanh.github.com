@@ -3,9 +3,11 @@ layout: post
 title: Lazy loading images in Svelte 
 description: "Speed up your website render time by only loading the images you want to show"
 tags: [web development, Svelte]
-imageURL: TODO.jpg
-published: false
+imageURL: shopireland_list.jpg
+published: true
 ---
+
+*This article was [originally published on CSS Tricks](https://css-tricks.com/lazy-loading-images-in-svelte/).*
 
 When we build websites and apps we want them to load quickly and feel quick when navigating. One easy way to improve the speed is to only download visible images.
 

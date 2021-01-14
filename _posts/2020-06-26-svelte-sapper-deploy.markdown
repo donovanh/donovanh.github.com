@@ -4,8 +4,10 @@ title: Hosting your own Svelte / Sapper app
 description: "How to set up a Digital Ocean droplet for your Sapper app, and host it along with your API on the same server"
 tags: [web development, devops]
 imageURL: server.jpg
-published: false
+published: true
 ---
+
+*This article was originaly [posted on LogRocket](https://blog.logrocket.com/hosting-your-own-svelte-sapper-app/).*
 
 You've build an amazing app using Sapper and Svelte, but now what? Where do we host it to make it available to the world? This article will set out the steps involved in one possible approach, self-hosting your own Sapper application using [DigitalOcean](https://m.do.co/c/cfc7d387f018).
 
