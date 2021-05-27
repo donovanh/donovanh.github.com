@@ -7,8 +7,6 @@ imageURL: server.jpg
 published: true
 ---
 
-*This article was originaly [posted on LogRocket](https://blog.logrocket.com/hosting-your-own-svelte-sapper-app/).*
-
 You've build an amazing app using Sapper and Svelte, but now what? Where do we host it to make it available to the world? This article will set out the steps involved in one possible approach, self-hosting your own Sapper application using [DigitalOcean](https://m.do.co/c/cfc7d387f018).
 
 I recently went through this process having build an application and hosting it using Vercel. They have a slick deployment process, but as they better suit serverless applications I quickly realised I needed more than what they offered. So I rented a virtual server and moved the app there.
@@ -437,3 +435,4 @@ I hope this article is useful and helps you get your awesome Sapper projects ont
 Have you build a cool Svelte app you'd like to tell me about? You can message me [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
 
 
+*This article was originaly [posted on LogRocket](https://blog.logrocket.com/hosting-your-own-svelte-sapper-app/).*

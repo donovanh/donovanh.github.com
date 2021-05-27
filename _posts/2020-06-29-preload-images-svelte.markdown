@@ -7,8 +7,6 @@ imageURL: shopireland_list.jpg
 published: true
 ---
 
-*This article was [originally published on CSS Tricks](https://css-tricks.com/lazy-loading-images-in-svelte/).*
-
 When we build websites and apps we want them to load quickly and feel quick when navigating. One easy way to improve the speed is to only download visible images.
 
 In this article I'll show how can make use of the Intersection Observer alongside the `onLoad` event to load only the necessary images as our visitors load and then scroll within our Svelte websites and apps.
@@ -281,5 +279,8 @@ This approach is being used on my [Amazon Ireland](https://www.shopireland.ie) p
 ## Well that's enough about me. Your turn!
 
 Have you build a cool Svelte app you'd like to tell me about? You can message me [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
+
+*This article was [originally published on CSS Tricks](https://css-tricks.com/lazy-loading-images-in-svelte/).*
+
 
 

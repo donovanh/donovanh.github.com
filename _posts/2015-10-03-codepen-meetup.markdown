@@ -6,7 +6,7 @@ tags: [codepen, frontend, codependublin]
 imageURL: codepen-meetup.jpg
 ---
 
-On Thursday, 1st October I met up with 15 awesome front-end developers at the first [CodePen Dublin meetup](/codepen-dublin/). It was a great evening, and I'm really looking forward to the next.
+On Thursday, 1st October I met up with 15 awesome front-end developers at the first CodePen Dublin meetup. It was a great evening, and I'm really looking forward to the next.
 
 ## A CodePen meetup?
 
