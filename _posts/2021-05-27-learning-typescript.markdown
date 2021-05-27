@@ -13,11 +13,80 @@ The following is a summary of some notes I took during the course. To assist my 
 
 The following should be a helpful resource to refer to after taking the course.
 
-# TypeScript
+## Table of contents
 
-TypeScript is an [open-source language which builds on JavaScript](https://www.typescriptlang.org). You can write JavaScript in TypeScript files, as TypeScript builds on top of the existing functionality of JavaScript. You cannot however write TypeScript inside a JavaScript (`.js`) file. This is because TypeScript requires a compiler, which takes given TypeScript code and compiles it to JavaScript so that it can be run in the browser and elsewhere.
+* [Getting started](#getting-started)
+  * [TypeScript in action](#typescript-in-action)
+  * [Types](#types)
+    + [Defining types in functions](#defining-types-in-functions)
+    + [Type inference](#type-inference)
+    + [Using "!" or "as HTMLInputElement" (type casting)](#using--or-as-htmlinputelement-type-casting)
+    + [Object type](#object-type)
+    + [Custom object definition](#custom-object-definition)
+    + [Array types](#array-types)
+    + [Other types: Tuples](#other-types-tuples)
+    + [Other types: enum](#other-types-enum)
+    + [Other types: any](#other-types-any)
+    + [Other types: union](#other-types-union)
+    + [Other types: literal](#other-types-literal)
+    + [Type aliases](#type-aliases)
+  * [Functions](#functions)
+    + [Return: void](#return-void)
+    + [Other types: Function](#other-types-function)
+    + [Other types: unknown](#other-types-unknown)
+    + [Other types: never](#other-types-never)
+  * [Configurating TypeScript compiler](#configurating-typescript-compiler)
+    + [watch mode](#watch-mode)
+    + [Watching a project](#watching-a-project)
+    + [tsconfig.json](#tsconfigjson)
+    + [Adding options to tsconfig.json](#adding-options-to-tsconfigjson)
+    + [`strict` options](#strict-options)
+    + [Additional checks](#additional-checks)
+    + [Full reference](#full-reference)
+  * [Classes & Interfaces](#classes--interfaces)
+    + [public and private modifiers](#public-and-private-modifiers)
+    + [Shorthand initialisation](#shorthand-initialisation)
+    + [Read-only](#read-only)
+    + [Inheritance](#inheritance)
+    + [Overriding properties and protected](#overriding-properties-and-protected)
+    + [Getters and setters](#getters-and-setters)
+    + [Static properties and methods](#static-properties-and-methods)
+    + [Singletons](#singletons)
+  * [Interfaces](#interfaces)
+    + [Readonly interface properties](#readonly-interface-properties)
+    + [Extending interfaces](#extending-interfaces)
+    + [Interfaces as function types](#interfaces-as-function-types)
+    + [Optional properties](#optional-properties)
+  * [Advanced Types and TypeScript Features](#advanced-types-and-typescript-features)
+    + [Intersection Types](#intersection-types)
+    + [Type guards](#type-guards)
+    + [Discriminated Unions](#discriminated-unions)
+    + [Type Casting](#type-casting)
+    + [Index types](#index-types)
+    + [Function Overloads](#function-overloads)
+    + [Optional chaining](#optional-chaining)
+    + [Nullish Coalescing](#nullish-coalescing)
+  * [Generics](#generics)
+    + [Using generic types](#using-generic-types)
+    + [Constraints](#constraints)
+    + [`keyof` constraint](#keyof-constraint)
+    + [Generic classes](#generic-classes)
+    + [Generic utility types](#generic-utility-types)
+  * [Decorators](#decorators)
+    + [Decorator factory](#decorator-factory)
+    + [Adding multiple decorators](#adding-multiple-decorators)
+    + [Accessor, method and property decorators](#accessor-method-and-property-decorators)
+    + [Accessor and Parameter decorators](#accessor-and-parameter-decorators)
+    + [Adding custom class logic to decorators](#adding-custom-class-logic-to-decorators)
+    + [Returning from decorators](#returning-from-decorators)
+    + [Decorator example - autobind](#decorator-example---autobind)
+    + [Other notes](#other-notes)
+  * [Next steps](#next-steps)
+
 
 ## Getting started
+
+TypeScript is an [open-source language which builds on JavaScript](https://www.typescriptlang.org). You can write JavaScript in TypeScript files, as TypeScript builds on top of the existing functionality of JavaScript. You cannot however write TypeScript inside a JavaScript (`.js`) file. This is because TypeScript requires a compiler, which takes given TypeScript code and compiles it to JavaScript so that it can be run in the browser and elsewhere.
 
 You can [install TypeScript](https://www.typescriptlang.org/download) a number of ways. I installed it globally using:
 
