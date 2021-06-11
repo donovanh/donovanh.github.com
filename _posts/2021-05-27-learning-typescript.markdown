@@ -1146,7 +1146,7 @@ const merged = merge({ name: 'Marge' }, { age: 30 });
 console.log(merged.name);
 ```
 
-This ensures that TypeScript will expect an object for each of the generic types, while also ensuring that the function outputs the merged objects `T & U`, which allows us to then confidently access properties such as `name`.
+This ensures that TypeScript will expect an object for each of the generic types, while also ensuring that the function outputs the merged objects `T` & `U`, which allows us to then confidently access properties such as `name`.
 
 Another example of a generic `T` with a custom defined type (interface) as a constraint:
 
