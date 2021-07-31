@@ -63,7 +63,7 @@ img {
 
 .dates {
   color: #aaa;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 h2 {
@@ -92,4 +92,8 @@ p {
   .page-container {
     background: #fff;
   }  
+  .dates {
+    color: #aaa;
+    padding-left: 1em;
+  }
 }
