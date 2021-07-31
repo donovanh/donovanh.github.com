@@ -30,6 +30,7 @@ p {
 }
 
 img {
+  display: none;
   height: 40px;
   width: 40px;
   position: absolute;
@@ -79,14 +80,18 @@ p {
   line-height: 1.5;
 }
 
+.content h1 {
+  text-align: left;
+}
+
 @media print {
   html, body {
     font-size: 10px;
     background: #fff;
   }
   
-  .content h1 {
-    text-align: left;
+  img {
+    display: block;
   }
 
   header.top, footer {
