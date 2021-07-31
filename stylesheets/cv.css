@@ -1,0 +1,95 @@
+.section-title {
+  border-bottom: 1px solid #eee;
+  padding-top: 0.25em;
+}
+
+p {
+  padding: 0.25rem 0 0.5rem;
+}
+
+.educations p {
+  padding-bottom: 0;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top section {
+  width: calc(50% - 2em);
+  margin-right: 2em;
+}
+
+.top section:nth-child(even) {
+  margin-right: 0;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  border-radius: 50%;
+}
+
+.jobs, .projects, .educations  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jobs h2, .projects h2, .educations h2 {
+  font-size: 1.5em;
+}
+
+.job, .project {
+  width: calc(50% - 2em);
+  padding-right: 2em;
+}
+
+.job:nth-child(even), .project:nth-child(even) {
+  padding-right: 0;
+}
+
+.subtitle {
+  font-size: 0.5em !important;
+  display: block;
+}
+
+.company {
+  color: #888;
+}
+
+.dates {
+  color: #aaa;
+  padding-left: 2em;
+}
+
+h2 {
+  margin: 0.5em 0 .5em !important;
+}
+
+p {
+  margin: 0 0 .5em !important;
+  line-height: 1.5;
+}
+
+@media print {
+  html, body {
+    font-size: 10px;
+    background: #fff;
+  }
+  
+  .content h1 {
+    text-align: left;
+  }
+
+  header.top, footer {
+    display: none;
+  }
+
+  .page-container {
+    background: #fff;
+  }  
+}
