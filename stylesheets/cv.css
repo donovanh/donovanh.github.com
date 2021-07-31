@@ -17,12 +17,21 @@ p {
 
 .top {
   display: flex;
-  justify-content: space-between;
 }
 
 .top section {
   width: calc(50% - 2em);
   margin-right: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+  }
+  .top section {
+    margin: 0 0 1rem;
+    width: 100%;
+  }
 }
 
 .top section:nth-child(even) {
@@ -51,6 +60,13 @@ img {
 .job, .project {
   width: calc(50% - 2em);
   padding-right: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .job, .project {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .job:nth-child(even), .project:nth-child(even) {
