@@ -5,6 +5,7 @@ description: "I've begun the move to cloud-based hosting. An adventure starts he
 tags: [hosting]
 published: true
 ---
+
 A little while back, my hosting company [Slicehost][] was purchased by [Rackspace][]. While this didn't change much at first, they are now in the process of migrating accounts to Rackspace's cloud platform.
 
 As someone who's hosting bill has been a steady and predictable bill for the past 6 years, moving to the cloud is a bit of a change. I tidied up the server last weekend and pushed through the migration to the cloud system, and now I have no idea how much it's going to cost by the end of the month.
@@ -38,5 +39,5 @@ I'd love to hear your experiences if you've used similar services. I can be reac
 [Slicehost]: http://slicehost.com
 [Rackspace]: http://www.rackspace.com/cloud/
 [Elastic Compute Cloud]: http://aws.amazon.com/ec2/
-[@donovanh]: http://twitter.com/donovanh
+[@donovanh]: http://mastodon.ie/@donovanh
 [@donovan]: http://alpha.app.net/donovan

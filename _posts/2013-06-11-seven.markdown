@@ -46,7 +46,7 @@ First through, we need to set up some HTML to which we will apply the CSS:
         <span class="text part2">7</span>
     </article>
 
-Here we have an article that contains two spans, each of which has a 7. The reason for including two 7s will become apparent in a moment.  Before applying gradients, we set up these two spans so that they sit in an iOS-like icon in the middle of the screen.
+Here we have an article that contains two spans, each of which has a 7. The reason for including two 7s will become apparent in a moment. Before applying gradients, we set up these two spans so that they sit in an iOS-like icon in the middle of the screen.
 
 The containing article is positioned and styled:
 
@@ -138,7 +138,7 @@ The background will need some HTML. Place the following **before** the container
         <section class="background"></section>
     </div>
 
-This will make use of a *background-container* to contain the background and we'll add the pattern CSS to the section contained within. First, place the background container in place with some CSS.
+This will make use of a _background-container_ to contain the background and we'll add the pattern CSS to the section contained within. First, place the background container in place with some CSS.
 
     .background-container {
         width: 100%;
@@ -190,11 +190,11 @@ The resulting dot pattern looks something like this:
 
 ### Rotation problem
 
-Rather than apply the dot pattern directly to the background element, we need to adjust it to match the banner. The dots in the banner are a diagonal pattern, rather than the straight lines above. This would mean rotating the pattern 45 degrees around the Z axis. Since the *background* element has been tilted back 45 degrees already, rotating it on the Z-axis would not create the desired effect:
+Rather than apply the dot pattern directly to the background element, we need to adjust it to match the banner. The dots in the banner are a diagonal pattern, rather than the straight lines above. This would mean rotating the pattern 45 degrees around the Z axis. Since the _background_ element has been tilted back 45 degrees already, rotating it on the Z-axis would not create the desired effect:
 
 <img src="/images/posts/seven/rotate.jpg" alt="Awkward rotation" class="bordered">
 
-To get around this we can create a [pseudo-element](http://docs.webplatform.org/wiki/css/selectors/pseudo-elements) and apply the pattern to that. pseudo-elements can be added to an element to give us extra "elements" that we can style, referred to as *before* and *after*. Here's the *before* pseudo-element:
+To get around this we can create a [pseudo-element](http://docs.webplatform.org/wiki/css/selectors/pseudo-elements) and apply the pattern to that. pseudo-elements can be added to an element to give us extra "elements" that we can style, referred to as _before_ and _after_. Here's the _before_ pseudo-element:
 
     .background:before {
         content: "";
@@ -208,7 +208,7 @@ To get around this we can create a [pseudo-element](http://docs.webplatform.org/
         -webkit-transform: rotateZ(45deg);
     }
 
-The *before* element contains the pattern and is itself rotated 45 degrees on the Z axis. At this point it's almost there, it needs the white gradient from the top of the banner. We can use the second pseudo-element to contain that gradient:
+The _before_ element contains the pattern and is itself rotated 45 degrees on the Z axis. At this point it's almost there, it needs the white gradient from the top of the banner. We can use the second pseudo-element to contain that gradient:
 
     .background:after {
         content: "";
@@ -254,16 +254,12 @@ Check out the [online 7 demo](http://hop.ie/seven) or download the [source from 
 
 ### Update: Lighter version!
 
-[Keith Chu](http://codepen.io/catharsis) has put together a great [lighter version](http://codepen.io/catharsis/pen/pkIdw). It reduces the number of HTML elements and makes use of multiple backgrounds to reduce the amount of CSS. 
+[Keith Chu](http://codepen.io/catharsis) has put together a great [lighter version](http://codepen.io/catharsis/pen/pkIdw). It reduces the number of HTML elements and makes use of multiple backgrounds to reduce the amount of CSS.
 
 I've included the lighter version in the github repo also for reference.
 
-I love feedback. Reach me [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh).
+I love feedback. Reach me [by email](mailto:d@hop.ie) or [on Mastodon](https://mastodon.ie/@donovanh).
 
 <style type="text/css">
     header.post h1 { font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Arial, Sans-serif; font-weight: normal; }
 </style>
-
-
-
-

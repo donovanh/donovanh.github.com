@@ -21,16 +21,16 @@ A key rule when creating an application is to place the goals of the people usin
 
 When people want to make a screencast, I would suggest they have one main goal:
 
-* to create quality screencasts that people will want to watch
+- to create quality screencasts that people will want to watch
 
 Quickcast helps users achieve this by limiting the length of screencasts to 3 minutes. While most screencast software imposes no such limit, the 3 minute limit in this case seems to be a deliberate decision that pushes the user to make the most of the limited time. In this way it becomes a design decision that aligns itself with this main goal.
 
 Other goals the users might have include:
 
-* the ability to begin recording as soon as they want to
-* seeing how long they have have left while recording
-* reviewing their screencast after recording
-* uploading and sharing a screencast
+- the ability to begin recording as soon as they want to
+- seeing how long they have have left while recording
+- reviewing their screencast after recording
+- uploading and sharing a screencast
 
 I will stepping through the application and see how Quickcast has catered for each of these goals.
 
@@ -92,4 +92,4 @@ While this does mean the video won't have a title or description, it makes creat
 
 ## What do you think?
 
-I'd love to hear what you think of this or other products. Have you used something recently you liked? [Send me a tweet](http://twitter.com/donovanh) or [email](mailto:d@hop.ie).
+I'd love to hear what you think of this or other products. Have you used something recently you liked? [Send me a tweet](http://mastodon.ie/@donovanh) or [email](mailto:d@hop.ie).

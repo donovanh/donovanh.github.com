@@ -1,45 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>Introduction to Node.js</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-    <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
-    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/reveal.min.css" />
+    <link rel="stylesheet" href="css/theme/default.css" id="theme" />
+    <link rel="stylesheet" href="css/user.css" />
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+      document.write(
+        '<link rel="stylesheet" href="css/print/' +
+          (window.location.search.match(/print-pdf/gi) ? "pdf" : "paper") +
+          '.css" type="text/css" media="print">'
+      );
     </script>
 
     <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
+      <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
   </head>
 
   <body>
-
     <div class="reveal">
-
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-
         <section>
-          <div style="position:absolute;top:-300px;width: 800px">
+          <div style="position: absolute; top: -300px; width: 800px">
             <h2>#refreshdublin</h2>
             <aside class="tweets" id="tweet-container"></aside>
           </div>
@@ -54,18 +63,23 @@
             <br />
             <ul>
               <li>Donovan Hutchinson</li>
-              <li>Twitter: <a href="http://twitter.com/donovanh">@donovanh</a></li>
+              <li>
+                Twitter: <a href="http://mastodon.ie/@donovanh">@donovanh</a>
+              </li>
             </ul>
             <p>
               <br />
               http://hop.ie/go/node
             </p>
             <p>
-              <small>Source files: <br />
-                <strong>http://hop.ie/downloads/node-examples.zip</strong></small>
+              <small
+                >Source files: <br />
+                <strong
+                  >http://hop.ie/downloads/node-examples.zip</strong
+                ></small
+              >
             </p>
           </div>
-          
         </section>
 
         <section>
@@ -96,7 +110,7 @@
 
         <section>
           <h1>Data I/O</h1>
-          <table style="width:400px;margin:20px auto;">
+          <table style="width: 400px; margin: 20px auto">
             <tr>
               <th>L1</th>
               <td>3 cycles</td>
@@ -140,7 +154,7 @@
 
         <section>
           <h3>A full Node app</h3>
-<pre style="font-size:34px"><code>var fs = require('fs');
+          <pre style="font-size: 34px"><code>var fs = require('fs');
 var contents = fs.readFile(
   './hello.txt',
   'utf8', 
@@ -150,7 +164,7 @@ var contents = fs.readFile(
 );
 console.log("Hello from Node!\n");
 </code></pre>
-        <p>Download: http://hop.ie/downloads/node-examples.zip</p>
+          <p>Download: http://hop.ie/downloads/node-examples.zip</p>
         </section>
 
         <section>
@@ -158,8 +172,10 @@ console.log("Hello from Node!\n");
           <ul>
             <li>Create new file: app.js</li>
           </ul>
-          <pre style="font-size:34px"><code>var http = require('http');</code></pre>
-          <pre style="font-size:34px"><code>var server = http.createServer(
+          <pre
+            style="font-size: 34px"
+          ><code>var http = require('http');</code></pre>
+          <pre style="font-size: 34px"><code>var server = http.createServer(
 function (request, response) {
   response.writeHead(
     200,
@@ -167,7 +183,9 @@ function (request, response) {
   );
   response.end('Hello World!\n');
 });</code></pre>
-            <pre style="font-size:34px"><code>server.listen(1337, '127.0.0.1');</code></pre>
+          <pre
+            style="font-size: 34px"
+          ><code>server.listen(1337, '127.0.0.1');</code></pre>
         </section>
 
         <section>
@@ -236,11 +254,27 @@ function (request, response) {
         <section>
           <h1>Resources</h1>
           <ul>
-              <li><a href="http://www.yuiblog.com/blog/2010/05/20/video-dahl/">Ryan Dahl Intro to Node.js</a></li>
-              <li><a href="http://www.youtube.com/watch?v=L0pjVcIsU6A">Node.js Explained</a></li>
-              <li><a href="http://vimeo.com/62943212">Tim Caldwell's Intro to Node.js</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Google Group</a></li>
-            <li><a href="http://www.nodejsdublin.com/">NodeJS Dublin Meetup</a></li>
+            <li>
+              <a href="http://www.yuiblog.com/blog/2010/05/20/video-dahl/"
+                >Ryan Dahl Intro to Node.js</a
+              >
+            </li>
+            <li>
+              <a href="http://www.youtube.com/watch?v=L0pjVcIsU6A"
+                >Node.js Explained</a
+              >
+            </li>
+            <li>
+              <a href="http://vimeo.com/62943212"
+                >Tim Caldwell's Intro to Node.js</a
+              >
+            </li>
+            <li>
+              <a href="http://groups.google.com/group/nodejs">Google Group</a>
+            </li>
+            <li>
+              <a href="http://www.nodejsdublin.com/">NodeJS Dublin Meetup</a>
+            </li>
           </ul>
         </section>
 
@@ -248,14 +282,14 @@ function (request, response) {
           <h1>Thanks</h1>
           <p>Get in touch</p>
           <ul>
-            <li>Twitter: <a href="http://twitter.com/donovanh">@donovanh</a></li>
+            <li>
+              Twitter: <a href="http://mastodon.ie/@donovanh">@donovanh</a>
+            </li>
             <li>Email: <a href="mailto:d@hop.ie">d@hop.ie</a></li>
           </ul>
           <p><br />http://hop.ie/go/node</p>
         </section>
-
       </div>
-
     </div>
 
     <script src="lib/js/head.min.js"></script>
@@ -267,7 +301,6 @@ function (request, response) {
     <script src="js/jquery.tweets.js"></script>
 
     <script>
-
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
@@ -276,31 +309,62 @@ function (request, response) {
         history: true,
         center: true,
 
-        theme: 'sky', // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        theme: "sky", // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || "default", // default/cube/page/concave/zoom/linear/fade/none
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          {
+            src: "lib/js/classList.js",
+            condition: function () {
+              return !document.body.classList;
+            },
+          },
+          {
+            src: "plugin/markdown/showdown.js",
+            condition: function () {
+              return !!document.querySelector("[data-markdown]");
+            },
+          },
+          {
+            src: "plugin/markdown/markdown.js",
+            condition: function () {
+              return !!document.querySelector("[data-markdown]");
+            },
+          },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+          {
+            src: "plugin/zoom-js/zoom.js",
+            async: true,
+            condition: function () {
+              return !!document.body.classList;
+            },
+          },
+          {
+            src: "plugin/notes/notes.js",
+            async: true,
+            condition: function () {
+              return !!document.body.classList;
+            },
+          },
           // ,{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
+        ],
       });
 
       /* Initialise the Tweets plugin */
       $.tweets({
-        searchPhrase: 'refreshdublin',
-        templateID: '',
-        destinationID: 'tweet-container',
-        tweetSource: 'http://tweets.hop.ie',
-        maxTweets: 15
+        searchPhrase: "refreshdublin",
+        templateID: "",
+        destinationID: "tweet-container",
+        tweetSource: "http://tweets.hop.ie",
+        maxTweets: 15,
       });
-
     </script>
-
   </body>
 </html>

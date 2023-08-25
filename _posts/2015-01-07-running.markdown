@@ -55,13 +55,13 @@ So far I'm not entirely convinced by this. As far as interruptions go it's quite
 
 Your milage may vary but here's what I have found essential:
 
-* Decent, light running shoes
-* Shorts
-* Summer: short sleeve polyester running top
-* Winter: I have an Underarmour long-sleeve top works well as a base layer
-* Winter: I am also big fan of this [inov-8 Windshell](http://www.inov-8.com/New/Global/Product-View-Clothing-OffRoad-Outer-Race-Elite-70.asp?L=26)
-* iPhone with Runkeeper, Overcast, Spotify, and earphones
-* Facecloth
+- Decent, light running shoes
+- Shorts
+- Summer: short sleeve polyester running top
+- Winter: I have an Underarmour long-sleeve top works well as a base layer
+- Winter: I am also big fan of this [inov-8 Windshell](http://www.inov-8.com/New/Global/Product-View-Clothing-OffRoad-Outer-Race-Elite-70.asp?L=26)
+- iPhone with Runkeeper, Overcast, Spotify, and earphones
+- Facecloth
 
 I had a hard time adjusting from the summer to winter at first until discovering the Windshell. It's very light, but stops the wind from getting through and stays comfortable even for a long run.
 
@@ -71,7 +71,4 @@ Also, as [noted here](https://medium.com/having-it-some/the-awful-truth-about-jo
 
 ## What about you?
 
-Do you run? Feel free to look me up on Runkeeper. I'm Donovan Hutchinson. If you've had running experiences you'd like to share or questions, do [drop me an email](mailto:d@hop.ie) or say hi [on Twitter](https://twitter.com/donovanh).
-
-
-
+Do you run? Feel free to look me up on Runkeeper. I'm Donovan Hutchinson. If you've had running experiences you'd like to share or questions, do [drop me an email](mailto:d@hop.ie) or say hi [on Mastodon](https://mastodon.ie/@donovanh).

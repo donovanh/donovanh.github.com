@@ -22,7 +22,7 @@ This got me thinking about other ways CSS could be used to create interesting 3D
 
 [Portal CSS](/blog/portal/) was an attempt to recreate a classic video game scene and made use of the way borders in CSS meet to give depth to an isometric 3D scene. I also made a [CSS Mac Plus](/blog/macplus/). The Mac Plus was originally going to be an article for [Adobe Inspire](http://www.adobe.com/inspire.html), but an [amended version](http://www.adobe.com/inspire/2013/11/3d-css.html) ended up making the publication instead.
 
-I was also lucky enough to be asked to write for .net magazine. In issue 244 I wrote a tutorial titled [3D CSS in the Real World](http://hop.ie/cube/). 
+I was also lucky enough to be asked to write for .net magazine. In issue 244 I wrote a tutorial titled [3D CSS in the Real World](http://hop.ie/cube/).
 
 In some 2D CSS posts, I created the [iOS 7 logo](/blog/seven/) using CSS (a combination of font-face and linear gradients) and also used gradients to make great looking [CSS Balls](/blog/balls/).
 
@@ -46,7 +46,7 @@ In the next year I'd like to continue learning more about front-end development.
 
 Thank you for the support. I hope 2014 is a wonderful year for you and yours.
 
-To hear when new posts go live, [follow me on Twitter](http://twitter.com/donovanh). 
+To hear when new posts go live, [follow me on Mastodon(http://mastodon.ie/@donovanh).
 
 ## In case you missed any...
 

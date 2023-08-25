@@ -33,7 +33,7 @@ It will be acting as a case study, and you can [download the blog's source code]
 
 What I wanted from the blog was quite simple, and would be something I hope to expand upon as time goes on. The basic blog would need to have a list of posts, individual posts pages, comments, and a way for people to share the posts.
 
-At the same time I didn't want to spend a lot of time setting up or managing the blog, so it needed to be low maintenance. 
+At the same time I didn't want to spend a lot of time setting up or managing the blog, so it needed to be low maintenance.
 
 ## Choosing a platform
 
@@ -68,7 +68,7 @@ This will navigate into your folder and tell Jekyll to run a server. Go to [loca
 
 ## Creating layouts
 
-Within your blog directory you should find a "_layouts" folder. Within it should be `default.html` and `post.html` files. These are the layout files that are used to contain the content of your site.
+Within your blog directory you should find a "\_layouts" folder. Within it should be `default.html` and `post.html` files. These are the layout files that are used to contain the content of your site.
 
 ### Liquid markup
 
@@ -126,7 +126,7 @@ Markdown is a neat [text-to-HTML conversion tool](http://daringfireball.net/proj
 
 ## Creating standalone pages
 
-You can create standalone pages for your site by creating HTML files. If you include the settings text at the top, Jekyll will automatically take the contents of your HTML file and insert into the right template. To show this, open the `index.html` file. 
+You can create standalone pages for your site by creating HTML files. If you include the settings text at the top, Jekyll will automatically take the contents of your HTML file and insert into the right template. To show this, open the `index.html` file.
 
 This file is the home page for the blog, so contains a loop of all the site's posts. It could be any HTML content we wish. Note the frontmatter at the top:
 
@@ -162,7 +162,7 @@ When building the blog, I needed to get a layout together that would be responsi
 
 There are [loads of CSS frameworks](http://mashable.com/2013/04/26/css-boilerplates-frameworks/) to choose from. I briefly tried a few but ended up settling on [Bootstrap](http://getbootstrap.com). It's a popular framework built by Twitter, and very popular. Since I'm using SASS to manage my CSS, I chose to use a [Bootstrap SASS](https://github.com/thomas-mcdonald/bootstrap-sass).
 
-Looking in the `sass/vendor` folder, you'll find the `bootstrap.scss` file. This file is imported by the `_base.sass` file to bring in the various Bootstrap tools. 
+Looking in the `sass/vendor` folder, you'll find the `bootstrap.scss` file. This file is imported by the `_base.sass` file to bring in the various Bootstrap tools.
 
 Along with defining sensible default styling, Bootstrap brings a grid-based layout system that is also responsive. When setting up the blg, I made use of this grid structure to define the columns:
 
@@ -187,8 +187,4 @@ If you've been following along, you should have a locally running basic blog. It
 
 In part two I will cover setting up pagination on the home page, how to create custom icons, adding some discussion options and social sharing, and finally deploy the finished blog.
 
-You should follow me on Twitter [here](http://twitter.com/donovanh) for an alert on the next part!
-
-
-
-
+You should follow me on Twitter [here](http://mastodon.ie/@donovanh) for an alert on the next part!

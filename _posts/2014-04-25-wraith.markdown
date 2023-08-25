@@ -21,7 +21,7 @@ Wraith is a tool for testing responsive designs. It generates sets of screenshot
 
 ![Some screenshots at various breakpoints of Hop.ie pages](/images/posts/wraith/hop.png)
 
-The tool is built and maintained by BBC web developers [Dave Blooman](http://twitter.com/dblooman), [John Cleveley](http://twitter.com/jcleveley), and [Simon Thulbourn](http://twitter.com/sthulbourn). 
+The tool is built and maintained by BBC web developers [Dave Blooman](http://twitter.com/dblooman), [John Cleveley](http://twitter.com/jcleveley), and [Simon Thulbourn](http://twitter.com/sthulbourn).
 
 ### Installing
 
@@ -170,6 +170,4 @@ I have started using this tool to check on this blog, you can [see the results h
 
 ## Your process
 
-Do you currently use tools to help with responsive design and flexible layout testing? [Do let me know](http://twitter.com/donovanh), I'd love to hear what works for you.
-
-
+Do you currently use tools to help with responsive design and flexible layout testing? [Do let me know](https://mastodon.ie/@donovanh), I'd love to hear what works for you.

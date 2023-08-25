@@ -23,7 +23,7 @@ With the recent release of React Fibre (React 16), it's a great time to learn so
 
 The first thing I do when learning something new is to get a feel for it through whatever means possible. This means subscribing to React or JavaScript newsletters,podcasts, Youtube channels and basically getting a feel for the ecosystem around the framework.
 
-The [React.js newsletter](http://reactjsnewsletter.com) is good, as is [Fullstack React](http://newsletter.fullstackreact.com), and I also recommend [JavaScript Jabber](https://devchat.tv/js-jabber) if you like listening to tech stuff. 
+The [React.js newsletter](http://reactjsnewsletter.com) is good, as is [Fullstack React](http://newsletter.fullstackreact.com), and I also recommend [JavaScript Jabber](https://devchat.tv/js-jabber) if you like listening to tech stuff.
 
 This is all very fun but I have no idea what most of the articles are really about yet, so the next step is to take to the [official documentation](https://reactjs.org/docs/). A great starting point is [Thinking in React](https://reactjs.org/docs/thinking-in-react.html). I worked through that, then looped back and studied the Quick Start sections more thoroughly. This helped me understand the concept.
 
@@ -37,7 +37,7 @@ After a week or so of spare time I was able to work through this course and I fe
 
 ## Step 3: Application
 
-Immersion and book learning are all great, and I enjoy them very much but the process doesn't really amount to much if I don't apply it to a real project. This is how I really learn, by making mistakes and fixing them. 
+Immersion and book learning are all great, and I enjoy them very much but the process doesn't really amount to much if I don't apply it to a real project. This is how I really learn, by making mistakes and fixing them.
 
 Rather than hack together a to-do app, I decided to aim a little higher. I have an [Irish shopping website](https://shopireland.ie) that is a great place to try new approaches. The site's very old now, and in need of a re-build so I'll try the new skills on it.
 
@@ -47,6 +47,4 @@ I'm just getting started with step 3 and will update once things progress. For n
 
 Wish me luck!
 
-
-I hope you find this helpful! If you have any questions, or are feeling inspired to take on a fitness challenge, hit me up [on twitter](https://twitter.com/donovanh). Also, <a href="/hire/">you can hire me</a>. I'd love to hear from you.
-
+I hope you find this helpful! If you have any questions, or are feeling inspired to take on a fitness challenge, hit me up [on Mastodon](https://mastodon.ie/@donovanh). Also, <a href="/hire/">you can hire me</a>. I'd love to hear from you.

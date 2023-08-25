@@ -2,106 +2,139 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>{% if page.title %} {{ page.title }} - {% endif %} hop.ie</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Thoughts from Donovan's brain{% endif %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Donovan Hutchinson">
-    <link rel="stylesheet" href="/stylesheets/screen.css">
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}Thoughts from Donovan's brain{% endif %}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Donovan Hutchinson" />
+    <link rel="stylesheet" href="/stylesheets/screen.css" />
     {% if page.newstylesheet %}
-    <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css">
+    <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css" />
     {% endif %}
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel="stylesheet" type="text/css">
-    <link rel="canonical" href="{{ page.url | canonical }}">
-    <meta name="google-site-verification" content="4b2gG2_kr5STLh0RhE34iPvU59o591CoG9N6iYOazvw" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Condensed:700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Source+Code+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="canonical" href="{{ page.url | canonical }}" />
+    <meta
+      name="google-site-verification"
+      content="4b2gG2_kr5STLh0RhE34iPvU59o591CoG9N6iYOazvw"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="/feed.xml"
+    />
     <script src="/javascripts/modernizr.js"></script>
 
     {% if page.newstylesheet %}
-      <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css">
+    <link rel="stylesheet" href="/stylesheets/{{ page.newstylesheet }}.css" />
     {% endif %}
-</head>
-<body class="internal">
-  <div class="page-container">
-  	<header class="top">
-  		<h1 class="bouncer-container"><a href="/">hop.ie</a></h1>
-  	</header>
-  	<div class="page clearfix">
-    	<section class="content">
-    		{{ content }}
-    	</section>
+  </head>
+  <body class="internal">
+    <div class="page-container">
+      <header class="top">
+        <h1 class="bouncer-container"><a href="/">hop.ie</a></h1>
+      </header>
+      <div class="page clearfix">
+        <section class="content">{{ content }}</section>
+      </div>
     </div>
-  </div>
-  
-	<footer class="clearfix">
-	  <section class="footer-content">
-	    <p>Hi, I'm <a href="/about">Donovan Hutchinson</a>. This is where I write about web development.</p>
-      <p>You can follow me at <a href="http://twitter.com/donovanh">@donovanh</a> or by <a href="/feed.xml">RSS</a>.</p>
-      <p>&copy; and written by Donovan Hutchinson</p>
-		</section>
-	</footer>
 
-  <script id="bouncer-template" type="text/html">
-	  <span class="bouncer">
-	    <span class="ear1"></span>
-	    <span class="ear2"></span>
-	    <span class="eye1"></span>
-	    <span class="eye2"></span>
-	    <span class="mouth"></span>
-	  </span>
-  </script>
-  <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
-  <script src="/javascripts/main.js"></script>
-  
-  <!--
+    <footer class="clearfix">
+      <section class="footer-content">
+        <p>
+          Hi, I'm <a href="/about">Donovan Hutchinson</a>. This is where I write
+          about web development.
+        </p>
+        <p>
+          You can follow me at
+          <a href="http://mastodon.ie/@donovanh">@donovanh</a> or by
+          <a href="/feed.xml">RSS</a>.
+        </p>
+        <p>&copy; and written by Donovan Hutchinson</p>
+      </section>
+    </footer>
+
+    <script id="bouncer-template" type="text/html">
+      <span class="bouncer">
+        <span class="ear1"></span>
+        <span class="ear2"></span>
+        <span class="eye1"></span>
+        <span class="eye2"></span>
+        <span class="mouth"></span>
+      </span>
+    </script>
+    <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="/javascripts/jquery.min.js"><\/script>');
+    </script>
+    <script src="/javascripts/main.js"></script>
+
+    <!--
     Custom search 404 code
   -->
-  <!-- This polyfill is only for browsers that don't support <dialog> out of the box -->
-  <script src="https://cdn.rawgit.com/GoogleChrome/dialog-polyfill/master/dialog-polyfill.js"></script>
+    <!-- This polyfill is only for browsers that don't support <dialog> out of the box -->
+    <script src="https://cdn.rawgit.com/GoogleChrome/dialog-polyfill/master/dialog-polyfill.js"></script>
     <script>
       function customSearchContructor() {
         // Some private variables for this object
         var context = this; // Keeping the parent context available so that we can call local methods
-        var dialog = document.querySelector('dialog');
+        var dialog = document.querySelector("dialog");
 
         // Apply the polyfill (requires the external JS polyfill referenced earlier)
         dialogPolyfill.registerDialog(dialog);
 
         // Your keys
-        var engineID = '008316387327485507723:jia2k-cmxom';
-        var apiKey = 'AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA';
+        var engineID = "008316387327485507723:jia2k-cmxom";
+        var apiKey = "AIzaSyDXRjpBfunIKGm1uKvYgm6l30do4RhECpA";
 
-        this.trySearch = function(phrase) {
+        this.trySearch = function (phrase) {
           var queryParams = {
-            cx:       engineID,
-            key:      apiKey,
-            num:      10,
-            q:        phrase,
-            alt:      'JSON'
-          }
-          var API_URL = 'https://www.googleapis.com/customsearch/v1?';
+            cx: engineID,
+            key: apiKey,
+            num: 10,
+            q: phrase,
+            alt: "JSON",
+          };
+          var API_URL = "https://www.googleapis.com/customsearch/v1?";
           // Send the request to the custom search api
-          $.getJSON(API_URL, queryParams, function(response) {
+          $.getJSON(API_URL, queryParams, function (response) {
             if (response.items && response.items.length) {
               context.showDialog(response.items[0].link);
             }
           });
         };
         this.showDialog = function (url) {
-          var suggestedLink = $('<a></a>');
+          var suggestedLink = $("<a></a>");
           // Verify that the suggested URL is from this domain
           var hostname = new RegExp(location.hostname);
           if (hostname.test(url)) {
-            suggestedLink.attr('href', url);
+            suggestedLink.attr("href", url);
             suggestedLink.text(url);
-            $('dialog .suggestion').html(suggestedLink);
+            $("dialog .suggestion").html(suggestedLink);
             dialog.showModal();
           }
         };
@@ -110,36 +143,42 @@
         };
       }
 
-      $(document).ready(function() {
+      $(document).ready(function () {
         var customSearch = new customSearchContructor();
         var path = window.location.pathname;
-        var phrase = decodeURIComponent(path.replace(/\/+/g, ' ').trim());
-        if (phrase.indexOf('mac') > -1) {
-          customSearch.showDialog('http://hop.ie/blog/macplus');
-        } else if (phrase.indexOf('smashing') > -1) {
-          customSearch.showDialog('http://hop.ie/go/smashingmag');
+        var phrase = decodeURIComponent(path.replace(/\/+/g, " ").trim());
+        if (phrase.indexOf("mac") > -1) {
+          customSearch.showDialog("http://hop.ie/blog/macplus");
+        } else if (phrase.indexOf("smashing") > -1) {
+          customSearch.showDialog("http://hop.ie/go/smashingmag");
         } else {
           customSearch.trySearch(phrase);
         }
-        $('dialog .nope').click(function() {
+        $("dialog .nope").click(function () {
           customSearch.hideDialog();
         });
       });
     </script>
-  <!-- end of the custom search code  -->
+    <!-- end of the custom search code  -->
 
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-3481417-23']);
-    _gaq.push(['_setDomainName', 'hop.ie']);
-    _gaq.push(['_setSiteSpeedSampleRate', 10]);
-    _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-3481417-23"]);
+      _gaq.push(["_setDomainName", "hop.ie"]);
+      _gaq.push(["_setSiteSpeedSampleRate", 10]);
+      _gaq.push(["_trackPageview"]);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</body>
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
 </html>

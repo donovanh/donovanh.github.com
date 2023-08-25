@@ -69,6 +69,4 @@ I know I've probably been a bit harsh on working from home but I really enjoy it
 
 ## Thanks, Dan!
 
-If you enjoyed this interview (or if you didn't), please let me know [on Twitter](http://twitter.com/donovanh) or [email](mailto:d@hop.ie). If you have experience working for yourself and want to add something, do get in touch.
-
-
+If you enjoyed this interview (or if you didn't), please let me know [on Mastodon](https://mastodon.ie/@donovanh) or [email](mailto:d@hop.ie). If you have experience working for yourself and want to add something, do get in touch.

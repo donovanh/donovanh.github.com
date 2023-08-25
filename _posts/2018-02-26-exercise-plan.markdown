@@ -51,7 +51,7 @@ Knee and leg raises are better. Currently I do leg raises lying down on my back,
 
 I think a big part of what makes these difficult for me is the range of motion needed, I'm not as flexible as I need to be, so that's something to work on! Keeping my legs straight all the way through is tough but is improving with practice.
 
-Progression: I'd like to move toward handing knee-raises as the next step. 
+Progression: I'd like to move toward handing knee-raises as the next step.
 
 ### Squats
 
@@ -65,7 +65,7 @@ Progression: I'm aiming to work toward one-legged (pistol) squats. Will be a whi
 
 ### Pull ups
 
-Pull ups are a difficult exercise at the best of times, but with weighing 90kg and being over 6"3 tall, I've always struggled with them. It took many months of slowly practising each week to get to the point where I could do 5 good pull ups with a full range of motion. 
+Pull ups are a difficult exercise at the best of times, but with weighing 90kg and being over 6"3 tall, I've always struggled with them. It took many months of slowly practising each week to get to the point where I could do 5 good pull ups with a full range of motion.
 
 I started with half-pull ups and by jumping up and trying to bring myself down slowly (negatives). This is the only movement that requires any equipment, and I use a door-mounted pull up bar. I'm really keen to improve these as they have a massive impact to my back and upper half of my body so I've been putting the pull up bar on my home office door and doing sets through the day.
 
@@ -97,9 +97,6 @@ The progression from this routine would be to isolate one exercise to focus on e
 
 If you're approaching making a workout plan like this yourself, always keep in mind that it's ok to adjust and tweak it as you go. Only you know your own body and how it feels.
 
-
 ## How about you?
 
-How are your new years resolutions working out? Got any goals for the year? Mention me up [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
-
-
+How are your new years resolutions working out? Got any goals for the year? Mention me up [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.

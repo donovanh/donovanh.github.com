@@ -15,74 +15,73 @@ The following should be a helpful resource to refer to after taking the course.
 
 ## Table of contents
 
-* [Getting started](#getting-started)
-* [TypeScript in action](#typescript-in-action)
-* [Types](#types)
-  + [Defining types in functions](#defining-types-in-functions)
-  + [Type inference](#type-inference)
-  + [Using "!" or "as HTMLInputElement" (type casting)](#using--or-as-htmlinputelement-type-casting)
-  + [Object type](#object-type)
-  + [Custom object definition](#custom-object-definition)
-  + [Array types](#array-types)
-  + [Other types: Tuples](#other-types-tuples)
-  + [Other types: enum](#other-types-enum)
-  + [Other types: any](#other-types-any)
-  + [Other types: union](#other-types-union)
-  + [Other types: literal](#other-types-literal)
-  + [Type aliases](#type-aliases)
-* [Functions](#functions)
-  + [Return: void](#return-void)
-  + [Other types: Function](#other-types-function)
-  + [Other types: unknown](#other-types-unknown)
-  + [Other types: never](#other-types-never)
-* [Configurating TypeScript compiler](#configurating-typescript-compiler)
-  + [watch mode](#watch-mode)
-  + [Watching a project](#watching-a-project)
-  + [tsconfig.json](#tsconfigjson)
-  + [Adding options to tsconfig.json](#adding-options-to-tsconfigjson)
-  + [`strict` options](#strict-options)
-  + [Additional checks](#additional-checks)
-  + [Full reference](#full-reference)
-* [Classes & Interfaces](#classes--interfaces)
-  + [public and private modifiers](#public-and-private-modifiers)
-  + [Shorthand initialisation](#shorthand-initialisation)
-  + [Read-only](#read-only)
-  + [Inheritance](#inheritance)
-  + [Overriding properties and protected](#overriding-properties-and-protected)
-  + [Getters and setters](#getters-and-setters)
-  + [Static properties and methods](#static-properties-and-methods)
-  + [Singletons](#singletons)
-* [Interfaces](#interfaces)
-  + [Readonly interface properties](#readonly-interface-properties)
-  + [Extending interfaces](#extending-interfaces)
-  + [Interfaces as function types](#interfaces-as-function-types)
-  + [Optional properties](#optional-properties)
-* [Advanced Types and TypeScript Features](#advanced-types-and-typescript-features)
-  + [Intersection Types](#intersection-types)
-  + [Type guards](#type-guards)
-  + [Discriminated Unions](#discriminated-unions)
-  + [Type Casting](#type-casting)
-  + [Index types](#index-types)
-  + [Function Overloads](#function-overloads)
-  + [Optional chaining](#optional-chaining)
-  + [Nullish Coalescing](#nullish-coalescing)
-* [Generics](#generics)
-  + [Using generic types](#using-generic-types)
-  + [Constraints](#constraints)
-  + [`keyof` constraint](#keyof-constraint)
-  + [Generic classes](#generic-classes)
-  + [Generic utility types](#generic-utility-types)
-* [Decorators](#decorators)
-  + [Decorator factory](#decorator-factory)
-  + [Adding multiple decorators](#adding-multiple-decorators)
-  + [Accessor, method and property decorators](#accessor-method-and-property-decorators)
-  + [Accessor and Parameter decorators](#accessor-and-parameter-decorators)
-  + [Adding custom class logic to decorators](#adding-custom-class-logic-to-decorators)
-  + [Returning from decorators](#returning-from-decorators)
-  + [Decorator example - autobind](#decorator-example---autobind)
-  + [Other notes](#other-notes)
-* [Next steps](#next-steps)
-
+- [Getting started](#getting-started)
+- [TypeScript in action](#typescript-in-action)
+- [Types](#types)
+  - [Defining types in functions](#defining-types-in-functions)
+  - [Type inference](#type-inference)
+  - [Using "!" or "as HTMLInputElement" (type casting)](#using--or-as-htmlinputelement-type-casting)
+  - [Object type](#object-type)
+  - [Custom object definition](#custom-object-definition)
+  - [Array types](#array-types)
+  - [Other types: Tuples](#other-types-tuples)
+  - [Other types: enum](#other-types-enum)
+  - [Other types: any](#other-types-any)
+  - [Other types: union](#other-types-union)
+  - [Other types: literal](#other-types-literal)
+  - [Type aliases](#type-aliases)
+- [Functions](#functions)
+  - [Return: void](#return-void)
+  - [Other types: Function](#other-types-function)
+  - [Other types: unknown](#other-types-unknown)
+  - [Other types: never](#other-types-never)
+- [Configurating TypeScript compiler](#configurating-typescript-compiler)
+  - [watch mode](#watch-mode)
+  - [Watching a project](#watching-a-project)
+  - [tsconfig.json](#tsconfigjson)
+  - [Adding options to tsconfig.json](#adding-options-to-tsconfigjson)
+  - [`strict` options](#strict-options)
+  - [Additional checks](#additional-checks)
+  - [Full reference](#full-reference)
+- [Classes & Interfaces](#classes--interfaces)
+  - [public and private modifiers](#public-and-private-modifiers)
+  - [Shorthand initialisation](#shorthand-initialisation)
+  - [Read-only](#read-only)
+  - [Inheritance](#inheritance)
+  - [Overriding properties and protected](#overriding-properties-and-protected)
+  - [Getters and setters](#getters-and-setters)
+  - [Static properties and methods](#static-properties-and-methods)
+  - [Singletons](#singletons)
+- [Interfaces](#interfaces)
+  - [Readonly interface properties](#readonly-interface-properties)
+  - [Extending interfaces](#extending-interfaces)
+  - [Interfaces as function types](#interfaces-as-function-types)
+  - [Optional properties](#optional-properties)
+- [Advanced Types and TypeScript Features](#advanced-types-and-typescript-features)
+  - [Intersection Types](#intersection-types)
+  - [Type guards](#type-guards)
+  - [Discriminated Unions](#discriminated-unions)
+  - [Type Casting](#type-casting)
+  - [Index types](#index-types)
+  - [Function Overloads](#function-overloads)
+  - [Optional chaining](#optional-chaining)
+  - [Nullish Coalescing](#nullish-coalescing)
+- [Generics](#generics)
+  - [Using generic types](#using-generic-types)
+  - [Constraints](#constraints)
+  - [`keyof` constraint](#keyof-constraint)
+  - [Generic classes](#generic-classes)
+  - [Generic utility types](#generic-utility-types)
+- [Decorators](#decorators)
+  - [Decorator factory](#decorator-factory)
+  - [Adding multiple decorators](#adding-multiple-decorators)
+  - [Accessor, method and property decorators](#accessor-method-and-property-decorators)
+  - [Accessor and Parameter decorators](#accessor-and-parameter-decorators)
+  - [Adding custom class logic to decorators](#adding-custom-class-logic-to-decorators)
+  - [Returning from decorators](#returning-from-decorators)
+  - [Decorator example - autobind](#decorator-example---autobind)
+  - [Other notes](#other-notes)
+- [Next steps](#next-steps)
 
 ## Getting started
 
@@ -116,11 +115,11 @@ Editors such as VSCode will show errors before compilation but you can also run 
 
 Core data types:
 
-* number
-* string
-* boolean
-* object
-* Arrays (string[], number[] etc)
+- number
+- string
+- boolean
+- object
+- Arrays (string[], number[] etc)
 
 ### Defining types in functions
 
@@ -249,7 +248,6 @@ Methods unavailable to the type `string` would then show an error when writing t
 
 An example of a tuple where we can specify the specific order of types in an array, for example:
 
-
 ```
 const person = {
   name: string;
@@ -348,7 +346,7 @@ function add(n1: number, n2: number):string {
 
 ### Return: void
 
-If a function doesn't return anything, TypeScript will report that the function returns `void`. 
+If a function doesn't return anything, TypeScript will report that the function returns `void`.
 
 This is not to be confused with type `undefined`, which is a different and valid type in TypeScript. A function that doesn't not return anything doesn't return `undefined` and should be instead be written:
 
@@ -406,7 +404,6 @@ In this way `unknown` has some type checking whereas `any` has none. It's in som
 
 In general you can use `unknown` when you do `typeof` or `instanceof` checks before carrying out operations on the variable.
 
-
 Tip: Try to use more specific types when possible, but `unknown` in preference of `any`.
 
 ### Other types: never
@@ -427,7 +424,6 @@ function throwCustomError(message: string, errorCode: number):never {
   throw {message, errorCode};
 }
 ```
-
 
 ## Configurating TypeScript compiler
 
@@ -471,7 +467,7 @@ We could specify this using `"dom"` and `"es6"` along with things like `"dom.ite
 
 An option worth considering is the `noEmitOnError` setting. By default it is `false`. This means that even when errors are encountered, the compiled JavaScript files are still generated.
 
-If set to true, this will stop any files being written when errors are encountered. 
+If set to true, this will stop any files being written when errors are encountered.
 
 We can also add extra options to the end of the generated config file, such as if we want to exclude certain files:
 
@@ -524,14 +520,13 @@ if (button) {
 
 ### Additional checks
 
-Turning on `noUnusedLocals`, `noUnusedParameters` are useful ways to highlight when unused local variables or parameters find their way into your code. 
+Turning on `noUnusedLocals`, `noUnusedParameters` are useful ways to highlight when unused local variables or parameters find their way into your code.
 
 `noImplicitReturns` will complain if we have functions that return in some places but not in others.
 
 ### Full reference
 
 More information on the options available can be found at the [official TSConfig Reference documentation page](https://www.typescriptlang.org/tsconfig).
-
 
 ## Classes & Interfaces
 
@@ -698,7 +693,6 @@ console.log(Example.myProp)
 
 When following the singleton pattern, TypeScript makes the process easier by allowing you to specify a `private` constructor.
 
-
 ## Interfaces
 
 An `interface` describes the structure of an object and can be used as a `type` definition to check that a type matches the expected pattern.
@@ -856,8 +850,6 @@ user2 = {
 user2.greet('Hey I am'); // Dave
 ```
 
-
-
 ## Advanced Types and TypeScript Features
 
 ### Intersection Types
@@ -1012,7 +1004,6 @@ inputEl.value = 'Hello';
 
 Note that the above casting implicitly removes the `null` type as an option so we might want to instead check that manually if we are not sure whether it might be null.
 
-
 ### Index types
 
 When defining a custom type interfaces we can use `index` types to set out a shape for the expected object.
@@ -1069,7 +1060,7 @@ This documents the possible combinations of types that can be given to a functio
 
 ### Optional chaining
 
-TypeScript includes built-in support for adding `?` to objects and their properties if they may be missing. 
+TypeScript includes built-in support for adding `?` to objects and their properties if they may be missing.
 
 ```
 myObject?.property?.foo
@@ -1220,7 +1211,7 @@ In the above, more than one generic can be used if needed, along with constraint
 
 Some [generic utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) are available including:
 
-`Partial` wraps a type to make any properties on it temporarily optional. 
+`Partial` wraps a type to make any properties on it temporarily optional.
 
 ```
 interface Thing {
@@ -1406,7 +1397,7 @@ class Product {
     } else {
       throw new Error('Invalid price - should be positive')
     }
-  } 
+  }
 
   getPriceWithTax(tax: number) {
     return this._price * tax;
@@ -1439,7 +1430,7 @@ class Product {
     } else {
       throw new Error('Invalid price - should be positive')
     }
-  } 
+  }
 
   @LogMethod
   getPriceWithTax(tax: number) {
@@ -1473,7 +1464,7 @@ class Product {
     } else {
       throw new Error('Invalid price - should be positive')
     }
-  } 
+  }
 
   getPriceWithTax(@LogParameter tax: number) {
     return this._price * tax;
@@ -1562,8 +1553,6 @@ const p = new PrintMessage();
 button.addEventListener('click', p.showMessage);
 ```
 
-
-
 ### Other notes
 
 You can use `_` in argument lists to mark an expected argument that will not be used:
@@ -1578,10 +1567,6 @@ function(_: string, _2: number) {
 
 The [TypeScript website](https://www.typescriptlang.org/) is a good starting point to explore TypeScript further.
 
-
 ## Well that's enough about me. Your turn!
 
-Have you build a cool Svelte app you'd like to tell me about? You can message me [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
-
-
-
+Have you build a cool Svelte app you'd like to tell me about? You can message me [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.

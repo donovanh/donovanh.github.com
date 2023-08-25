@@ -7,7 +7,7 @@ imageURL: babysteps.jpg
 published: true
 ---
 
-It's February and the time when most people's new year resolutions have fallen away, so I'm getting started on this year's. My goal this year is simple: do *one* free-standing handstand.
+It's February and the time when most people's new year resolutions have fallen away, so I'm getting started on this year's. My goal this year is simple: do _one_ free-standing handstand.
 
 It's a simple goal to state but takes a bit of preparation and work to get there. A big part of the challenge is that I've not been exercising much since last October and I need to get back into it.
 
@@ -21,13 +21,13 @@ One caveat - I'm still running and have been out most weeks at least once or twi
 
 Before the multi-month gap, I had been following a weekly routine that involved a "focus" exercise each day along with a bunch of others. The "focus" exercise I would do multiple sets of, and then one set of each other exercise.
 
-* Monday: Pushups
-* Tuesday: Leg raises
-* Wednesday: Squats
-* Thursday: Bridges
-* Friday: Pull-ups
-* Saturday: Handstands
-* Sunday: One set of each
+- Monday: Pushups
+- Tuesday: Leg raises
+- Wednesday: Squats
+- Thursday: Bridges
+- Friday: Pull-ups
+- Saturday: Handstands
+- Sunday: One set of each
 
 It was fairly intense, doing multiple sets of one exercise but I had worked up to this point gradually and it felt good. As long as I could spare 30 minutes each day I could do all the routine.
 
@@ -35,11 +35,11 @@ It was fairly intense, doing multiple sets of one exercise but I had worked up t
 
 Since I let things go, I'm now facing a bit of an uphill climb to get back to where I was. My approach begins this week. To get started I'm going to do one or two light sets of each exercise daily.
 
-The idea is that by doing a light routine each day, it'll prompt the old muscles to wake up and realise that they're going to be needed again. 
+The idea is that by doing a light routine each day, it'll prompt the old muscles to wake up and realise that they're going to be needed again.
 
 Last week I began by doing two sets of each of the above exercises. Being light sets, it was along the lines of 15 pushups, 10 leg raises, 5 pullups etc.
 
-It wasn't easy. Even though the sets were quite light I did struggle toward the end of them. When I came back the next day I was also weaker and had to struggle more. 
+It wasn't easy. Even though the sets were quite light I did struggle toward the end of them. When I came back the next day I was also weaker and had to struggle more.
 
 ## Progress so far
 
@@ -65,14 +65,12 @@ Having cut that out of my evenings, and making a point of being in bed a little 
 
 ## One handstand
 
-The resolution this is all working toward is being able to do *one* handstand. So far I still feel a long way away from that. I can hold myself up against a wall for 20 seconds, arms shaking and gasping the whole time, but if I get everything else in place I am sure I can do it.
+The resolution this is all working toward is being able to do _one_ handstand. So far I still feel a long way away from that. I can hold myself up against a wall for 20 seconds, arms shaking and gasping the whole time, but if I get everything else in place I am sure I can do it.
 
 ## How about you?
 
-How are your new years resolutions working out? Got any goals for the year? Mention me up [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
+How are your new years resolutions working out? Got any goals for the year? Mention me up [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.
 
 ## Photo credit
 
 Many thanks to [Emma Frances Logan](https://unsplash.com/photos/PVIbUkN_wCQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash for the photo used in this post.
-
-

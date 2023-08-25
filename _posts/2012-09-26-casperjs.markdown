@@ -5,6 +5,7 @@ description: "PhantomJS & CasperJS for easy front-end JavaScript-based testing."
 tags: [testing, development]
 published: true
 ---
+
 Front-end development used to be straightforward. A little bit of HTML, some CSS for styling and setting the colours, and maybe sprinkle on some JavaScript to handle the rollovers and form validation. Well, it's not 1999 any more, it's time to stop partying and get serious. For a moment anyway.
 
 ##Web apps be serious business
@@ -13,7 +14,7 @@ I, like many web people, got into the industry through what started as a hobby a
 
 ##Booooooorrrrringgg
 
-The idea of writing a lot of code just for the purposes of checking what I could quite plainly tell was ok just by looking at it seemed absurd. Not that I was ever actually *asked* to write tests for my work.
+The idea of writing a lot of code just for the purposes of checking what I could quite plainly tell was ok just by looking at it seemed absurd. Not that I was ever actually _asked_ to write tests for my work.
 
 For the smaller projects I was involved with, this laissez-faire attitude got me by for the most part, but over the past year I've been lucky enough to work with some excellent developers who have introduced me to the idea of test driven development, or TDD for short.
 
@@ -43,9 +44,9 @@ Where it gets really interesting (for me) was implementation, or functional test
 
 ##What is your major malfunction?
 
-Implementation testing is when you take a step back and write tests that *use* your website, and verify that it does what it's supposed to. This typically involves a real web browser, hitting a live (or locally hosted) version of your website, and clicking around like a mad thing.
+Implementation testing is when you take a step back and write tests that _use_ your website, and verify that it does what it's supposed to. This typically involves a real web browser, hitting a live (or locally hosted) version of your website, and clicking around like a mad thing.
 
-There are many tools that achieve this. In the rails world, Capybara is a popular one. It runs what is known as "drivers" that launch your chosen web browser, and very quickly click through paths that you define. At each stage, you *assert* that certain things are to be expected, and the result is a set of very much real-world tests.
+There are many tools that achieve this. In the rails world, Capybara is a popular one. It runs what is known as "drivers" that launch your chosen web browser, and very quickly click through paths that you define. At each stage, you _assert_ that certain things are to be expected, and the result is a set of very much real-world tests.
 
 ##The ghost in the machine
 
@@ -59,46 +60,46 @@ While PhantomJS acts as a ghostly virtual website user, writing tests directly c
 
 By sequential tests I mean that you can write a sequence of steps for the virtual browser to follow, in a very readible way, using very little code. Here's an example from the CasperJS site:
 
-	var casper = require('casper').create();
+    var casper = require('casper').create();
 
-	casper.start('http://google.fr/', function() {
-	    // search for 'casperjs' from google form
-	    this.fill('form[action="/search"]', { q: 'casperjs' }, true);
-	});
+    casper.start('http://google.fr/', function() {
+        // search for 'casperjs' from google form
+        this.fill('form[action="/search"]', { q: 'casperjs' }, true);
+    });
 
-	casper.then(function() {
-	    // aggregate results for the 'casperjs' search
-	    links = this.evaluate(getLinks);
-	    // now search for 'phantomjs' by filling the form again
-	    this.fill('form[action="/search"]', { q: 'phantomjs' }, true);
-	});
+    casper.then(function() {
+        // aggregate results for the 'casperjs' search
+        links = this.evaluate(getLinks);
+        // now search for 'phantomjs' by filling the form again
+        this.fill('form[action="/search"]', { q: 'phantomjs' }, true);
+    });
 
-	casper.then(function() {
-	    // aggregate results for the 'phantomjs' search
-	    links = links.concat(this.evaluate(getLinks));
-	});
+    casper.then(function() {
+        // aggregate results for the 'phantomjs' search
+        links = links.concat(this.evaluate(getLinks));
+    });
 
-	casper.run(function() {
-	    // echo results in some pretty fashion
-	    this.echo(links.length + ' links found:');
-	    this.echo(' - ' + links.join('\n - ')).exit();
-	});
+    casper.run(function() {
+        // echo results in some pretty fashion
+        this.echo(links.length + ' links found:');
+        this.echo(' - ' + links.join('\n - ')).exit();
+    });
 
-The above code demonstrates how to have the headless browser open Google, run a search, and then return a list of links from the results page. A couple of things to note include the "fill" method, which fills and optionally submits forms. Also note the structure. Everything is done in blocks using *casper.then(...)*. This ensures that the tests run from the top down, with the next only starting when the previous has finished.
+The above code demonstrates how to have the headless browser open Google, run a search, and then return a list of links from the results page. A couple of things to note include the "fill" method, which fills and optionally submits forms. Also note the structure. Everything is done in blocks using _casper.then(...)_. This ensures that the tests run from the top down, with the next only starting when the previous has finished.
 
 There's a lot more it can do, including waiting for [selectors to be available][6], [fetching text content][7], checking [page titles][8], and even [capturing screenshots][9].
 
 ##Just asserts
 
-The testing itself is handled by assertions. Functions that expect to evaluate true, and if not, show up in the test report as a nasty red *fail*.
+The testing itself is handled by assertions. Functions that expect to evaluate true, and if not, show up in the test report as a nasty red _fail_.
 
 Something the above doesn't show is any actual tests. CasperJS includes lots of assert methods, such as assertEquals, assertEval, and assertVisible. So you might do something like this:
 
-	casper.then(function() {
-		this.test.assertEquals(this.getTitle(), 'The Page of Awesomeness', 'The page title was "The Page of Awesomeness"');
-	});
+    casper.then(function() {
+    	this.test.assertEquals(this.getTitle(), 'The Page of Awesomeness', 'The page title was "The Page of Awesomeness"');
+    });
 
-Running the above test in the sequence would return a nice green *pass* if your page was called "The Page of Awesomeness", and a red *fail* if your page sucks.
+Running the above test in the sequence would return a nice green _pass_ if your page was called "The Page of Awesomeness", and a red _fail_ if your page sucks.
 
 ##Managing lots of tests
 
@@ -114,7 +115,7 @@ Danny Croft has some great [instructions on setting up PhantomJS and CasperJS][1
 
 Having a scripted headless browser at your disposal is a powerful and fun tool. It's extremely useful for implementation tests, but already there are some great alternate uses coming through like [website performance testing][12], and even [scraping data for an API][13].
 
-What's most surprising to me is that I've actually found the process of testing *fun*. It's also reassuring to know that I can make changes and be confident that it does what it's meant to.
+What's most surprising to me is that I've actually found the process of testing _fun_. It's also reassuring to know that I can make changes and be confident that it does what it's meant to.
 
 ##A note on versions
 
@@ -122,8 +123,7 @@ Currently, CasperJS works best with version 1.6.1 of PhantomJS. Version 1.7 of P
 
 ##Feedback
 
-If you enjoyed this article, found it offensive or just too long, you'll want to [send me a message on twitter][14] then.
-
+If you enjoyed this article, found it offensive or just too long, you'll want to [send me a message on Mastodon[14] then.
 
 [1]: http://en.wikipedia.org/wiki/Test_driven_development
 [2]: https://github.com/pivotal/jasmine-gem
@@ -138,5 +138,4 @@ If you enjoyed this article, found it offensive or just too long, you'll want to
 [11]: http://dannycroft.co.uk/front-end-unit-testing-with-javascript/
 [12]: http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
 [13]: http://www.subelsky.com/2012/08/webscraping-with-casperjs-and-phantomjs.html
-[14]: http://twitter.com/donovanh
-
+[14]: http://mastodon.ie/@donovanh

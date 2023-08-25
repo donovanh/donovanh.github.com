@@ -119,6 +119,4 @@ Middleman brings some great features, such as code minification, image compressi
 
 I find that quite exciting and the icing on the cake is that every part of this is entirely free.
 
-If you've had success in creating static websites, or have tips to share, hit me up [on twitter](http://twitter.com/donovanh)! I'd love to hear your experiences.
-
-
+If you've had success in creating static websites, or have tips to share, hit me up [on Mastodon](https://mastodon.ie/@donovanh)! I'd love to hear your experiences.

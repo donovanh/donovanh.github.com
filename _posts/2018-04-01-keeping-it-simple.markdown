@@ -11,7 +11,7 @@ Choosing a workout routine is a daunting process. They all seem complicated or d
 
 Last month I started a new workout plan that included 6 exercises every day, with the goal being that if I could keep it simple, and stick to it, it would be a success. I had a few requirements:
 
-### No gym 
+### No gym
 
 I don't want to travel each day to exercise.
 
@@ -35,7 +35,7 @@ Being able to write down what I've done quickly will mean I actually write it do
 
 ![March 2018 workout stats](/images/posts/exercise/workout-march-2018.jpg)
 
-It looks like a lot of detail but this is an entire month of exercise. Along the top I've set up columns for the 7 things I do. This includes running, pushups, leg raises, squats, pullups,  bridges and handstands.
+It looks like a lot of detail but this is an entire month of exercise. Along the top I've set up columns for the 7 things I do. This includes running, pushups, leg raises, squats, pullups, bridges and handstands.
 
 Each day I add in an extra row, and note the numbers as I do them. It's easy to see how I progressed in each area, for the most part. The numbers don't show how I improved in form in a couple of things, such as pushups and bridges, but you can see definite progress in pullups, bridges and squats.
 
@@ -85,11 +85,11 @@ Speaking of time - if you're like me you'll find that this stuff takes longer th
 
 ## The right intensity
 
-When I start new routines I tend to start off very enthusiastic and then lose interest and burn out over time. With this in mind my current routine is deliberately *less* intense than I'd usually go for. It's enough to get my heart rate up a bit, and activates all muscle groups, but not intense enough to break a sweat.
+When I start new routines I tend to start off very enthusiastic and then lose interest and burn out over time. With this in mind my current routine is deliberately _less_ intense than I'd usually go for. It's enough to get my heart rate up a bit, and activates all muscle groups, but not intense enough to break a sweat.
 
 I want to be able to continue this over the long term. Plus, starting with a low intensity brings some useful benefits. There's less chance of injury, as I'm giving my body time to adapt to the exercise routine. I'm happy to do it every day as I know it's quite light and doesn't take long.
 
-At the same time, it's not *too* easy. I push myself a little in each set, either with intensity or volume. I also try to gradually improve my technique each time. One tool I find very valuable in making sure I progress is keeping a log.
+At the same time, it's not _too_ easy. I push myself a little in each set, either with intensity or volume. I also try to gradually improve my technique each time. One tool I find very valuable in making sure I progress is keeping a log.
 
 ## Easy to log
 
@@ -99,7 +99,7 @@ It could be a nuisance to create and maintain a log so I try to keep it as simpl
 
 This puts the majority of the data onto the page and out of my head. I can then check over time and see what's improving, or not.
 
-With it being quite easy to log it's becoming a habit. 
+With it being quite easy to log it's becoming a habit.
 
 ## Take it slow
 
@@ -109,6 +109,4 @@ My goal is to be kind to myself, start slow, and gradually increase the intensit
 
 ## How about you?
 
-What are you doing to stay in shape? You can message me [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
-
-
+What are you doing to stay in shape? You can message me [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.

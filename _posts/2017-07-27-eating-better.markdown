@@ -13,7 +13,7 @@ In mid-2016 I started back at the gym and got back into running more regularly. 
 
 In early 2017 I began adjusting my diet, and investigating other ways of exercising to encourage muscle growth. Along the way I've learned a lot about how to eat better, as well as using bodyweight exercises to build up a good weekly workout routine.
 
-As a result I've lost about 10 kilograms (22 pounds) overall, while gaining a significant amount of muscle in my legs, back, arms, shoulders and core. 
+As a result I've lost about 10 kilograms (22 pounds) overall, while gaining a significant amount of muscle in my legs, back, arms, shoulders and core.
 
 There are two parts to this, so I'll begin with the diet changes, then share a bit about my workout routine. Hopefully this will be useful to some people - but do keep in mind that what works for me might not be right for you, your goals and physical needs. Be mindful and listen to your body!
 
@@ -25,12 +25,12 @@ Over the last 6 months or so I've been making a lot of small changes to what I e
 
 In the end, the bits that worked involved:
 
-* Less snacking between meals
-* Fewer treats like ice-cream, sweets etc
-* Replacing starchy carbs like rice, potatoes with green vegetables
-* Protein in every meal - lean meat, protein-rich vegetables
-* A small amount of whey protein supplementation 
-* Drinking more water
+- Less snacking between meals
+- Fewer treats like ice-cream, sweets etc
+- Replacing starchy carbs like rice, potatoes with green vegetables
+- Protein in every meal - lean meat, protein-rich vegetables
+- A small amount of whey protein supplementation
+- Drinking more water
 
 On top of this, I also took time to track everything in myFitnessPal, a phone app that helps track food and breaks it down into "macros" (how much protein, carbs and fats are in the diet).
 
@@ -72,5 +72,4 @@ What I don't do is cheat days. I might do "cheat" meals where I just eat 2,000 c
 
 The second part to getting healthy has been to work out a decent training plan. This has evolved a lot since last year when I joined a gym, and I'm now in a very different place to where I started, but in the next post I'll go into more detail about how this has progressed and what I hope to achieve.
 
-If you have any questions, hit me up [on twitter](https://twitter.com/donovanh).
-
+If you have any questions, hit me up [on Mastodon](https://mastodon.ie/@donovanh).

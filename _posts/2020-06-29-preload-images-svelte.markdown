@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lazy loading images in Svelte 
+title: Lazy loading images in Svelte
 description: "Speed up your website render time by only loading the images you want to show"
 tags: [web development, Svelte]
 imageURL: shopireland_list.jpg
@@ -11,7 +11,7 @@ When we build websites and apps we want them to load quickly and feel quick when
 
 In this article I'll show how can make use of the Intersection Observer alongside the `onLoad` event to load only the necessary images as our visitors load and then scroll within our Svelte websites and apps.
 
-*This article was [originally published on CSS Tricks](https://css-tricks.com/lazy-loading-images-in-svelte/).*
+_This article was [originally published on CSS Tricks](https://css-tricks.com/lazy-loading-images-in-svelte/)._
 
 ## Real-life example
 
@@ -146,14 +146,14 @@ Let's use our `IntersectionObserver.svelte` component to conditionally load our 
 
   import IntersectionObserver from './IntersectionObserver.svelte'
   import Image from './Image.svelte'
-  
+
 </script>
 
 <IntersectionObserver once={true} let:intersecting={intersecting}>
   {#if intersecting}
     <Image {alt} {src} />
   {/if}
-</IntersectionObserver> 
+</IntersectionObserver>
 ```
 
 This component takes some image-related props (`src`, `alt`) which we will use to create our image tag. It them imports two other components, the `IntersectionObserver` which we created already, and a new component we'll create in a moment called `Image`.
@@ -164,7 +164,7 @@ Then we make use of Svelte's slot props.
 
 ## Slot Props
 
-When we make use of a wrapping component we sometimes want to pass properties to the childen of the wrapper. Svelte gives us a way to do this called `slot props`. 
+When we make use of a wrapping component we sometimes want to pass properties to the childen of the wrapper. Svelte gives us a way to do this called `slot props`.
 
 In our `IntersectionObserver` component you may have noticed this line:
 
@@ -187,7 +187,7 @@ We can then use the `intersecting` value to determine whether to show the `Image
   {#if intersecting}
     <Image {alt} {src} />
   {/if}
-</IntersectionObserver> 
+</IntersectionObserver>
 ```
 
 If we do, we show the `Image` component and pass in the `alt` and `src` props.
@@ -216,7 +216,7 @@ Set up the component like so:
     thisImage.onload = () => {
       loaded = true
     }
-  }) 
+  })
 
 </script>
 
@@ -248,7 +248,7 @@ With all that set up, we apply our image tag like so:
 
 This uses `class:loaded` to conditionally apply a `loaded` class if the `loaded` variable is true.
 
-It lastly uses the `bind:this` method to associate this DOM element with the `thisImage` variable. 
+It lastly uses the `bind:this` method to associate this DOM element with the `thisImage` variable.
 
 ## Using our `ImageLoader`
 
@@ -277,10 +277,6 @@ You can download the [complete code for this demo on Github](https://github.com/
 
 This approach is being used on my [Amazon Ireland](https://www.shopireland.ie) project on the home page, category pages and search pages to help make every page view faster. I hope you find it useful!
 
-
 ## Well that's enough about me. Your turn!
 
-Have you build a cool Svelte app you'd like to tell me about? You can message me [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
-
-
-
+Have you build a cool Svelte app you'd like to tell me about? You can message me [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.

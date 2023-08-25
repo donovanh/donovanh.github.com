@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hosting your own Svelte / Sapper app 
+title: Hosting your own Svelte / Sapper app
 description: "How to set up a Digital Ocean droplet for your Sapper app, and host it along with your API on the same server"
 tags: [web development, devops]
 imageURL: server.jpg
@@ -13,21 +13,21 @@ I recently went through this process having build an application and hosting it 
 
 If you like you can see my [Amazon Ireland](https://www.shopireland.ie) Sapper / Svelte project in action. It's running on a [DigitalOcean](https://m.do.co/c/cfc7d387f018) droplet as a Node app, with an Nginx reverse proxy. I also have a second app running alongside that acts as an API layer to get product information from Amazon.
 
-## What we cover in this article 
+## What we cover in this article
 
 In this article I'll walk through the steps I took to set up a server to run Node projects such as Sapper applications. I hope this can act as a good starting point for you if you're interested in running your own Svelte / Sapper app.
 
-Note: this is written based on Ubuntu version *18.04*. Some specifics might have changed with newer versions.
+Note: this is written based on Ubuntu version _18.04_. Some specifics might have changed with newer versions.
 
 ## Topics
 
-* [Setting up your Digital Ocean droplet](#setting-up-your-digital-ocean-droplet)
-* [Node and Nginx proxy server](#node-and-nginx-proxy-server)
-* [Pushing your app code using Git](#pushing-your-app-code-using-git)
-* [Running your app using PM2](#running-your-apps-using-pm2)
-* [Setting up Nginx server block with caching](#setting-up-nginx-server-block-with-caching)
-* [Adding a domain name](#adding-a-domain-name)
-* [Testing your site](#testing-your-site)
+- [Setting up your Digital Ocean droplet](#setting-up-your-digital-ocean-droplet)
+- [Node and Nginx proxy server](#node-and-nginx-proxy-server)
+- [Pushing your app code using Git](#pushing-your-app-code-using-git)
+- [Running your app using PM2](#running-your-apps-using-pm2)
+- [Setting up Nginx server block with caching](#setting-up-nginx-server-block-with-caching)
+- [Adding a domain name](#adding-a-domain-name)
+- [Testing your site](#testing-your-site)
 
 ## Setting up your Digital Ocean droplet
 
@@ -192,7 +192,7 @@ The above code sets up some variables (adjust the `YOUR_APP` part as needed!) an
 
 Currently all it's set up to do is copy our code, but only if we've pushed the `master` branch.
 
-Let's try it. To use this we need to add a `remote` to our project. In our project folder on our *local* machine, add the following remote:
+Let's try it. To use this we need to add a `remote` to our project. In our project folder on our _local_ machine, add the following remote:
 
 ```
 git remote add origin USER_NAME@YOUR_IP_ADDRESS:/home/USER_NAME/repo/YOUR_APP
@@ -283,7 +283,6 @@ If you get an error here, check your code is all in place and run `pm2 restart A
 
 With the app running, we can now improve our Git hook to have it handle the build step, run npm install, and restart PM2 on ever deploy. Update our hook by adding the following before the `done` line:
 
-
 ```
 cd /home/don/www/YOUR_APP
 npm install --production
@@ -346,7 +345,7 @@ server {
 
 Exit and save using `Control + X, y`.
 
-At the start, the `proxy_cache_path` sets a location for the cache along with how many `levels` to store (this can be tweaked if you think you'll be storing millions of requests). The `keys_zone` part sets a named zone and how big it is, in memory, for storing metadata about the cached content. 
+At the start, the `proxy_cache_path` sets a location for the cache along with how many `levels` to store (this can be tweaked if you think you'll be storing millions of requests). The `keys_zone` part sets a named zone and how big it is, in memory, for storing metadata about the cached content.
 
 We set `max_size` as the maximum amount of space the cache can take up. In this case it's a generous `10g`.
 
@@ -360,7 +359,7 @@ There are lots more settings available, and you can find out more [in this artic
 
 ### Activating the server block
 
-We now have a file in `sites-available` but we need to activate it by creating a link to it from `sites-enabled`. 
+We now have a file in `sites-available` but we need to activate it by creating a link to it from `sites-enabled`.
 
 ```
 sudo ln -s /etc/nginx/sites-available/YOUR_SITE.vhost /etc/nginx/sites-enabled/
@@ -398,11 +397,11 @@ In this case my app has no log in component and doesn't send any sensitive data 
 
 So if we're using CloudFlare, head over and register. Then add a new site and select the Flexible SSL option.
 
-If you have a domain already, it will prompt you to move the records. You might not want to keep the old records but instead take this opportunity to add in an `A` record pointing to your server's IP address, and a CNAME for `www` pointing to `YOUR_DOMAIN.rocks`. 
+If you have a domain already, it will prompt you to move the records. You might not want to keep the old records but instead take this opportunity to add in an `A` record pointing to your server's IP address, and a CNAME for `www` pointing to `YOUR_DOMAIN.rocks`.
 
 Once set up you will be prompted to add two name servers to your domain. Take note of these.
 
-### Setting up your nameservers 
+### Setting up your nameservers
 
 Log in to your registrar and navigate to the section where you set the name servers. Update the list to contain just the two given by CloudFlare.
 
@@ -416,10 +415,10 @@ You should now be able to access your app at your own domain name, using `https:
 
 So what should you do if you see the dreaded `520` error? A few things to try:
 
-* Check your app has been built with `npm run build` and that it is successful
-* Check `pm2 list` to see the app is running
-* Look for `Actice` in `sudo service nginx status`
-* Double-check the location server block to ensure it's looking for `localhost:3000`
+- Check your app has been built with `npm run build` and that it is successful
+- Check `pm2 list` to see the app is running
+- Look for `Actice` in `sudo service nginx status`
+- Double-check the location server block to ensure it's looking for `localhost:3000`
 
 Lastly, you can also check logs for both at their default locations using:
 
@@ -432,7 +431,6 @@ I hope this article is useful and helps you get your awesome Sapper projects ont
 
 ## Well that's enough about me. Your turn!
 
-Have you build a cool Svelte app you'd like to tell me about? You can message me [on twitter](https://twitter.com/donovanh), I'd love to hear from you.
+Have you build a cool Svelte app you'd like to tell me about? You can message me [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.
 
-
-*This article was originaly [posted on LogRocket](https://blog.logrocket.com/hosting-your-own-svelte-sapper-app/).*
+_This article was originaly [posted on LogRocket](https://blog.logrocket.com/hosting-your-own-svelte-sapper-app/)._

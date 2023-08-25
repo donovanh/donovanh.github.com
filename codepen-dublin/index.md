@@ -16,15 +16,15 @@ Our next meetup is Thursday, 2nd June. [RSVP here](https://ti.to/donovan/codepen
 
 ## Social media
 
-Keep up to date with the latest meetup venue and times by [following on Twitter](https://twitter.com/frontenddublin). You can also follow the hashtag [#CodePenDublin](https://twitter.com/hashtag/codependublin).
+Keep up to date with the latest meetup venue and times by [following on Mastodon(https://twitter.com/frontenddublin). You can also follow the hashtag [#CodePenDublin](https://twitter.com/hashtag/codependublin).
 
 ## Code of Conduct
 
-Be cool. 
+Be cool.
 
 By this we mean pleasant, accommodating and friendly. The CodePen meetup is an informal event but it's important act like polite grown-ups and do our best to make this event welcoming and inclusive.
 
-By taking part we expect you to agree with the following code of conduct. We will enforce this code throughout the event. Any questions please do ask, either through [Twitter](https://twitter.com/frontenddublin), [email](mailto:d@hop.ie) or in person.
+By taking part we expect you to agree with the following code of conduct. We will enforce this code throughout the event. Any questions please do ask, either through [Mastodon(https://twitter.com/frontenddublin), [email](mailto:d@hop.ie) or in person.
 
 ### The Quick Version
 
@@ -40,7 +40,7 @@ Sponsors are also subject to the anti-harassment policy. In particular, sponsors
 
 If a participant engages in harassing behavior, the meetup organizers may take any action they deem appropriate, including warning the offender or expulsion from the meetup.
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact me (Donovan) immediately. 
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact me (Donovan) immediately.
 
 I will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the meetup. I value your attendance.
 

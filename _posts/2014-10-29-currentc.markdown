@@ -33,9 +33,8 @@ This act of shutting off a service so that another, competing, service can be in
 
 ## Your experiences
 
-I'd be interested to hear of your experiences in retail and how people are being manipulated through other dark patterns. Drop me a line on [Twitter](http://twitter.com/donovanh) or by [email](mailto:d@hop.ie) and I'll include your thoughts here.
+I'd be interested to hear of your experiences in retail and how people are being manipulated through other dark patterns. Drop me a line on [Mastodon(http://mastodon.ie/@donovanh) or by [email](mailto:d@hop.ie) and I'll include your thoughts here.
 
 ## Update
 
 [According to Techcrunch](http://techcrunch.com/2014/10/29/retailer-backed-apple-pay-rival-currentc-has-been-hacked-testers-email-addresses-stolen/), the initial testing version of CurrentC has been hacked. I would strongly advise anyone to not put their bank account details in this system.
-

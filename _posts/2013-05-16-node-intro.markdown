@@ -24,4 +24,4 @@ The [slides can be viewed online](http://hop.ie/talks/node-intro/). Some links f
 - [Google Group](http://groups.google.com/group/nodejs)
 - [NodeJSDublin Meetup](http://www.nodejsdublin.com/)
 
-Be sure and follow me at [@donovanh](http://twitter.com/donovanh) for updates.
+Be sure and follow me at [@donovanh](http://mastodon.ie/@donovanh) for updates.

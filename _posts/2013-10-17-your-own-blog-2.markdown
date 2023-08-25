@@ -64,7 +64,7 @@ Within this loop you can access any of the posts settings using the `post.value`
 
 Blogging platforms like [Wordpress](http://wordpress.org) ship with comments systems built in. Since the blog we're working with is made up of static HTML pages, we don't have the option. However there are some great JavaScript-based services.
 
-A popular solution is [Disqus](http://disqus.com/). It's easy to set up, includes full comment administration tools, and best of all, free. 
+A popular solution is [Disqus](http://disqus.com/). It's easy to set up, includes full comment administration tools, and best of all, free.
 
 To get started select "Add Disqus to Your Site", and register your site. When you've completed setup you'll be given a JavaScript snippet. Place it in the `posts.html` layout template, where you'd like the comments to appear, and you're done.
 
@@ -78,7 +78,7 @@ When making a favicon, it's worth keeping in mind that it's going to be **really
 
 It's a `favicon.ico` and is sized 16 by 16 pixels.
 
-To make this, begin with a square canvas in photoshop or your editor of choice. It's usually easier to start with something bigger than 16 pixels (I would suggest about 500px by 500px), and we'll scale it down later. Once you've assembled an image, the quickest way to generate the favicon itself is to upload it to [Iconifier](http://iconifier.net/). 
+To make this, begin with a square canvas in photoshop or your editor of choice. It's usually easier to start with something bigger than 16 pixels (I would suggest about 500px by 500px), and we'll scale it down later. Once you've assembled an image, the quickest way to generate the favicon itself is to upload it to [Iconifier](http://iconifier.net/).
 
 It will shrink the file down to 16 pixels and you can then download the resulting `.ico` file. Place this file in the root of your blog project.
 
@@ -115,7 +115,7 @@ This basic page will let people know what happened. Many choose to do [something
 
 ## Social media and sharing
 
-Depending on your site's goals, you may want to plug in some social sharing and links to social profiles. This is something that depends on how you want your site to be perceived, and it's up to you how you approach this. On [Hop.ie](http://hop.ie), for example, I'm content to have a link to my Twitter profile at the bottom of the page. This is because it's my personal blog and I don't see a need to promote it like a commercial venture. 
+Depending on your site's goals, you may want to plug in some social sharing and links to social profiles. This is something that depends on how you want your site to be perceived, and it's up to you how you approach this. On [Hop.ie](http://hop.ie), for example, I'm content to have a link to my Twitter profile at the bottom of the page. This is because it's my personal blog and I don't see a need to promote it like a commercial venture.
 
 The [Shop Ireland News](http://blog.shopireland.ie) blog however, is a commercial venture and is better suited to having some obvious social stuff on the pages. The quickest way I have found to do this is to use a service such as [Addthis Smart Layers](https://www.addthis.com/get/smart-layers).
 
@@ -125,7 +125,7 @@ To set up Smart Layers, use the Addthis form to set up your chosen social networ
 
 The last thing I would typically do before launching, after doing one last visual check of every page, is add in some [Google Analytics](http://google.com/analytics). This is a helpful service that lets you see how many visitors you are getting, from where, and when. If you are writing blog posts and want to judge which are working and which aren't, this service will help.
 
-To use Analytics, you'll need to register and follow Google's set up instructions for a new account. After setting time zone and naming the account, you'll be given another JavaScript snippet to add to your page. 
+To use Analytics, you'll need to register and follow Google's set up instructions for a new account. After setting time zone and naming the account, you'll be given another JavaScript snippet to add to your page.
 
 It's up to you whether you want to add the JavaScript to the `head` or the bottom of your HTML. Keep in mind that JavaScript calls can slow down the rendering of a page, so while putting the tracking in the `head` might catch the people who leave before the page renders, it might also make the page slower. For this reason I would usually put the JavaScript at the end of the page, before the closing `body` tag.
 
@@ -177,11 +177,4 @@ Once you are happy with the structure of your blog, adding new posts is then a c
 
 ### Questions
 
-If you've enjoyed this article, or have any questions you'd like to follow up on, by all means let me know. I can be reached [by email](mailto:d@hop.ie) or [on Twitter](http://twitter.com/donovanh) and am always delighted to hear from you.
-
-
-
-
-
-
-
+If you've enjoyed this article, or have any questions you'd like to follow up on, by all means let me know. I can be reached [by email](mailto:d@hop.ie) or [on Mastodon](https://mastodon.ie/@donovanh) and am always delighted to hear from you.

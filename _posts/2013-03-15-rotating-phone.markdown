@@ -146,9 +146,10 @@ Rather than explain setting up each of the pieces, here's a chance to see each p
 
 }
 .phone-container.ex .shadow {
-  opacity: 0.7 !important;
+opacity: 0.7 !important;
 }
 </style>
+
 <pre id="phone-example-code"><style type="text/css" class="editable-styles" contenteditable="true">.phone-container.ex .front {
   opacity: 0.7;
   -webkit-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
@@ -206,5 +207,4 @@ If you're shaking your head at something I've messed up, I'm happy to receive pu
 
 Many thanks to [Adam Lynch](https://github.com/adam-lynch) for adding the floating animation.
 
-Please let me know if you have any questions or feedback. My email is [d@hop.ie](mailto:d@hop.ie) and I can also be reached on Twitter at [@donovanh](http://twitter.com/donovanh).
-
+Please let me know if you have any questions or feedback. My email is [d@hop.ie](mailto:d@hop.ie) and I can also be reached on Twitter at [@donovanh](http://mastodon.ie/@donovanh).

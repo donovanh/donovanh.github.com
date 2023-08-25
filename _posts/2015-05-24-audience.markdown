@@ -79,11 +79,10 @@ One weird trick&trade; I've found is giving away stickers. I recently had some p
 
 I hesitate to use the phrase "fail fast", because I don't think any of this counts as failing. But do try. Looking back at some of my earlier posts, I cringe a little and want to change things, but that just means I've improved.
 
-So have a go. And do [let me know](https://twitter.com/donovanh) when you have something in place. Maybe you'll start seeing those "follow" notifications and do a dance of your own.
+So have a go. And do [let me know](https://mastodon.ie/@donovanh) when you have something in place. Maybe you'll start seeing those "follow" notifications and do a dance of your own.
 
 ## Get in touch
 
-Have you built or are thinking about building a product? Want to talk about how it could be done? I'm happy to bounce ideas around and help where I can. Send me [an email](mailto:d@hop.ie) or hit me up on [Twitter](https://twitter.com/donovanh) and let's chat.
+Have you built or are thinking about building a product? Want to talk about how it could be done? I'm happy to bounce ideas around and help where I can. Send me [an email](mailto:d@hop.ie) or hit me up on [Mastodon(https://mastodon.ie/@donovanh) and let's chat.
 
 If you find this or [CSS Animation](https://cssanimation.rocks) useful, please consider giving it a mention on Twitter, [or following along](https://twitter.com/cssanimation). It's going to be interesting.
-

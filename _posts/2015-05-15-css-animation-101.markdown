@@ -33,7 +33,7 @@ This was something a course could help. I decided to focus on the gap between kn
 
 ## Planning and creating a course
 
-There are many ways to set about creating an online course, but this is roughly the sequence of steps I followed. For a first go it worked out, but I did learn a few things *not* to do along the way.
+There are many ways to set about creating an online course, but this is roughly the sequence of steps I followed. For a first go it worked out, but I did learn a few things _not_ to do along the way.
 
 ### Step 1: Plan the content
 
@@ -61,9 +61,9 @@ With the topic introduced, and `transitions` and `animations` covered in detail,
 
 With the course planned out (note: I hadn't actually written the content at this point, just the summaries of each day), I considered pricing. Pricing is a tough one. If I priced the content too low, I'd potentially get more signups but would have to gain exponentially more purchases to make the same amount as if I charge more. If I charge too much, it won't sell.
 
-After looking at lots of similar products I decided to aim for *slightly* expensive. I wanted the product to feel like it was worth paying for, and the first step was to actually charge for it. At the same time, I also wanted flexibility to be able to change the price as I learn more. To do this, I chose a *expectation* price and a *real* price.
+After looking at lots of similar products I decided to aim for _slightly_ expensive. I wanted the product to feel like it was worth paying for, and the first step was to actually charge for it. At the same time, I also wanted flexibility to be able to change the price as I learn more. To do this, I chose a _expectation_ price and a _real_ price.
 
-I set the *expectation* price at $99. I knew this was quite high but didn't feel confident charging that much. Instead, I left it on the page, crossed out, and made the real price at $49. This meant that the course felt like a bargain, being half price!
+I set the _expectation_ price at $99. I knew this was quite high but didn't feel confident charging that much. Instead, I left it on the page, crossed out, and made the real price at $49. This meant that the course felt like a bargain, being half price!
 
 The only way to find out if this would work was to put the page live, so I put together a landing page with a simple Paypal Buy Now button, and put word out.
 
@@ -93,7 +93,6 @@ With little promotion, I managed to get 45 paid purchases of the course's May ru
 
 ## Get in touch
 
-Have you built or are thinking about building a product? Want to talk about how it could be done? I'm happy to bounce ideas around and help where I can. Send me [an email](mailto:d@hop.ie) or hit me up on [Twitter](https://twitter.com/donovanh) and let's chat.
+Have you built or are thinking about building a product? Want to talk about how it could be done? I'm happy to bounce ideas around and help where I can. Send me [an email](mailto:d@hop.ie) or hit me up on [Mastodon(https://mastodon.ie/@donovanh) and let's chat.
 
 If you find this or [CSS Animation](https://cssanimation.rocks) useful, please consider giving it a mention on Twitter, [or following along](https://twitter.com/cssanimation). It's going to be interesting.
-
