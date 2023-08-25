@@ -207,4 +207,4 @@ If you're shaking your head at something I've messed up, I'm happy to receive pu
 
 Many thanks to [Adam Lynch](https://github.com/adam-lynch) for adding the floating animation.
 
-Please let me know if you have any questions or feedback. My email is [d@hop.ie](mailto:d@hop.ie) and I can also be reached on Twitter at [@donovanh](http://mastodon.ie/@donovanh).
+Please let me know if you have any questions or feedback. My email is [d@hop.ie](mailto:d@hop.ie) and I can also be reached on Mastodon at [@donovanh](http://mastodon.ie/@donovanh).

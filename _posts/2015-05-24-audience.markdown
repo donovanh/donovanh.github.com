@@ -25,13 +25,13 @@ There are three steps to building an audience. Everybody loves things if they ca
 
 ## 1. Set up places
 
-First, set up a mailing list. This may seem an obvious thing to do, but I didn't set up an email list until late last year. Until then I'd been relying on Twitter. Email is a whole other level, it is more direct, people are more likely to read an email than a tweet, and you can write a lot more. Definitely set up a mailing list and throw a signup form onto the footer of your site, or on a "subscribe" landing page.
+First, set up a mailing list. This may seem an obvious thing to do, but I didn't set up an email list until late last year. Until then I'd been relying on Mastodon. Email is a whole other level, it is more direct, people are more likely to read an email than a tweet, and you can write a lot more. Definitely set up a mailing list and throw a signup form onto the footer of your site, or on a "subscribe" landing page.
 
 There could be some merit in offering something in exchange for signing up. I've heard it helps, but it's not something I've done yet. I'll have to get back to you on that one. But do make sure there's some way for people to sign up.
 
 ### Twitter, Facebook, Pinterest, Instragram...
 
-Get your usernames reserved on any appropriate services as soon as you can. For me, Twitter's a big one, with Facebook, and Dribbble being popular places for people to see my content. You may have more photo-related content, in which Instagram or Pinterest might be good. Add some links to your social accounts on your site so that people can find them.
+Get your usernames reserved on any appropriate services as soon as you can. For me, Mastodon's a big one, with Facebook, and Dribbble being popular places for people to see my content. You may have more photo-related content, in which Instagram or Pinterest might be good. Add some links to your social accounts on your site so that people can find them.
 
 ### RSS
 

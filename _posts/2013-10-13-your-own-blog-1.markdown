@@ -187,4 +187,4 @@ If you've been following along, you should have a locally running basic blog. It
 
 In part two I will cover setting up pagination on the home page, how to create custom icons, adding some discussion options and social sharing, and finally deploy the finished blog.
 
-You should follow me on Twitter [here](http://mastodon.ie/@donovanh) for an alert on the next part!
+You should follow me on Mastodon [here](http://mastodon.ie/@donovanh) for an alert on the next part!

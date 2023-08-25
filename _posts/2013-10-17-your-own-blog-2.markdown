@@ -115,7 +115,7 @@ This basic page will let people know what happened. Many choose to do [something
 
 ## Social media and sharing
 
-Depending on your site's goals, you may want to plug in some social sharing and links to social profiles. This is something that depends on how you want your site to be perceived, and it's up to you how you approach this. On [Hop.ie](http://hop.ie), for example, I'm content to have a link to my Twitter profile at the bottom of the page. This is because it's my personal blog and I don't see a need to promote it like a commercial venture.
+Depending on your site's goals, you may want to plug in some social sharing and links to social profiles. This is something that depends on how you want your site to be perceived, and it's up to you how you approach this. On [Hop.ie](http://hop.ie).
 
 The [Shop Ireland News](http://blog.shopireland.ie) blog however, is a commercial venture and is better suited to having some obvious social stuff on the pages. The quickest way I have found to do this is to use a service such as [Addthis Smart Layers](https://www.addthis.com/get/smart-layers).
 

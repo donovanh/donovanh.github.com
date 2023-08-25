@@ -94,5 +94,3 @@ With little promotion, I managed to get 45 paid purchases of the course's May ru
 ## Get in touch
 
 Have you built or are thinking about building a product? Want to talk about how it could be done? I'm happy to bounce ideas around and help where I can. Send me [an email](mailto:d@hop.ie) or hit me up on [Mastodon(https://mastodon.ie/@donovanh) and let's chat.
-
-If you find this or [CSS Animation](https://cssanimation.rocks) useful, please consider giving it a mention on Twitter, [or following along](https://twitter.com/cssanimation). It's going to be interesting.
