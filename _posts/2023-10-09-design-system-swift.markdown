@@ -7,7 +7,7 @@ imageURL: detail-button-styled-min.png
 published: true
 ---
 
-When working with design systems as engineers, we want to create styles that match the design resources while being composable and easy to use across many variations in our UI. In this talk [Daniel Tull](https://www.youtube.com/@danielctull) explains how we can make use of a SwiftUI approach to build extensible design systems without creating a load of difficult-to-manage custom views.
+When working with design systems as engineers, we want to create styles that match the design resources while being composable and easy to use across many variations in our UI. In this talk [Daniel Tull](https://danieltull.co.uk) explains how we can make use of a SwiftUI approach to build extensible design systems without creating a load of difficult-to-manage custom views.
 
 More talks [are available from Daniel Tull here](https://www.youtube.com/@danielctull).
 
