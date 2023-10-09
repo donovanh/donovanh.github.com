@@ -649,6 +649,8 @@ Button (
 
 ![Primary Button example](/images/posts/design-system-swift/all-examples-min.png)
 
+You can [download an Xcode project with the code](https://github.com/donovanh/swift-design-system/tree/main) from this talk.
+
 ## Summary
 
 Make use of custom styles rather than create views for each use cases. As the styles are composable, the styles can be nested for different contexts.
@@ -659,4 +661,4 @@ Then make the standard types easier to use by using extensions to provide simple
 
 ## Well that's enough about me. Your turn!
 
-A QUESTION HERE RELEVANT TO THE TOPIC? You can message me [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.
+Got any useful SwiftUI tips to share or questions about this post? You can message me [on Mastodon](https://mastodon.ie/@donovanh), I'd love to hear from you.
