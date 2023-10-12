@@ -15,6 +15,8 @@ More talks [are available from Daniel Tull here](https://www.youtube.com/@daniel
 
 You can [watch the talk on Youtube here](https://www.youtube.com/embed/Z7rJKr6Jlho).
 
+Check out the useful post on Moving Parts also, [Styling Components in SwiftUI](https://movingparts.io/styling-components-in-swiftui).
+
 ## Code
 
 You can [download an Xcode project with the code](https://github.com/donovanh/swift-design-system/tree/main) from this talk.
@@ -347,7 +349,7 @@ It'll also allow us to remove the `VStack` we used above when initially setting 
 
 #### Resolve style
 
-In the blog post [Composable Styles in SwiftUI](https://movingparts.io/composable-styles-in-swiftui) by [Moving Parts](https://movingparts.io), an approach to resolving styles in order to apply them to components is set out. A similar method can be set up to resolve the `DetailStyle` here:
+In the blog post [Styling Components in SwiftUI](https://movingparts.io/styling-components-in-swiftui) by [Moving Parts](https://movingparts.io), an approach to resolving styles in order to apply them to components is set out. A similar method can be set up to resolve the `DetailStyle` here:
 
 ```swift
 extension DetailStyle {
